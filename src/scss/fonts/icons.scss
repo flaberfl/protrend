@@ -1,0 +1,69 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-logo:before {
+	content: "\e900";
+}
+
+._icon-arrows-down:before {
+	content: "\e901";
+}
+
+._icon-avatar:before {
+	content: "\e902";
+}
+
+._icon-blog:before {
+	content: "\e903";
+}
+
+._icon-google-mail:before {
+	content: "\e904";
+}
+
+._icon-home:before {
+	content: "\e905";
+}
+
+._icon-list-item:before {
+	content: "\e906";
+}
+
+._icon-project-icon:before {
+	content: "\e907";
+}
+
+._icon-project:before {
+	content: "\e908";
+}
+
+._icon-resume:before {
+	content: "\e909";
+}
+
+._icon-telegram:before {
+	content: "\e90a";
+}
+
+._icon-vk:before {
+	content: "\e90b";
+}
+
+._icon-wz:before {
+	content: "\e90c";
+}

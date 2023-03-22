@@ -1,0 +1,210 @@
+//====================================================================================================
+
+.header {
+  @include adaptiveValue("padding-top", 60, 10);
+  @include adaptiveValue("padding-bottom", 60, 10);
+  // position: absolute;
+  // width: 100%;
+  // left: 0;
+  // top: 0;
+  // z-index: 50;
+
+  // @media (max-width:$mobile) {
+  //   background-color: blue;
+  // }
+
+  // &._header-scroll {
+  //   position: fixed;
+  //   top: -200%;
+
+  //   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171);
+
+  //   @media (min-width:$mobile) {
+  //     background-color: red; // Цвет хеадера при скролле
+  //     backdrop-filter: blur(15px);
+  //   }
+  // }
+
+  // &._header-show {
+  //   transition: top 1s ease 0s;
+  //   top: 0;
+  // }
+
+  /* .header__container */
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__menu {
+    flex: 1 1 auto;
+  }
+
+  &__actions {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: rem(16)
+  }
+
+  .menu {
+    padding: 0 rem(10); // отступы безопасности
+
+    /* .menu__body */
+    &__body {
+      @media (max-width:$mobile) {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        @include adaptiveValue("padding-top", 180, 120, 768, 320, 2);
+        padding-left: rem(15);
+        padding-right: rem(15);
+        padding-bottom: rem(30);
+
+        overflow: auto;
+        background-color: gray; // цвет меню
+        transition: all 0.3s ease 0s;
+
+        // Плашка
+        &::before {
+          content: '';
+          position: fixed;
+          z-index: 2;
+          width: 100%;
+          top: 0;
+          left: -100%;
+          @include adaptiveValue("height", 100, 56, 768, 320, 2); // адаптируем плашку
+
+          background-color: silver; // цвет плашки
+          transition: all 0.3s ease 0s;
+        }
+
+        .menu-open & {
+          left: 0;
+
+          &::before {
+            left: 0;
+          }
+        }
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: rem(10);
+      @include adaptiveValue("column-gap", 44, 15);
+
+      @media (max-width:$mobile) {
+        flex-direction: column;
+        row-gap: rem(30);
+
+        text-align: center;
+      }
+    }
+
+    /* .menu__list */
+    // &__list {
+
+    //   text-align: center;
+
+    //   @media (min-width:$mobile) {
+    //     display: flex;
+    //     align-items: center;
+    //     flex-wrap: wrap;
+    //     justify-content: center;
+    //   }
+    // }
+
+
+
+    /* .menu__item */
+    &__item {}
+
+    /* .menu__link */
+    &__link {
+      @media (max-width:$mobile) {
+        font-size: rem(30);
+      }
+
+      transition: color 0.3s ease 0s;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: green;
+        }
+      }
+    }
+  }
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+  display: none;
+
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: rem(27);
+    height: rem(24);
+    cursor: pointer;
+    z-index: 999;
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      left: 0px;
+      position: absolute;
+      width: 100%;
+      height: rem(4);
+      border-radius: rem(8);
+      background-color: #000;
+    }
+
+    &::before {
+      top: rem(2);
+    }
+
+    &::after {
+      bottom: 0px;
+    }
+
+    span {
+      top: calc(50% - 1px);
+    }
+
+    .menu-open & {
+      span {
+        transform: scale(0);
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+        top: calc(50% - 2px);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        bottom: calc(50% - 2px);
+      }
+    }
+  }
+}
