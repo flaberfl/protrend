@@ -1,8 +1,8 @@
 //====================================================================================================
 
 .header {
-  @include adaptiveValue("padding-top", 60, 10);
-  @include adaptiveValue("padding-bottom", 60, 10);
+  @include adaptiveValue("padding-top", 46, 21);
+  @include adaptiveValue("padding-bottom", 46, 21);
   // position: absolute;
   // width: 100%;
   // left: 0;
@@ -39,6 +39,10 @@
   &__logo {
     position: relative;
     z-index: 5;
+
+    img {
+      @include adaptiveValue("width", 355, 150);
+    }
   }
 
   &__menu {
@@ -73,22 +77,8 @@
         padding-bottom: rem(30);
 
         overflow: auto;
-        background-color: gray; // цвет меню
+        background-color: $bgMenu; // цвет меню
         transition: all 0.3s ease 0s;
-
-        // Плашка
-        &::before {
-          content: '';
-          position: fixed;
-          z-index: 2;
-          width: 100%;
-          top: 0;
-          left: -100%;
-          @include adaptiveValue("height", 100, 56, 768, 320, 2); // адаптируем плашку
-
-          background-color: silver; // цвет плашки
-          transition: all 0.3s ease 0s;
-        }
 
         .menu-open & {
           left: 0;
@@ -136,15 +126,20 @@
 
     /* .menu__link */
     &__link {
+      font-size: rem(10);
+      font-weight: 600;
+      line-height: math.div(12, 10);
+      text-transform: uppercase;
+
       @media (max-width:$mobile) {
-        font-size: rem(30);
+        font-size: rem(16);
       }
 
       transition: color 0.3s ease 0s;
 
       @media (any-hover: hover) {
         &:hover {
-          color: green;
+          color: $hoverColor;
         }
       }
     }
@@ -155,55 +150,108 @@
 
 //Burger
 
+// .icon-menu {
+//   display: none;
+
+//   @media (max-width: $mobile) {
+//     display: block;
+//     position: relative;
+//     width: rem(27);
+//     height: rem(24);
+//     cursor: pointer;
+//     z-index: 999;
+
+//     span,
+//     &::before,
+//     &::after {
+//       content: "";
+//       transition: all 0.3s ease 0s;
+//       left: 0px;
+//       position: absolute;
+//       width: 100%;
+//       height: rem(4);
+//       border-radius: rem(2);
+//       background-color: #fff;
+//     }
+
+//     &::before {
+//       top: rem(2);
+//     }
+
+//     &::after {
+//       bottom: 0px;
+//     }
+
+//     span {
+//       top: calc(50% - 1px);
+//     }
+
+//     .menu-open & {
+//       span {
+//         transform: scale(0);
+//       }
+
+//       &::before {
+//         transform: rotate(-45deg);
+//         top: calc(50% - 2px);
+//       }
+
+//       &::after {
+//         transform: rotate(45deg);
+//         bottom: calc(50% - 2px);
+//       }
+//     }
+//   }
+// }
+
+
 .icon-menu {
   display: none;
 
   @media (max-width: $mobile) {
     display: block;
     position: relative;
-    width: rem(27);
-    height: rem(24);
+    width: rem(21);
+    height: rem(20);
     cursor: pointer;
     z-index: 999;
 
     span,
-    &::before,
-    &::after {
+    &::before {
       content: "";
       transition: all 0.3s ease 0s;
       left: 0px;
       position: absolute;
       width: 100%;
-      height: rem(4);
-      border-radius: rem(8);
-      background-color: #000;
+      height: rem(3);
+      border-radius: rem(2);
+      background-color: #fff;
     }
 
     &::before {
-      top: rem(2);
-    }
-
-    &::after {
-      bottom: 0px;
+      top: rem(6);
     }
 
     span {
-      top: calc(50% - 1px);
+      top: 70%;
     }
 
     .menu-open & {
-      span {
-        transform: scale(0);
+
+      span,
+      &::before {
+        top: 50%;
+        left: 28%;
+        width: rem(18);
+        height: rem(3);
       }
 
       &::before {
         transform: rotate(-45deg);
-        top: calc(50% - 2px);
       }
 
-      &::after {
+      span {
         transform: rotate(45deg);
-        bottom: calc(50% - 2px);
       }
     }
   }
