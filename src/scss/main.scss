@@ -4,6 +4,15 @@
   &__container {
     display: grid;
     grid-template-columns: 1fr 52%;
+
+    &::before{
+      content:'';
+      width: rem(1328);
+      height: rem(1328);
+
+      // background-color: #222D37;
+      border: 190px solid #222D37;
+    }
   }
 
   /* .promo__image */
