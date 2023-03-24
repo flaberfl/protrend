@@ -5,8 +5,11 @@
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: rem(28) rem(22);
-	// height: rem(70);
+	padding: rem(0) rem(22);
+	min-width: rem(218);
+
+	height: rem(70);
+	@include adaptiveValue("height", 70, 50);
 
 	background: $bgBtn;
 	box-shadow: $shadowBtn;
@@ -26,6 +29,7 @@
 	@media (max-width:$mobile) {
 		height: rem(50);
 	}
+
 
 	&_tr {
 		border: 1px solid #EF002B;

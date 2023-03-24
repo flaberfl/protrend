@@ -47,13 +47,19 @@
       @include adaptiveValue("width", 355, 150);
     }
   }
-
+  
   &__menu {
     // flex: 1 1 auto;
   }
 
   &__button {
+    min-width: 0;
     @include adaptiveValue("width", 218, 172);
+
+    @media (max-width:$mobile){
+      border-color: #fff;
+      color: #fff;
+    }
   }
 
   .menu {
@@ -63,7 +69,7 @@
     &__body {
       display: flex;
       align-items: center;
-      @include adaptiveValue("gap", 187, 0);
+      @include adaptiveValue("gap", 187, 0, 1920, 768);
 
       @media (max-width:$mobile) {
         position: fixed;
