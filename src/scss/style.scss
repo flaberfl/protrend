@@ -26,8 +26,8 @@ $secTextColor: #6F879D;
 $hoverColor: #EF002B;
 
 $bgBtn: linear-gradient(90deg, #D97000 -18.3%, #E00028 134.86%);
-$shBtn: 0px 10px 13px rgba(96, 26, 26, 0.49);
-$brBtn:  35px;
+$shadowBtn: 0px 10px 13px rgba(96, 26, 26, 0.49);
+$borderBtn: rem(35);
 
 
 
@@ -37,7 +37,7 @@ $minWidth: 360;
 // Ширина полотна (макета)
 $maxWidth: 1920;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
-$maxWidthContainer: 1290;
+$maxWidthContainer: 1460;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 30;

@@ -3,11 +3,33 @@
 
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	justify-content: center;
+	align-items: center;
+	padding: rem(28) rem(22);
+	// height: rem(70);
+
+	background: $bgBtn;
+	box-shadow: $shadowBtn;
+	border-radius: $borderBtn;
+
+	font-size: rem(10);
+	font-weight: 800;
+	line-height: math.div(12, 10);
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.18);
 
 	@media (any-hover: hover) {
-		&:hover {
-			
-		}
+		&:hover {}
+	}
+
+	@media (max-width:$mobile) {
+		height: rem(50);
+	}
+
+	&_tr {
+		border: 1px solid #EF002B;
+		background: none;
+		box-shadow: none;
 	}
 }
