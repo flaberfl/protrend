@@ -37,7 +37,7 @@ $minWidth: 360;
 // Ширина полотна (макета)
 $maxWidth: 1920;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
-$maxWidthContainer: 1460;
+$maxWidthContainer: 1470;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 30;
@@ -60,10 +60,9 @@ $mobileSmall: em(479.98); // Телефоны S
 @import "base/null";
 
 body {
-
+	// Letter-spacing: 0.05em;
 	background: $bgColor;
 
-	letter-spacing: 0.05em;
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
@@ -81,6 +80,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+
 
 	// Прижимаем footer
 	>main {
@@ -168,6 +168,7 @@ body {
 // Подключение стилей отдельных блоков
 @import "header";
 @import "main";
+@import "block/social";
 @import "footer";
 
 // Подключение стилей отдельных страниц
