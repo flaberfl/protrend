@@ -1,24 +1,30 @@
 .promo {
+
   /* .promo__container */
   &__container {
     display: grid;
     grid-template-columns: 1fr 52%;
   }
+
   /* .promo__image */
-  &__image {
-  }
+  &__image {}
+
   /* .promo__content */
-  &__content {
-    
-  }
+  &__content {}
+
   /* .promo__title */
   &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(45);
+    }
+
     font-size: rem(70);
+    @include adaptiveValue("font-size", 70, 30);
     font-weight: 700;
-    line-height: math.div(84 , 70);
+    line-height: math.div(84, 70);
     text-transform: uppercase;
   }
-  
+
   &__symbol {
     color: #263039;
   }
@@ -26,11 +32,19 @@
   &__name {
     color: #5BA13A;
   }
+
   /* .promo__text */
   &__text {
+    &:not(:last-child) {
+      margin-bottom: rem(83);
+    }
+
+    @include adaptiveValue("font-size", 30, 16);
+    font-weight: 300;
+    line-height: math.div(36 , 30);
   }
 }
-.title {
-}
-.button {
-}
+
+.title {}
+
+.button {}
