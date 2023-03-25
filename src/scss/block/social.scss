@@ -3,7 +3,7 @@
   /* .social__list */
   &__list {
     display: grid;
-    @include adaptiveValue("row-gap", 75, 52);
+    @include adaptiveValue("row-gap", 77, 52);
   }
 
   /* .social__item */

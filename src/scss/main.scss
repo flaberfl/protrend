@@ -1,5 +1,7 @@
 .promo {
 
+  mix-blend-mode: lighten;
+
   /* .promo__container */
   &__container {
     position: relative;
@@ -14,11 +16,11 @@
   &__content {
     @include adaptiveValue("padding-top", 123, 123);
     padding-left: rem(7);
-
   }
 
   /* .promo__title */
   &__title {
+    position: relative;
 
     &:not(:last-child) {
       margin-bottom: rem(55);
@@ -30,6 +32,8 @@
     line-height: math.div(84, 70);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+
+    z-index: 20;
   }
 
   &__symbol {
@@ -64,7 +68,6 @@
 
     transform: rotate(-90deg);
 
-
     span {
       font-size: rem(10);
       font-weight: 600;
@@ -72,8 +75,33 @@
       letter-spacing: 0.5em;
       color: #757D84;
     }
+
+    @media (max-width: em(1730)) {
+      left: -6%;
+    }
   }
 
   /* .promo__social */
-  &__social {}
+  &__social {
+    position: absolute;
+    right: -6%;
+    top: 30%;
+
+    @media (max-width: em(1700)) {
+      right: 1%;
+      top: 20%;
+    }
+  }
+
+  &__ellipse {
+    position: absolute;
+    @include adaptiveValue("width", 1328, 851);
+    top: -110%;
+    left: -50%;
+
+    
+    mix-blend-mode: difference;
+    z-index: 10;
+  }
 }
+
