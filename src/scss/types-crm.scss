@@ -1,0 +1,89 @@
+.types-crm {
+
+	/* .types-crm__container */
+	&__container {}
+
+	/* .types-crm__body */
+	&__body {}
+
+	/* .types-crm__navigation */
+	&__navigation {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		column-gap: rem(26);
+	}
+
+	/* .types-crm__button */
+	&__button {
+		position: relative;
+		cursor: pointer;
+		// max-width: rem(273);
+		@include adaptiveValue("padding-top", 54, 54);
+		@include adaptiveValue("padding-bottom", 37, 37);
+		@include adaptiveValue("padding-left", 53, 40);
+		display: grid;
+		gap: rem(20);
+		// background-color: rgba(111, 135, 157, .1);
+		// border-radius: rem(30);
+
+		
+		&::before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+
+			border-radius: rem(30);
+			background-color: $secTextColor;
+			opacity: .1;
+		}
+	}
+
+	/* .types-crm__icon */
+	&__icon {}
+
+	/* .types-crm__name */
+	&__name {
+
+		@include adaptiveValue("font-size", 20, 10);
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		line-height: math.div(24, 20);
+		color: #85E25A;
+	}
+
+	/* .types-crm__content */
+	&__content {}
+
+	/* .types-crm__item */
+	&__item {}
+
+	/* .types-crm__image */
+	&__image {}
+
+	/* .types-crm__text */
+	&__text {}
+}
+
+.text-types-crm {
+
+	/* .text-types-crm__title */
+	&__title {}
+
+	/* .text-types-crm__slogan */
+	&__slogan {}
+
+	/* .text-types-crm__list */
+	&__list {}
+
+	/* .text-types-crm__item */
+	&__item {}
+
+	/* .text-types-crm__descr */
+	&__descr {}
+
+	/* .text-types-crm__name */
+	&__name {}
+}
