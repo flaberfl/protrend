@@ -4,13 +4,17 @@
 	&__container {}
 
 	/* .types-crm__body */
-	&__body {}
+	&__body {
+		display: grid;
+	}
 
 	/* .types-crm__navigation */
 	&__navigation {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
+		// grid-template-columns: repeat(auto-fit, minmax(rem(270), 1fr));
 		column-gap: rem(26);
+		overflow-x: auto;
 	}
 
 	/* .types-crm__button */
