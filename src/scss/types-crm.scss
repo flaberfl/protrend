@@ -27,9 +27,17 @@
 		gap: rem(20);
 		// background-color: rgba(111, 135, 157, .1);
 		// border-radius: rem(30);
+		transition: all 0.3s ease 0s;
+		border-radius: rem(30);
+
+		&:hover {
+			background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
+
+		}
 
 
 		&::before {
+			transition: all 0.3s ease 0s;
 			position: absolute;
 			content: '';
 			width: 100%;
@@ -61,8 +69,10 @@
 
 	/* .types-crm__item */
 	&__item {
+		letter-spacing: .05em;
+
 		display: grid;
-		grid-template-columns: repeat(1, 49.5%);
+		grid-template-columns: 1fr 49.5%;
 	}
 
 	/* .types-crm__image */
@@ -88,9 +98,9 @@
 
 
 
-		&:hover{
+		&:hover {
 			background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
-			
+
 		}
 
 	}
@@ -98,7 +108,10 @@
 	/* .text-types-crm__slogan */
 	&__slogan {
 		font-size: rem(16);
-		color: $mainTextColor;
+		@include adaptiveValue("font-size", 16, 16);
+		font-weight: 600;
+		line-height: math.div(28, 16);
+
 		letter-spacing: .05em;
 	}
 
@@ -133,7 +146,11 @@
 	}
 
 	/* .text-types-crm__descr */
-	&__descr {}
+	&__descr {
+		font-size: rem(16);
+		@include adaptiveValue("font-size", 16, 16);
+		line-height: math.div(28, 16);
+	}
 
 	/* .text-types-crm__name */
 	&__name {}
