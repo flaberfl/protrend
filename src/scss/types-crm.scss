@@ -1,5 +1,6 @@
 .types-crm {
-padding-top: rem(228);
+	padding-top: rem(228);
+
 	/* .types-crm__container */
 	&__container {}
 
@@ -10,7 +11,7 @@ padding-top: rem(228);
 	&__navigation {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
-		margin-bottom: rem(90);
+		margin-bottom: rem(74);
 		// grid-template-columns: repeat(auto-fit, minmax(rem(270), 1fr));
 		column-gap: rem(26);
 		overflow-x: auto;
@@ -19,7 +20,7 @@ padding-top: rem(228);
 	/* .types-crm__button */
 	&__button {
 		position: relative;
-		cursor: pointer;
+		// cursor: pointer;
 		// max-width: rem(273);
 		@include adaptiveValue("padding-top", 54, 54);
 		@include adaptiveValue("padding-bottom", 37, 37);
@@ -71,18 +72,35 @@ padding-top: rem(228);
 	&__item {
 		letter-spacing: .05em;
 
+		// display: flex;
 		display: grid;
 		grid-template-columns: 1fr 49.5%;
+		// grid-template-columns: repeat(2, 1fr);
 	}
 
 	/* .types-crm__image */
-	&__image {}
+	&__image {
+		position: relative;
+
+		// justify-self: start;
+		// display: flex;
+		// align-items: start;
+		img {
+			position: absolute;
+			// // max-width: 100%;
+			left: -9%;
+			// bottom: 0;
+		}
+	}
 
 	/* .types-crm__text */
-	&__text {}
+	&__text {
+		// flex: 0 1 60%;
+	}
 }
 
 .text-types-crm {
+	padding-top: rem(17);
 
 	/* .text-types-crm__title */
 	&__title {
@@ -127,19 +145,19 @@ padding-top: rem(228);
 	/* .text-types-crm__item */
 	&__item {
 		position: relative;
-		// display: grid;
-		display: flex;
-		gap: rem(10);
-		position: relative;
+		display: grid;
+		gap: rem(15);
 		padding-left: rem(26);
 		align-items: center;
-
-
-
+		
+		
+		
 		p {
 			@include adaptiveValue("font-size", 16, 16);
 			line-height: math.div(38, 16);
 			line-height: 195%;
+			// letter-spacing: .05em;
+
 		}
 
 		&::before {
@@ -156,6 +174,9 @@ padding-top: rem(228);
 
 	/* .text-types-crm__descr */
 	&__descr {
+		padding-top: rem(7);
+		&:not(:last-child) {margin-bottom: rem(50);}
+
 		font-size: rem(16);
 		@include adaptiveValue("font-size", 16, 16);
 		line-height: math.div(28, 16);
