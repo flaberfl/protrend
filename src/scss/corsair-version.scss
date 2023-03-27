@@ -1,0 +1,58 @@
+.corsair-version {
+  padding-top: rem(200);
+
+  /* .corsair-version__page */
+  &__page {}
+
+  /* .corsair-version__container */
+  &__container {
+    display: grid;
+    grid-template-columns: 55% auto;
+
+    @media (max-width:$mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* .corsair-version__content */
+  &__content {
+    // @include adaptiveValue("padding-right", 45, 30);
+    @include adaptiveValue("padding-right", 45, 10);
+  }
+
+  /* .corsair-version__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 60, 20);
+
+    @include adaptiveValue("font-size", 70, 30);
+    line-height: math.div(84, 70);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+
+    span {
+      display: block;
+      color: $hoverColor;
+      letter-spacing: 0.05em;
+    }
+
+  }
+
+  /* .corsair-version__text */
+  &__text {
+    display: grid;
+    @include adaptiveValue("gap", 30, 15);
+
+    color: $mainTextColor;
+    letter-spacing: 0.05em;
+    line-height: math.div(28, 16);
+    @include adaptiveValue("font-size", 16, 14);
+  }
+
+  /* .corsair-version__image */
+  &__image {
+    img {
+      max-width: 100%;
+    }
+  }
+}

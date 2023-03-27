@@ -77,7 +77,27 @@
 			<section class="types-crm">
 				<div class="types-crm__container">
 
-					<div  data-tabs class="types-crm__body">
+
+					<div data-tabs class="tabs1">
+						<nav data-tabs-titles class="tabs__navigation1">
+							<button type="button" class="tabs__title1 _tab-active">Таб №1</button>
+							<button type="button" class="tabs__title1">Таб №2</button>
+							<button type="button" class="tabs__title1">Таб №3</button>
+						</nav>
+						<div data-tabs-body class="tabs__content1">
+							<div class="tabs__body1">
+								Вміст першого таба
+							</div>
+							<div class="tabs__body1">
+								Вміст другого таба
+							</div>
+							<div class="tabs__body1">
+								Вміст третього таба
+							</div>
+						</div>
+					</div>
+
+					<div data-tabs class="types-crm__body">
 
 						<div data-tabs-titles class="types-crm__navigation">
 							<div class="types-crm__button _tab-active">
@@ -102,7 +122,7 @@
 							</div>
 						</div>
 
-						<div data-tabs-body class="types-crm__content">
+						<div data-tabs-body class="types-crm__content tabs__content">
 
 							<div class="types-crm__item">
 								<div class="types-crm__image">
@@ -249,7 +269,7 @@
 								</div>
 
 							</div>
-	
+
 
 						</div>
 
@@ -259,24 +279,27 @@
 				</div>
 			</section>
 
-			<div data-tabs class="tabs">
-				<nav data-tabs-titles class="tabs__navigation">
-					<div type="button" class="tabs__title _tab-active">Таб №1</div>
-					<div type="button" class="tabs__title">Таб №2</div>
-					<div type="button" class="tabs__title">Таб №3</div>
-				</nav>
-				<div data-tabs-body class="tabs__content">
-					<div class="tabs__body">
-						Вміст першого таба
+			<section class="corsair-version__page corsair-version">
+				<div class="corsair-version__container">
+					<div class="corsair-version__content">
+						<h2 class="corsair-version__title">Пользователям пиратской версии <span>Protrend</span></h2>
+						<div class="corsair-version__text">
+							<p>У вас есть уникальная возможность перейти на новую платформу Protrend
+								со всеми современными и востребованными функциями для продаж, аналитики
+								и постпродаж при оплате 50% стоимости лицензий и подключении технической поддержки сервера.</p>
+							<p>
+								Наслаждайтесь лучшим решением от авторов программного обеспечения Protrend
+								и безупречной техподдержкой.</p>
+						</div>
 					</div>
-					<div class="tabs__body">
-						Вміст другого таба
+					<div class="corsair-version__image">
+						<img src="@img/corsair-version.png" alt="Пиратская версия">
 					</div>
-					<div class="tabs__body">
-						Вміст третього таба
-					</div>
+
 				</div>
-			</div>
+			</section>
+
+
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
