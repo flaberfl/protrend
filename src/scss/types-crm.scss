@@ -4,9 +4,7 @@
 	&__container {}
 
 	/* .types-crm__body */
-	&__body {
-		display: grid;
-	}
+	&__body {}
 
 	/* .types-crm__navigation */
 	&__navigation {
@@ -30,7 +28,7 @@
 		// background-color: rgba(111, 135, 157, .1);
 		// border-radius: rem(30);
 
-		
+
 		&::before {
 			position: absolute;
 			content: '';
@@ -62,7 +60,10 @@
 	&__content {}
 
 	/* .types-crm__item */
-	&__item {}
+	&__item {
+		display: grid;
+		grid-template-columns: repeat(1, 49.5%);
+	}
 
 	/* .types-crm__image */
 	&__image {}
@@ -74,16 +75,62 @@
 .text-types-crm {
 
 	/* .text-types-crm__title */
-	&__title {}
+	&__title {
+
+		&:not(:last-child) {
+			margin-bottom: rem(5);
+		}
+
+		font-size: rem(50);
+		font-weight: 700;
+		line-height: math.div(61, 50);
+		letter-spacing: .05em;
+
+
+
+		&:hover{
+			background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
+			
+		}
+
+	}
 
 	/* .text-types-crm__slogan */
-	&__slogan {}
+	&__slogan {
+		font-size: rem(16);
+		color: $mainTextColor;
+		letter-spacing: .05em;
+	}
 
 	/* .text-types-crm__list */
 	&__list {}
 
 	/* .text-types-crm__item */
-	&__item {}
+	&__item {
+		display: grid;
+		gap: rem(10);
+		position: relative;
+
+		&:hover {
+			background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
+		}
+
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+
+		&::before {
+			content: '';
+			border-bottom: 1px solid #000;
+			background: url('@img/icons/check-p.svg') 0 0 no-repeat;
+			position: absolute;
+			width: rem(15);
+			width: rem(14);
+			top: 0;
+			left: 0;
+		}
+
+	}
 
 	/* .text-types-crm__descr */
 	&__descr {}
