@@ -6,8 +6,23 @@
 
   /* .corsair-version__container */
   &__container {
+    position: relative;
     display: grid;
     grid-template-columns: 55% auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: #204160;
+      opacity: 0.7;
+      top: 36%;
+
+      filter: blur(201.5px);
+      transform: matrix(-0.78, 0.62, 0.62, 0.78, 0, 0);
+      width: rem(432);
+      height: rem(1182);
+      z-index: 20;
+    }
 
     @media (max-width:$mobile) {
       grid-template-columns: 1fr;
@@ -16,8 +31,11 @@
 
   /* .corsair-version__content */
   &__content {
+    position: relative;
     // @include adaptiveValue("padding-right", 45, 30);
     @include adaptiveValue("padding-right", 45, 10);
+
+    z-index: 40;
   }
 
   /* .corsair-version__title */
@@ -40,6 +58,7 @@
 
   /* .corsair-version__text */
   &__text {
+    position: relative;
     display: grid;
     @include adaptiveValue("gap", 30, 15);
 
@@ -47,12 +66,23 @@
     letter-spacing: 0.05em;
     line-height: math.div(28, 16);
     @include adaptiveValue("font-size", 16, 14);
+
+    z-index: 40;
   }
 
   /* .corsair-version__image */
   &__image {
+    position: relative;
+    z-index: 40;
     img {
       max-width: 100%;
     }
+  }
+
+  &__ellipse {
+    position: absolute;
+    right: -55%;
+    top: -27%;
+    z-index: 20;
   }
 }
