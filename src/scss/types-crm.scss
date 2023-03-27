@@ -1,5 +1,5 @@
 .types-crm {
-
+padding-top: rem(228);
 	/* .types-crm__container */
 	&__container {}
 
@@ -10,6 +10,7 @@
 	&__navigation {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
+		margin-bottom: rem(90);
 		// grid-template-columns: repeat(auto-fit, minmax(rem(270), 1fr));
 		column-gap: rem(26);
 		overflow-x: auto;
@@ -25,14 +26,13 @@
 		@include adaptiveValue("padding-left", 53, 40);
 		display: grid;
 		gap: rem(20);
-		// background-color: rgba(111, 135, 157, .1);
+		background-color: rgba(111, 135, 157, .1);
 		// border-radius: rem(30);
-		transition: all 0.3s ease 0s;
 		border-radius: rem(30);
+		transition: all 1s ease 0s;
 
 		&:hover {
 			background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
-
 		}
 
 
@@ -87,19 +87,18 @@
 	/* .text-types-crm__title */
 	&__title {
 
-		&:not(:last-child) {
-			margin-bottom: rem(5);
-		}
 
 		font-size: rem(50);
 		font-weight: 700;
 		line-height: math.div(61, 50);
-		letter-spacing: .05em;
+		text-transform: uppercase;
 
-
+		&:not(:last-child) {
+			margin-bottom: rem(22);
+		}
 
 		&:hover {
-			background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
+			// background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
 
 		}
 
@@ -113,36 +112,46 @@
 		line-height: math.div(28, 16);
 
 		letter-spacing: .05em;
+
+		&:not(:last-child) {
+			margin-bottom: rem(26);
+		}
 	}
 
 	/* .text-types-crm__list */
-	&__list {}
+	&__list {
+		display: grid;
+		gap: rem(10)
+	}
 
 	/* .text-types-crm__item */
 	&__item {
-		display: grid;
+		position: relative;
+		// display: grid;
+		display: flex;
 		gap: rem(10);
 		position: relative;
+		padding-left: rem(26);
+		align-items: center;
 
-		&:hover {
-			background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
-		}
 
-		&:not(:last-child) {
-			margin-bottom: rem(15);
+
+		p {
+			@include adaptiveValue("font-size", 16, 16);
+			line-height: math.div(38, 16);
+			line-height: 195%;
 		}
 
 		&::before {
 			content: '';
-			border-bottom: 1px solid #000;
-			background: url('@img/icons/check-p.svg') 0 0 no-repeat;
 			position: absolute;
-			width: rem(15);
-			width: rem(14);
-			top: 0;
 			left: 0;
-		}
+			top: rem(8);
+			width: rem(15);
+			height: rem(15);
 
+			background: url('@img/icons/check-p.svg') 0 0 no-repeat;
+		}
 	}
 
 	/* .text-types-crm__descr */
