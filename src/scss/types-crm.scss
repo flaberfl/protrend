@@ -149,9 +149,9 @@
 		gap: rem(15);
 		padding-left: rem(26);
 		align-items: center;
-		
-		
-		
+
+
+
 		p {
 			@include adaptiveValue("font-size", 16, 16);
 			line-height: math.div(38, 16);
@@ -175,7 +175,10 @@
 	/* .text-types-crm__descr */
 	&__descr {
 		padding-top: rem(7);
-		&:not(:last-child) {margin-bottom: rem(50);}
+
+		&:not(:last-child) {
+			margin-bottom: rem(50);
+		}
 
 		font-size: rem(16);
 		@include adaptiveValue("font-size", 16, 16);
