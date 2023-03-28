@@ -63,7 +63,8 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    @include adaptiveValue("column-gap", 34, 34);
+    // @include adaptiveValue("column-gap", 34, 34);
+
   }
 }
 
@@ -191,8 +192,13 @@
 .item-step {
   position: relative;
   display: grid;
-  grid-template-rows: auto auto auto;
+  height: auto;
+  grid-template-rows: auto-fit auto 1fr;
   justify-items: center;
+
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   
   max-width: rem(329);
   @include adaptiveValue("padding-top", 36, 20);
@@ -234,7 +240,7 @@
     padding: rem(14) rem(10);
     height: rem(46);
     width: calc(100% + rem(14));
-
+  
     background: linear-gradient(90deg, #415465 0%, #374858 100%);
     border-radius: rem(7) rem(7) 0 0;
 
@@ -276,7 +282,8 @@
   }
 
   /* .item-step__list */
-  &__list {}
+  &__list {
+  }
 
   /* .item-step__price */
   &__price {
@@ -308,22 +315,22 @@
     // position: absolute;
     margin-top: rem(30);
     margin-bottom: rem(-4);
-    // display: none;
+    display: none;
     transform: scale(0);
 
     transition: all 1s ease 0s;
     
     ._active & {
       transform: scale(1);
-      // display: inline-block;
+      display: inline-block;
     }
   }
 
   /* .item-step__footer */
 
   &__footer {
-    
-    // position: relative;
+    flex: 1 1 100%;
+    position: relative;
     padding-top: rem(25);
     text-align: center;
 
@@ -331,7 +338,7 @@
 
     ._active &{
       // height: rem(250);
-      height: 20%;
+      // height: 20%;
       // margin-bottom: rem(250);
     }
 

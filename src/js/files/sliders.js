@@ -8,7 +8,7 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper, {
-	Navigation
+	Pagination
 } from 'swiper';
 /*
 Основниые модули слайдера:
@@ -48,12 +48,12 @@ function initSliders() {
 
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper')) { // Указываем класс нужного слайдера
+	if (document.querySelector('.plans__slider')) { // Указываем класс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper', {
+		new Swiper('.plans__slider', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			//modules: [Navigation, Pagination],
+			modules: [Pagination],
 			/*
 			effect: 'fade',
 			autoplay: {
@@ -63,8 +63,8 @@ function initSliders() {
 			*/
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
+			slidesPerView: 4,
+			spaceBetween: 44,
 			autoHeight: true,
 			speed: 800,
 			//touchRatio: 0,
@@ -82,7 +82,7 @@ function initSliders() {
 				nextEl: '.about__more .more__item_next',
 				prevEl: '.about__more .more__item_prev',
 			},
-			/*
+		
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
@@ -95,14 +95,14 @@ function initSliders() {
 				},
 				992: {
 					slidesPerView: 3,
-					spaceBetween: 20,
+					spaceBetween: 44,
 				},
 				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					slidesPerView: 3,
+					spaceBetween: 44,
 				},
 			},
-			*/
+	
 			on: {
 
 			}
