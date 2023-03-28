@@ -202,6 +202,8 @@
   background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
   border-radius: 30px;
 
+  color: $secTextColor;
+
   // &::after {
   //   content: '';
   //   position: absolute;
@@ -217,7 +219,8 @@
 
   /* .item-step__name */
   &__name {
-    @include adaptiveValue("margin-bottom", 96, 96);
+    // @include adaptiveValue("margin-bottom", 96, 96);
+    margin-bottom: rem(25);
 
     @include adaptiveValue("font-size", 20, 14);
     line-height: math.div(24, 20);
@@ -230,24 +233,29 @@
 
   /* .item-step__descr */
   &__descr {
+    margin-bottom: rem(48);
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    z-index: 20;
-    width: 100%;
+    position: relative;
+    width: 126%;
+    // width: calc(100% + rem(14));
     padding: rem(13) rem(13);
-    border: 1px solid #000;
-    top: 1%;
+    top: 10%;
 
-    width: rem(343);
-    height: rem(46);
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   width: calc(100% + rem(14));
+    //   height: rem(46);
+    //   background: url('@img/steps/border.svg') 0 0 no-repeat;
+    // }
 
-    background: linear-gradient(90deg, #415465 0%, #374858 100%);
-    border-radius: 7px 7px 0px 0px;
+    // width: rem(343);
+    // height: rem(46);
 
-
-
+    // background: linear-gradient(90deg, #415465 0%, #374858 100%);
+    // border-radius: 7px 7px 0px 0px;
 
     @include adaptiveValue("font-size", 14, 12);
     line-height: math.div(17, 14);
@@ -255,8 +263,30 @@
     letter-spacing: 0.05em;
     color: $secTextColor;
 
+    z-index: 20;
 
+    span {
+      position: relative;
 
+      &::after {
+        content: '';
+        position: absolute;
+        width: 4.88px;
+        height: 8.45px;
+        left: -10.2%;
+        bottom: -105%;
+
+        background: #536576;
+        transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
+        z-index: 10;
+      }
+    }
+  }
+
+  &__border-img {
+    position: absolute;
+    width: calc(100% + rem(14));
+    
   }
 
   /* .item-step__list */
@@ -282,11 +312,23 @@
 .list-item-step {
 
   /* .list-item-step__item */
-  &__item {}
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: 1.6em;
+    // justify-content: space-between;
+  }
 
   /* .list-item-step__name */
-  &__name {}
-
+  &__name {
+    @include adaptiveValue("font-size", 14, 14);
+    font-weight: 400;
+    line-height: math.div(16 , 14);
+  }
+  
   /* .list-item-step__value */
-  &__value {}
+  &__value {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
 }
