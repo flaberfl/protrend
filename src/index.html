@@ -302,70 +302,74 @@
 				</div>
 			</section>
 
-			<div class="page__plans plans">
+			<section class="page__plans plans">
 				<div class="plans__container">
-					<h2 class="plans__title">Наши тарифы</h2>
-					<div class="plans__step-one step-one-plans">
-						<div class="step-one-plans__header">
-							<div class="step-one-plans__title">
-								<h3 class="step-one-plans__name">Сколько новых жилых комплексов
-									хотите внедрить в Protrend?</h3>
-								<h4 class="step-one-plans__subname">Одна лицензия = Один жилой комплекс</h4>
+					<h2 class="plans__title">Наши <span>тарифы</span></h2>
+					<div class="plans__step-one step-one-plans step-plans">
+						<div class="step-plans__header header-step-plans">
+							<div class="header-step-plans__number">
+								<span class="step-plans__number">1</span>
+								<span class="step-plans__step">шаг</span>
 							</div>
-							<form action="" class="step-one-plans__form form-step-one">
-								<label for="form-input" class="form-step-one__lable">Введите количество:</label>
-								<input autocomplete="off" type="text" name="form-input" data-error="Помилка" placeholder=""
-									class="form-step-one__input input">
+							<div class="header-step-plans__title">
+								<h3 class="header-step-plans__name">Сколько новых жилых комплексов
+									хотите внедрить в Protrend?</h3>
+								<h4 class="header-step-plans__subname">Одна лицензия = Один жилой комплекс</h4>
+							</div>
+							<form action="" class="step-one-plans__form form-step-one form-step">
+								<label for="form-input" class="form-step__lable">Введите количество:</label>
+								<input autocomplete="off" min="1" max="50" type="number" name="form-input" data-error="Ошибка" placeholder=""
+									class="form-step__input input">
+								<p class="form-step__descr">Обязательно к заполнению!</p>
 							</form>
-							<p class="step-one-plans__descr">Обязательно к заполнению!</p>
 						</div>
-						<div class="step-one-plans__items">
-							<div class="step-one-plans__item item-step-one">
-								<h4 class="item-step-one__name">БАЗОВАЯ</h4>
-								<p class="item-step-one__descr">Для 1-2 жилых комплексов</p>
+						<div class="step-plans__items">
+							<div class="step-one-plans__item item-step">
+								<h4 class="item-step__name">БАЗОВАЯ</h4>
+								<p class="item-step__descr">Для 1-2 жилых комплексов</p>
 
-								<ul class="item-step-one__list list-item-step-one">
-									<li class="list-item-step-one__item">
-										<p class="list-item-step-one__name">Действие лицензии</p>
-										<p class="list-item-step-one__value">до 3 лет</p>
+								<ul class="item-step__list list-item-step">
+									<li class="list-item-step__item">
+										<p class="list-item-step__name">Действие лицензии</p>
+										<p class="list-item-step__value">до 3 лет</p>
 									</li>
-									<li class="list-item-step-one__item">
-										<p class="list-item-step-one__name">Типы помещений/p>
-											<p class="list-item-step-one__value">все</p>
+									<li class="list-item-step__item">
+										<p class="list-item-step__name">Типы помещений/p>
+											<p class="list-item-step__value">все</p>
 									</li>
-									<li class="list-item-step-one__item">
-										<p class="list-item-step-one__name">Обучение</p>
-										<p class="list-item-step-one__value">бесплатно</p>
+									<li class="list-item-step__item">
+										<p class="list-item-step__name">Обучение</p>
+										<p class="list-item-step__value">бесплатно</p>
 									</li>
-									<li class="list-item-step-one__item">
-										<p class="list-item-step-one__name">Загрузка шахматок</p>
-										<p class="list-item-step-one__value">да</p>
+									<li class="list-item-step__item">
+										<p class="list-item-step__name">Загрузка шахматок</p>
+										<p class="list-item-step__value">да</p>
 									</li>
-									<li class="list-item-step-one__item">
-										<p class="list-item-step-one__name">Загрузка планировок</p>
-										<p class="list-item-step-one__value">да</p>
+									<li class="list-item-step__item">
+										<p class="list-item-step__name">Загрузка планировок</p>
+										<p class="list-item-step__value">да</p>
 									</li>
-									<li class="list-item-step-one__item">
-										<p class="list-item-step-one__name">Настройка шаблонов
+									<li class="list-item-step__item">
+										<p class="list-item-step__name">Настройка шаблонов
 											договоров</p>
-										<p class="list-item-step-one__value">да</p>
+										<p class="list-item-step__value">да</p>
 									</li>
-									<li class="list-item-step-one__item">
-										<p class="list-item-step-one__name">Устранение ошибок</p>
-										<p class="list-item-step-one__value">да</p>
+									<li class="list-item-step__item">
+										<p class="list-item-step__name">Устранение ошибок</p>
+										<p class="list-item-step__value">да</p>
 									</li>
 								</ul>
-								<p class="item-step-one__price">KZT 900 000</p>
-								<p class="item-step-one__text">за 1 жилой комплекс</p>
+								<p class="item-step__price">KZT 900 000</p>
+								<p class="item-step__text">за 1 жилой комплекс</p>
 
-								<img src="@img/icons/item-step-one-chek.svg" alt="Check" class="item-step-one__check">
+								<img src="@img/icons/item-step-one-check.svg" alt="Check" class="item-step__check">
 
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
-			</div>
+			</section>
 
 
 		</main>

@@ -1,0 +1,217 @@
+.plans {
+  margin-top: rem(-30);
+
+  /* .plans__container */
+  &__container {}
+
+  /* .plans__title */
+  &__title {
+    position: relative;
+    z-index: 100;
+    @include adaptiveValue("margin-bottom", 75, 75);
+
+    @include adaptiveValue("font-size", 70, 70);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: math.div(84, 70);
+    letter-spacing: 0.03em;
+
+    span {
+      color: #00C4EF;
+    }
+  }
+
+  /* .plans__step-one */
+  &__step-one {}
+}
+
+.step-one-plans {
+
+  /* .step-one-plans__form */
+  &__form {}
+
+  /* .step-one-plans__item */
+  &__item {}
+}
+
+.step-plans {
+
+  /* .step-plans__header */
+  &__header {}
+
+  /* .step-plans__number */
+  &__number {
+    @include adaptiveValue("font-size", 100, 60);
+    font-weight: 500;
+    line-height: math.div(122, 100);
+    letter-spacing: 0.03em;
+  }
+
+  /* .step-plans__step */
+  &__step {
+    display: inline-block;
+    transform: rotate(-90deg);
+    transform-origin: 0 65%;
+
+    @include adaptiveValue("font-size", 14, 10);
+    font-weight: 900;
+    line-height: math.div(17, 14);
+    letter-spacing: 0.29em;
+  }
+
+  /* .step-plans__items */
+  &__items {}
+}
+
+.header-step-plans {
+  position: relative;
+  z-index: 100;
+
+  display: grid;
+  grid-template-columns: 58.8% auto;
+  align-items: center;
+  @include adaptiveValue("padding-left", 87, 60);
+
+  /* .header-step-plans__number */
+  &__number {
+    position: absolute;
+    top: rem(-13);
+
+    color: $secTextColor;
+  }
+
+  /* .header-step-plans__title */
+  &__title {
+    @include adaptiveValue("padding-left", 10, 10);
+  }
+
+  /* .header-step-plans__name */
+  &__name {
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+
+    @include adaptiveValue("font-size", 40, 40);
+    font-weight: 300;
+    line-height: math.div(49, 40);
+
+    letter-spacing: 0.05em;
+  }
+
+  /* .header-step-plans__subname */
+  &__subname {
+    @include adaptiveValue("font-size", 16, 16);
+    font-weight: 500;
+    color: $mainTextColor;
+    line-height: math.div(19.5, 16);
+    letter-spacing: 0.05em;
+  }
+
+  /* .header-step-plans__descr */
+  &__descr {}
+}
+
+.form-step-one {}
+
+.form-step {
+  // display: grid;
+  // grid-template-columns: 1fr;
+  // grid-template-rows: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: rem(10);
+
+  /* .form-step__lable */
+  &__lable {
+    // width: 100%;
+    flex: 1 1 100%;
+    margin-bottom: rem(25);
+    @include adaptiveValue("padding-left", 24, 0);
+
+    @include adaptiveValue("font-size", 16, 16);
+    line-height: math.div(19.5, 16);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+
+  }
+
+  /* .form-step__input */
+  &__input {
+    // display: flex;
+    // align-items: center;
+    margin-right: rem(20);
+    @include adaptiveValue("width", 236, 103);
+    @include adaptiveValue("height", 80, 50);
+    padding-right: rem(20);
+    @include adaptiveValue("padding-left", 50, 40);
+
+
+    border: 1px solid $secTextColor;
+    background-color: transparent;
+    border-radius: rem(40);
+
+    font-size: rem(20);
+    font-weight: 900;
+    color: #fff;
+    line-height: math.div(24, 20);
+    letter-spacing: 0.05em;
+
+  }
+
+  &__descr {
+    position: relative;
+    padding-left: rem(31);
+    display: flex;
+    align-items: center;
+
+    font-size: rem(10);
+    line-height: math.div(12, 10);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: rem(21);
+      height: rem(1);
+      background-color: $secTextColor;
+      left: 0;
+    }
+
+  }
+}
+
+.item-step {
+
+  /* .item-step__name */
+  &__name {}
+
+  /* .item-step__descr */
+  &__descr {}
+
+  /* .item-step__list */
+  &__list {}
+
+  /* .item-step__price */
+  &__price {}
+
+  /* .item-step__text */
+  &__text {}
+
+  /* .item-step__check */
+  &__check {}
+}
+
+.list-item-step {
+
+  /* .list-item-step__item */
+  &__item {}
+
+  /* .list-item-step__name */
+  &__name {}
+
+  /* .list-item-step__value */
+  &__value {}
+}
