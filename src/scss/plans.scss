@@ -278,14 +278,13 @@
 
 .list-item-step {
   @include adaptiveValue("padding-left", 30, 20);
-  @include adaptiveValue("padding-right", 20, 20);
+  @include adaptiveValue("padding-right", 30, 20);
 
   /* .list-item-step__item */
   &__item {
     display: grid;
-    grid-template-columns: 71% auto;
-    // grid-auto-rows: 3em;
-    grid-auto-rows: rem(10);
+    grid-template-columns: auto auto;
+    grid-auto-rows: 3.1em;
     align-items: center;
     // justify-content: space-between;
   }
