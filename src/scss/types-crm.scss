@@ -2,7 +2,25 @@
 	padding-top: rem(228);
 
 	/* .types-crm__container */
-	&__container {}
+	&__container {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			background: #204160;
+			opacity: 0.7;
+			top: -14%;
+			right: 22%;
+			filter: blur(201.5px);
+			transform: rotate(38.38deg);
+			width: rem(432);
+			height: rem(1182);
+
+			// z-index: 20;
+			opacity: 0.7;
+		}
+	}
 
 	/* .types-crm__body */
 	&__body {}
@@ -13,22 +31,26 @@
 		grid-template-columns: repeat(5, 1fr);
 		margin-bottom: rem(74);
 		// grid-template-columns: repeat(auto-fit, minmax(rem(270), 1fr));
-		column-gap: rem(26);
+		@include adaptiveValue("column-gap", 26, 7);
 		overflow-x: auto;
+		position: relative;
 	}
 
 	/* .types-crm__button */
 	&__button {
 		position: relative;
 		cursor: pointer;
-		// max-width: rem(273);
-		@include adaptiveValue("padding-top", 54, 54);
-		@include adaptiveValue("padding-bottom", 45, 37);
-		@include adaptiveValue("padding-left", 53, 40);
+		// width: rem(125);
+		// min-width: rem(94);
+		@include adaptiveValue("padding-top", 54, 13);
+		@include adaptiveValue("padding-bottom", 45, 14);
+		@include adaptiveValue("padding-left", 53, 18);
+		@include adaptiveValue("padding-right", 50, 18);
 		display: grid;
-		gap: rem(20);
+		row-gap: rem(20);
+
 		background-color: rgba(111, 135, 157, .1);
-		border-radius: rem(30);
+		@include adaptiveValue("border-radius", 30, 10);
 
 		&::before {
 			background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
@@ -39,8 +61,9 @@
 			left: 0;
 			top: 0;
 			opacity: 0;
-			border-radius: rem(30);
-			transition: all 0.8s ease-in-out;
+			@include adaptiveValue("border-radius", 30, 10);
+
+			transition: all 0.3s ease-in-out;
 
 			z-index: -1000;
 		}
@@ -54,10 +77,35 @@
 				color: #85E25A;
 			}
 		}
+
+		@media (max-width:$tablet) {
+			grid-template-columns: 1fr 1fr;
+			column-gap: rem(15);
+			align-items: center;
+		}
+
+		@include adaptiveValue("height", 103, 42, 767, 360);
+		@media (max-width:$mobile){
+			//  height: rem(42);
+		}
 	}
 
 	/* .types-crm__icon */
-	&__icon {}
+	&__icon {
+
+
+		img {
+
+			@media (max-width:$mobile) {
+				width: rem(14);
+			}
+
+			// max-width: 120%;
+		}
+
+		// max-width: 15%;
+		// width: rem(61);
+	}
 
 	/* .types-crm__name */
 	&__name {
@@ -74,37 +122,31 @@
 
 	/* .types-crm__item */
 	&__item {
-		letter-spacing: .05em;
-
-		// display: flex;
 		display: grid;
 		grid-template-columns: 1fr 49.5%;
-		// grid-template-columns: repeat(2, 1fr);
+
+		align-items: center;
+		height: rem(650);
+		border: 1px solid #000;
+		letter-spacing: .05em;
+
+		&_chess {
+			align-items: start;
+		}
 	}
 
 	/* .types-crm__image */
 	&__image {
-		position: relative;
 
-		// justify-self: start;
-		// display: flex;
-		// align-items: start;
 		img {
-			position: absolute;
-			// max-width: 100%;
-
-			left: -9%;
-			// bottom: 0;
+			max-width: 100%;
 		}
 
 		&_crm {
-			img {
-				left: -28%;
-				top: 17%;
+			margin-right: rem(-260);
 
-				@media (max-width: em(1600)) {
-					width: 140%;
-				}
+			img {
+				margin-left: rem(-213);
 			}
 		}
 
@@ -119,16 +161,20 @@
 .text-types-crm {
 	padding-top: rem(17);
 
+	// max-width: rem(720);
+
 	/* .text-types-crm__title */
 	&__title {
-
-		font-size: rem(50);
+		position: relative;
+		@include adaptiveValue("font-size", 50, 20);
 		font-weight: 700;
 		line-height: math.div(61, 50);
 		text-transform: uppercase;
 
+		// z-index: 20;
+
 		&:not(:last-child) {
-			margin-bottom: rem(22);
+			@include adaptiveValue("margin-bottom", 22, 15);
 		}
 
 		&:hover {
@@ -139,14 +185,14 @@
 	/* .text-types-crm__slogan */
 	&__slogan {
 		font-size: rem(16);
-		@include adaptiveValue("font-size", 16, 16);
+		@include adaptiveValue("font-size", 16, 14);
 		font-weight: 600;
 		line-height: math.div(28, 16);
 
 		letter-spacing: .05em;
 
 		&:not(:last-child) {
-			margin-bottom: rem(26);
+			@include adaptiveValue("margin-bottom", 26, 15);
 		}
 	}
 
@@ -163,13 +209,15 @@
 		gap: rem(15);
 		padding-left: rem(26);
 		margin-bottom: rem(29);
+		@include adaptiveValue("margin-bottom", 29, 18);
+
 
 		._icon-top & {
 			margin-bottom: rem(0);
 		}
 
 		p {
-			@include adaptiveValue("font-size", 16, 16);
+			@include adaptiveValue("font-size", 16, 14);
 			line-height: math.div(38, 16);
 			line-height: 195%;
 			// letter-spacing: .05em;
@@ -194,13 +242,14 @@
 	/* .text-types-crm__descr */
 	&__descr {
 		padding-top: rem(7);
+		letter-spacing: rem(.3);
+
 
 		&:not(:last-child) {
-			margin-bottom: rem(35);
+			@include adaptiveValue("margin-bottom", 35, 18);
 		}
 
-		font-size: rem(16);
-		@include adaptiveValue("font-size", 16, 16);
+		@include adaptiveValue("font-size", 16, 14);
 		line-height: math.div(28, 16);
 	}
 
