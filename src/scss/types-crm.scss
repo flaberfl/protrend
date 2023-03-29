@@ -86,14 +86,13 @@
 	&__image {
 		position: relative;
 
-
-
 		// justify-self: start;
 		// display: flex;
 		// align-items: start;
 		img {
 			position: absolute;
-			// // max-width: 100%;
+			// max-width: 100%;
+
 			left: -9%;
 			// bottom: 0;
 		}
@@ -102,6 +101,10 @@
 			img {
 				left: -28%;
 				top: 17%;
+
+				@media (max-width: em(1600)) {
+					width: 140%;
+				}
 			}
 		}
 
