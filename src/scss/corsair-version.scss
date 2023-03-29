@@ -80,9 +80,10 @@
   }
 
   &__ellipse {
+    @include adaptiveValue("width", 1328, 755);
     position: absolute;
     right: -55%;
     top: -27%;
-    z-index: 20;
+    z-index: -1;
   }
 }

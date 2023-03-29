@@ -20,7 +20,7 @@
 	/* .types-crm__button */
 	&__button {
 		position: relative;
-		// cursor: pointer;
+		cursor: pointer;
 		// max-width: rem(273);
 		@include adaptiveValue("padding-top", 54, 54);
 		@include adaptiveValue("padding-bottom", 37, 37);
