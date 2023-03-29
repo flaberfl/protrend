@@ -1,5 +1,5 @@
 .types-crm {
-	padding-top: rem(228);
+	@include adaptiveValue("padding-top", 228, 244);
 
 	/* .types-crm__container */
 	&__container {
@@ -178,10 +178,10 @@
 		}
 
 		&_an {
-			@media (max-width:$tablet){
+			@media (max-width:$tablet) {
 				max-width: 85%;
-				
-				  
+
+
 			}
 		}
 

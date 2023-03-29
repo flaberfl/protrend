@@ -1,5 +1,6 @@
 .plans {
   margin-top: rem(-30);
+  @include adaptiveValue("padding-top", -30, 150);
 
   /* .plans__container */
   &__container {}
@@ -8,12 +9,8 @@
   &__title {
     position: relative;
     z-index: 100;
-    @include adaptiveValue("margin-bottom", 75, 75);
+    @include adaptiveValue("margin-bottom", 75, 50);
 
-    @include adaptiveValue("font-size", 70, 70);
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: math.div(84, 70);
     letter-spacing: 0.03em;
 
     span {
@@ -97,7 +94,7 @@
       margin-bottom: rem(24);
     }
 
-    @include adaptiveValue("font-size", 40, 40);
+    @include adaptiveValue("font-size", 40, 20);
     font-weight: 300;
     line-height: math.div(49, 40);
 
@@ -106,7 +103,7 @@
 
   /* .header-step-plans__subname */
   &__subname {
-    @include adaptiveValue("font-size", 16, 16);
+    @include adaptiveValue("font-size", 16, 14);
     font-weight: 500;
     color: $mainTextColor;
     line-height: math.div(19.5, 16);
@@ -115,6 +112,11 @@
 
   /* .header-step-plans__descr */
   &__descr {}
+
+  @media (max-width: em(1200)){
+     grid-template-columns: 1fr;
+     row-gap: rem(20);
+  }
 }
 
 .form-step-one {}
@@ -199,7 +201,7 @@
   // display: flex;
   // flex-direction: column;
   // align-items: center;
-  
+
   max-width: rem(329);
   @include adaptiveValue("padding-top", 36, 20);
   @include adaptiveValue("padding-bottom", 36, 20);
@@ -240,7 +242,7 @@
     padding: rem(14) rem(10);
     height: rem(46);
     width: calc(100% + rem(14));
-  
+
     background: linear-gradient(90deg, #415465 0%, #374858 100%);
     border-radius: rem(7) rem(7) 0 0;
 
@@ -282,8 +284,7 @@
   }
 
   /* .item-step__list */
-  &__list {
-  }
+  &__list {}
 
   /* .item-step__price */
   &__price {
@@ -319,7 +320,7 @@
     transform: scale(0);
 
     transition: all 1s ease 0s;
-    
+
     ._active & {
       transform: scale(1);
       display: inline-block;
@@ -336,7 +337,7 @@
 
     transition: all 1s ease 0s;
 
-    ._active &{
+    ._active & {
       // height: rem(250);
       // height: 20%;
       // margin-bottom: rem(250);

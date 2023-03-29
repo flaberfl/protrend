@@ -19,26 +19,28 @@
     position: relative;
 
     img {
-      margin: 0 auto;
       position: absolute;
-      // left: -21.2rem;
-      // top: -11.7rem;
-      top: rem(-117);
-      // width: 100%;
-      // height: 100%;
-      width: rem(1264);
+      top: rem(-76);
+      @include adaptiveValue("top", -117, -76);
       @include adaptiveValue("width", 1264, 694);
-      // left: -9.2rem;
-      @include adaptiveValue("left", -212, -92);
-      width: 69.4rem;
+      @include adaptiveValue("left", -212, -92, 1920, 992);
+
+      @media (max-width:$tablet) {
+        @include adaptiveValue("left", -14, -90, 992, 360);
+      }
     }
   }
 
   /* .promo__content */
   &__content {
-    @include adaptiveValue("padding-top", 123, 63);
+    @include adaptiveValue("padding-top", 123, 45);
 
-    grid-row-start:  ;
+    @media (max-width:$tablet) {
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+      padding-right: rem(85);
+    }
 
     @media (min-width:$tablet) {
       padding-left: rem(7);
@@ -53,14 +55,20 @@
       @include adaptiveValue("margin-bottom", 55, 50);
     }
 
-    font-size: rem(70);
     @include adaptiveValue("font-size", 70, 30);
     font-weight: 700;
-    line-height: math.div(84, 70);
-    text-transform: uppercase;
     letter-spacing: 0.05em;
 
     z-index: 20;
+
+    @media (max-width:$tablet) {
+      max-width: rem(570);
+    }
+
+    @media (max-width:$mobile) {
+      max-width: rem(500);
+    }
+
   }
 
   &__symbol {
@@ -78,22 +86,30 @@
     letter-spacing: 0.05em;
 
     &:not(:last-child) {
-      margin-bottom: rem(96);
+      // margin-bottom: rem(96);
+      @include adaptiveValue("margin-bottom", 96, 20);
     }
 
     @include adaptiveValue("font-size", 30, 16);
     font-weight: 300;
     line-height: math.div(36, 30);
 
-    @media (max-width: em(1200)) {
+    @media (min-width:$tablet) and (max-width: em(1200)) {
       background-color: rgba(0, 0, 0, .2);
       border-radius: rem(10);
       padding-left: rem(10);
     }
   }
 
+  @media (max-width:$tablet) {}
+
   &__button {
     position: relative;
+
+    @media (max-width:$tablet) {
+      position: absolute;
+      bottom: rem(-163);
+    }
   }
 
   /* .promo__scroll-down */
@@ -131,16 +147,26 @@
     top: 30%;
 
     @media (max-width: em(1700)) {
-      right: 1%;
+      right: 3%;
       top: 16.4%;
+    }
+
+    @media (max-width:$tablet) {
+      right: rem(22);
+      top: 6%;
     }
   }
 
   &__ellipse {
     position: absolute;
     @include adaptiveValue("width", 1328, 851);
+    @include adaptiveValue("height", 1328, 851);
     top: -110%;
     left: -50%;
+
+    @media (max-width:$mobile) {
+      top: -80%;
+    }
 
 
     mix-blend-mode: difference;
