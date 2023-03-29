@@ -29,8 +29,8 @@
 	&__navigation {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
-		margin-bottom: rem(74);
-		// grid-template-columns: repeat(auto-fit, minmax(rem(270), 1fr));
+		@include adaptiveValue("margin-bottom", 74, 20);
+
 		@include adaptiveValue("column-gap", 26, 7);
 		overflow-x: auto;
 		position: relative;
@@ -40,12 +40,11 @@
 	&__button {
 		position: relative;
 		cursor: pointer;
-		// width: rem(125);
-		// min-width: rem(94);
 		@include adaptiveValue("padding-top", 54, 13);
 		@include adaptiveValue("padding-bottom", 45, 14);
 		@include adaptiveValue("padding-left", 53, 18);
 		@include adaptiveValue("padding-right", 50, 18);
+		@include adaptiveValue("height", 103, 42, 767, 360);
 		display: grid;
 		row-gap: rem(20);
 
@@ -68,13 +67,22 @@
 			z-index: -1000;
 		}
 
-		&:hover {
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					opacity: 1;
+				}
+
+				.types-crm__name {
+					color: #85E25A;
+				}
+
+			}
+		}
+
+		&._tab-active {
 			&::before {
 				opacity: 1;
-			}
-
-			.types-crm__name {
-				color: #85E25A;
 			}
 		}
 
@@ -84,27 +92,20 @@
 			align-items: center;
 		}
 
-		@include adaptiveValue("height", 103, 42, 767, 360);
-		@media (max-width:$mobile){
-			//  height: rem(42);
-		}
+
 	}
 
 	/* .types-crm__icon */
 	&__icon {
-
-
 		img {
-
 			@media (max-width:$mobile) {
-				width: rem(14);
+				width: rem(24);
 			}
 
-			// max-width: 120%;
+			@media (max-width:$mobileSmall) {
+				width: rem(14);
+			}
 		}
-
-		// max-width: 15%;
-		// width: rem(61);
 	}
 
 	/* .types-crm__name */
@@ -133,6 +134,12 @@
 		&_chess {
 			align-items: start;
 		}
+
+		@media (max-width:$tablet) {
+			grid-template-columns: 1fr;
+			height: 100%;
+			row-gap: rem(20);
+		}
 	}
 
 	/* .types-crm__image */
@@ -140,13 +147,25 @@
 
 		img {
 			max-width: 100%;
+			
+			@media (max-width:$tablet) {
+				max-width: 70%;
+			}
 		}
 
 		&_crm {
-			margin-right: rem(-260);
+
+			@media (min-width:$tablet) {
+				margin-right: rem(-260);
+
+			}
 
 			img {
-				margin-left: rem(-213);
+
+				@media (min-width:$tablet) {
+					margin-left: rem(-213);
+
+				}
 			}
 		}
 
