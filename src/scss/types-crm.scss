@@ -5,21 +5,24 @@
 	&__container {
 		position: relative;
 
-		&::before {
-			content: "";
-			position: absolute;
-			background: #204160;
-			opacity: 0.7;
-			top: -14%;
-			right: 22%;
-			filter: blur(201.5px);
-			transform: rotate(38.38deg);
-			width: rem(432);
-			height: rem(1182);
+		@media (min-width:$tablet) {
+			&::before {
+				content: "";
+				position: absolute;
+				background: #204160;
+				opacity: 0.7;
+				top: -14%;
+				right: 22%;
+				filter: blur(201.5px);
+				transform: rotate(38.38deg);
+				width: rem(432);
+				height: rem(1182);
 
-			// z-index: 20;
-			opacity: 0.7;
+				// z-index: 20;
+				opacity: 0.7;
+			}
 		}
+
 	}
 
 	/* .types-crm__body */
@@ -147,9 +150,14 @@
 
 		img {
 			max-width: 100%;
-			
+
 			@media (max-width:$tablet) {
-				max-width: 70%;
+				max-width: 60%;
+			}
+
+			@media (max-width:$mobile) {
+				max-width: 100%;
+
 			}
 		}
 
@@ -167,6 +175,18 @@
 
 				}
 			}
+		}
+
+		&_an {
+			@media (max-width:$tablet){
+				max-width: 85%;
+				
+				  
+			}
+		}
+
+		@media (max-width:$tablet) {
+			text-align: center;
 		}
 
 	}
