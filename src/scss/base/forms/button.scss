@@ -7,6 +7,7 @@
 	align-items: center;
 	padding: rem(0) rem(22);
 	min-width: rem(218);
+	box-shadow: $shadowBtn;
 
 	@include adaptiveValue("height", 70, 50);
 
@@ -40,8 +41,21 @@
 		background: none;
 		box-shadow: none;
 	}
+
+	&_248 {
+		@include adaptiveValue("width", 248, 218);
+	}
+
+	&_tr-b {
+		background: none;
+		box-shadow: none;
+		border: 1px solid #FA982F;
+	}
 }
 
-
-
-
+.b-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: rem(14);
+}

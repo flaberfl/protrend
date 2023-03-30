@@ -447,6 +447,14 @@
     gap: rem(14);
     margin-top: rem(30);
 
+    &_up {
+      justify-content: space-between;
+
+      span {
+        color: #FF6767;
+      }
+    }
+
     span {
       @include adaptiveValue("font-size", 16, 10);
       font-weight: 700;

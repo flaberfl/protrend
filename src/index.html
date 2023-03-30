@@ -512,10 +512,12 @@
 					<div class="swiper-pagination-plans swiper-pagination-plans_one"></div>
 
 					<div class="plans__button-block">
-						<button class="plans__button plans__button_down">
-							<img src="@img/icons/arrow-d.svg" alt="Стрелка вниз">
-						</button>
-						<span>Перейти <br> ко второму шагу</span>
+						<div class="b-wrap">
+							<button data-goto=".plans__step-two" class="plans__button plans__button_down">
+								<img src="@img/icons/arrow-d.svg" alt="Стрелка вниз">
+							</button>
+							<span>Перейти <br> ко второму шагу</span>
+						</div>
 					</div>
 
 					<div data-spollers class="spollers plans__faq">
@@ -761,11 +763,16 @@
 					</div>
 
 					<div class="swiper-pagination-plans swiper-pagination-plans_two"></div>
-					<div class="plans__button-block">
-						<button class="plans__button plans__button_down">
-							<img src="@img/icons/arrow-d.svg" alt="Стрелка вверх">
-						</button>
-						<span>Перейти <br> ко второму шагу</span>
+					<div class="plans__button-block plans__button-block_up">
+						<button type="submit" class="button button_tr-b button_248">Связаться с нами</button>
+						<div class="b-wrap">
+							<button data-goto=".plans__step-one" class="plans__button plans__button_down">
+								<img src="@img/icons/arrow-up.svg" alt="Стрелка вверх">
+							</button>
+							<span>Вернуться <br> к первому шагу</span>
+						</div>
+						<button type="submit" class="button button_248">Оформить заявку</button>
+
 					</div>
 
 					<div class="plans__decor-ellipse decor-ellipse">
