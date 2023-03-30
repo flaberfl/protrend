@@ -66,7 +66,7 @@ function initSliders() {
 			slidesPerView: 'auto',
 			spaceBetween: 34,
 			// freeMode: true,
-			autoHeight: true,
+			// autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,
