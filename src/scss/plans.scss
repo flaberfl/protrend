@@ -5,6 +5,39 @@
   /* .plans__container */
   &__container {
     position: relative;
+
+    &::before,
+    &::after {
+
+      @media (min-width:$mobile) {
+
+        content: '';
+
+        position: absolute;
+        width: rem(432);
+        height: rem(1182);
+
+        right: 21%;
+        top: 10%;
+        background: #204160;
+        opacity: 0.7;
+        filter: blur(201.5px);
+        transform: rotate(38.38deg);
+        z-index: -1000;
+      }
+
+    }
+
+    &::before {
+      right: 21%;
+      top: 10%;
+    }
+
+    &::after {
+      right: 40%;
+      top: 47%;
+    }
+
   }
 
   /* .plans__title */
@@ -60,7 +93,7 @@
   &__step {
     display: inline-block;
     transform: rotate(-90deg);
-    transform-origin: 0 65%;
+    transform-origin: 8% 57%;
 
     @include adaptiveValue("font-size", 14, 10);
     font-weight: 900;
@@ -450,6 +483,10 @@
     &_up {
       justify-content: space-between;
 
+      @media (max-width:$mobile) {
+        flex-direction: column;
+      }
+
       span {
         color: #FF6767;
       }
@@ -461,7 +498,10 @@
       line-height: math.div(19, 16);
       letter-spacing: 0.05em;
       color: #B1E718;
+
     }
+
+
   }
 
   /* .plans__button */
@@ -507,10 +547,98 @@
   &__faq {
     @include adaptiveValue("margin-top", 28, 24);
     @include adaptiveValue("margin-bottom", 163, 73);
+
+    &_sec {
+      @include adaptiveValue("margin-bottom", 70, 75);
+    }
   }
 
   &__decor-ellipse {
     top: 48%;
     left: -59%;
   }
+}
+
+
+.step-plans {
+
+  /* .step-plans__operation */
+  &__operation {}
+}
+
+.operation-plans {
+
+  /* .operation-plans__items */
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* .operation-plans__item */
+  &__item {}
+}
+
+.item-operation {
+
+  /* .item-operation_1 */
+  &_1 {}
+
+  /* .item-operation_2 */
+  &_2 {}
+
+  /* .item-operation_3 */
+  &_3 {}
+
+  /* .item-operation_4 */
+  &_4 {}
+
+  /* .item-operation__icon */
+  &__icon {
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding-left: rem(3);
+    padding-top: rem(9);
+
+    @include adaptiveValue("width", 124, 78);
+    @include adaptiveValue("height", 124, 78);
+    background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
+    border-radius: 50%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      display: block;
+      background: url('@img/steps/operatio-1-b.svg') no-repeat;
+      width: rem(43);
+      height: rem(43);
+
+      // background-color: red;
+
+
+    }
+
+    /* .item-operation__icon_1 */
+    &_1 {}
+
+    /* .item-operation__icon_2 */
+    &_2 {}
+
+    /* .item-operation__icon_3 */
+    &_3 {}
+
+    /* .item-operation__icon_4 */
+    &_4 {}
+
+  }
+
+  /* .item-operation__name */
+  &__name {}
+
+  /* .item-operation__list */
+  &__list {}
+
+  /* .item-operation__item */
+  &__item {}
 }

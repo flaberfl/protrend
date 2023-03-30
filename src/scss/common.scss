@@ -16,7 +16,7 @@
 }
 
 .swiper-pagination-plans {
-  margin-top: rem(50);
+  @include adaptiveValue("margin-top", 50, 38);
   display: flex;
   gap: rem(12);
   align-items: center;
