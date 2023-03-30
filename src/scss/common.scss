@@ -40,21 +40,25 @@
 // }
 
 .swiper-pagination-plans {
-margin-top: rem(50);
-  text-align: center;
+  margin-top: rem(50);
   display: flex;
   gap: rem(12);
   align-items: center;
   justify-content: center;
+
+  text-align: center;
+
+  @media (min-width:em(1200)) {
+    display: none;
+  }
 }
 
 .swiper-pagination-bullet {
   cursor: pointer;
-  // position: absolute;
-  // bottom: 0;
-  // display: inline-block;
-  width: rem(10);
-  height: rem(10);
+  @include adaptiveValue("width", 15, 10);
+  @include adaptiveValue("height", 15, 10);
+  // width: rem(10);
+  // height: rem(10);
   border-radius: 50%;
 
   background-color: $bgMenu;

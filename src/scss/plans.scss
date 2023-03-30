@@ -3,8 +3,7 @@
   padding-bottom: rem(100);
 
   /* .plans__container */
-  &__container {
-  }
+  &__container {}
 
   /* .plans__title */
   &__title {
@@ -22,8 +21,7 @@
   /* .plans__step-one */
   &__step-one {}
 
-  &__slider {
-  }
+  &__slider {}
 }
 
 .step-one-plans {
@@ -422,5 +420,64 @@
     font-weight: 600;
     letter-spacing: 0.05em;
     text-align: right;
+  }
+}
+
+.plans {
+
+  &__button-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(14);
+    margin-top: rem(30);
+
+    span {
+      @include adaptiveValue("font-size", 16, 10);
+      font-weight: 700;
+      line-height: math.div(19, 16);
+      letter-spacing: 0.05em;
+      color: #B1E718;
+    }
+  }
+
+  /* .plans__button */
+  &__button {
+    position: relative;
+    display: grid;
+    place-items: center;
+    @include adaptiveValue("width", 145, 77);
+    @include adaptiveValue("height", 145, 77);
+
+    border-radius: 50%;
+
+    background-color: #2D3843;
+    // z-index: -1000;
+
+    &:hover {
+      &::before {
+        box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    /* .plans__button_down */
+    &_down {}
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 72%;
+      height: 72%;
+
+      background-color: #314150;
+      border-radius: 50%;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
+      // z-index: 10;
+    }
+
+    img {
+      position: relative;
+      @include adaptiveValue("height", 43, 19);
+    }
   }
 }
