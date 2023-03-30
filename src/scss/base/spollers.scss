@@ -15,10 +15,21 @@
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: rem(10) rem(15);
-	border-radius: rem(5);
+	// padding: rem(10) rem(15);
+	border-radius: rem(40);
 	position: relative;
+	background-color: #445D74;
+	// display: flex;
+	// align-items: center;
+
+	@include adaptiveValue("height", 80, 60);
+	@include adaptiveValue("padding-left", 39, 28);
+
+	@include adaptiveValue("font-size", 20, 14);
+	font-weight: 600;
+	line-height: math.div(24 , 20);
+	letter-spacing: 0.05em;
+
 	._spoller-init & {
 		cursor: pointer;
 		&::before,
