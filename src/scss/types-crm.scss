@@ -65,8 +65,7 @@
 			opacity: 0;
 			@include adaptiveValue("border-radius", 30, 10);
 
-			transition: all 0.3s ease-in-out;
-
+			transition: all 0.3s ease 0s;
 			z-index: -1000;
 		}
 

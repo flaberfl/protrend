@@ -39,7 +39,9 @@
 .step-plans {
 
   /* .step-plans__header */
-  &__header {}
+  &__header {
+    @include adaptiveValue("margin-bottom", 50, 24);
+  }
 
   /* .step-plans__number */
   &__number {
@@ -63,9 +65,11 @@
 
   /* .step-plans__items */
   &__items {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    // overflow-x: auto;
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
     // @include adaptiveValue("column-gap", 34, 34);
+    // align-items: flex-start;
 
   }
 }
@@ -73,10 +77,8 @@
 .header-step-plans {
   position: relative;
   z-index: 100;
-  margin-bottom: rem(50);
 
   display: grid;
-  // grid-template-columns: 58.8% auto;
   grid-template-columns: 57.7% auto;
   align-items: center;
   @include adaptiveValue("padding-left", 87, 60);
@@ -93,7 +95,7 @@
   /* .header-step-plans__title */
   &__title {
 
-    @media (max-width:$tablet){
+    @media (max-width:$tablet) {
       // margin-bottom: rem();
       @include adaptiveValue("margin-bottom", 20, 12);
     }
@@ -234,16 +236,10 @@
   height: auto;
   grid-template-rows: auto-fit auto 1fr;
   justify-items: center;
-
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-
-  max-width: rem(329);
+  @include adaptiveValue("width", 329, 289);
   @include adaptiveValue("padding-top", 36, 20);
   @include adaptiveValue("padding-bottom", 36, 20);
-  // @include adaptiveValue("padding-left", 30, 20);
-  // @include adaptiveValue("padding-right", 20, 20);
+
 
   background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
   border-radius: 30px;
@@ -256,8 +252,7 @@
 
   /* .item-step__name */
   &__name {
-    // @include adaptiveValue("margin-bottom", 96, 96);
-    margin-bottom: rem(31);
+    @include adaptiveValue("margin-bottom", 31, 13);
 
     @include adaptiveValue("font-size", 20, 14);
     line-height: math.div(24, 20);
@@ -275,9 +270,10 @@
   &__descr {
     position: relative;
     display: block;
-    margin-bottom: rem(36);
+    @include adaptiveValue("margin-bottom", 36, 13);
     padding: rem(14) rem(10);
     height: rem(46);
+    @include adaptiveValue("height", 46, 38);
     width: calc(100% + rem(14));
 
     background: linear-gradient(90deg, #415465 0%, #374858 100%);
@@ -325,7 +321,7 @@
 
   /* .item-step__price */
   &__price {
-    @include adaptiveValue("font-size", 36, 36);
+    @include adaptiveValue("font-size", 36, 30);
     line-height: math.div(44, 36);
     color: $secTextColor;
     font-weight: 800;
@@ -338,7 +334,7 @@
 
   /* .item-step__text */
   &__text {
-    @include adaptiveValue("font-size", 14, 14);
+    @include adaptiveValue("font-size", 14, 10);
     font-weight: 600;
     line-height: math.div(24, 14);
     color: $secTextColor;
@@ -350,13 +346,12 @@
 
   /* .item-step__check */
   &__check {
-    // position: absolute;
-    margin-top: rem(30);
+    @include adaptiveValue("margin-top", 30, 20);
     margin-bottom: rem(-4);
     display: none;
     transform: scale(0);
 
-    transition: all 1s ease 0s;
+    transition: all .4s ease 0s;
 
     ._active & {
       transform: scale(1);
@@ -367,18 +362,13 @@
   /* .item-step__footer */
 
   &__footer {
-    flex: 1 1 100%;
     position: relative;
-    padding-top: rem(25);
-    text-align: center;
+    @include adaptiveValue("padding-top", 25, 18);
 
+    text-align: center;
     transition: all 1s ease 0s;
 
-    ._active & {
-      // height: rem(250);
-      // height: 20%;
-      // margin-bottom: rem(250);
-    }
+    ._active & {}
 
   }
 
@@ -387,7 +377,7 @@
 .list-item-step {
   position: relative;
   display: grid;
-  row-gap: rem(24);
+  @include adaptiveValue("row-gap", 24, 11);
   @include adaptiveValue("padding-left", 30, 20);
   @include adaptiveValue("padding-right", 30, 20);
 
@@ -404,7 +394,7 @@
     row-gap: rem(24);
 
     &:last-child {
-      padding-bottom: rem(25);
+      @include adaptiveValue("padding-bottom", 25, 16);
       border-bottom: 1px solid #414E53;
 
     }
@@ -412,8 +402,6 @@
 
   /* .list-item-step__name */
   &__name {
-    // max-width: rem(160);
-    font-size: rem(14);
     @include adaptiveValue("font-size", 16, 14);
     font-weight: 400;
     line-height: math.div(24, 16);
@@ -423,6 +411,7 @@
   &__value {
     padding-top: rem(3);
 
+    @include adaptiveValue("font-size", 16, 14);
     font-weight: 600;
     letter-spacing: 0.05em;
     text-align: right;

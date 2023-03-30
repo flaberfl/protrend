@@ -64,7 +64,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 4,
-			spaceBetween: 44,
+			spaceBetween: 34,
 			autoHeight: true,
 			speed: 800,
 			//touchRatio: 0,
@@ -73,16 +73,16 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 			// Dotts
-			//pagination: {
-			//	el: '.slider-quality__pagging',
-			//	clickable: true,
-			//},
-			// Arrows
-			navigation: {
-				nextEl: '.about__more .more__item_next',
-				prevEl: '.about__more .more__item_prev',
+			pagination: {
+				el: '.slider-quality__pagging',
+				clickable: true,
 			},
-		
+			// Arrows
+			// navigation: {
+			// 	nextEl: '.about__more .more__item_next',
+			// 	prevEl: '.about__more .more__item_prev',
+			// },
+
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
@@ -98,11 +98,11 @@ function initSliders() {
 					spaceBetween: 44,
 				},
 				1268: {
-					slidesPerView: 3,
-					spaceBetween: 44,
+					slidesPerView: 4,
+					spaceBetween: 34,
 				},
 			},
-	
+
 			on: {
 
 			}
