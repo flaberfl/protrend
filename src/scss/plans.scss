@@ -239,7 +239,7 @@
 .item-step {
   position: relative;
   display: grid;
-  height: auto;
+  height: 100%;
   grid-template-rows: auto-fit auto 1fr;
   justify-items: center;
   @include adaptiveValue("width", 329, 289);
@@ -337,6 +337,15 @@
     ._active & {
       color: #fff;
     }
+
+    .step-two-plans__item & {
+      @include adaptiveValue("font-size", 28, 22);
+      line-height: math.div(34, 28);
+
+      span {
+        font-weight: 300;
+      }
+    }
   }
 
   /* .item-step__text */
@@ -422,6 +431,10 @@
     font-weight: 600;
     letter-spacing: 0.05em;
     text-align: right;
+
+    &_sm {
+      font-size: rem(11);
+    }
   }
 }
 
@@ -485,6 +498,7 @@
 
   &__faq {
     @include adaptiveValue("margin-top", 28, 24);
+    @include adaptiveValue("margin-bottom", 163, 73);
   }
 
   &__decor-ellipse {
