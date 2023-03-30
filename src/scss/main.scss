@@ -157,19 +157,12 @@
     }
   }
 
-  &__ellipse {
-    position: absolute;
-    @include adaptiveValue("width", 1328, 851);
-    @include adaptiveValue("height", 1328, 851);
+  &__decor-ellipse {
     top: -110%;
     left: -50%;
 
     @media (max-width:$mobile) {
       top: -80%;
     }
-
-
-    mix-blend-mode: difference;
-    z-index: -1000;
   }
 }

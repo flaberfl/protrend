@@ -3,7 +3,9 @@
   padding-bottom: rem(100);
 
   /* .plans__container */
-  &__container {}
+  &__container {
+    position: relative;
+  }
 
   /* .plans__title */
   &__title {
@@ -479,5 +481,14 @@
       position: relative;
       @include adaptiveValue("height", 43, 19);
     }
+  }
+
+  &__faq {
+    @include adaptiveValue("margin-top", 28, 24);
+  }
+
+  &__decor-ellipse {
+    top: 48%;
+    left: -59%;
   }
 }

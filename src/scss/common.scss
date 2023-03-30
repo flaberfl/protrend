@@ -8,6 +8,13 @@
   // letter-spacing: 0.03em;
 }
 
+.decor-ellipse {
+  position: absolute;
+  @include adaptiveValue("width", 1328, 851);
+  @include adaptiveValue("height", 1328, 851);
+  z-index: -1000;
+}
+
 // .body-grid {
 //   display: grid;
 //   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

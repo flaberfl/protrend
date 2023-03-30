@@ -4,12 +4,12 @@
 // Блок со спойлерами
 .spollers {
 	display: grid;
-	gap: 15px;
+	gap: rem(15);
 }
 
 // Спойлер
 .spollers__item {
-	font-size: rem(20);
+	// font-size: rem(20);
 }
 
 // Заголовок спойлера
@@ -17,14 +17,19 @@
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	// padding: rem(10) rem(15);
 	border-radius: rem(40);
 	position: relative;
-	// display: flex;
-	// align-items: center;
+	display: flex;
+	align-items: center;
+	// max-width: rem(230);
 
 	@include adaptiveValue("height", 80, 60);
 	@include adaptiveValue("padding-left", 39, 28);
+	@include adaptiveValue("padding-right", 12, 8);
+
+	// &:not(:last-child) {
+	// 	margin-bottom: rem(15);
+	// }
 
 	background-color: #445D74;
 	@include adaptiveValue("font-size", 20, 14);
@@ -41,12 +46,15 @@
 		&::after {
 			content: "";
 			position: absolute;
-			right: 10px;
+			@include adaptiveValue("right", 36, 26);
 			top: 50%;
-			background-color: #000;
-			height: 2px;
-			width: 15px;
-			transition: transform 0.5s ease 0s;
+			background-color: #fff;
+			height: rem(2);
+			@include adaptiveValue("width", 7.5, 4.5);
+
+
+			z-index: 20;
+			transition: all 0.5s ease 0s;
 		}
 
 		&::before {
@@ -57,9 +65,20 @@
 			transform: translate(0, -50%) rotate(-40deg);
 		}
 
+		svg {
+			position: absolute;
+			right: rem(10);
+		}
+
 		&._spoller-active {
+
 			background: linear-gradient(294.61deg, #263039 5.58%, #576776 126.67%);
-			opacity: 1;
+
+			// opacity: 1;
+			&::before,
+			&::after {
+				background-color: #263039;
+			}
 
 			&::before {
 				transform: translateX(-75%) rotate(-40deg);
@@ -68,13 +87,45 @@
 			&::after {
 				transform: rotate(40deg);
 			}
+
+			.circle {
+				background: #6F879D;
+				box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.1);
+			}
 		}
 	}
 }
 
 // Контент спойлера
 .spollers__body {
-	padding: rem(20);
-	border-radius: rem(5);
-	border: 1px solid #eee;
+
+	@include adaptiveValue("padding-top", 34, 21);
+	@include adaptiveValue("padding-left", 40, 0);
+	@include adaptiveValue("padding-bottom", 43, 0);
+
+	@include adaptiveValue("font-size", 16, 12);
+	line-height: math.div(28, 16);
+	font-weight: 500;
+	letter-spacing: 0.05em;
+
+	p {
+		&:not(:last-child) {
+			margin-bottom: rem(27);
+			@include adaptiveValue("margin-bottom", 27, 12);
+		}
+	}
+
+	b {
+		font-weight: 700;
+	}
+}
+
+.circle {
+	position: absolute;
+	@include adaptiveValue("width", 62, 45);
+	@include adaptiveValue("height", 62, 45);
+
+	background: linear-gradient(294.61deg, #263039 5.58%, #576776 126.67%);
+	border-radius: rem(40);
+	@include adaptiveValue("right", 12, 8);
 }
