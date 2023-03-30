@@ -63,18 +63,20 @@ function initSliders() {
 			*/
 			observer: true,
 			observeParents: true,
-			slidesPerView: 4,
+			slidesPerView: 'auto',
 			spaceBetween: 34,
+			// freeMode: true,
 			autoHeight: true,
 			speed: 800,
+
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			// loop: true,
 			//preloadImages: false,
 			//lazy: true,
 			// Dotts
 			pagination: {
-				el: '.slider-quality__pagging',
+				el: '.swiper-pagination-plans',
 				clickable: true,
 			},
 			// Arrows
@@ -83,25 +85,25 @@ function initSliders() {
 			// 	prevEl: '.about__more .more__item_prev',
 			// },
 
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 44,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 34,
-				},
-			},
+			// breakpoints: {
+			// 	320: {
+			// 		slidesPerView: 1,
+			// 		spaceBetween: 0,
+			// 		autoHeight: true,
+			// 	},
+			// 	768: {
+			// 		slidesPerView: 2,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	992: {
+			// 		slidesPerView: 3,
+			// 		spaceBetween: 44,
+			// 	},
+			// 	1268: {
+			// 		slidesPerView: 4,
+			// 		spaceBetween: 34,
+			// 	},
+			// },
 
 			on: {
 

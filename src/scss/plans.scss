@@ -20,6 +20,10 @@
 
   /* .plans__step-one */
   &__step-one {}
+
+  &__slider {
+    padding-bottom: rem(200);
+  }
 }
 
 .step-one-plans {
@@ -237,6 +241,7 @@
   grid-template-rows: auto-fit auto 1fr;
   justify-items: center;
   @include adaptiveValue("width", 329, 289);
+  // width: rem(300) !important;
   @include adaptiveValue("padding-top", 36, 20);
   @include adaptiveValue("padding-bottom", 36, 20);
 
