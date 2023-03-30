@@ -1,6 +1,6 @@
 .plans {
   margin-top: rem(-30);
-  @include adaptiveValue("padding-top", -30, 150);
+  @include adaptiveValue("padding-top", -30, 100);
 
   /* .plans__container */
   &__container {}
@@ -25,7 +25,12 @@
 .step-one-plans {
 
   /* .step-one-plans__form */
-  &__form {}
+  &__form {
+
+    @media (max-width:$mobileSmall) {
+      @include adaptiveValue("margin-left", -30, -60);
+    }
+  }
 
   /* .step-one-plans__item */
   &__item {}
@@ -71,9 +76,11 @@
   margin-bottom: rem(50);
 
   display: grid;
-  grid-template-columns: 58.8% auto;
+  // grid-template-columns: 58.8% auto;
+  grid-template-columns: 57.7% auto;
   align-items: center;
   @include adaptiveValue("padding-left", 87, 60);
+  gap: rem(15);
 
   /* .header-step-plans__number */
   &__number {
@@ -85,13 +92,21 @@
 
   /* .header-step-plans__title */
   &__title {
-    @include adaptiveValue("padding-left", 10, 10);
+
+    @media (max-width:$tablet){
+      // margin-bottom: rem();
+      @include adaptiveValue("margin-bottom", 20, 12);
+    }
+
+    @media (min-width:$tablet) {
+      padding-left: rem(10);
+    }
   }
 
   /* .header-step-plans__name */
   &__name {
     &:not(:last-child) {
-      margin-bottom: rem(24);
+      @include adaptiveValue("margin-bottom", 24, 14);
     }
 
     @include adaptiveValue("font-size", 40, 20);
@@ -113,34 +128,39 @@
   /* .header-step-plans__descr */
   &__descr {}
 
-  @media (max-width: em(1200)){
-     grid-template-columns: 1fr;
-     row-gap: rem(20);
+  @media (max-width:$tablet) {
+    grid-template-columns: 1fr;
+    row-gap: rem(20);
   }
 }
 
 .form-step-one {}
 
 .form-step {
-  // display: grid;
-  // grid-template-columns: 1fr;
-  // grid-template-rows: 1fr 1fr;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-top: rem(10);
+
+  @media (min-width:$tablet) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    // padding-top: rem(10);
+  }
 
   /* .form-step__lable */
   &__lable {
     // width: 100%;
     flex: 1 1 100%;
     margin-bottom: rem(25);
-    @include adaptiveValue("padding-left", 24, 0);
 
-    @include adaptiveValue("font-size", 16, 16);
+    @include adaptiveValue("font-size", 16, 12);
     line-height: math.div(19.5, 16);
     font-weight: 500;
     letter-spacing: 0.05em;
+
+    @include adaptiveValue("padding-left", 24, 10, 1920, 1200);
+
+    @media (max-width:$tablet) {
+      margin-right: rem(17);
+    }
 
   }
 
@@ -148,12 +168,11 @@
   &__input {
     // display: flex;
     // align-items: center;
-    margin-right: rem(20);
+    margin-right: rem(10);
     @include adaptiveValue("width", 236, 103);
     @include adaptiveValue("height", 80, 50);
     padding-right: rem(20);
     @include adaptiveValue("padding-left", 50, 40);
-
 
     border: 1px solid $secTextColor;
     background-color: transparent;
@@ -165,27 +184,45 @@
     line-height: math.div(24, 20);
     letter-spacing: 0.05em;
 
+    @media (min-width:em(1200)) {
+      margin-right: rem(20);
+    }
+
+    @media (max-width:$mobile) {
+      margin-right: 0;
+    }
+
   }
 
   &__descr {
-    position: relative;
-    padding-left: rem(31);
-    display: flex;
-    align-items: center;
-
-    font-size: rem(10);
+    @include adaptiveValue("font-size", 10, 8);
     line-height: math.div(12, 10);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 
-    &::before {
-      content: '';
-      position: absolute;
-      width: rem(21);
-      height: rem(1);
-      background-color: $secTextColor;
-      left: 0;
+    @media (max-width:$mobile) {}
+
+    @media (max-width: em(1200)) {
+      max-width: rem(140);
+    }
+
+    @media (min-width:em(1200)) {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      padding-left: rem(31);
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: rem(21);
+        height: rem(1);
+        background-color: $secTextColor;
+        left: 0;
+      }
+
     }
 
   }
