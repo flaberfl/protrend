@@ -1,5 +1,4 @@
 .plans {
-  margin-top: rem(-30);
   @include adaptiveValue("padding-top", -30, 100);
 
   /* .plans__container */
@@ -22,7 +21,7 @@
   &__step-one {}
 
   &__slider {
-    padding-bottom: rem(200);
+    position: relative;
   }
 }
 
@@ -41,6 +40,7 @@
 }
 
 .step-plans {
+  // position: relative;
 
   /* .step-plans__header */
   &__header {
@@ -69,6 +69,8 @@
 
   /* .step-plans__items */
   &__items {
+    // padding-bottom: rem(200);
+
     // overflow-x: auto;
     // display: grid;
     // grid-template-columns: repeat(4, 1fr);

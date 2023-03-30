@@ -38,3 +38,30 @@
 //     }
 //   }
 // }
+
+.swiper-pagination-plans {
+  padding-top: rem(60);
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  gap: rem(12);
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  // position: absolute;
+  // bottom: 0;
+  // display: inline-block;
+  width: rem(10);
+  height: rem(10);
+  border-radius: 50%;
+
+  background-color: $bgMenu;
+  transition: all 0.3s ease 0s;
+
+  &-active {
+    background-color: #D9D9D9;
+  }
+}
