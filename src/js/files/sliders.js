@@ -110,6 +110,68 @@ function initSliders() {
 			}
 		});
 	}
+	if (document.querySelector('.clients-reviews__slider')) { // Указываем класс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.clients-reviews__slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			// modules: [Pagination],
+			/*
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: 45,
+			// freeMode: true,
+			// autoHeight: true,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			// loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			// pagination: {
+			// 	el: '.swiper-pagination-plans_two',
+			// 	clickable: true,
+			// },
+			// Arrows
+			// navigation: {
+			// 	nextEl: '.about__more .more__item_next',
+			// 	prevEl: '.about__more .more__item_prev',
+			// },
+
+			// breakpoints: {
+			// 	320: {
+			// 		slidesPerView: 1,
+			// 		spaceBetween: 0,
+			// 		autoHeight: true,
+			// 	},
+			// 	768: {
+			// 		slidesPerView: 2,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	992: {
+			// 		slidesPerView: 3,
+			// 		spaceBetween: 44,
+			// 	},
+			// 	1268: {
+			// 		slidesPerView: 4,
+			// 		spaceBetween: 34,
+			// 	},
+			// },
+
+			on: {
+
+			}
+		});
+	}
 	if (document.querySelector('.plans__slider_two')) { // Указываем класс нужного слайдера
 		// Создаем слайдер
 		new Swiper('.plans__slider_two', {

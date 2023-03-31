@@ -1,0 +1,78 @@
+.clients-reviews {
+
+  /* .clients-reviews__container */
+  &__container {}
+
+  /* .clients-reviews__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 50);
+    margin-bottom: rem(50);
+    letter-spacing: 0.05em;
+
+    span {
+      color: #FA982F;
+    }
+  }
+
+  /* .clients-reviews__subtitle */
+  &__subtitle {
+    @include adaptiveValue("margin-bottom", 48, 48);
+    margin-bottom: rem(48);
+    @include adaptiveValue("font-size", 40, 40);
+    font-weight: 300;
+    line-height: math.div(28, 40);
+    color: $mainTextColor;
+    letter-spacing: 0.05em;
+  }
+
+  /* .clients-reviews__clients */
+  &__clients {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+
+    // overflow-x: auto;
+  }
+
+  /* .clients-reviews__logo */
+  &__logo {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  /* .clients-reviews__reviews */
+  &__reviews {}
+}
+
+.title {}
+
+.reviews-clients {
+
+  /* .reviews-clients__list */
+  &__list {}
+
+  /* .reviews-clients__item */
+  &__item {}
+}
+
+.reviews {
+
+  /* .reviews__badge */
+  &__badge {}
+
+  /* .reviews__image */
+  &__image {}
+
+  /* .reviews__name */
+  &__name {}
+
+  /* .reviews__position */
+  &__position {}
+
+  /* .reviews__job */
+  &__job {}
+
+  /* .reviews__audio */
+  &__audio {}
+}
