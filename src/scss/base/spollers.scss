@@ -16,24 +16,20 @@
 .spollers__title {
 	width: 100%;
 	cursor: default;
-	text-align: left;
 	border-radius: rem(40);
 	position: relative;
 	display: flex;
 	align-items: center;
-	// max-width: rem(230);
 
 	@include adaptiveValue("height", 80, 60);
 	@include adaptiveValue("padding-left", 39, 28);
-	// @include adaptiveValue("padding-right", 12, 8);
-	padding-right: rem(80);
+	padding-right: rem(70);
 
-	// &:not(:last-child) {
-	// 	margin-bottom: rem(15);
-	// }
 
 	background-color: #445D74;
+
 	@include adaptiveValue("font-size", 20, 14);
+	text-align: left;
 	font-weight: 600;
 	line-height: math.div(24, 20);
 	letter-spacing: 0.05em;

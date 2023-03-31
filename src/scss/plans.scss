@@ -1,6 +1,6 @@
 .plans {
   @include adaptiveValue("margin-top", -30, 117);
-  padding-bottom: rem(100);
+  padding-bottom: rem(120);
 
   /* .plans__container */
   &__container {
@@ -648,18 +648,6 @@
     }
   }
 
-  /* .item-operation_1 */
-  &_1 {}
-
-  /* .item-operation_2 */
-  &_2 {}
-
-  /* .item-operation_3 */
-  &_3 {}
-
-  /* .item-operation_4 */
-  &_4 {}
-
   /* .item-operation__icon */
   &__icon {
     position: relative;
@@ -746,8 +734,22 @@
 }
 
 .question-plan {
+  position: relative;
+
 
   text-align: center;
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 25%;
+    top: -121%;
+    background: url('@img/smoke.png') no-repeat;
+    width: rem(716);
+    height: rem(587);
+    z-index: -1000;
+  }
 
   /* .question-plan__title */
   &__title {
