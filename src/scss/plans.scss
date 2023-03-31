@@ -569,8 +569,8 @@
 }
 
 .step-three-plans__header {
-  @include adaptiveValue("margin-bottom", 71, 71);
-  @include adaptiveValue("padding-left", 110, 110);
+  @include adaptiveValue("margin-bottom", 71, 17);
+  @include adaptiveValue("padding-left", 110, 65);
 }
 
 
@@ -579,8 +579,23 @@
   /* .operation-plans__items */
   &__items {
     display: grid;
-    grid-template-columns: repeat(4, rem(343));
-    column-gap: rem(29);
+
+    grid-template-columns: repeat(auto-fit, minmax(auto, rem(343)));
+    @include adaptiveValue("column-gap", 29, 15);
+    @include adaptiveValue("row-gap", 100, 34);
+    justify-content: center;
+
+    @media (min-width:$tablet) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: em(600)) {
+      justify-content: end;
+    }
+
+    @media (max-width:$mobileSmall) {
+      grid: none;
+    }
   }
 
   /* .operation-plans__item */
@@ -589,16 +604,29 @@
 
 .item-operation {
   position: relative;
+  // max-width: rem(343);
 
-  &::after {
-    content: '';
-    position: absolute;
-    width: rem(176);
-    height: rem(47);
-    top: 0;
-    right: 0;
 
-    background: url('@img/steps/dots-arrow.svg') 0 0 no-repeat;
+  @media (max-width:$tablet) {
+    // justify-self: center;
+  }
+
+  @media (max-width: em(600)) {
+    // justify-self: start;
+  }
+
+  &:not(:last-child) {
+    &::after {
+      content: '';
+      position: absolute;
+      width: rem(176);
+      height: rem(47);
+      top: 0;
+      right: -1%;
+
+      background: url('@img/steps/dots-arrow.svg') 0 0 no-repeat;
+      z-index: -1;
+    }
   }
 
   &:nth-child(2) {
@@ -606,6 +634,10 @@
       // transform: matrix(1, 0, 0, -1, 0, 0);
       transform: scale(1, -1);
       transform-origin: 0 100%;
+
+      @media (max-width:$tablet) {
+        display: none;
+      }
     }
   }
 
@@ -659,10 +691,10 @@
   /* .item-operation__name */
   &__name {
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 24, 24);
+      @include adaptiveValue("margin-bottom", 24, 21);
     }
 
-    @include adaptiveValue("font-size", 22, 22);
+    @include adaptiveValue("font-size", 22, 16);
     font-weight: 700;
     line-height: math.div(28, 22);
     letter-spacing: 0.05em;
@@ -681,7 +713,7 @@
     padding-left: rem(40);
 
     @include adaptiveValue("font-size", 16, 14);
-    line-height: math.div(18, 16);
+    line-height: math.div(19, 16);
     letter-spacing: 0.05em;
 
     background: url('@img/icons/check-w.svg') 0 0 no-repeat;
