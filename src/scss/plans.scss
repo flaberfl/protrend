@@ -469,11 +469,24 @@
     margin-top: rem(30);
 
     &_up {
+      position: relative;
       justify-content: space-between;
+
+      &::before {
+        content: '';
+        position: absolute;
+        right: 7%;
+        transform: translate(50%, -60%);
+        top: 30%;
+        background: url('@img/smoke.png') no-repeat;
+        width: rem(716);
+        height: rem(587);
+        z-index: -1000;
+      }
+
 
       @media (max-width:$mobile) {
         flex-direction: column;
-        // margin-bottom: rem(47);
       }
 
       span {
@@ -743,8 +756,9 @@
   &::before {
     content: '';
     position: absolute;
-    left: 25%;
-    top: -121%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    top: 60%;
     background: url('@img/smoke.png') no-repeat;
     width: rem(716);
     height: rem(587);
