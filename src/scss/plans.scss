@@ -421,9 +421,11 @@
 
   /* .list-item-step__item */
   &__item {
-    display: grid;
-    grid-template-columns: auto auto;
+    // display: grid;
+    // grid-template-columns: auto auto;
     row-gap: rem(24);
+    display: flex;
+    justify-content: space-between;
 
     &:last-child {
       @include adaptiveValue("padding-bottom", 25, 16);
@@ -437,6 +439,9 @@
     @include adaptiveValue("font-size", 16, 14);
     font-weight: 400;
     line-height: math.div(24, 16);
+
+    flex: 0 1 70%;
+
   }
 
   /* .list-item-step__value */
@@ -667,7 +672,6 @@
       @include adaptiveValue("left", 41, 8);
       @include adaptiveValue("top", 77, 32);
 
-      background: url('@img/steps/item-1-b.svg') 0 0 no-repeat;
       width: rem(111);
       height: rem(111);
     }
@@ -675,6 +679,30 @@
     img {
       @include adaptiveValue("width", 124, 78);
       @include adaptiveValue("height", 124, 78);
+    }
+
+    &_1 {
+      &::before {
+        background: url('@img/steps/item-1-b.svg') 0 0 no-repeat;
+      }
+    }
+
+    &_2 {
+      &::before {
+        background: url('@img/steps/item-2-b.svg') 0 0 no-repeat;
+      }
+    }
+
+    &_3 {
+      &::before {
+        background: url('@img/steps/item-3-b.svg') 0 0 no-repeat;
+      }
+    }
+
+    &_4 {
+      &::before {
+        background: url('@img/steps/item-4-b.svg') 0 0 no-repeat;
+      }
     }
   }
 

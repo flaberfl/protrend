@@ -21,7 +21,7 @@
       transform: matrix(-0.78, 0.62, 0.62, 0.78, 0, 0);
       width: rem(432);
       height: rem(1182);
-      z-index: 20;
+      z-index: -1000;
     }
 
     @media (max-width:$mobile) {
