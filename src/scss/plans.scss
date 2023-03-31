@@ -61,7 +61,6 @@
 
   /* .step-one-plans__form */
   &__form {
-
     @media (max-width:$mobileSmall) {
       @include adaptiveValue("margin-left", -30, -60);
     }
@@ -100,13 +99,7 @@
 
   /* .step-plans__items */
   &__items {
-
-    // overflow-x: auto;
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
-    // @include adaptiveValue("column-gap", 34, 34);
     align-items: flex-start;
-
   }
 }
 
@@ -132,7 +125,6 @@
   &__title {
 
     @media (max-width:$tablet) {
-      // margin-bottom: rem();
       @include adaptiveValue("margin-bottom", 20, 12);
     }
 
@@ -180,12 +172,10 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    // padding-top: rem(10);
   }
 
   /* .form-step__lable */
   &__lable {
-    // width: 100%;
     flex: 1 1 100%;
     margin-bottom: rem(25);
 
@@ -204,8 +194,6 @@
 
   /* .form-step__input */
   &__input {
-    // display: flex;
-    // align-items: center;
     margin-right: rem(10);
     @include adaptiveValue("width", 236, 103);
     @include adaptiveValue("height", 80, 50);
@@ -229,7 +217,6 @@
     @media (max-width:$mobile) {
       margin-right: 0;
     }
-
   }
 
   &__descr {
@@ -273,7 +260,6 @@
   grid-template-rows: auto-fit auto 1fr;
   justify-items: center;
   @include adaptiveValue("width", 329, 289);
-  // width: rem(300) !important;
   @include adaptiveValue("padding-top", 36, 20);
   @include adaptiveValue("padding-bottom", 36, 20);
 
@@ -499,7 +485,6 @@
 
     }
 
-
   }
 
   /* .plans__button */
@@ -533,7 +518,6 @@
       background-color: #314150;
       border-radius: 50%;
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
-      // z-index: 10;
     }
 
     img {
@@ -679,31 +663,19 @@
     &::before {
       content: '';
       position: absolute;
-      right: 0;
-      top: 0;
+
+      @include adaptiveValue("left", 41, 8);
+      @include adaptiveValue("top", 77, 32);
+
       background: url('@img/steps/item-1-b.svg') 0 0 no-repeat;
-      width: rem(43);
-      height: rem(43);
-      z-index: 100;
+      width: rem(111);
+      height: rem(111);
     }
 
     img {
       @include adaptiveValue("width", 124, 78);
       @include adaptiveValue("height", 124, 78);
     }
-
-    /* .item-operation__icon_1 */
-    &_1 {}
-
-    /* .item-operation__icon_2 */
-    &_2 {}
-
-    /* .item-operation__icon_3 */
-    &_3 {}
-
-    /* .item-operation__icon_4 */
-    &_4 {}
-
   }
 
   /* .item-operation__name */
@@ -726,8 +698,6 @@
 
   /* .item-operation__item */
   &__item {
-
-    // @include adaptiveValue("padding-left", 44, 44);
     padding-left: rem(40);
 
     @include adaptiveValue("font-size", 16, 14);
