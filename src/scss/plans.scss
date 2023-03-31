@@ -1,5 +1,5 @@
 .plans {
-  @include adaptiveValue("padding-top", -30, 100);
+  @include adaptiveValue("margin-top", -30, 117);
   padding-bottom: rem(100);
 
   /* .plans__container */
@@ -10,9 +10,7 @@
     &::after {
 
       @media (min-width:$mobile) {
-
         content: '';
-
         position: absolute;
         width: rem(432);
         height: rem(1182);
@@ -74,7 +72,6 @@
 }
 
 .step-plans {
-  // position: relative;
 
   /* .step-plans__header */
   &__header {
@@ -556,7 +553,7 @@
   }
 
   &__decor-ellipse {
-    top: 48%;
+    top: 17.4%;
     left: -59%;
   }
 }
@@ -565,7 +562,9 @@
 .step-plans {
 
   /* .step-plans__operation */
-  &__operation {}
+  &__operation {
+    @include adaptiveValue("margin-bottom", 103, 100);
+  }
 }
 
 .step-three-plans__header {
@@ -575,6 +574,22 @@
 
 
 .operation-plans {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: rem(432);
+    height: rem(1182);
+    top: -150%;
+    left: 11%;
+
+    background: #204160;
+    opacity: 0.7;
+    filter: blur(201.5px);
+    transform: matrix(-0.78, 0.62, 0.62, 0.78, 0, 0);
+    z-index: -1000;
+  }
 
   /* .operation-plans__items */
   &__items {
@@ -631,11 +646,11 @@
 
       transform: scale(1, -1);
       transform-origin: 0 100%;
-      
+
       @media (min-width: em(736)) and (max-width:$tablet) {
         display: none;
       }
-      
+
       @media (max-width: em(735)) {
         transform: rotate(90deg) scale(1, -1);
         transform-origin: 0 -100%;
@@ -725,6 +740,61 @@
       content: '';
       width: rem(18);
       height: rem(18);
+    }
+  }
+
+  /* .plan__questions */
+  &__questions {}
+}
+
+.question-plan {
+
+  text-align: center;
+
+  /* .question-plan__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 65, 27);
+
+    @include adaptiveValue("font-size", 50, 30);
+    font-weight: 700;
+    line-height: math.div(61, 50);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  /* .question-plan__button */
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(15);
+    @include adaptiveValue("padding-left", 165, 0, 1920, 768, 1);
+
+    span {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: rem(32);
+
+      font-size: rem(10);
+      font-weight: 500;
+      color: $mainTextColor;
+      line-height: math.div(12, 10);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: rem(21);
+        height: rem(1);
+        background-color: $secTextColor;
+        left: 0;
+      }
+
+      @media (max-width:$mobile) {
+        display: none;
+      }
     }
   }
 }
