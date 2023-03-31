@@ -485,6 +485,7 @@
 
       @media (max-width:$mobile) {
         flex-direction: column;
+        // margin-bottom: rem(47);
       }
 
       span {
@@ -549,6 +550,7 @@
     @include adaptiveValue("margin-bottom", 163, 73);
 
     &_sec {
+      @include adaptiveValue("margin-top", 28, 41);
       @include adaptiveValue("margin-bottom", 70, 75);
     }
   }
@@ -566,12 +568,19 @@
   &__operation {}
 }
 
+.step-three-plans__header {
+  @include adaptiveValue("margin-bottom", 71, 71);
+  @include adaptiveValue("padding-left", 110, 110);
+}
+
+
 .operation-plans {
 
   /* .operation-plans__items */
   &__items {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, rem(343));
+    column-gap: rem(29);
   }
 
   /* .operation-plans__item */
@@ -579,6 +588,26 @@
 }
 
 .item-operation {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: rem(176);
+    height: rem(47);
+    top: 0;
+    right: 0;
+
+    background: url('@img/steps/dots-arrow.svg') 0 0 no-repeat;
+  }
+
+  &:nth-child(2) {
+    &::after {
+      // transform: matrix(1, 0, 0, -1, 0, 0);
+      transform: scale(1, -1);
+      transform-origin: 0 100%;
+    }
+  }
 
   /* .item-operation_1 */
   &_1 {}
@@ -595,28 +624,22 @@
   /* .item-operation__icon */
   &__icon {
     position: relative;
-    display: grid;
-    place-items: center;
-    padding-left: rem(3);
-    padding-top: rem(9);
-
-    @include adaptiveValue("width", 124, 78);
-    @include adaptiveValue("height", 124, 78);
-    background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
-    border-radius: 50%;
+    @include adaptiveValue("margin-bottom", 27, 24);
 
     &::before {
       content: '';
       position: absolute;
       right: 0;
-      display: block;
-      background: url('@img/steps/operatio-1-b.svg') no-repeat;
+      top: 0;
+      background: url('@img/steps/item-1-b.svg') 0 0 no-repeat;
       width: rem(43);
       height: rem(43);
+      z-index: 100;
+    }
 
-      // background-color: red;
-
-
+    img {
+      @include adaptiveValue("width", 124, 78);
+      @include adaptiveValue("height", 124, 78);
     }
 
     /* .item-operation__icon_1 */
@@ -634,11 +657,39 @@
   }
 
   /* .item-operation__name */
-  &__name {}
+  &__name {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 24, 24);
+    }
+
+    @include adaptiveValue("font-size", 22, 22);
+    font-weight: 700;
+    line-height: math.div(28, 22);
+    letter-spacing: 0.05em;
+  }
 
   /* .item-operation__list */
-  &__list {}
+  &__list {
+    display: grid;
+    gap: rem(18);
+  }
 
   /* .item-operation__item */
-  &__item {}
+  &__item {
+
+    // @include adaptiveValue("padding-left", 44, 44);
+    padding-left: rem(40);
+
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: math.div(18, 16);
+    letter-spacing: 0.05em;
+
+    background: url('@img/icons/check-w.svg') 0 0 no-repeat;
+
+    &::before {
+      content: '';
+      width: rem(18);
+      height: rem(18);
+    }
+  }
 }
