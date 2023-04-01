@@ -3,10 +3,12 @@
 .header {
   @include adaptiveValue("padding-top", 44, 22);
   @include adaptiveValue("padding-bottom", 44, 22);
-  // position: absolute;
+  position: fixed;
   width: 100%;
-  // left: 0;
-  // top: 0;
+  left: 0;
+  top: 0;
+
+  z-index: 500;
   // z-index: 50;
 
   // @media (max-width:$mobile) {
@@ -30,14 +32,32 @@
   //   top: 0;
   // }
 
+  transition: all 0.3s ease 0s;
+
   /* .header__container */
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // gap: rem(15);
   }
 
+  &._header-bg {
+    background-color: rgba(34, 45, 55, .9);
+    padding: rem(10) 0;
+
+    @media (min-width:$mobile) {
+      backdrop-filter: blur(rem(3));
+
+    }
+  }
+
+  &._hide {
+    @media (min-width:$mobile) {
+      transform: translateY(-50px);
+    }
+
+    opacity: 0;
+  }
 
   &__logo {}
 
@@ -73,8 +93,8 @@
         width: 100%;
         // height: 100%;
         row-gap: rem(64);
-        top: 0;
-        left: -100%;
+        top: -100%;
+        left: 0;
         // @include adaptiveValue("padding-top", 180, 120, 768, 320, 2);
         padding-top: rem(76);
         padding-left: rem(15);
@@ -83,13 +103,13 @@
 
         overflow: auto;
         background-color: $bgMenu; // цвет меню
-        transition: all 0.3s ease 0s;
+        transition: all 0.5s ease 0s;
 
         .menu-open & {
-          left: 0;
+          top: 0;
 
           &::before {
-            left: 0;
+            top: 0;
           }
         }
       }
@@ -152,6 +172,10 @@
     position: absolute;
     right: rem(22);
     top: rem(100);
+
+    @media (min-width:$mobile) {
+      display: none;
+    }
   }
 }
 

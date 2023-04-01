@@ -1,4 +1,5 @@
 .promo {
+  @include adaptiveValue("padding-top", 156, 66);
 
   mix-blend-mode: lighten;
 
