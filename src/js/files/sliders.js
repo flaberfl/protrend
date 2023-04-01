@@ -65,7 +65,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
-			spaceBetween: 34,
+			spaceBetween: 44,
 			// freeMode: true,
 			// autoHeight: true,
 			speed: 800,
@@ -86,25 +86,20 @@ function initSliders() {
 			// 	prevEl: '.about__more .more__item_prev',
 			// },
 
-			// breakpoints: {
-			// 	320: {
-			// 		slidesPerView: 1,
-			// 		spaceBetween: 0,
-			// 		autoHeight: true,
-			// 	},
-			// 	768: {
-			// 		slidesPerView: 2,
-			// 		spaceBetween: 20,
-			// 	},
-			// 	992: {
-			// 		slidesPerView: 3,
-			// 		spaceBetween: 44,
-			// 	},
-			// 	1268: {
-			// 		slidesPerView: 4,
-			// 		spaceBetween: 34,
-			// 	},
-			// },
+			breakpoints: {
+				320: {
+					spaceBetween: 23,
+				},
+				768: {
+					spaceBetween: 30
+				},
+				// 992: {
+				// 	spaceBetween: 34,
+				// },
+				// 1268: {
+				// 	spaceBetween: 40,
+				// },
+			},
 
 			on: {
 
@@ -127,7 +122,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
-			spaceBetween: 34,
+			spaceBetween: 44,
 			// freeMode: true,
 			// autoHeight: true,
 			speed: 800,
@@ -148,25 +143,20 @@ function initSliders() {
 			// 	prevEl: '.about__more .more__item_prev',
 			// },
 
-			// breakpoints: {
-			// 	320: {
-			// 		slidesPerView: 1,
-			// 		spaceBetween: 0,
-			// 		autoHeight: true,
-			// 	},
-			// 	768: {
-			// 		slidesPerView: 2,
-			// 		spaceBetween: 20,
-			// 	},
-			// 	992: {
-			// 		slidesPerView: 3,
-			// 		spaceBetween: 44,
-			// 	},
-			// 	1268: {
-			// 		slidesPerView: 4,
-			// 		spaceBetween: 34,
-			// 	},
-			// },
+			breakpoints: {
+				320: {
+					spaceBetween: 23,
+				},
+				768: {
+					spaceBetween: 30
+				},
+				// 992: {
+				// 	spaceBetween: 34,
+				// },
+				// 1268: {
+				// 	spaceBetween: 40,
+				// },
+			},
 
 			on: {
 
@@ -185,7 +175,7 @@ function initSliders() {
 				delay: 800,
 				disableOnInteraction: false,
 			},
-	
+
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
