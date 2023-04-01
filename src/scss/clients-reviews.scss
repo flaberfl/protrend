@@ -25,6 +25,8 @@
     letter-spacing: 0.05em;
   }
 
+  &__slider {}
+
   /* .clients-reviews__clients */
   &__clients {
     display: flex;
@@ -36,8 +38,20 @@
 
   /* .clients-reviews__logo */
   &__logo {
+
+    // max-width: 161px;
+    // @include adaptiveValue("height", 118, 58);
     img {
       max-width: 100%;
+
+      @media (max-width:$mobile) {
+        width: 80%;
+      }
+      
+      @media (max-width:$mobileSmall){
+        width: 55%; 
+      }
+
     }
   }
 
@@ -94,6 +108,10 @@
   &__image {
     @include adaptiveValue("margin-bottom", 22, 22);
     margin-bottom: rem(22);
+
+    img {
+      @include adaptiveValue("width", 164, 79);
+    }
   }
 
   /* .reviews__name */

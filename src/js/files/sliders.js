@@ -200,25 +200,14 @@ function initSliders() {
 			// 	prevEl: '.about__more .more__item_prev',
 			// },
 
-			// breakpoints: {
-			// 	320: {
-			// 		slidesPerView: 1,
-			// 		spaceBetween: 0,
-			// 		autoHeight: true,
-			// 	},
-			// 	768: {
-			// 		slidesPerView: 2,
-			// 		spaceBetween: 20,
-			// 	},
-			// 	992: {
-			// 		slidesPerView: 3,
-			// 		spaceBetween: 44,
-			// 	},
-			// 	1268: {
-			// 		slidesPerView: 4,
-			// 		spaceBetween: 34,
-			// 	},
-			// },
+			breakpoints: {
+				320: {
+					spaceBetween: -20,
+				},
+				768: {
+					spaceBetween: 20,
+				}
+			},
 
 			on: {
 
@@ -233,15 +222,16 @@ function initSliders() {
 			modules: [Pagination],
 			/*
 			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
+		*/
+			// autoplay: {
+			// 	delay: 800,
+			// 	disableOnInteraction: false,
+			// },
+		
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
-			spaceBetween: 44,
+			spaceBetween: 30,
 			// freeMode: true,
 			// autoHeight: true,
 			speed: 800,
@@ -253,7 +243,7 @@ function initSliders() {
 			//lazy: true,
 			// Dotts
 			pagination: {
-				el: '.swiper-pagination-plans_two',
+				el: '.swiper-pagination-reviews',
 				clickable: true,
 			},
 			// Arrows
@@ -264,10 +254,10 @@ function initSliders() {
 
 			breakpoints: {
 				320: {
-					spaceBetween: 23,
+					spaceBetween: 15,
 				},
 				768: {
-					spaceBetween: 30
+					spaceBetween: 20
 				},
 				// 992: {
 				// 	spaceBetween: 34,

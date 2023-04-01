@@ -29,6 +29,21 @@
   }
 }
 
+.swiper-pagination-reviews {
+  @include adaptiveValue("margin-top", 50, 38);
+  display: flex;
+  gap: rem(12);
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  @media (min-width:em(992)) {
+    display: none;
+  }
+}
+
+
 .swiper-pagination-bullet {
   cursor: pointer;
   @include adaptiveValue("width", 15, 10);
