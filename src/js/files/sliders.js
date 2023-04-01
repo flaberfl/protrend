@@ -225,6 +225,63 @@ function initSliders() {
 			}
 		});
 	}
+	if (document.querySelector('.reviews-clients__slilder')) { // Указываем класс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.reviews-clients__slilder', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Pagination],
+			/*
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: 44,
+			// freeMode: true,
+			// autoHeight: true,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			// loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			pagination: {
+				el: '.swiper-pagination-plans_two',
+				clickable: true,
+			},
+			// Arrows
+			// navigation: {
+			// 	nextEl: '.about__more .more__item_next',
+			// 	prevEl: '.about__more .more__item_prev',
+			// },
+
+			breakpoints: {
+				320: {
+					spaceBetween: 23,
+				},
+				768: {
+					spaceBetween: 30
+				},
+				// 992: {
+				// 	spaceBetween: 34,
+				// },
+				// 1268: {
+				// 	spaceBetween: 40,
+				// },
+			},
+
+			on: {
+
+			}
+		});
+	}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
