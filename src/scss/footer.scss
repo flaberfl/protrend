@@ -5,7 +5,11 @@
   &__container {}
 
   /* .footer__top */
-  &__top {}
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   /* .footer__logo */
   &__logo {}
@@ -27,16 +31,49 @@
 }
 
 .social-footer {
+  display: flex;
+  align-items: center;
+  @include adaptiveValue("gap", 43, 43);
+  gap: rem(43);
 
   /* .social-footer__item */
   &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     /* .social-footer__item_ytb */
     &_ytb {}
   }
 
   /* .social-footer__link */
-  &__link {}
+  &__link {
+    display: flex;
+    align-items: center;
+
+
+    &_ytb {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: rem(70);
+        height: rem(70);
+        border-radius: 50%;
+        border-bottom: 10px solid $hoverColor;
+
+        @media (max-width:$mobile) {
+          width: rem(50);
+          height: rem(50);
+        }
+      }
+
+    }
+  }
 
   /* .social-footer__media */
   &__media {}
