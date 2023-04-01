@@ -57,21 +57,95 @@
 }
 
 .reviews {
+  position: relative;
+  @include adaptiveValue("width", 466, 284);
+  @include adaptiveValue("padding-top", 67, 61);
+  @include adaptiveValue("padding-bottom", 25, 14);
+  display: grid;
+  justify-content: center;
 
-  /* .reviews__badge */
-  &__badge {}
+  background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
+  border-radius: 30px;
+
+  text-align: center;
+
+  /* .reviews__label */
+  &__label {
+    position: absolute;
+    padding: rem(3) rem(11);
+    left: 27px;
+    top: 23px;
+
+
+    background-color: #FF890B;
+    border-radius: rem(30);
+
+    @include adaptiveValue("font-size", 16, 10);
+    font-weight: 400;
+    line-height: math.div(20, 16);
+    letter-spacing: 0.05em;
+
+    @media (max-width:$mobile) {
+      font-weight: 500;
+    }
+  }
 
   /* .reviews__image */
-  &__image {}
+  &__image {
+    @include adaptiveValue("margin-bottom", 22, 22);
+    margin-bottom: rem(22);
+  }
 
   /* .reviews__name */
-  &__name {}
+  &__name {
+    @include adaptiveValue("margin-bottom", 9, 9);
+    margin-bottom: rem(9);
+
+    @include adaptiveValue("font-size", 40, 40);
+    font-weight: 600;
+    line-height: math.div(49, 40);
+    letter-spacing: 0.05em
+  }
 
   /* .reviews__position */
-  &__position {}
+  &__position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    @include adaptiveValue("margin-bottom", 22, 22);
+    margin-bottom: rem(22);
+    @include adaptiveValue("padding-bottom", 25, 25);
+    padding-bottom: rem(25);
+
+    @include adaptiveValue("font-size", 16, 16);
+    font-weight: 400;
+    line-height: math.div(20, 16);
+    letter-spacing: 0.05em;
+
+    &::after {
+      content: '';
+      bottom: 0;
+      position: absolute;
+      @include adaptiveValue("width", 358, 252);
+      height: rem(1);
+      opacity: .3;
+      background-color: #fff;
+    }
+  }
 
   /* .reviews__job */
-  &__job {}
+  &__job {
+    @include adaptiveValue("margin-bottom", 20, 20);
+    margin-bottom: rem(20);
+
+
+    @include adaptiveValue("font-size", 16, 16);
+    font-weight: 400;
+    line-height: math.div(20, 16);
+    color: #FA982F;
+    letter-spacing: 0.05em;
+  }
 
   /* .reviews__audio */
   &__audio {}
