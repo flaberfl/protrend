@@ -123,6 +123,10 @@
 
     transform: rotate(-90deg);
 
+    img {
+      cursor: pointer;
+    }
+
     span {
       font-size: rem(10);
       font-weight: 600;
@@ -148,7 +152,12 @@
 
     @media (max-width: em(1700)) {
       right: 3%;
-      top: 16.4%;
+      top: 48.8%;
+    }
+
+    @media (max-width: em(1450)) {
+      right: 3%;
+      top: 17%;
     }
 
     @media (max-width:$tablet) {
