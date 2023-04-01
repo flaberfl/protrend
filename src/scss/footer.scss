@@ -1,6 +1,6 @@
 //====================================================================================================
 .footer {
-  @include adaptiveValue("padding-top", 150, 150);
+  @include adaptiveValue("padding-top", 169, 150);
 
   /* .footer__container */
   &__container {}
@@ -10,47 +10,109 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include adaptiveValue("padding-bottom", 32, 21);
+    gap: rem(20);
+
+    border-bottom: 1px solid #34393D;
+
+    @media (max-width:$tablet) {
+      flex-wrap: wrap;
+
+    }
   }
 
   /* .footer__logo */
-  &__logo {}
+  &__logo {
+    margin-right: rem(20);
+
+    @media (max-width:$tablet) {
+      // margin-bottom: rem(40);
+    }
+  }
 
   /* .footer__social */
   &__social {}
 
   /* .footer__bottom */
-  &__bottom {}
+  &__bottom {
+    display: flex;
+    align-items: center;
+
+    @include adaptiveValue("padding-top", 18, 22);
+    padding-bottom: rem(25);
+
+  }
 
   /* .footer__policy */
-  &__policy {}
+  &__policy {
+    flex: 1 1 auto;
+
+    @include adaptiveValue("font-size", 10, 10);
+    font-weight: 600;
+    line-height: math.div(12, 10);
+    color: $mainTextColor;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
 
   /* .footer__copyright */
-  &__copyright {}
+  &__copyright {
+    @include adaptiveValue("font-size", 10, 10);
+    font-weight: 600;
+    line-height: math.div(12, 10);
+    color: $mainTextColor;
+    letter-spacing: 0.05em;
+  }
 
   /* .footer__label */
-  &__label {}
+  &__label {
+    @include adaptiveValue("margin-left", 28, 28);
+  }
+
+  &__button {
+    @include adaptiveValue("margin-left", 59, 10, 1920, 992, 1);
+    min-width: none !important;
+    // @include adaptiveValue("width", 218, 179);
+    width: rem(70);
+    @media (max-width:$tablet) {}
+  }
 }
 
 .social-footer {
   display: flex;
   align-items: center;
-  @include adaptiveValue("gap", 43, 43);
-  gap: rem(43);
+  @include adaptiveValue("gap", 43, 37);
 
   /* .social-footer__item */
   &__item {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: rem(10);
 
     /* .social-footer__item_ytb */
-    &_ytb {}
+    &_ytb {
+      @include adaptiveValue("gap", 40, 30, 1920, 992, 1);
+    }
   }
+
+
 
   /* .social-footer__link */
   &__link {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
+
+    svg path {
+      transition: all 0.3s ease 0s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg path {
+          fill: #fff;
+        }
+      }
+    }
 
 
     &_ytb {
@@ -59,13 +121,15 @@
       align-items: center;
       position: relative;
 
+
       &::before {
         content: '';
         position: absolute;
         width: rem(70);
         height: rem(70);
         border-radius: 50%;
-        border-bottom: 1px solid red;
+        border: 1px solid red;
+        z-index: -1;
 
         @media (max-width:$mobile) {
           width: rem(50);
@@ -73,16 +137,77 @@
         }
       }
 
+      @media (max-width:$mobile){
+         padding-left: rem(30); 
+      }
+
     }
   }
 
   /* .social-footer__media */
-  &__media {}
+  &__media {
+    display: flex;
+    @include adaptiveValue("gap", 66, 0);
+
+
+    @media (max-width:$mobile) {
+      flex-direction: column-reverse;
+      gap: rem(38)
+    }
+  }
 
   /* .social-footer__name */
   &__name {
 
+    @include adaptiveValue("font-size", 10, 10);
+    line-height: math.div(12, 10);
+    font-weight: 600;
+    color: $mainTextColor;
+    letter-spacing: 0.05em;
+
     /* .social-footer__name_ytb */
-    &_ytb {}
+    &_ytb {
+      position: relative;
+      display: flex;
+      align-items: center;
+      @include adaptiveValue("padding-left", 33, 33);
+
+      font-weight: 500;
+      text-transform: uppercase;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        background-color: $secTextColor;
+        width: rem(21);
+        height: rem(1);
+      }
+
+    }
+  }
+}
+
+.top-footer {
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+
+    @media (max-width:$tablet) {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__left {
+    @include adaptiveValue("gap", 165, 20, 1920, 992, 1);
+  }
+
+  &__right {
+    @media (max-width:$mobile){
+       @include adaptiveValue("padding-top", 40, 40); 
+    }
   }
 }

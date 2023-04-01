@@ -42,10 +42,6 @@
   &__logo {
     // position: relative;
     // z-index: 5;
-
-    img {
-      @include adaptiveValue("width", 355, 150);
-    }
   }
 
   &__menu {
@@ -159,6 +155,13 @@
         }
       }
     }
+  }
+}
+
+
+.logo {
+  img {
+    @include adaptiveValue("width", 355, 150);
   }
 }
 

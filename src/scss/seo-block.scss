@@ -18,8 +18,6 @@
   &__image {
     position: relative;
     align-self: start;
-    // justify-selt: start;
-
 
     img {
       position: absolute;
@@ -31,7 +29,7 @@
       z-index: -1;
 
       @media (min-width:$mobileSmall) and (max-width:$tablet) {
-        transform: translate(20%, 0px);
+        transform: translate(14%, 0px);
       }
     }
   }
