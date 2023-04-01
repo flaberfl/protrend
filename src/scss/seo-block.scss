@@ -17,20 +17,23 @@
   /* .seo-block__image */
   &__image {
     position: relative;
+    align-self: start;
+    // justify-selt: start;
+
 
     img {
       position: absolute;
-      top: -31.9%;
-      left: -12%;
-      @include adaptiveValue("width", 980, 571);
+      left: 0;
+      @include adaptiveValue("width", 1120, 690);
+      @include adaptiveValue("left", -193, -142);
+      @include adaptiveValue("top", -213, -139);
+
       z-index: -1;
 
-
-      // left: rem(-118);
-      // bottom: rem(-232);
-      // width: rem(660);
+      @media (min-width:$mobileSmall) and (max-width:$tablet) {
+        transform: translate(20%, 0px);
+      }
     }
-
   }
 
   /* .seo-block__content */
@@ -65,6 +68,10 @@
       &:not(:last-child) {
         margin-bottom: rem(28);
       }
+    }
+
+    @media (max-width:$mobileSmall) {
+      line-height: 135%;
     }
   }
 }
