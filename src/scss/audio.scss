@@ -18,7 +18,8 @@
   align-items: center;
 
   padding: rem(0) rem(22);
-  column-gap: rem(15);
+  // column-gap: rem(15);
+  @include adaptiveValue("column-gap", 15, 8);
 
   // width: max-content;
 
@@ -77,3 +78,19 @@
   @include adaptiveValue("width", 182, 108);
 }
 
+.play-more {
+  display: grid;
+  gap: rem(2);
+
+  span {
+    display: block;
+    background-color: #D9D9D9;
+    @include adaptiveValue("width", 4, 2);
+    @include adaptiveValue("height", 4, 2);
+    border-radius: 50%;
+  }
+}
+
+.play-wrap {
+  flex: 0 0 auto;
+}
