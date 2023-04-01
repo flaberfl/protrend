@@ -158,6 +158,8 @@
   }
 
   &__decor-ellipse {
+    @include adaptiveValue("width", 1328, 851);
+    @include adaptiveValue("height", 1328, 851);
     top: -110%;
     left: -50%;
 

@@ -1,8 +1,6 @@
 //====================================================================================================
 .footer {
-  // @include adaptiveValue("padding-top", 169, -25);
   @include adaptiveValue("margin-top", 169, -112);
-  // padding-top: rem(0);
 
   /* .footer__container */
   &__container {}
@@ -26,10 +24,6 @@
   /* .footer__logo */
   &__logo {
     margin-right: rem(20);
-
-    @media (max-width:$tablet) {
-      // margin-bottom: rem(40);
-    }
   }
 
   /* .footer__social */
@@ -47,7 +41,6 @@
     @media (max-width: em(680)) {
       flex-wrap: wrap;
     }
-
   }
 
   /* .footer__policy */
@@ -83,7 +76,6 @@
     min-width: rem(179);
     @include adaptiveValue("width", 218, 179);
 
-    // width: rem(70);
     @media (max-width:$tablet) {
       margin-left: 0;
     }
@@ -115,12 +107,8 @@
     }
   }
 
-
   /* .social-footer__link */
   &__link {
-    // display: flex;
-    // align-items: center;
-
     svg path {
       transition: all 0.3s ease 0s;
     }
@@ -133,13 +121,11 @@
       }
     }
 
-
     &_ytb {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
-
 
       &::before {
         content: '';
@@ -159,7 +145,6 @@
       @media (max-width:$mobile) {
         padding-left: rem(30);
       }
-
     }
   }
 
@@ -167,7 +152,6 @@
   &__media {
     display: flex;
     @include adaptiveValue("gap", 66, 0);
-
 
     @media (max-width:$mobile) {
       flex-direction: column-reverse;
@@ -202,7 +186,6 @@
         width: rem(21);
         height: rem(1);
       }
-
     }
   }
 }

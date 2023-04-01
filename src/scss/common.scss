@@ -10,8 +10,8 @@
 
 .decor-ellipse {
   position: absolute;
-  @include adaptiveValue("width", 1328, 851);
-  @include adaptiveValue("height", 1328, 851);
+  @include adaptiveValue("width", 1328, 755);
+  @include adaptiveValue("height", 1328, 755);
   z-index: -1000;
 }
 
