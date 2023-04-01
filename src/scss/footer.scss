@@ -1,6 +1,8 @@
 //====================================================================================================
 .footer {
-  @include adaptiveValue("padding-top", 169, 150);
+  // @include adaptiveValue("padding-top", 169, -25);
+  @include adaptiveValue("margin-top", 169, -112);
+  // padding-top: rem(0);
 
   /* .footer__container */
   &__container {}
@@ -37,9 +39,14 @@
   &__bottom {
     display: flex;
     align-items: center;
+    @include adaptiveValue("gap", 28, 28);
 
     @include adaptiveValue("padding-top", 18, 22);
     padding-bottom: rem(25);
+
+    @media (max-width: em(680)) {
+      flex-wrap: wrap;
+    }
 
   }
 
@@ -47,7 +54,9 @@
   &__policy {
     flex: 1 1 auto;
 
-    @include adaptiveValue("font-size", 10, 10);
+    padding-right: rem(20);
+
+    font-size: rem(10);
     font-weight: 600;
     line-height: math.div(12, 10);
     color: $mainTextColor;
@@ -57,7 +66,7 @@
 
   /* .footer__copyright */
   &__copyright {
-    @include adaptiveValue("font-size", 10, 10);
+    font-size: rem(10);
     font-weight: 600;
     line-height: math.div(12, 10);
     color: $mainTextColor;
@@ -66,15 +75,22 @@
 
   /* .footer__label */
   &__label {
-    @include adaptiveValue("margin-left", 28, 28);
+    margin: 0 auto;
   }
 
   &__button {
     @include adaptiveValue("margin-left", 59, 10, 1920, 992, 1);
-    min-width: none !important;
-    // @include adaptiveValue("width", 218, 179);
-    width: rem(70);
-    @media (max-width:$tablet) {}
+    min-width: rem(179);
+    @include adaptiveValue("width", 218, 179);
+
+    // width: rem(70);
+    @media (max-width:$tablet) {
+      margin-left: 0;
+    }
+
+    @media (max-width:$mobileSmall) {
+      margin-top: rem(-50);
+    }
   }
 }
 
@@ -92,9 +108,12 @@
     /* .social-footer__item_ytb */
     &_ytb {
       @include adaptiveValue("gap", 40, 30, 1920, 992, 1);
+
+      @media (max-width:$mobileSmall) {
+        gap: 0;
+      }
     }
   }
-
 
 
   /* .social-footer__link */
@@ -137,8 +156,8 @@
         }
       }
 
-      @media (max-width:$mobile){
-         padding-left: rem(30); 
+      @media (max-width:$mobile) {
+        padding-left: rem(30);
       }
 
     }
@@ -206,8 +225,8 @@
   }
 
   &__right {
-    @media (max-width:$mobile){
-       @include adaptiveValue("padding-top", 40, 40); 
+    @media (max-width:$mobile) {
+      @include adaptiveValue("padding-top", 40, 40);
     }
   }
 }
