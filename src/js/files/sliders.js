@@ -171,10 +171,10 @@ function initSliders() {
 			modules: [Autoplay],
 			/*  
 			effect: 'fade', */
-			autoplay: {
-				delay: 800,
-				disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	delay: 800,
+			// 	disableOnInteraction: false,
+			// },
 
 			observer: true,
 			observeParents: true,
@@ -186,7 +186,7 @@ function initSliders() {
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			loop: true,
+			// loop: true,
 			//preloadImages: false,
 			//lazy: true,
 			// Dotts
@@ -206,6 +206,9 @@ function initSliders() {
 				},
 				768: {
 					spaceBetween: 20,
+				},
+				992: {
+					spaceBetween: 45,
 				}
 			},
 
@@ -259,9 +262,9 @@ function initSliders() {
 				768: {
 					spaceBetween: 20
 				},
-				// 992: {
-				// 	spaceBetween: 34,
-				// },
+				992: {
+					spaceBetween: 30,
+				},
 				// 1268: {
 				// 	spaceBetween: 40,
 				// },

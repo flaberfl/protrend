@@ -1,6 +1,6 @@
 .plans {
   @include adaptiveValue("margin-top", -30, 117);
-  padding-bottom: rem(120);
+  @include adaptiveValue("padding-bottom", 120, 79);
 
   /* .plans__container */
   &__container {

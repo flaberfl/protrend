@@ -65,10 +65,15 @@
 }
 
 .play-time {
+  flex: 0 0 auto;
   font-weight: 400;
   @include adaptiveValue("font-size", 12, 8);
   line-height: math.div(15, 12);
   color: $mainTextColor;
   letter-spacing: 0.05em;
+}
+
+#cur-time {
+  @include adaptiveValue("width", 182, 108);
 }
 

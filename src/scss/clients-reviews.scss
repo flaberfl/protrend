@@ -5,8 +5,7 @@
 
   /* .clients-reviews__title */
   &__title {
-    @include adaptiveValue("margin-bottom", 50, 50);
-    margin-bottom: rem(50);
+    @include adaptiveValue("margin-bottom", 50, 32);
     letter-spacing: 0.05em;
 
     span {
@@ -16,16 +15,18 @@
 
   /* .clients-reviews__subtitle */
   &__subtitle {
-    @include adaptiveValue("margin-bottom", 48, 48);
-    margin-bottom: rem(48);
-    @include adaptiveValue("font-size", 40, 40);
+    @include adaptiveValue("margin-bottom", 48, 9);
+    @include adaptiveValue("font-size", 40, 16);
     font-weight: 300;
-    line-height: math.div(28, 40);
+    // line-height: math.div(28, 40);
     color: $mainTextColor;
     letter-spacing: 0.05em;
+    line-height: 175%;
   }
 
-  &__slider {}
+  &__slider {
+    @include adaptiveValue("margin-bottom", 43, 13);
+  }
 
   /* .clients-reviews__clients */
   &__clients {
@@ -47,9 +48,9 @@
       @media (max-width:$mobile) {
         width: 80%;
       }
-      
-      @media (max-width:$mobileSmall){
-        width: 55%; 
+
+      @media (max-width:$mobileSmall) {
+        width: 55%;
       }
 
     }
@@ -75,11 +76,13 @@
   @include adaptiveValue("width", 466, 284);
   @include adaptiveValue("padding-top", 67, 61);
   @include adaptiveValue("padding-bottom", 25, 14);
+  @include adaptiveValue("padding-left", 28, 12);
+  @include adaptiveValue("padding-right", 28, 12);
   display: grid;
   justify-content: center;
 
   background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
-  border-radius: 30px;
+  @include adaptiveValue("border-radius", 30, 20);
 
   text-align: center;
 
@@ -87,8 +90,8 @@
   &__label {
     position: absolute;
     padding: rem(3) rem(11);
-    left: 27px;
-    top: 23px;
+    @include adaptiveValue("left", 27, 12);
+    @include adaptiveValue("top", 23, 14);
 
 
     background-color: #FF890B;
@@ -116,10 +119,10 @@
 
   /* .reviews__name */
   &__name {
-    @include adaptiveValue("margin-bottom", 9, 9);
+    @include adaptiveValue("margin-bottom", 9, 4);
     margin-bottom: rem(9);
 
-    @include adaptiveValue("font-size", 40, 40);
+    @include adaptiveValue("font-size", 40, 20);
     font-weight: 600;
     line-height: math.div(49, 40);
     letter-spacing: 0.05em
@@ -131,12 +134,10 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    @include adaptiveValue("margin-bottom", 22, 22);
-    margin-bottom: rem(22);
-    @include adaptiveValue("padding-bottom", 25, 25);
-    padding-bottom: rem(25);
+    @include adaptiveValue("margin-bottom", 22, 14);
+    @include adaptiveValue("padding-bottom", 25, 18);
 
-    @include adaptiveValue("font-size", 16, 16);
+    @include adaptiveValue("font-size", 16, 12);
     font-weight: 400;
     line-height: math.div(20, 16);
     letter-spacing: 0.05em;
@@ -158,7 +159,7 @@
     margin-bottom: rem(20);
 
 
-    @include adaptiveValue("font-size", 16, 16);
+    @include adaptiveValue("font-size", 16, 12);
     font-weight: 400;
     line-height: math.div(20, 16);
     color: #FA982F;
