@@ -1,5 +1,6 @@
 //====================================================================================================
 .footer {
+  @include adaptiveValue("padding-top", 150, 150);
 
   /* .footer__container */
   &__container {}
@@ -64,7 +65,7 @@
         width: rem(70);
         height: rem(70);
         border-radius: 50%;
-        border-bottom: 10px solid $hoverColor;
+        border-bottom: 1px solid red;
 
         @media (max-width:$mobile) {
           width: rem(50);
