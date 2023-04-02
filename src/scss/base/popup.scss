@@ -45,20 +45,10 @@ body::after {
 	cursor: pointer;
 	position: absolute;
 
-	// right: rem(80);
-	// top: rem(39);
-	// right: rem(80);
-	// top: rem(39);
-
 	@include adaptiveValue("right", 80, 30);
 	@include adaptiveValue("top", 39, 14);
 
 	z-index: 999;
-
-	@media (max-width:$mobile) {
-		// right: rem(30);
-		// top: rem(14);
-	}
 
 	&::before,
 	&::after {
@@ -136,8 +126,8 @@ body::after {
 		letter-spacing: 0.05em;
 		color: $hoverColor;
 
-		@media (max-width:$mobile){
-			 top: 60%; 
+		@media (max-width:$mobile) {
+			top: 60%;
 		}
 	}
 
@@ -218,4 +208,55 @@ body::after {
 
 	/* .checkbox__text */
 	&__text {}
+}
+
+
+.thanks-popup {
+
+	/* .thanks-popup__title */
+	&__title {
+		margin-bottom: rem(30);
+
+		@include adaptiveValue("font-size", 70, 24);
+		font-weight: 700;
+		line-height: math.div(85, 70);
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
+
+	&__close {
+		@include adaptiveValue("right", 52, 30);
+		@include adaptiveValue("top", 39, 14);
+
+	}
+
+	&__content {
+		@include adaptiveValue("padding-top", 104, 27);
+
+		@include adaptiveValue("padding-bottom", 0, 50);
+		@include adaptiveValue("width", 964, 323);
+	}
+
+	/* .thanks-popup__body */
+	&__body {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/* .thanks-popup__image */
+	&__image {
+		img {
+			max-width: 100%;
+		}
+	}
+
+	/* .thanks-popup__logo */
+	&__logo {
+		position: absolute;
+		top: 30%;
+		width: 100%;
+		z-index: -1;
+	}
 }
