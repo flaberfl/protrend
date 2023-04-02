@@ -54,11 +54,7 @@ body::after {
 	&::after {
 		content: '';
 		position: absolute;
-		// top: 12px;
-		// right: 20px;
-		// height: rem(20);
 		@include adaptiveValue("height", 25, 20);
-		// @include adaptiveValue("height", 30, 20);
 		@include adaptiveValue("width", 4, 3);
 		background-color: #fff;
 	}
