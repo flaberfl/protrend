@@ -30,7 +30,7 @@ body::after {
 }
 
 .popup_show {
-	z-index: 150;
+	z-index: 500;
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
@@ -40,6 +40,48 @@ body::after {
 	visibility: visible;
 	transform: scale(1);
 }
+
+.popup__close {
+	cursor: pointer;
+	position: absolute;
+
+	// right: rem(80);
+	// top: rem(39);
+	// right: rem(80);
+	// top: rem(39);
+
+	@include adaptiveValue("right", 80, 30);
+	@include adaptiveValue("top", 39, 14);
+
+	z-index: 999;
+
+	@media (max-width:$mobile) {
+		// right: rem(30);
+		// top: rem(14);
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		// top: 12px;
+		// right: 20px;
+		// height: rem(20);
+		@include adaptiveValue("height", 25, 20);
+		// @include adaptiveValue("height", 30, 20);
+		@include adaptiveValue("width", 4, 3);
+		background-color: #fff;
+	}
+
+	&::before {
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		transform: rotate(-45deg);
+	}
+}
+
 
 .popup__wrapper {
 	display: flex;
@@ -54,16 +96,126 @@ body::after {
 }
 
 .popup__content {
+	padding: rem(94) rem(124) rem(100);
+
+	@include adaptiveValue("padding-top", 94, 27);
+	@include adaptiveValue("padding-left", 124, 27);
+	@include adaptiveValue("padding-right", 124, 28);
+	@include adaptiveValue("padding-bottom", 100, 32);
+
+	width: 100%;
+	@include adaptiveValue("width", 964, 320);
+
+
+	background-color: #445D74;
+	@include adaptiveValue("border-radius", 50, 30);
+	box-shadow: 0px 34px 52px rgba(0, 0, 0, 0.7);
+
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
-	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
 
 	.lock & {
 		visibility: visible;
 	}
+}
+
+
+
+.form {
+
+	&__label {
+		position: absolute;
+		@include adaptiveValue("right", 36, 17);
+		top: 50%;
+		transform: translate(0px, -50%);
+
+		@include adaptiveValue("font-size", 24, 18);
+		font-weight: 500;
+		line-height: math.div(29, 24);
+		letter-spacing: 0.05em;
+		color: $hoverColor;
+
+		@media (max-width:$mobile){
+			 top: 60%; 
+		}
+	}
+
+	/* .form__title */
+	&__title {
+		@include adaptiveValue("margin-bottom", 41, 28);
+
+		@include adaptiveValue("font-size", 50, 24);
+		font-weight: 700;
+		color: #fff;
+		line-height: math.div(61, 50);
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+
+	/* .form__item */
+	&__item {
+		position: relative;
+
+		/* .form__item_name */
+		&_name {
+			@include adaptiveValue("margin-bottom", 19, 10);
+		}
+
+		/* .form__item_phone */
+		&_phone {
+			@include adaptiveValue("margin-bottom", 19, 10);
+		}
+
+		/* .form__item_textarea */
+		&_textarea {
+
+			@include adaptiveValue("margin-bottom", 29, 16);
+			width: 100%;
+		}
+
+		/* .form__item_checkbox */
+		&_checkbox {
+			@include adaptiveValue("margin-bottom", 54, 19);
+		}
+	}
+
+	/* .form__input */
+	&__input {
+		@include adaptiveValue("height", 70, 50);
+		@include adaptiveValue("padding-left", 44, 23);
+		@include adaptiveValue("padding-right", 36, 23);
+		@include adaptiveValue("padding-top", 25, 25);
+		@include adaptiveValue("padding-bottom", 25, 25);
+
+
+		background-color: #fff;
+		border: rem(1) solid #D9D9D9;
+		border-radius: rem(39);
+
+
+		@include adaptiveValue("font-size", 16, 12);
+		line-height: math.div(20, 16);
+		font-weight: 500;
+		color: #263039;
+		letter-spacing: 0.05em;
+	}
+
+	/* .form__button */
+	&__button {
+		@include adaptiveValue("width", 218, 269);
+	}
+}
+
+
+.checkbox {
+
+	/* .checkbox__input */
+	&__input {}
+
+	/* .checkbox__label */
+	&__label {}
+
+	/* .checkbox__text */
+	&__text {}
 }

@@ -9,3 +9,47 @@
 	</div>
 </div>
  -->
+
+<div id="popup-submit" aria-hidden="true" class="popup popup_show">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"></button>
+
+			<form class="form" action="#" data-dev data-popup-message="#form-message">
+				<h2 class="form__title">Связаться с нами</h2>
+
+				<div class="form__item form__item_name">
+					<label class="form__label" for="name">*</label>
+					<input autocomplete="off" type="text" name="name" data-required data-error="Не заполненное поле!"
+						placeholder="Ваше имя" class="form__input input">
+				</div>
+
+				<div class="form__item form__item_phone">
+					<label class="form__label" for="name">*</label>
+					<input autocomplete="off" type="tel" name="phone" data-required data-error="Не заполненное поле!"
+						placeholder="Номер телефона" class="form__input input">
+				</div>
+
+				<div class="form__item form__item_textarea">
+					<textarea class="form__input input" name="textarea" cols="1" rows="3"
+						placeholder="Введите текст сообщения"></textarea>
+				</div>
+
+				<div class="form__item form__item_checkbox">
+					<div class="checkbox">
+						<input id="c_1" data-error="Не выбрано поле" data-required class="checkbox__input" type="checkbox" value="1"
+							name="checkbox">
+						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Даем согласие на обработку
+								персональных данных <a href="#">Политика конфиденциальности</a></span></label>
+					</div>
+				</div>
+
+				<div class="form__item">
+					<button type="submit" class="form__button button">Отправить</button>
+				</div>
+
+			</form>
+
+		</div>
+	</div>
+</div>
