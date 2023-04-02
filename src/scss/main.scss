@@ -106,6 +106,7 @@
 
   &__button {
     position: relative;
+    z-index: 100;
 
     @media (max-width:$tablet) {
       position: absolute;
