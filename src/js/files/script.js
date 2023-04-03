@@ -228,13 +228,15 @@ function getValue() {
     box.classList.remove('_active');
 
     // box.classList.add('small');
-  });
 
-  if (numValue <= 2) {
-    item1classList.add('_active');
+
+  });
+  if (numValue >= 1 && numValue <= 2) {
+    item1.classList.add('_active');
   } else {
     item1.classList.remove('_active');
   };
+
 
 
 };
