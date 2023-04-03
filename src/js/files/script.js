@@ -229,13 +229,33 @@ function getValue() {
 
     // box.classList.add('small');
 
-
   });
+
   if (numValue >= 1 && numValue <= 2) {
     item1.classList.add('_active');
-  } else {
-    item1.classList.remove('_active');
+  } else if (numValue >= 3 && numValue <= 5) {
+    item2.classList.add('_active');
   };
+
+
+
+
+  // if (numValue >= 1 && numValue <= 2) {
+  //   item1.classList.add('_active');
+  // } else {
+  //   item1.classList.remove('_active');
+  // };
+
+
+
+
+
+
+  // else if (numValue >= 3 && numValue <= 5) {
+  //   item1.classList.add('_active');
+  // } else {
+  //   item1.classList.remove('_active');
+  // }
 
 
 
