@@ -14,7 +14,6 @@
         position: absolute;
         width: rem(432);
         height: rem(1182);
-
         right: 21%;
         top: 10%;
         background: #204160;
@@ -23,7 +22,6 @@
         transform: rotate(38.38deg);
         z-index: -1000;
       }
-
     }
 
     &::before {
@@ -35,7 +33,6 @@
       right: 40%;
       top: 47%;
     }
-
   }
 
   /* .plans__title */
@@ -50,11 +47,6 @@
       color: #00C4EF;
     }
   }
-
-  /* .plans__step-one */
-  &__step-one {}
-
-  &__slider {}
 }
 
 .step-one-plans {
@@ -65,9 +57,6 @@
       @include adaptiveValue("margin-left", -30, -60);
     }
   }
-
-  /* .step-one-plans__item */
-  &__item {}
 }
 
 .step-plans {
@@ -124,7 +113,6 @@
 
   /* .header-step-plans__title */
   &__title {
-
     @media (max-width:$tablet) {
       @include adaptiveValue("margin-bottom", 20, 12);
     }
@@ -143,7 +131,6 @@
     @include adaptiveValue("font-size", 40, 20);
     font-weight: 300;
     line-height: math.div(49, 40);
-
     letter-spacing: 0.05em;
   }
 
@@ -165,8 +152,6 @@
   }
 }
 
-.form-step-one {}
-
 .form-step {
 
   @media (min-width:$tablet) {
@@ -179,18 +164,17 @@
   &__lable {
     flex: 1 1 100%;
     margin-bottom: rem(25);
+    @include adaptiveValue("padding-left", 24, 10, 1920, 1200);
 
     @include adaptiveValue("font-size", 16, 12);
     line-height: math.div(19.5, 16);
     font-weight: 500;
     letter-spacing: 0.05em;
 
-    @include adaptiveValue("padding-left", 24, 10, 1920, 1200);
 
     @media (max-width:$tablet) {
       margin-right: rem(17);
     }
-
   }
 
   /* .form-step__input */
@@ -237,8 +221,8 @@
       position: relative;
       display: flex;
       align-items: center;
-
       padding-left: rem(31);
+
 
       &::before {
         content: '';
@@ -248,9 +232,7 @@
         background-color: $secTextColor;
         left: 0;
       }
-
     }
-
   }
 }
 
@@ -264,7 +246,6 @@
   @include adaptiveValue("padding-top", 36, 20);
   @include adaptiveValue("padding-bottom", 36, 20);
 
-
   background: linear-gradient(294.61deg, #2F4356 5.58%, #1F2E3D 126.67%);
   border-radius: 30px;
 
@@ -273,8 +254,6 @@
   transition: all 0.7s ease 0s;
 
   ._active & {
-    transition: all 0.7s ease 0s;
-
     background: linear-gradient(294.61deg, #3E5770 5.58%, #2B4256 126.67%);
   }
 
@@ -289,8 +268,7 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
 
-    transition: all .4s ease 0s;
-
+    transition: color .3s ease 0s;
 
     ._active & {
       color: #01C3ED;
@@ -303,7 +281,6 @@
     display: block;
     @include adaptiveValue("margin-bottom", 36, 13);
     padding: rem(14) rem(10);
-    height: rem(46);
     @include adaptiveValue("height", 46, 38);
     width: calc(100% + rem(14));
 
@@ -317,6 +294,8 @@
     color: $secTextColor;
     text-align: center;
 
+    transition: color .3 ease 0s;
+
     &::after {
       content: '';
       position: absolute;
@@ -328,8 +307,6 @@
       padding: 0;
       width: 100%;
       z-index: -1;
-
-
     }
 
     ._active & {
@@ -360,7 +337,7 @@
     font-weight: 800;
     letter-spacing: 0.05em;
 
-    transition: color 0.4s ease 0s;
+    transition: color .3s ease 0s;
 
 
     ._active & {
@@ -384,7 +361,7 @@
     line-height: math.div(24, 14);
     color: $secTextColor;
 
-    transition: color .4s ease 0s;
+    transition: color .3s ease 0s;
 
     ._active & {
       color: #01C3ED;
@@ -395,16 +372,17 @@
   &__check {
     @include adaptiveValue("margin-top", 30, 20);
     margin-bottom: rem(-4);
-    display: none;
-    opacity: 0;
-    transform: scale(0);
 
-    transition: transform .4s ease 0s;
+    transform: scale(0);
+    opacity: 0;
+
+    transition: all .3s ease 0s;
 
     ._active & {
-      opacity: 1;
-      transform: scale(1);
       display: inline-block;
+
+      transform: scale(1);
+      opacity: 1;
     }
   }
 
@@ -413,14 +391,16 @@
   &__footer {
     position: relative;
     @include adaptiveValue("padding-top", 25, 18);
+    margin-bottom: rem(-122);
 
     text-align: center;
-    transition: all 1s ease 0s;
 
-    ._active & {}
+    transition: all 0.3s ease 0s;
 
+    ._active & {
+      margin-bottom: 0;
+    }
   }
-
 }
 
 .list-item-step {
@@ -431,6 +411,7 @@
   @include adaptiveValue("padding-right", 30, 20);
 
   z-index: 100;
+  transition: color .3s ease 0s;
 
   ._active & {
     color: #fff;
@@ -438,8 +419,6 @@
 
   /* .list-item-step__item */
   &__item {
-    // display: grid;
-    // grid-template-columns: auto auto;
     row-gap: rem(24);
     display: flex;
     justify-content: space-between;
@@ -458,7 +437,6 @@
     line-height: math.div(24, 16);
 
     flex: 0 1 70%;
-
   }
 
   /* .list-item-step__value */
@@ -501,7 +479,6 @@
         z-index: -1000;
       }
 
-
       @media (max-width:$mobile) {
         flex-direction: column;
       }
@@ -517,9 +494,7 @@
       line-height: math.div(19, 16);
       letter-spacing: 0.05em;
       color: #B1E718;
-
     }
-
   }
 
   /* .plans__button */
@@ -531,9 +506,7 @@
     @include adaptiveValue("height", 145, 77);
 
     border-radius: 50%;
-
     background-color: #2D3843;
-    // transition: all 1s ease 0s;
 
     &::after,
     &::before {
@@ -574,12 +547,8 @@
       }
 
       img {
-        // transition: all .6s ease 0s;
-
-        // top: -20px;
         transform: translate(0px, rem(15));
       }
-
     }
 
     &_up {
@@ -587,7 +556,6 @@
 
         img {
           transform: translate(0px, rem(-15));
-
         }
       }
     }
@@ -609,7 +577,6 @@
   }
 }
 
-
 .step-plans {
 
   /* .step-plans__operation */
@@ -622,7 +589,6 @@
   @include adaptiveValue("margin-bottom", 71, 17);
   @include adaptiveValue("padding-left", 110, 65);
 }
-
 
 .operation-plans {
   position: relative;
@@ -687,14 +653,12 @@
         top: 68%;
         left: -51%;
         transform: rotate(90deg) scale(1, -1);
-
       }
     }
   }
 
   &:nth-child(2) {
     &::after {
-
       transform: scale(1, -1);
       transform-origin: 0 100%;
 
@@ -705,7 +669,6 @@
       @media (max-width: em(735)) {
         transform: rotate(90deg) scale(1, -1);
         transform-origin: 0 -100%;
-
       }
     }
   }
@@ -798,9 +761,7 @@
 .question-plan {
   position: relative;
 
-
   text-align: center;
-
 
   &::before {
     content: '';

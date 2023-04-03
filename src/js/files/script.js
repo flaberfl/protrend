@@ -205,6 +205,7 @@ pauseBtn.addEventListener("click", () => {
 // })
 
 
+// Функции вывода карточек, в зависимости от введенного значениия в input
 
 
 num.oninput = getValue;
@@ -243,7 +244,7 @@ function getValueTwo() {
   const item1 = document.getElementById('13');
   const item2 = document.getElementById('47');
   const item3 = document.getElementById('811');
-  const item4 = document.getElementById('12');
+  const item4 = document.getElementById('120');
   let numValue = this.value;
 
   itemsStep.forEach(box => {
@@ -262,54 +263,3 @@ function getValueTwo() {
   };
 
 };
-
-
-
-
-
-
-// function getValue() {
-//   const item = document.querySelectorAll('.item-step');
-//   const item1 = document.getElementById('12');
-//   const item2 = document.getElementById('35');
-//   const item3 = document.getElementById('69');
-//   const item4 = document.getElementById('10');
-//   let num = document.getElementById('num');
-//   let numValue = num.value;
-
-//   let result = document.getElementById('result');
-//   result.innerText = numValue;
-
-//   // if ((' ' + item.className + ' ').indexOf('_active') > -1) {
-//   // 	item1.classList.remove('_active');
-//   // }
-
-
-//   // console.log(item1);
-//   if (numValue <= 2) {
-//     item1.classList.add('_active');
-//   } else {
-//     item1.classList.remove('_active');
-//   };
-
-//   // if (numValue >= 2) {
-//   // 	item2.classList.add('_active');
-//   // } else {
-//   // 	item2.classList.remove('_active');
-//   // };
-//   // if (numValue <= 3 & >= 5) {
-//   // 	item2.classList.add('_active');
-//   // } else {
-//   // 	item2.classList.remove('_active');
-//   // }
-//   // if (numValue <= 2) {
-//   // 	item1.classList.add('_active');
-//   // } else {
-//   // 	item1.classList.remove('_active');
-//   // }
-//   // if (numValue <= 2) {
-//   // 	item1.classList.add('_active');
-//   // } else {
-//   // 	item1.classList.remove('_active');
-//   // }
-// }
