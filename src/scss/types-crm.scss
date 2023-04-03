@@ -46,8 +46,6 @@
 			transform: none;
 			opacity: 1;
 		}
-
-
 	}
 
 	/* .types-crm__button */
@@ -104,8 +102,6 @@
 			column-gap: rem(15);
 			align-items: center;
 		}
-
-
 	}
 
 	/* .types-crm__icon */
@@ -141,18 +137,20 @@
 			transform: none;
 			opacity: 1;
 		}
-
 	}
 
 	/* .types-crm__item */
 	&__item {
 		display: grid;
 		grid-template-columns: 1fr 49.5%;
-
 		align-items: center;
 		height: rem(650);
 
 		letter-spacing: .05em;
+
+		transform: translate(rem(30), rem(10));
+		opacity: 0;
+		transition: all .8s ease 0s;
 
 		&_chess {
 			align-items: start;
@@ -162,6 +160,11 @@
 			grid-template-columns: 1fr;
 			height: 100%;
 			row-gap: rem(20);
+		}
+
+		&._watcher-view {
+			opacity: 1;
+			transform: none;
 		}
 	}
 
@@ -182,10 +185,21 @@
 		}
 
 		&_crm {
+			position: relative;
+
+			&::before {
+				position: absolute;
+				content: '';
+				height: 100%;
+				width: 30%;
+				left: -17%;
+				top: 0;
+				background: linear-gradient(90deg, rgba(29, 38, 40, 0) 0%, #1D2628 81.77%);
+				transform: matrix(-1, 0, 0, 1, 0, 0);
+			}
 
 			@media (min-width:$tablet) {
 				margin-right: rem(-260);
-
 			}
 
 			img {
@@ -200,7 +214,6 @@
 		&_an {
 			@media (max-width:$tablet) {
 				max-width: 85%;
-
 
 			}
 		}
@@ -269,7 +282,6 @@
 		padding-left: rem(26);
 		margin-bottom: rem(29);
 		@include adaptiveValue("margin-bottom", 29, 18);
-
 
 		._icon-top & {
 			margin-bottom: rem(0);

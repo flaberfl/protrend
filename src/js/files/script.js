@@ -207,7 +207,6 @@ pauseBtn.addEventListener("click", () => {
 
 // Функции вывода карточек, в зависимости от введенного значениия в input
 
-
 num.oninput = getValue;
 const itemsStep = document.querySelectorAll('.item-step');
 
@@ -217,8 +216,8 @@ function getValue() {
   const item3 = document.getElementById('69');
   const item4 = document.getElementById('10');
 
+  // Ограничение вводимых символов
   this.value = this.value.substr(0, 2);
-
   // result.innerText = numValue;
   let numValue = this.value;
 

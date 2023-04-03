@@ -69,6 +69,10 @@ function initSliders() {
 			// freeMode: true,
 			// autoHeight: true,
 			speed: 800,
+			hashnav: true,
+			hashNavigation: {
+
+			},
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -102,10 +106,15 @@ function initSliders() {
 			},
 
 			on: {
-
+				init: function (swiper) {
+					var currentSlide = swiper.slideTo(3);
+					console.log(currentSlide);
+				}
 			}
+			
 		});
 	}
+
 	if (document.querySelector('.plans__slider_two')) { // Указываем класс нужного слайдера
 		// Создаем слайдер
 		new Swiper('.plans__slider_two', {
@@ -230,7 +239,7 @@ function initSliders() {
 			// 	delay: 800,
 			// 	disableOnInteraction: false,
 			// },
-		
+
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
