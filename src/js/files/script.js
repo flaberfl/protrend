@@ -235,6 +235,10 @@ function getValue() {
     item1.classList.add('_active');
   } else if (numValue >= 3 && numValue <= 5) {
     item2.classList.add('_active');
+  } else if (numValue >= 6 && numValue <= 9) {
+    item3.classList.add('_active');
+  } else if (numValue >= 10 && numValue <= 50) {
+    item4.classList.add('_active');
   };
 
 
