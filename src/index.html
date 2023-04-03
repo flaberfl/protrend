@@ -76,7 +76,7 @@
 
 			<section class="page__types-crm types-crm">
 				<div class="types-crm__container">
-					<div data-tabs class="tabs types-crm__body">
+					<div data-tabs-animate data-tabs class="tabs types-crm__body">
 						<nav data-watch data-tabs-titles class="tabs__navigation types-crm__navigation">
 
 							<div class="types-crm__button tabs__title _tab-active">
@@ -320,28 +320,55 @@
 								<input id="num" onInput="getValue(this.value)" min="1" max="50" type="number" name="form-input-one"
 									data-error="Ошибка" placeholder="" class="form-step__input form-step__input-v input">
 
-								<span id="result"></span>
+								<!-- <span id="result"></span> -->
 
-								<script>
+								<!-- <script>
 									function getValue() {
-										const plans = document.querySelector('.step-one-plans__item');
-										const item1 = document.getElementById('13');
-										const item2 = document.getElementById('46');
-										const item3 = document.getElementById('58');
-										const item4 = document.getElementById('912');
+										const item = document.querySelectorAll('.item-step');
+										const item1 = document.getElementById('12');
+										const item2 = document.getElementById('35');
+										const item3 = document.getElementById('69');
+										const item4 = document.getElementById('10');
 										let num = document.getElementById('num');
 										let numValue = num.value;
 
 										let result = document.getElementById('result');
 										result.innerText = numValue;
-										// console.log(item2);	
-										console.log(item1);
-										if (numValue >= 2) {
-											item1.classList.add('_active');
 
-										}
+										// if ((' ' + item.className + ' ').indexOf('_active') > -1) {
+										// 	item1.classList.remove('_active');
+										// }
+
+
+										// console.log(item1);
+										if (numValue <= 2) {
+											item1.classList.add('_active');
+										} else {
+											item1.classList.remove('_active');
+										};
+
+										// if (numValue >= 2) {
+										// 	item2.classList.add('_active');
+										// } else {
+										// 	item2.classList.remove('_active');
+										// };
+										// if (numValue <= 3 & >= 5) {
+										// 	item2.classList.add('_active');
+										// } else {
+										// 	item2.classList.remove('_active');
+										// }
+										// if (numValue <= 2) {
+										// 	item1.classList.add('_active');
+										// } else {
+										// 	item1.classList.remove('_active');
+										// }
+										// if (numValue <= 2) {
+										// 	item1.classList.add('_active');
+										// } else {
+										// 	item1.classList.remove('_active');
+										// }
 									}
-								</script>
+								</script> -->
 
 								<p class="form-step__descr">Обязательно к заполнению!</p>
 							</form>
@@ -351,7 +378,7 @@
 
 							<div class="step-plans__items swiper-wrapper">
 
-								<div id="13" class="step-one-plans__item item-step swiper-slide">
+								<div id="12" class="step-one-plans__item item-step swiper-slide">
 									<h4 class="item-step__name">БАЗОВАЯ</h4>
 
 									<h5 class="item-step__descr">Для 1-2 жилых комплексов</h5>
@@ -396,7 +423,7 @@
 
 								</div>
 
-								<div id="46" class="step-one-plans__item item-step swiper-slide _active">
+								<div id="35" class="step-one-plans__item item-step swiper-slide">
 
 									<h4 class="item-step__name">РАСШИРЕННАЯ</h4>
 									<div class="item-step__descr">
@@ -442,7 +469,7 @@
 
 
 								</div>
-								<div id="58" class="step-one-plans__item item-step swiper-slide">
+								<div id="69" class="step-one-plans__item item-step swiper-slide">
 									<h4 class="item-step__name">ПРОФЕССИОНАЛЬНАЯ</h4>
 
 									<h5 class="item-step__descr">Для 6-9 жилых комплексов</h5>
@@ -485,7 +512,7 @@
 									</div>
 
 								</div>
-								<div id="912" class="step-one-plans__item item-step swiper-slide">
+								<div id="10" class="step-one-plans__item item-step swiper-slide">
 									<h4 class="item-step__name">КОРПОРАТИВНАЯ</h4>
 
 									<h5 class="item-step__descr">От 10 жилых комплексов</h5>

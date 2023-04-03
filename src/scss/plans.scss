@@ -517,31 +517,52 @@
     border-radius: 50%;
 
     background-color: #2D3843;
-    // z-index: -1000;
+    // transition: all 1s ease 0s;
 
-    &:hover {
-      &::before {
-        box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.25);
-      }
-    }
-
-    /* .plans__button_down */
-    &_down {}
-
+    &::after,
     &::before {
       content: '';
       position: absolute;
       width: 72%;
       height: 72%;
-
-      background-color: #314150;
       border-radius: 50%;
+      background-color: #314150;
+      transition: .4s;
+    }
+
+    &::before {
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
+      opacity: 1;
+    }
+
+    &::after {
+      opacity: 0;
+      box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.25);
+
     }
 
     img {
       position: relative;
+      z-index: 100;
       @include adaptiveValue("height", 43, 19);
+      transition: .4s;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+
+      img {
+        // transition: all .6s ease 0s;
+
+        // top: -20px;
+        transform: translate(0px, rem(15));
+      }
     }
   }
 
