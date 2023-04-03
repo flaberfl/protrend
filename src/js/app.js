@@ -76,7 +76,9 @@
 
   /* Работа с полями формы */
   /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-  flsForms.formFieldsInit({ viewPass: false });
+  flsForms.formFieldsInit({
+    viewPass: false
+  });
 
   /* Oтправка формы */
   /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
@@ -150,7 +152,7 @@
   // Наблюдатель за объектами c атрибутом data-watch
   // Документация: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
   // Сниппет(HTML):
-  // import './libs/watcher.js'
+  import './libs/watcher.js'
 
   // Модуль поэкранного скролла
   // Документация: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html

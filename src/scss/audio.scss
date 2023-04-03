@@ -104,11 +104,67 @@
   width: 200px;
   // top: -4px;
   height: 8px;
+  background-color: #000;
 }
 
 .music-seek-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
+  -webkit-appearance: unset;
   height: 50px;
   width: 5px;
   background-color: #000;
+  cursor: pointer;
+}
+
+.controls {
+  position: relative;
+}
+
+.volume-slider {
+  // -webkit-appearance: unset;
+  // -webkit-appearance: none;
+  cursor: pointer;
+  width: rem(62);
+  height: rem(40);
+  position: absolute;
+  transform: rotate(-90deg);
+  border: rem(20);
+  overflow: hidden;
+  // background: #000;
+
+  &.active {
+    opacity: 1;
+    display: block;
+  }
+}
+
+.volume-slider::-webkit-slider-thumb {
+  // -webkit-appearance: unset;
+  -webkit-appearance: none;
+  height: rem(40);
+  width: rem(10);
+  // background: red;
+
+  // box-shadow: -200px 0 1px 200px red;
+
+}
+
+.play-p,
+.pause-p {
+  cursor: pointer;
+
+  &.active {
+    opacity: 1;
+    display: block;
+  }
+}
+
+.main-player {
+  span {
+    img {
+      display: none;
+      opacity: 0;
+
+    }
+  }
 }

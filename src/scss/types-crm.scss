@@ -37,6 +37,17 @@
 		@include adaptiveValue("column-gap", 26, 7);
 		overflow-x: auto;
 		position: relative;
+
+		transform: translate(0, rem(50));
+		opacity: 0;
+		transition: all 1.2s ease 0s;
+
+		&._watcher-view {
+			transform: none;
+			opacity: 1;
+		}
+
+
 	}
 
 	/* .types-crm__button */
@@ -121,7 +132,17 @@
 	}
 
 	/* .types-crm__content */
-	&__content {}
+	&__content {
+		transform: translate(0, rem(50));
+		opacity: 0;
+		transition: all 1.2s ease 0s;
+
+		&._watcher-view {
+			transform: none;
+			opacity: 1;
+		}
+
+	}
 
 	/* .types-crm__item */
 	&__item {

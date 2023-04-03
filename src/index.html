@@ -77,7 +77,7 @@
 			<section class="page__types-crm types-crm">
 				<div class="types-crm__container">
 					<div data-tabs class="tabs types-crm__body">
-						<nav data-tabs-titles class="tabs__navigation types-crm__navigation">
+						<nav data-watch data-tabs-titles class="tabs__navigation types-crm__navigation">
 
 							<div class="types-crm__button tabs__title _tab-active">
 								<div class="types-crm__icon">
@@ -116,7 +116,7 @@
 
 						</nav>
 
-						<div data-tabs-body class="tabs__content types-crm__content">
+						<div data-watch data-tabs-body class="tabs__content types-crm__content">
 							<div class="tabs__body">
 								<div class="types-crm__item types-crm__item_chess">
 									<div class="types-crm__image">
@@ -316,8 +316,8 @@
 							</div>
 							<form action="" class="step-one-plans__form form-step-one form-step">
 								<label for="form-input" class="form-step__lable">Введите количество:</label>
-								<input autocomplete="off" min="1" max="50" type="number" name="form-input-one" data-error="Ошибка"
-									placeholder="" class="form-step__input input">
+								<input min="1" max="50" type="number" name="form-input-one" data-error="Ошибка" placeholder=""
+									class="form-step__input form-step__input-v input">
 								<p class="form-step__descr">Обязательно к заполнению!</p>
 							</form>
 						</div>
@@ -766,7 +766,8 @@
 					<div class="swiper-pagination-plans swiper-pagination-plans_two"></div>
 
 					<div class="plans__button-block plans__button-block_up">
-						<button data-popup="#popup-submit" type="submit" class="button button_tr-b button_248">Связаться с нами</button>
+						<button data-popup="#popup-submit" type="submit" class="button button_tr-b button_248">Связаться с
+							нами</button>
 						<div class="b-wrap">
 							<button data-goto=".plans__step-one" class="plans__button plans__button_up">
 								<img src="@img/icons/arrow-up.svg" alt="Стрелка вверх">
@@ -952,7 +953,7 @@
 
 									<div class="player">
 										<audio id="av-tag" controls>
-											<source src="https://web-freelancer.ru/audio/01.mp3" type="audio/mp3">
+											<source src="audio/01.mp3" type="audio/mp3">
 											Your browser does not support the audio element.
 										</audio>
 										<button class="play-btn">
@@ -1053,12 +1054,32 @@
 
 			</section>
 
+			<audio src="files/01.mp3" id="audio-source"></audio>
 
-			<div class="music-player-section">
+			<section class="music-player-section">
 				<div class="seek-bar-container">
-				 <input type="range" value="0" class="music-seek-bar">
+					<input type="range" value="0" class="music-seek-bar">
+					<p class="current-time">00 : 00</p>
+					<p class="duration">00 : 00</p>
 				</div>
-			</div>
+
+				<div class="controls">
+					<div class="main-player">
+
+						<span><img class="play-p active" src="@img/contols/play.svg" alt=""></span>
+						<span><img class="pause-p" src="@img/contols/stop.svg" alt=""></span>
+
+					</div>
+					<!-- <input type="range" class="volume-slider" max="1" value="1" step="0.1"> -->
+					<span class="volume-up"><img src="@img/contols/sound.svg" alt=""></span>
+
+				</div>
+
+
+
+
+			</section>
+
 
 		</main>
 		@@include('html/_footer.htm',{})
