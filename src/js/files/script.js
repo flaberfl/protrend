@@ -210,18 +210,35 @@ const item1 = document.getElementById('12');
 const item2 = document.getElementById('35');
 const item3 = document.getElementById('69');
 const item4 = document.getElementById('10');
+const items = document.querySelectorAll('.item-step');
 num.oninput = getValue;
 
 function getValue() {
-  result.innerText = this.value;
+  // this.value = numValue;
+  // result.innerText = numValue;
+  let numValue = this.value;
+  console.log(numValue);
 
-  if (this.value <= 2) {
-    item.classList.add('_active');
-  }
+  // if (this.value <= 2) {
+  //   item1classList.add('_active');
+  // }
 
-}
+  items.forEach(box => {
 
-const item = document.querySelectorAll('.item-step');
+    box.classList.remove('_active');
+
+    // box.classList.add('small');
+  });
+
+  if (numValue <= 2) {
+    item1classList.add('_active');
+  } else {
+    item1.classList.remove('_active');
+  };
+
+
+};
+
 
 
 
