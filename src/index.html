@@ -324,13 +324,17 @@
 
 								<script>
 									function getValue() {
-										
+										const plans = document.querySelector('.step-one-plans__item');
+										const item1 = document.getElementById('13');
+										const item2 = document.getElementById('46');
+										const item3 = document.getElementById('58');
+										const item4 = document.getElementById('912');
 										let num = document.getElementById('num');
 										let numValue = num.value;
 
 										let result = document.getElementById('result');
 										result.innerText = numValue;
-										// console.log(numValue);
+										console.log(item2);
 										
 									}
 								</script>
@@ -343,7 +347,7 @@
 
 							<div class="step-plans__items swiper-wrapper">
 
-								<div class="step-one-plans__item item-step swiper-slide">
+								<div id="13" class="step-one-plans__item item-step swiper-slide">
 									<h4 class="item-step__name">БАЗОВАЯ</h4>
 
 									<h5 class="item-step__descr">Для 1-2 жилых комплексов</h5>
@@ -388,7 +392,7 @@
 
 								</div>
 
-								<div class="step-one-plans__item item-step swiper-slide _active">
+								<div id="46" class="step-one-plans__item item-step swiper-slide _active">
 
 									<h4 class="item-step__name">РАСШИРЕННАЯ</h4>
 									<div class="item-step__descr">
@@ -434,7 +438,7 @@
 
 
 								</div>
-								<div class="step-one-plans__item item-step swiper-slide">
+								<div id="58" class="step-one-plans__item item-step swiper-slide">
 									<h4 class="item-step__name">ПРОФЕССИОНАЛЬНАЯ</h4>
 
 									<h5 class="item-step__descr">Для 6-9 жилых комплексов</h5>
@@ -477,7 +481,7 @@
 									</div>
 
 								</div>
-								<div class="step-one-plans__item item-step swiper-slide">
+								<div id="912" class="step-one-plans__item item-step swiper-slide">
 									<h4 class="item-step__name">КОРПОРАТИВНАЯ</h4>
 
 									<h5 class="item-step__descr">От 10 жилых комплексов</h5>
