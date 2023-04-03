@@ -237,3 +237,14 @@ pauseBtn.addEventListener("click", () => {
 
 
 // input.addEventListener("input", onInputHandler);
+
+
+
+function getValue() {
+  let num = document.getElementById('num');
+  let numValue = num.value;
+
+  let result = document.getElementById('result');
+  result.innerText = numValue;
+  // console.log(numValue);
+}

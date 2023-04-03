@@ -316,8 +316,23 @@
 							</div>
 							<form action="" class="step-one-plans__form form-step-one form-step">
 								<label for="form-input" class="form-step__lable">Введите количество:</label>
-								<input min="1" max="50" type="number" name="form-input-one" data-error="Ошибка" placeholder=""
-									class="form-step__input form-step__input-v input">
+
+								<input id="num" onInput="getValue(this.value)" min="1" max="50" type="number" name="form-input-one"
+									data-error="Ошибка" placeholder="" class="form-step__input form-step__input-v input">
+
+								<span id="result"></span>
+
+								<script>
+									function getValue() {
+										let num = document.getElementById('num');
+										let numValue = num.value;
+
+										let result = document.getElementById('result');
+										result.innerText = numValue;
+										// console.log(numValue);
+									}
+								</script>
+
 								<p class="form-step__descr">Обязательно к заполнению!</p>
 							</form>
 						</div>
