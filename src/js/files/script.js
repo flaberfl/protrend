@@ -245,6 +245,6 @@ function getValue() {
   let numValue = num.value;
 
   let result = document.getElementById('result');
-  result.innerText = numValue;
+  result.innerHTML = numValue;
   // console.log(numValue);
 }
