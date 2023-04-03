@@ -206,29 +206,23 @@ pauseBtn.addEventListener("click", () => {
 
 
 
-const item1 = document.getElementById('12');
-const item2 = document.getElementById('35');
-const item3 = document.getElementById('69');
-const item4 = document.getElementById('10');
-const items = document.querySelectorAll('.item-step');
+
 num.oninput = getValue;
+const itemsStep = document.querySelectorAll('.item-step');
 
 function getValue() {
-  // this.value = numValue;
+  const item1 = document.getElementById('12');
+  const item2 = document.getElementById('35');
+  const item3 = document.getElementById('69');
+  const item4 = document.getElementById('10');
+
   // result.innerText = numValue;
   let numValue = this.value;
   console.log(numValue);
 
-  // if (this.value <= 2) {
-  //   item1classList.add('_active');
-  // }
-
-  items.forEach(box => {
+  itemsStep.forEach(box => {
 
     box.classList.remove('_active');
-
-    // box.classList.add('small');
-
   });
 
   if (numValue >= 1 && numValue <= 2) {
@@ -241,29 +235,35 @@ function getValue() {
     item4.classList.add('_active');
   };
 
+};
 
+num2.oninput = getValueTwo;
 
+function getValueTwo() {
+  const item1 = document.getElementById('13');
+  const item2 = document.getElementById('47');
+  const item3 = document.getElementById('811');
+  const item4 = document.getElementById('12');
+  let numValue = this.value;
 
-  // if (numValue >= 1 && numValue <= 2) {
-  //   item1.classList.add('_active');
-  // } else {
-  //   item1.classList.remove('_active');
-  // };
+  itemsStep.forEach(box => {
 
+    box.classList.remove('_active');
+  });
 
-
-
-
-
-  // else if (numValue >= 3 && numValue <= 5) {
-  //   item1.classList.add('_active');
-  // } else {
-  //   item1.classList.remove('_active');
-  // }
-
-
+  if (numValue >= 1 && numValue <= 3) {
+    item1.classList.add('_active');
+  } else if (numValue >= 4 && numValue <= 7) {
+    item2.classList.add('_active');
+  } else if (numValue >= 8 && numValue <= 11) {
+    item3.classList.add('_active');
+  } else if (numValue >= 12 && numValue <= 50) {
+    item4.classList.add('_active');
+  };
 
 };
+
+
 
 
 
