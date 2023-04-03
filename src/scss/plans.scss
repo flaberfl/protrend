@@ -527,7 +527,7 @@
       height: 72%;
       border-radius: 50%;
       background-color: #314150;
-      transition: .4s;
+      transition: .3s;
     }
 
     &::before {
@@ -545,7 +545,7 @@
       position: relative;
       z-index: 100;
       @include adaptiveValue("height", 43, 19);
-      transition: .4s;
+      transition: .3s;
     }
 
     &:hover {
@@ -562,6 +562,17 @@
 
         // top: -20px;
         transform: translate(0px, rem(15));
+      }
+
+    }
+
+    &_up {
+      &:hover {
+
+        img {
+          transform: translate(0px, rem(-15));
+
+        }
       }
     }
   }

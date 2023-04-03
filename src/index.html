@@ -317,59 +317,10 @@
 							<form action="" class="step-one-plans__form form-step-one form-step">
 								<label for="form-input" class="form-step__lable">Введите количество:</label>
 
-								<input id="num" onInput="getValue(this.value)" min="1" max="50" type="number" name="form-input-one"
-									data-error="Ошибка" placeholder="" class="form-step__input form-step__input-v input">
+								<input id="num" min="1" max="50" type="number" name="form-input-one" data-error="Ошибка" placeholder=""
+									class="form-step__input form-step__input-v input">
 
-								<!-- <span id="result"></span> -->
-
-								<!-- <script>
-									function getValue() {
-										const item = document.querySelectorAll('.item-step');
-										const item1 = document.getElementById('12');
-										const item2 = document.getElementById('35');
-										const item3 = document.getElementById('69');
-										const item4 = document.getElementById('10');
-										let num = document.getElementById('num');
-										let numValue = num.value;
-
-										let result = document.getElementById('result');
-										result.innerText = numValue;
-
-										// if ((' ' + item.className + ' ').indexOf('_active') > -1) {
-										// 	item1.classList.remove('_active');
-										// }
-
-
-										// console.log(item1);
-										if (numValue <= 2) {
-											item1.classList.add('_active');
-										} else {
-											item1.classList.remove('_active');
-										};
-
-										// if (numValue >= 2) {
-										// 	item2.classList.add('_active');
-										// } else {
-										// 	item2.classList.remove('_active');
-										// };
-										// if (numValue <= 3 & >= 5) {
-										// 	item2.classList.add('_active');
-										// } else {
-										// 	item2.classList.remove('_active');
-										// }
-										// if (numValue <= 2) {
-										// 	item1.classList.add('_active');
-										// } else {
-										// 	item1.classList.remove('_active');
-										// }
-										// if (numValue <= 2) {
-										// 	item1.classList.add('_active');
-										// } else {
-										// 	item1.classList.remove('_active');
-										// }
-									}
-								</script> -->
-
+								<span id="result"></span>
 								<p class="form-step__descr">Обязательно к заполнению!</p>
 							</form>
 						</div>

@@ -206,45 +206,51 @@ pauseBtn.addEventListener("click", () => {
 
 
 
-
-
-
-
-
-
-// let classNamesRE = /^(start|stop|status)$/;
-
-// let input = document.getElementById("my-field");
-
-// let div = document.querySelector(".sos");
-
-
-
-// let onInputHandler = event => {
-
-//   let match = event.target.value.match(classNamesRE);
-
-
-
-//   if (!match) match = ["", "error"];
-
-
-
-//   event.target.className = div.className = ["sos", match[1]].join(" ");
-
-// };
-
-
-
-// input.addEventListener("input", onInputHandler);
-
+num.oninput = getValue;
 
 
 function getValue() {
+  const item = document.querySelectorAll('.item-step');
+  const item1 = document.getElementById('12');
+  const item2 = document.getElementById('35');
+  const item3 = document.getElementById('69');
+  const item4 = document.getElementById('10');
   let num = document.getElementById('num');
   let numValue = num.value;
 
   let result = document.getElementById('result');
-  result.innerHTML = numValue;
-  // console.log(numValue);
+  result.innerText = numValue;
+
+  // if ((' ' + item.className + ' ').indexOf('_active') > -1) {
+  // 	item1.classList.remove('_active');
+  // }
+
+
+  // console.log(item1);
+  if (numValue <= 2) {
+    item1.classList.add('_active');
+  } else {
+    item1.classList.remove('_active');
+  };
+
+  // if (numValue >= 2) {
+  // 	item2.classList.add('_active');
+  // } else {
+  // 	item2.classList.remove('_active');
+  // };
+  // if (numValue <= 3 & >= 5) {
+  // 	item2.classList.add('_active');
+  // } else {
+  // 	item2.classList.remove('_active');
+  // }
+  // if (numValue <= 2) {
+  // 	item1.classList.add('_active');
+  // } else {
+  // 	item1.classList.remove('_active');
+  // }
+  // if (numValue <= 2) {
+  // 	item1.classList.add('_active');
+  // } else {
+  // 	item1.classList.remove('_active');
+  // }
 }
