@@ -217,8 +217,11 @@ function getValue() {
   const item3 = document.getElementById('69');
   const item4 = document.getElementById('10');
 
+  this.value = this.value.substr(0, 2);
+
   // result.innerText = numValue;
   let numValue = this.value;
+
   console.log(numValue);
 
   itemsStep.forEach(box => {
@@ -245,6 +248,7 @@ function getValueTwo() {
   const item2 = document.getElementById('47');
   const item3 = document.getElementById('811');
   const item4 = document.getElementById('120');
+  this.value = this.value.substr(0, 2);
   let numValue = this.value;
 
   itemsStep.forEach(box => {
@@ -261,5 +265,4 @@ function getValueTwo() {
   } else if (numValue >= 12 && numValue <= 50) {
     item4.classList.add('_active');
   };
-
 };
