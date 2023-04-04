@@ -82,8 +82,6 @@ body::after {
 }
 
 .popup__content {
-	padding: rem(94) rem(124) rem(100);
-
 	@include adaptiveValue("padding-top", 94, 27);
 	@include adaptiveValue("padding-left", 124, 27);
 	@include adaptiveValue("padding-right", 124, 28);
@@ -247,11 +245,15 @@ body::after {
 
 .quiz-popup {
 
+
 	/* .quiz-popup__wrapper */
 	&__wrapper {}
 
 	/* .quiz-popup__content */
 	&__content {
+	@include adaptiveValue("padding-top", 88, 27);
+
+		@include adaptiveValue("padding-bottom", 70, 32);
 		@include adaptiveValue("width", 1463, 320);
 
 
@@ -272,7 +274,7 @@ body::after {
 
 	/* .quiz-form__title */
 	&__title {
-		@include adaptiveValue("margin-bottom", 45, 28);
+		@include adaptiveValue("margin-bottom", 53, 28);
 
 		@include adaptiveValue("font-size", 40, 24);
 		font-size: 700px;
@@ -288,10 +290,12 @@ body::after {
 	/* .quiz-form__body */
 	&__body {
 		display: grid;
-		align-items: end;
+		grid-template-columns: 66.373% 1fr;
 
+		@include adaptiveValue("margin-bottom", 60, 18);
 
 		&_start {
+			align-items: end;
 			grid-template-columns: 69% 1fr;
 
 			@media (max-width:$tablet) {
@@ -340,6 +344,9 @@ body::after {
 
 	/* .quiz-form__button */
 	&__button {
+		min-width: 0;
+		@include adaptiveValue("width", 158, 50);
+
 
 		&_start {
 			@include adaptiveValue("width", 252, 273);
@@ -361,7 +368,7 @@ body::after {
 			display: flex;
 			align-items: center;
 
-			@include adaptiveValue("gap", 31, 25);
+			@include adaptiveValue("gap", 50, 25);
 
 		}
 	}
@@ -375,21 +382,112 @@ body::after {
 		}
 	}
 
+	/* .quiz-form__decor-wrap */
+	&__decor-wrap {
+		background: $secTextColor;
+		@include adaptiveValue("border-radius", 39, 30);
+	}
+
 	/* .quiz-form__description */
-	&__description {}
+	&__description {
+		display: flex;
+		align-items: flex-end;
+		justify-self: start;
+
+		@include adaptiveValue("padding-top", 72, 20);
+		@include adaptiveValue("padding-bottom", 46, 20);
+		@include adaptiveValue("padding-left", 46, 20);
+		@include adaptiveValue("padding-right", 50, 20);
+		gap: rem(10);
+
+		@include adaptiveValue("font-size", 16, 12);
+		line-height: math.div(20, 16);
+		color: #263039;
+		letter-spacing: 0.05em;
+
+		p {
+			position: relative;
+			@include adaptiveValue("width", 247, 199);
+
+			padding: rem(26);
+			@include adaptiveValue("padding-left", 33, 33);
+			@include adaptiveValue("padding-right", 25, 23);
+			// padding-right: rem(20);
+			// padding-left: rem(33);
+
+			transform: translate(0, rem(-25));
+
+			background: #B8D6DF;
+			box-shadow: 0px 12px 13px rgba(62, 76, 88, 0.17);
+			border-radius: 39px 39px 39px 0px;
+
+			&::before {
+				position: absolute;
+				content: '';
+				left: rem(-10);
+				bottom: 0;
+
+				border: rem(18) solid transparent;
+				border-bottom: rem(8) solid #B8D6DF;
+			}
+		}
+
+		span {
+			font-weight: 700;
+		}
+
+		img {
+			@include adaptiveValue("width", 52, 33);
+		}
+	}
 
 	/* .quiz-form__footer */
-	&__footer {}
+	&__footer {
+		display: flex;
+		align-items: center;
+	}
 
-	/* .quiz-form__progress-bar */
-	&__progress-bar {}
+	/* .quiz-form__progress */
+	&__progress {
+		flex: 1 1 auto;
+	}
 
 	/* .quiz-form__buttons */
 	&__buttons {}
 }
 
-.progress-bar {
+.progress-quiz-form {
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("gap", 16, 7);
 
-	/* .progress-bar__progress */
-	&__progress {}
+	/* .progress-quiz-form__bar */
+	&__bar {
+		position: relative;
+		@include adaptiveValue("width", 894, 125);
+		background: #517291;
+		border-radius: rem(15);
+		height: rem(15);
+	}
+
+	/* .progress-quiz-form__progress */
+	&__progress {
+		position: absolute;
+		width: 20%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: linear-gradient(90deg, #D97000 -18.3%, #E00028 134.86%);
+		box-shadow: 0px 10px 13px rgba(96, 26, 26, 0.49);
+		border-radius: rem(35);
+	}
+
+	/* .progress-quiz-form__rate */
+	&__rate {
+		@include adaptiveValue("font-size", 10, 10);
+		font-weight: 800;
+		line-height: math.div(12, 10);
+		letter-spacing: 0.05em;
+		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.18);
+	}
 }
