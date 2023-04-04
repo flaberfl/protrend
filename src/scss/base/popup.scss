@@ -346,7 +346,8 @@ body::after {
 	&__button {
 		min-width: 0;
 		@include adaptiveValue("width", 158, 50);
-
+		// padding-right: rem(72);
+		gap: rem(15);
 
 		&_start {
 			@include adaptiveValue("width", 252, 273);
