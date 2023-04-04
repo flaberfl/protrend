@@ -136,12 +136,13 @@ window.addEventListener('scroll', function () {
 //   }, 250)
 // });
 
+
+let currentMusic = 0;
 const music = document.querySelector('#audio-source');
 
 const seekBar = document.querySelector('.music-seek-bar');
 const currentMusicTime = document.querySelector('.current-time');
 const musicDuration = document.querySelector('.duration');
-
 
 const playBtn = document.querySelector('.play-p');
 const pauseBtn = document.querySelector('.pause-p');
@@ -149,14 +150,11 @@ const volumeBtn = document.querySelector('.volume-up');
 const volumeSlider = document.querySelector('.volume-slider');
 
 
-
-
 playBtn.addEventListener("click", () => {
   music.pLay();
   playBtn.classList.remove('active');
   pauseBtn.classList.add('active');
-  // console.log(playBtn.classList);
-  // console.log(pauseBtn.classList);
+
 });
 
 
@@ -167,42 +165,45 @@ pauseBtn.addEventListener("click", () => {
 });
 
 
-// const setMusic = () => {
-//   seekBar.value = 0;
+const setMusic = (i) => {
+  seekBar.value = 0;
+  currentMusic = i;
 
-//   setTimeout(() => {
-//     seekBar.max = music.duration;
-//     musicDuration.innerHTML = formatTime(music.duration)
-//   }, 300);
-//   currentMusicTime.innerHTML = '00 : 00';
-// }
+  setTimeout(() => {
+    seekBar.max = music.duration;
+    musicDuration.innerHTML = formatTime(music.duration)
+  }, 300);
+  currentMusicTime.innerHTML = '00 : 00';
+}
 
-// setMusic(0);
+setMusic(0);
 
-// const formatTime = (time) => {
-//   let min = Math.floor(time / 60);
-//   if (min < 10) {
-//     min = '0' + min;
-//   }
+const formatTime = (time) => {
+  let min = Math.floor(time / 60);
+  if (min < 10) {
+    min = '0' + min;
+  }
 
-//   let sec = Math.floor(time % 60);
-//   if (sec < 10) {
-//     sec = '0' + sec;
-//   }
+  let sec = Math.floor(time % 60);
+  if (sec < 10) {
+    sec = '0' + sec;
+  }
 
-//   return '${min} : ${sec}';
-// }
+  return '${min} : ${sec}';
+}
 
 
-// setInterval(() => {
-//   seekBar.value = music.currentTime;
-//   currentMusicTime.innerHTML = formatTime(music.currentTime);
+setInterval(() => {
+  seekBar.value = music.currentTime;
+  currentMusicTime.innerHTML = formatTime(music.currentTime);
 
-// }, 500)
+}, 500)
 
-// seekBar.addEventListener('change', () => {
-//   music.currentTime = seekBar.value;
-// })
+seekBar.addEventListener('change', () => {
+  music.currentTime = seekBar.value;
+})
+
+volumeBtn.addEventListener
 
 
 // Функции вывода карточек, в зависимости от введенного значениия в input
