@@ -251,7 +251,7 @@ body::after {
 
 	/* .quiz-popup__content */
 	&__content {
-	@include adaptiveValue("padding-top", 88, 27);
+		@include adaptiveValue("padding-top", 88, 27);
 
 		@include adaptiveValue("padding-bottom", 70, 32);
 		@include adaptiveValue("width", 1463, 320);
@@ -346,8 +346,19 @@ body::after {
 	&__button {
 		min-width: 0;
 		@include adaptiveValue("width", 158, 50);
-		// padding-right: rem(72);
 		gap: rem(15);
+
+		img {
+			transition: transform 0.3s ease 0s;
+		}
+
+		&:hover {
+			img {
+				transform: translate(rem(10), 0px);
+			}
+		}
+
+
 
 		&_start {
 			@include adaptiveValue("width", 252, 273);
@@ -358,6 +369,7 @@ body::after {
 
 		/* .quiz-form__button_next */
 		&_next {}
+
 	}
 
 	/* .quiz-form__item */
