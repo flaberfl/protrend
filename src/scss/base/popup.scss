@@ -193,20 +193,6 @@ body::after {
 	}
 }
 
-
-.checkbox {
-
-	/* .checkbox__input */
-	&__input {}
-
-	/* .checkbox__label */
-	&__label {}
-
-	/* .checkbox__text */
-	&__text {}
-}
-
-
 .thanks-popup {
 
 	/* .thanks-popup__title */
@@ -255,4 +241,141 @@ body::after {
 		width: 100%;
 		z-index: -1;
 	}
+}
+
+//========================================================================================================================================================
+
+.quiz-popup {
+
+	/* .quiz-popup__wrapper */
+	&__wrapper {}
+
+	/* .quiz-popup__content */
+	&__content {
+		@include adaptiveValue("width", 1463, 320);
+
+
+	}
+
+	/* .quiz-popup__close */
+	&__close {
+
+		@include adaptiveValue("right", 54, 32);
+		@include adaptiveValue("top", 42, 17);
+	}
+}
+
+.quiz-form {
+
+	/* .quiz-form__fieldset */
+	&__fieldset {}
+
+	/* .quiz-form__title */
+	&__title {
+		@include adaptiveValue("font-size", 40, 24);
+		font-size: 700px;
+		line-height: math.div(49, 40);
+		letter-spacing: 0.03em;
+	}
+
+	/* .quiz-form__body */
+	&__body {
+		display: grid;
+		align-items: end;
+
+
+		&_start {
+			grid-template-columns: 69% 1fr;
+
+			@media (max-width:$tablet){
+				grid: none;
+			}
+		}
+	}
+
+	/* .quiz-form__content */
+	&__content {}
+
+	/* .quiz-form__image */
+	&__image-ibg {
+		padding-bottom: 60.50%;
+
+		border-radius: rem(40);
+		overflow: hidden;
+
+		@media (max-width:$tablet){
+			margin-bottom: rem(10);
+		}
+	}
+
+	/* .quiz-form__solution */
+	&__solution {
+
+		&_start {
+			@include adaptiveValue("padding-left", 38, 20, 1920, 992);
+			@include adaptiveValue("padding-bottom", 88, 33, 1920, 992);
+		}
+	}
+
+	/* .quiz-form__text-start */
+	&__text-start {
+		@include adaptiveValue("margin-bottom", 35, 34);
+
+		@include adaptiveValue("font-size", 20, 16);
+		font-weight: 400;
+		line-height: math.div(30, 20);
+		letter-spacing: 0.03em;
+
+	}
+
+	/* .quiz-form__button */
+	&__button {
+
+		&_start {
+			@include adaptiveValue("width", 252, 273);
+		}
+
+		/* .quiz-form__button_prev */
+		&_prev {}
+
+		/* .quiz-form__button_next */
+		&_next {}
+	}
+
+	/* .quiz-form__item */
+	&__item {}
+
+	/* .quiz-form__input */
+	&__input {}
+
+	/* .quiz-form__description */
+	&__description {}
+
+	/* .quiz-form__footer */
+	&__footer {}
+
+	/* .quiz-form__progress-bar */
+	&__progress-bar {}
+
+	/* .quiz-form__buttons */
+	&__buttons {}
+}
+
+.checkbox {
+
+	/* .checkbox__input */
+	&__input {}
+
+	/* .checkbox__label */
+	&__label {}
+
+	/* .checkbox__text */
+	&__text {}
+}
+
+
+.progress-bar {
+
+	/* .progress-bar__progress */
+	&__progress {}
 }
