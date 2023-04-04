@@ -294,12 +294,23 @@ body::after {
 
 		@include adaptiveValue("margin-bottom", 60, 18);
 
+		@media (max-width: em(1200)) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media (max-width:$mobile) {
+			grid: none;
+			grid-template-columns: 1fr;
+			row-gap: rem(40);
+		}
+
 		&_start {
 			align-items: end;
 			grid-template-columns: 69% 1fr;
 
 			@media (max-width:$tablet) {
-				grid: none;
+				// grid: none;
+
 			}
 		}
 	}
@@ -324,6 +335,10 @@ body::after {
 
 	/* .quiz-form__solution */
 	&__solution {
+
+		@media (max-width:$mobile) {
+			justify-self: center;
+		}
 
 		&_start {
 			@include adaptiveValue("padding-left", 38, 20, 1920, 992);
@@ -376,12 +391,20 @@ body::after {
 	&__item {
 
 		&_other {
-			// @include adaptiveValue("margin-top", 10, 8);
-			margin-top: rem(-16);
 			display: flex;
-			align-items: center;
+			// @include adaptiveValue("margin-top", 10, 8);
 
-			@include adaptiveValue("gap", 50, 25);
+			@media (min-width: em(1200)) {
+				@include adaptiveValue("gap", 50, 0);
+				@include adaptiveValue("margin-top", -16, 0);
+				// margin-top: rem(-16);
+				align-items: center;
+			}
+
+			@media (max-width: em(1200)) {
+				gap: rem(27);
+				flex-direction: column;
+			}
 
 		}
 	}

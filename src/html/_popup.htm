@@ -73,8 +73,6 @@
 
 
 
-
-
 <div id="popup-quiz" aria-hidden="true" class="popup popup__quiz quiz-popup popup_show">
 	<div class="popup__wrapper quiz-popup__wrapper">
 		<div class="popup__content quiz-popup__content">
@@ -139,6 +137,88 @@
 							</div>
 							<div class="quiz-form__item quiz-form__item_other">
 								<div class="checkbox">
+									<input id="other" class="checkbox__input" type="checkbox" value="other" name="career[]">
+									<label for="other" class="checkbox__label"><span class="checkbox__text checkbox__text_last">Впишите
+											свой
+											ответ:</span></label>
+								</div>
+								<input type="text" name="career[]" class="input form__input quiz-form__input quiz-form__input_other">
+							</div>
+
+						</div>
+						<div class="quiz-form__solution">
+							<div class="quiz-form__decor-wrap">
+								<div class="quiz-form__description">
+									<img src="@img/quiz/d-check.svg" alt="Декоративная печать">
+									<p>Данная информация нам необходима, чтобы рассмотреть <span>для Вас партнерскую скидку</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="quiz-form__footer">
+						<div class="quiz-form__progress progress-quiz-form">
+							<div class="progress-quiz-form__bar">
+								<div class="progress-quiz-form__progress progress-quiz-form__progress_20"></div>
+							</div>
+							<span class="progress-quiz-form__rate">20%</span>
+						</div>
+
+						<div class="quiz-form__buttons">
+							<button class="button quiz-form__button quiz-form__button_next">Далее
+								<img src="@img/quiz/arrow-next.svg" alt="Стрелка вперед">
+							</button>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="quiz-form__fieldset" style="display: none;">
+					<h3 class=" form__title quiz-form__title">Имеется ли у Вас рабочая версия Protrend?</h3>
+					<div class="quiz-form__body">
+						<div class="quiz-form__content">
+
+
+							<div class="quiz-form__item">
+
+								<div class="options">
+									<div class="options__item">
+										<input id="o_1" class="options__input" checked type="radio" value="1" name="option">
+										<label for="o_1" class="options__label"><span class="options__text">Текст</span></label>
+									</div>
+									<div class="options__item">
+										<input id="o_2" class="options__input" type="radio" value="2" name="option">
+										<label for="o_2" class="options__label"><span class="options__text">Текст</span></label>
+									</div>
+								</div>
+
+							</div>
+							<div class="quiz-form__item">
+								<div class="checkbox">
+									<input id="rielter" class="checkbox__input" type="checkbox" value="rielter" name="career[]">
+									<label for="rielter" class="checkbox__label"><span class="checkbox__text">Риэлторское
+											агентство</span></label>
+								</div>
+							</div>
+							<div class="quiz-form__item">
+								<div class="checkbox">
+									<input id="digital" class="checkbox__input" type="checkbox" value="digital" name="career[]">
+									<label for="digital" class="checkbox__label"><span class="checkbox__text">Digital
+											агентство</span></label>
+								</div>
+							</div>
+							<div class="quiz-form__item">
+								<div class="checkbox">
+									<input id="it" class="checkbox__input" type="checkbox" value="it" name="career[]">
+									<label for="it" class="checkbox__label"><span class="checkbox__text">IT интегратор</span></label>
+								</div>
+							</div>
+							<div class="quiz-form__item">
+								<div class="checkbox">
+									<input id="web" class="checkbox__input" type="checkbox" value="web" name="career[]">
+									<label for="web" class="checkbox__label"><span class="checkbox__text">Web студия</span></label>
+								</div>
+							</div>
+							<div class="quiz-form__item quiz-form__item_other">
+								<div class="checkbox">
 									<input id="other" data-error="Помилка" class="checkbox__input" type="checkbox" value="other"
 										name="career[]">
 									<label for="other" class="checkbox__label"><span class="checkbox__text checkbox__text_last">Впишите
@@ -162,9 +242,9 @@
 					<div class="quiz-form__footer">
 						<div class="quiz-form__progress progress-quiz-form">
 							<div class="progress-quiz-form__bar">
-								<div class="progress-quiz-form__progress"></div>
+								<div class="progress-quiz-form__progress progress-quiz-form__progress_40"></div>
 							</div>
-							<span class="progress-quiz-form__rate">20%</span>
+							<span class="progress-quiz-form__rate">40%</span>
 						</div>
 
 						<div class="quiz-form__buttons">
