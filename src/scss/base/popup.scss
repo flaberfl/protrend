@@ -335,7 +335,7 @@ body::after {
 
 	/* .quiz-form__solution */
 	&__solution {
-
+		// align-self: end;
 		@media (max-width:$mobile) {
 			justify-self: center;
 		}
@@ -385,6 +385,12 @@ body::after {
 		/* .quiz-form__button_next */
 		&_next {}
 
+		@media (max-width:$tablet) {
+			span {
+				display: none;
+			}
+		}
+
 	}
 
 	/* .quiz-form__item */
@@ -402,7 +408,7 @@ body::after {
 			}
 
 			@media (max-width: em(1200)) {
-				gap: rem(27);
+				gap: rem(20);
 				flex-direction: column;
 			}
 
@@ -422,6 +428,12 @@ body::after {
 	&__decor-wrap {
 		background: $secTextColor;
 		@include adaptiveValue("border-radius", 39, 30);
+		@include adaptiveValue("padding-top", 72, 26);
+		@include adaptiveValue("padding-bottom", 46, 16);
+		@include adaptiveValue("padding-left", 46, 20);
+		@include adaptiveValue("padding-right", 50, 12);
+
+		@include adaptiveValue("width", 404, 270);
 	}
 
 	/* .quiz-form__description */
@@ -430,10 +442,6 @@ body::after {
 		align-items: flex-end;
 		justify-self: start;
 
-		@include adaptiveValue("padding-top", 72, 20);
-		@include adaptiveValue("padding-bottom", 46, 20);
-		@include adaptiveValue("padding-left", 46, 20);
-		@include adaptiveValue("padding-right", 50, 20);
 		gap: rem(10);
 
 		@include adaptiveValue("font-size", 16, 12);
@@ -446,8 +454,10 @@ body::after {
 			@include adaptiveValue("width", 247, 199);
 
 			padding: rem(26);
-			@include adaptiveValue("padding-left", 33, 33);
-			@include adaptiveValue("padding-right", 25, 23);
+			@include adaptiveValue("padding-left", 33, 24);
+			@include adaptiveValue("padding-right", 25, 14);
+			@include adaptiveValue("padding-bottom", 26, 18);
+			@include adaptiveValue("padding-top", 26, 22);
 			// padding-right: rem(20);
 			// padding-left: rem(33);
 
@@ -455,7 +465,7 @@ body::after {
 
 			background: #B8D6DF;
 			box-shadow: 0px 12px 13px rgba(62, 76, 88, 0.17);
-			border-radius: 39px 39px 39px 0px;
+			border-radius: rem(39) rem(39) rem(39) 0px;
 
 			&::before {
 				position: absolute;
@@ -465,6 +475,11 @@ body::after {
 
 				border: rem(18) solid transparent;
 				border-bottom: rem(8) solid #B8D6DF;
+			}
+
+			@media (max-width:$mobile) {
+				transform: translate(0, rem(-16));
+				border-radius: rem(30) rem(30) rem(30) 0px;
 			}
 		}
 
