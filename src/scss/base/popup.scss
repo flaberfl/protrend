@@ -256,7 +256,6 @@ body::after {
 
 .quiz-popup {
 
-
 	/* .quiz-popup__wrapper */
 	&__wrapper {}
 
@@ -266,13 +265,10 @@ body::after {
 
 		@include adaptiveValue("padding-bottom", 70, 32);
 		@include adaptiveValue("width", 1463, 320);
-
-
 	}
 
 	/* .quiz-popup__close */
 	&__close {
-
 		@include adaptiveValue("right", 54, 32);
 		@include adaptiveValue("top", 42, 17);
 	}
@@ -342,7 +338,6 @@ body::after {
 
 			@media (max-width: em(1140)) {
 				grid-template-columns: 1fr;
-				// gap: rem(40);
 				@include adaptiveValue("gap", 40, 30);
 			}
 		}
@@ -451,7 +446,6 @@ body::after {
 
 	/* .quiz-form__item */
 	&__item {
-
 		&_other {
 			display: flex;
 
@@ -473,7 +467,6 @@ body::after {
 
 		&_other {
 			@include adaptiveValue("width", 426, 270);
-
 		}
 	}
 
