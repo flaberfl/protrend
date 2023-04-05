@@ -39,7 +39,8 @@
 					<div class="checkbox">
 						<input id="c_1" data-error="Не выбрано поле" data-required class="checkbox__input" type="checkbox" value="1"
 							name="checkbox">
-						<label for="c_1" class="checkbox__label checkbox__label_subm"><span class="checkbox__text checkbox__text_subm">Даем согласие на
+						<label for="c_1" class="checkbox__label checkbox__label_subm"><span
+								class="checkbox__text checkbox__text_subm">Даем согласие на
 								обработку
 								персональных данных <a href="#">Политика конфиденциальности</a></span></label>
 					</div>
@@ -70,7 +71,6 @@
 		</div>
 	</div>
 </div>
-
 
 
 <div id="popup-quiz" aria-hidden="true" class="popup popup__quiz quiz-popup popup_show">
@@ -174,66 +174,37 @@
 				<fieldset class="quiz-form__fieldset">
 					<h3 class=" form__title quiz-form__title">Имеется ли у Вас рабочая версия Protrend?</h3>
 					<div class="quiz-form__body">
-						<div class="quiz-form__content">
+						<div class="options">
 
+							<div class="options__item">
+								<input id="o_1" class="options__input" checked type="radio" value="1" name="option">
+								<label for="o_1" class="options__label"><span class="options__text">Да, официальный
+										Protrend</span></label>
+							</div>
 
-							<div class="quiz-form__item">
-
-								<div class="options">
-									<div class="options__item">
-										<input id="o_1" class="options__input" checked type="radio" value="1" name="option">
-										<label for="o_1" class="options__label"><span class="options__text">Текст</span></label>
-									</div>
-									<div class="options__item">
-										<input id="o_2" class="options__input" type="radio" value="2" name="option">
-										<label for="o_2" class="options__label"><span class="options__text">Текст</span></label>
-									</div>
-								</div>
-
+							<div class="options__item">
+								<input id="o_2" class="options__input" type="radio" value="2" name="option">
+								<label for="o_2" class="options__label"><span class="options__text">Да, неофициальный
+										Protrend</span></label>
 							</div>
-							<div class="quiz-form__item">
-								<div class="checkbox">
-									<input id="rielter" class="checkbox__input" type="checkbox" value="rielter" name="career[]">
-									<label for="rielter" class="checkbox__label"><span class="checkbox__text">Риэлторское
-											агентство</span></label>
-								</div>
+							<div class="options__item">
+								<input id="o_2" class="options__input" type="radio" value="2" name="option">
+								<label for="o_2" class="options__label"><span class="options__text">Нет/span></label>
 							</div>
-							<div class="quiz-form__item">
-								<div class="checkbox">
-									<input id="digital" class="checkbox__input" type="checkbox" value="digital" name="career[]">
-									<label for="digital" class="checkbox__label"><span class="checkbox__text">Digital
-											агентство</span></label>
-								</div>
-							</div>
-							<div class="quiz-form__item">
-								<div class="checkbox">
-									<input id="it" class="checkbox__input" type="checkbox" value="it" name="career[]">
-									<label for="it" class="checkbox__label"><span class="checkbox__text">IT интегратор</span></label>
-								</div>
-							</div>
-							<div class="quiz-form__item">
-								<div class="checkbox">
-									<input id="web" class="checkbox__input" type="checkbox" value="web" name="career[]">
-									<label for="web" class="checkbox__label"><span class="checkbox__text">Web студия</span></label>
-								</div>
-							</div>
-							<div class="quiz-form__item quiz-form__item_other">
-								<div class="checkbox">
-									<input id="other" data-error="Помилка" class="checkbox__input" type="checkbox" value="other"
-										name="career[]">
-									<label for="other" class="checkbox__label"><span class="checkbox__text checkbox__text_last">Впишите
-											свой
-											ответ:</span></label>
-								</div>
-								<input type="text" name="career[]" class="input form__input quiz-form__input quiz-form__input_other">
+							<div class="options__item">
+								<input id="o_2" class="options__input" type="radio" value="2" name="option">
+								<label for="o_2" class="options__label"><span class="options__text">Затрудняюсь ответить</span></label>
 							</div>
 
 						</div>
+
 						<div class="quiz-form__solution">
 							<div class="quiz-form__decor-wrap">
 								<div class="quiz-form__description">
 									<img src="@img/quiz/d-check.svg" alt="Декоративная печать">
-									<p>Данная информация нам необходима, чтобы рассмотреть <span>для Вас партнерскую скидку</span></p>
+									<p>Среди наших клиентов <span>есть
+											компании, перешедшие с пиратской версии Protrend,</span> отказавшиеся от решений
+										сторонних поставщиков-конкурентов, а также впервые организовавшие работу отдела продаж</p>
 								</div>
 							</div>
 						</div>

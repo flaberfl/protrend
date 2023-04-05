@@ -2,15 +2,16 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	row-gap: rem(19);
 
 	// .options__item
 	&__item {
 		position: relative;
 		cursor: pointer;
 
-		&:not(:last-child) {
-			margin-bottom: em(5);
-		}
+		// &:not(:last-child) {
+		// 	margin-bottom: em(5);
+		// }
 	}
 
 	// .options__input
@@ -59,8 +60,8 @@
 			content: "";
 			width: rem(15);
 			height: rem(15);
-			left: 6%;
-			
+			left: rem(8);
+
 			transform: scale(0);
 			border-radius: 50%;
 			background-color: #FA982F;
