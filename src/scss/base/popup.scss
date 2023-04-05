@@ -191,7 +191,14 @@ body::after {
 
 	/* .form__button */
 	&__button {
+		position: relative;
+		z-index: 100;
 		@include adaptiveValue("width", 218, 269);
+
+		&_quize {
+			@include adaptiveValue("width", 218, 231);
+
+		}
 	}
 }
 
@@ -290,7 +297,7 @@ body::after {
 		}
 
 		&_finish {
-			@include adaptiveValue("margin-bottom", 32, 75);
+			@include adaptiveValue("margin-bottom", 32, 22);
 		}
 	}
 
@@ -301,7 +308,7 @@ body::after {
 		letter-spacing: 0.03em;
 
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 78, 60);
+			@include adaptiveValue("margin-bottom", 78, 30);
 		}
 	}
 
@@ -327,16 +334,17 @@ body::after {
 		&_start {
 			align-items: end;
 			grid-template-columns: 69% 1fr;
-
-			@media (max-width:$tablet) {
-				// grid: none;
-
-			}
 		}
 
 		&_finish {
 			grid-template-columns: 59.7% 1fr;
 			align-items: center;
+
+			@media (max-width: em(1140)) {
+				grid-template-columns: 1fr;
+				// gap: rem(40);
+				@include adaptiveValue("gap", 40, 30);
+			}
 		}
 	}
 
@@ -360,6 +368,10 @@ body::after {
 		@media (max-width:$tablet) {
 			margin-bottom: rem(10);
 		}
+	}
+
+	&__submit-form {
+		justify-self: center;
 	}
 
 	/* .quiz-form__solution */

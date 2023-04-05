@@ -92,7 +92,8 @@
 
 		@media (max-width:$mobile) {}
 
-		&_subm {
+		&_subm,
+		&_finish {
 			display: block;
 			padding-top: rem(6);
 
@@ -107,10 +108,18 @@
 					top: 20%;
 				}
 			}
+
 		}
 
 		&_last {
 			font-weight: 400;
+		}
+
+		&_finish {
+			&::before {
+				top: 20%;
+			}
+
 		}
 	}
 }
