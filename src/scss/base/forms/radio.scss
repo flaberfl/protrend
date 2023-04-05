@@ -21,7 +21,7 @@
 		position: absolute;
 
 		&:focus+.options__label:before {
-			box-shadow: 0 0 5px #000;
+			// box-shadow: 0 0 5px #000;
 		}
 
 		&:checked+.options__label:before {}
@@ -36,29 +36,42 @@
 		display: inline-flex;
 		align-items: center;
 		cursor: pointer;
-		gap: 10px;
+		@include adaptiveValue("gap", 14, 7);
 
 		&:before {
 			content: "";
 			align-self: flex-start;
-			width: 20px;
-			height: 20px;
-			flex: 0 0 20px;
+			width: rem(30);
+			height: rem(30);
+			flex: 0 0 rem(30);
 			border-radius: 50%;
-			border: 1px solid #a7a9ac;
+			background-color: #fff;
+
+			@media (max-width:$mobile) {
+				width: rem(20);
+				height: rem(20);
+				flex: 0 0 rem(20);
+			}
 		}
 
 		&:after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			transform: scale(0);
-			width: 10px;
-			height: 10px;
-			border-radius: 50%;
-			background-color: #77243a;
 			position: absolute;
-			left: 5px;
-			top: 5px;
+			content: "";
+			width: rem(15);
+			height: rem(15);
+			left: 6%;
+			
+			transform: scale(0);
+			border-radius: 50%;
+			background-color: #FA982F;
+
+			transition: all 0.3s ease 0s;
+
+			@media (max-width:$mobile) {
+				width: rem(10);
+				height: rem(10);
+				left: 5%;
+			}
 		}
 	}
 
