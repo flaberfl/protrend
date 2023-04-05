@@ -58,7 +58,6 @@
 	// .checkbox__text
 	&__text {
 		position: relative;
-		padding-top: rem(6);
 		max-width: rem(473);
 		@include adaptiveValue("padding-left", 38, 22);
 
@@ -84,23 +83,26 @@
 			text-decoration: underline;
 		}
 
-		@media (max-width:$mobile) {
-			padding-top: 0;
-		}
+		@media (max-width:$mobile) {}
 
 		&_submit {
+			padding-top: rem(6);
+
 			&::before {
 				top: 30%;
+			}
 
-				@media (max-width:$mobile) {
+			@media (max-width:$mobile) {
+				padding-top: 0;
+
+				&::before {
 					top: 20%;
 				}
-
 			}
 		}
+
 		&_last {
 			font-weight: 400;
 		}
-
 	}
 }
