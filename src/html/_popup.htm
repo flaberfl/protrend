@@ -171,29 +171,29 @@
 						</div>
 					</div>
 				</fieldset>
-				<fieldset class="quiz-form__fieldset">
+				<fieldset class="quiz-form__fieldset" style="display: none;">
 					<h3 class=" form__title quiz-form__title">Имеется ли у Вас рабочая версия Protrend?</h3>
 					<div class="quiz-form__body">
 						<div class="options">
 
 							<div class="options__item">
 								<input id="officialVersion" class="options__input" checked type="radio" value="official_version"
-									name="option">
+									name="version">
 								<label for="officialVersion" class="options__label"><span class="options__text">Да, официальный
 										Protrend</span></label>
 							</div>
 
 							<div class="options__item">
-								<input id="pirateVersion" class="options__input" type="radio" value="pirate_version" name="option">
+								<input id="pirateVersion" class="options__input" type="radio" value="pirate_version" name="version">
 								<label for="pirateVersion" class="options__label"><span class="options__text">Да, неофициальный
 										Protrend</span></label>
 							</div>
 							<div class="options__item">
-								<input id="noVersion" class="options__input" type="radio" value="no_version" name="option">
+								<input id="noVersion" class="options__input" type="radio" value="no_version" name="version">
 								<label for="noVersion" class="options__label"><span class="options__text">Нет</span></label>
 							</div>
 							<div class="options__item">
-								<input id="otherVersion" class="options__input" type="radio" value="other_version" name="option">
+								<input id="otherVersion" class="options__input" type="radio" value="other_version" name="version">
 								<label for="otherVersion" class="options__label"><span class="options__text">Затрудняюсь
 										ответить</span></label>
 							</div>
@@ -225,6 +225,170 @@
 							<button class="button quiz-form__button quiz-form__button_next"><span>Далее</span><img
 									src="@img/quiz/arrow-next.svg" alt="Стрелка вперед">
 							</button>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="quiz-form__fieldset" style="display: none;">
+					<h3 class=" form__title quiz-form__title">Сколько новых жилых комплексов хотите внедрить в Protrend?</h3>
+					<div class="quiz-form__body">
+						<div class="options">
+
+							<div class="options__item">
+								<input id="create_0" class="options__input" checked type="radio" value="create_0" name="create_complex">
+								<label for="create_0" class="options__label"><span class="options__text">0</span></label>
+							</div>
+
+							<div class="options__item">
+								<input id="create_1-2" class="options__input" type="radio" value="create_1-2" name="create_complex">
+								<label for="create_1-2" class="options__label"><span class="options__text">1-2</span></label>
+							</div>
+							<div class="options__item">
+								<input id="create_3-5" class="options__input" type="radio" value="create_3-5" name="create_complex">
+								<label for="create_3-5" class="options__label"><span class="options__text">3-5</span></label>
+							</div>
+							<div class="options__item">
+								<input id="create_6-9" class="options__input" type="radio" value="create_6-9" name="create_complex">
+								<label for="create_6-9" class="options__label"><span class="options__text">6-9</span></label>
+							</div>
+							<div class="options__item">
+								<input id="create_10-more" class="options__input" type="radio" value="create_10-more"
+									name="create_complex">
+								<label for="create_10-more" class="options__label"><span class="options__text">от 10 и
+										больше</span></label>
+							</div>
+
+						</div>
+
+						<div class="quiz-form__solution">
+							<div class="quiz-form__decor-wrap">
+								<div class="quiz-form__description">
+									<img src="@img/quiz/d-check.svg" alt="Декоративная печать">
+									<p>Чем больше количество внедряемых ЖК, <span>тем выше скидка на стоимость лицензии.</span> Одна
+										лицензия равна
+										одному ЖК</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="quiz-form__footer">
+						<div class="quiz-form__progress progress-quiz-form">
+							<div class="progress-quiz-form__bar">
+								<div class="progress-quiz-form__progress progress-quiz-form__progress_60"></div>
+							</div>
+							<span class="progress-quiz-form__rate">60%</span>
+						</div>
+
+						<div class="quiz-form__buttons">
+							<button class="button_tr quiz-form__button quiz-form__button_prev"></button>
+							<button class="button quiz-form__button quiz-form__button_next"><span>Далее</span><img
+									src="@img/quiz/arrow-next.svg" alt="Стрелка вперед">
+							</button>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="quiz-form__fieldset" style="display: none;">
+					<h3 class=" form__title quiz-form__title">Сколько жилых комплексов уже обслуживается в PROTREND?</h3>
+					<div class="quiz-form__body">
+						<div class="options">
+
+							<div class="options__item">
+								<input id="use_0" class="options__input" checked type="radio" value="use_0" name="use_complex">
+								<label for="use_0" class="options__label"><span class="options__text">0</span></label>
+							</div>
+
+							<div class="options__item">
+								<input id="use_1-3" class="options__input" type="radio" value="use_1-3" name="use_complex">
+								<label for="use_1-3" class="options__label"><span class="options__text">1-3</span></label>
+							</div>
+							<div class="options__item">
+								<input id="use_4-7" class="options__input" type="radio" value="use_4-7" name="use_complex">
+								<label for="use_4-7" class="options__label"><span class="options__text">4-7</span></label>
+							</div>
+							<div class="options__item">
+								<input id="use_8-11" class="options__input" type="radio" value="use_8-11" name="use_complex">
+								<label for="use_8-11" class="options__label"><span class="options__text">8-11</span></label>
+							</div>
+							<div class="options__item">
+								<input id="use_12-more" class="options__input" type="radio" value="use_12-more" name="use_complex">
+								<label for="use_12-more" class="options__label"><span class="options__text">от 12 и
+										больше</span></label>
+							</div>
+
+						</div>
+
+						<div class="quiz-form__solution">
+							<div class="quiz-form__decor-wrap">
+								<div class="quiz-form__description">
+									<img src="@img/quiz/d-check.svg" alt="Декоративная печать">
+									<p>Общее количество обслуживаемых ЖК необходимо для расчета мощностей сервера, <span>чтобы
+											пользовательский
+											опыт в Protrend был максимально комфортным</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="quiz-form__footer">
+						<div class="quiz-form__progress progress-quiz-form">
+							<div class="progress-quiz-form__bar">
+								<div class="progress-quiz-form__progress progress-quiz-form__progress_80"></div>
+							</div>
+							<span class="progress-quiz-form__rate">80%</span>
+						</div>
+
+						<div class="quiz-form__buttons">
+							<button class="button_tr quiz-form__button quiz-form__button_prev"></button>
+							<button class="button quiz-form__button quiz-form__button_next"><span>Далее</span><img
+									src="@img/quiz/arrow-next.svg" alt="Стрелка вперед">
+							</button>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="quiz-form__fieldset" style="display: none1;">
+					<div class="quiz-form__body quiz-form__body_finish">
+						<div class="quiz-form__content_finish">
+							<h3 class="form__title quiz-form__title quiz-form__title_finish">МЫ ГОТОВИМ ДЛЯ ВАС ЛУЧШЕЕ ПРЕДЛОЖЕНИЕ</h3>
+							<h4 class="quiz-form__subtitle">О нем мы расскажем по телефону!</h4>
+
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar progress-quiz-form__bar_finish">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_99"></div>
+								</div>
+								<span class="progress-quiz-form__rate">99%</span>
+							</div>
+						</div>
+
+						<div class="quiz-form__submit-form">
+
+							<div class="quiz-form__decor-wrap quiz-form__decor-wrap_finish">
+
+								<div class="form__item form__item_name">
+									<label class="form__label" for="name">*</label>
+									<input type="text" name="name" placeholder="Ваше имя" class="form__input input">
+								</div>
+
+								<div class="form__item form__item_phone">
+									<label class="form__label" for="name">*</label>
+									<input type="tel" name="phone" placeholder="Номер телефона" class="form__input input">
+								</div>
+
+								<div class="form__item form__item_checkbox">
+									<div class="checkbox">
+										<input id="send-quiz" data-error="Не выбрано поле" class="checkbox__input" type="checkbox"
+											value="send-quiz" name="checkbox">
+										<label for="send-quiz" class="checkbox__label checkbox__label_subm"><span
+												class="checkbox__text checkbox__text_subm">Даем согласие на
+												обработку
+												персональных данных <a href="#">Политика конфиденциальности</a></span></label>
+									</div>
+								</div>
+
+								<div class="form__item">
+									<button type="submit" class="form__button button">Отправить заявку</button>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</fieldset>
