@@ -137,73 +137,73 @@ window.addEventListener('scroll', function () {
 // });
 
 
-let currentMusic = 0;
-const music = document.querySelector('#audio-source');
+// let currentMusic = 0;
+// const music = document.querySelector('#audio-source');
 
-const seekBar = document.querySelector('.music-seek-bar');
-const currentMusicTime = document.querySelector('.current-time');
-const musicDuration = document.querySelector('.duration');
+// const seekBar = document.querySelector('.music-seek-bar');
+// const currentMusicTime = document.querySelector('.current-time');
+// const musicDuration = document.querySelector('.duration');
 
-const playBtn = document.querySelector('.play-p');
-const pauseBtn = document.querySelector('.pause-p');
-const volumeBtn = document.querySelector('.volume-up');
-const volumeSlider = document.querySelector('.volume-slider');
-
-
-playBtn.addEventListener("click", () => {
-  music.pLay();
-  playBtn.classList.remove('active');
-  pauseBtn.classList.add('active');
-
-});
+// const playBtn = document.querySelector('.play-p');
+// const pauseBtn = document.querySelector('.pause-p');
+// const volumeBtn = document.querySelector('.volume-up');
+// const volumeSlider = document.querySelector('.volume-slider');
 
 
-pauseBtn.addEventListener("click", () => {
-  music.pause();
-  pauseBtn.classList.remove('active');
-  playBt.classList.add('active');
-});
+// playBtn.addEventListener("click", () => {
+//   music.pLay();
+//   playBtn.classList.remove('active');
+//   pauseBtn.classList.add('active');
+
+// });
 
 
-const setMusic = (i) => {
-  seekBar.value = 0;
-  currentMusic = i;
-
-  setTimeout(() => {
-    seekBar.max = music.duration;
-    musicDuration.innerHTML = formatTime(music.duration)
-  }, 300);
-  currentMusicTime.innerHTML = '00 : 00';
-}
-
-setMusic(0);
-
-const formatTime = (time) => {
-  let min = Math.floor(time / 60);
-  if (min < 10) {
-    min = '0' + min;
-  }
-
-  let sec = Math.floor(time % 60);
-  if (sec < 10) {
-    sec = '0' + sec;
-  }
-
-  return '${min} : ${sec}';
-}
+// pauseBtn.addEventListener("click", () => {
+//   music.pause();
+//   pauseBtn.classList.remove('active');
+//   playBt.classList.add('active');
+// });
 
 
-setInterval(() => {
-  seekBar.value = music.currentTime;
-  currentMusicTime.innerHTML = formatTime(music.currentTime);
+// const setMusic = (i) => {
+//   seekBar.value = 0;
+//   currentMusic = i;
 
-}, 500)
+//   setTimeout(() => {
+//     seekBar.max = music.duration;
+//     musicDuration.innerHTML = formatTime(music.duration)
+//   }, 300);
+//   currentMusicTime.innerHTML = '00 : 00';
+// }
 
-seekBar.addEventListener('change', () => {
-  music.currentTime = seekBar.value;
-})
+// setMusic(0);
 
-volumeBtn.addEventListener
+// const formatTime = (time) => {
+//   let min = Math.floor(time / 60);
+//   if (min < 10) {
+//     min = '0' + min;
+//   }
+
+//   let sec = Math.floor(time % 60);
+//   if (sec < 10) {
+//     sec = '0' + sec;
+//   }
+
+//   return '${min} : ${sec}';
+// }
+
+
+// setInterval(() => {
+//   seekBar.value = music.currentTime;
+//   currentMusicTime.innerHTML = formatTime(music.currentTime);
+
+// }, 500)
+
+// seekBar.addEventListener('change', () => {
+//   music.currentTime = seekBar.value;
+// })
+
+// volumeBtn.addEventListener
 
 
 // Функции вывода карточек, в зависимости от введенного значениия в input
@@ -271,20 +271,39 @@ function getValueTwo() {
 /* Функционал КВИЗА  */
 
 const quize = document.getElementById('quiz-form');
-const quizeItems = quize.querySelectorAll('fieldset');
+const quizeItems = quize.querySelectorAll('.quiz-form__fieldset');
 const btnsNext = quize.querySelectorAll('.quiz-form__button_next');
 const btnsPrev = quize.querySelectorAll('.quiz-form__button_prev');
 
+let count = 0;
+quizeItems[count].classList.add('_active');
 
-btnsNext.forEach((btn, btnIndex) => {
-  btn.addEventListener('click', (event) => {
-    event.preventDefault();
-    console.log(btnIndex);
-
-    quizeItems[btnIndex + 1].style.display = 'block';
-    quizeItems[btnIndex].style.display = 'none';
+btnsNext.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    count++;
+    initQuiz();
   });
 });
+
+
+btnsPrev.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    count--;
+    initQuiz();
+  });
+});
+
+
+function initQuiz() {
+  quizeItems.forEach((element, i) => {
+    element.classList.remove('_active')
+    if (i === count) {
+      element.classList.add('_active')
+    }
+  })
+}
 
 // btnsPrev.forEach((btn, btnIndex) => {
 //   btn.addEventListener('click', (event) => {
@@ -295,227 +314,27 @@ btnsNext.forEach((btn, btnIndex) => {
 //   });
 // });
 
-for (let i = 0; i < btnsPrev.length; i++) {
-  // const element = array[index];
-  btnsPrev[i].addEventListener('click', (event) => {
-    event.preventDefault();
+// for (let i = 0; i < btnsPrev.length; i++) {
+//   // const element = array[index];
+//   btnsPrev[i].addEventListener('click', (event) => {
+//     event.preventDefault();
 
-    quizeItems[i + 1].style.display = 'none';
-    quizeItems[i].style.display = 'block';
-  })
-}
+//     quizeItems[i + 1].classList.remove = ('._active');
+//     quizeItems[i].classList.add = ('._active');
+//   })
+// }
 
-quizeItems.forEach((quizeItem, quizeItemIndex) => {
-  if (quizeItemIndex === 0) {
-    quizeItem.style.display = 'block';
-  } else {
-    quizeItem.style.display = 'none';
-  }
+// quizeItems.forEach((quizeItem, quizeItemIndex) => {
+//   if (quizeItemIndex === 0) {
+//     quizeItem.classList.add = ('._active');
+//   } else {
+//     quizeItem.classList.remove = ('._active');
+//   }
 
-  if (quizeItemIndex != quizeItems.length - 1) {
+//   if (quizeItemIndex != quizeItems.length - 1) {
 
-    // quizeItem.style.display = 'none';
+//     // quizeItem.style.display = 'none';
 
-  }
-})
+//   }
+// })
 // console.log(item);
-
-
-
-// let current = 0;
-// let setNewActive = function(duration) {
-//   let elements = document.getElementById('quiz-form').getElementsByTagName('fieldset');
-//   for (let i = 0; i < elements.length; i++) {
-//     if (elements[i].classList.contains('active')) {
-//       current = i;
-//     }
-//     elements[i].removeAttribute("class");
-//   }
-//   if (duration === 'up' && current > 0)
-//     current--;
-//   if (duration === 'down' && current < elements.length - 2)
-//     current++;
-//   elements[current].setAttribute('class', 'active');
-// }
-
-
-// let quiz_form = document.querySelector('.quiz-form');
-// if (quiz_form) {
-//   let PrevBtn = quiz_form.querySelector('.quiz-form__button_prev');
-//   let nextBtn = quiz_form.querySelector('.quiz-form__button_next"');
-//   let quizAll = quiz_form.querySelectorAll('.quiz-form__fieldset');
-//   // let currentQ = quiz_form.querySelector('.currentQ');
-//   // let progressQ = quiz_form.querySelector('.progress');
-//   // let progress = 0;
-//   let count = 0;
-//   // let progressPercent = 100 / (quizAll.length - 1);
-//   // initProgress();
-//   removeBtn();
-
-
-//   // quiz_form.querySelector('.allQ').textContent = `${quizAll.length}`;
-
-//   nextBtn.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     // currentQ.textContent++;
-//     count++
-//     // progress += Number(progressPercent.toFixed(3));
-//     initQuiz();
-//     // initProgress();
-//     // removeBtn();
-//     // blockBtn();
-//   })
-
-
-//   PrevBtn.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     count--
-//     // currentQ.textContent--;
-//     // progress -= Number(progressPercent.toFixed(3));
-//     initQuiz();
-//     // initProgress();
-//     // removeBtn();
-//     // blockBtn();
-//   })
-
-//   function initQuiz() {
-//     quizAll.forEach((element, i) => {
-//       element.classList.remove('active')
-//       if (i === count) {
-//         element.classList.add('active')
-//       }
-//     })
-//   }
-
-//   function initProgress() {
-//     progressQ.style.width = `${progress}%`;
-//   }
-
-//   function removeBtn() {
-//     if (count === 0) {
-//       PrevBtn.style.display = 'none'
-//     } else if (count !== 0) {
-//       PrevBtn.style.display = 'block'
-//     }
-//     if (count === quizAll.length - 1) {
-//       nextBtn.style.display = 'none'
-//     } else if (count !== quizAll.length) {
-//       nextBtn.style.display = 'block'
-//     }
-//   }
-
-
-//   function blockBtn() {
-//     let select = quiz_form.querySelector('.select');
-//     let phone = quiz_form.querySelector('#phone');
-//     let gender = quiz_form.querySelectorAll("[name = 'gender']");
-//     let nameInput = quiz_form.querySelector('[name = "name"]');
-//     let skill = quiz_form.querySelectorAll('[name = "skill"]');
-//     let contact = quiz_form.querySelectorAll('[name = "contact"]');
-//     let nextBtnParent = nextBtn.parentElement;
-//     let formBtn = quiz_form.querySelector('.form_btn');
-//     let countGender = gender.length;
-//     let countSkill = skill.length;
-
-//     if (count === 0) {
-//       if ((!nameInput.value) || (nameInput.value === ' ')) {
-//         nextBtnParent.classList.add('blockBtn');
-//       } else {
-//         nextBtnParent.classList.remove('blockBtn');
-//       }
-//       nameInput.addEventListener('keyup', function () {
-//         if ((!this.value) || (this.value === ' ')) {
-//           nextBtnParent.classList.add('blockBtn');
-//         } else {
-//           nextBtnParent.classList.remove('blockBtn');
-//         }
-//       })
-//     }
-
-//     if (count === 1) {
-//       function addSelectClass() {
-//         if (select.options.selectedIndex === 0) {
-//           nextBtnParent.classList.add('blockBtn');
-//         } else {
-//           nextBtnParent.classList.remove('blockBtn');
-//         }
-//       }
-//       addSelectClass();
-
-//       select.addEventListener('click', function () {
-//         addSelectClass();
-//       })
-//     }
-
-//     if (count === 2) {
-//       gender.forEach(element => {
-//         function addGenderClass() {
-//           if (element.checked) {
-//             nextBtnParent.classList.remove('blockBtn');
-//             countGender++
-//           } else {
-//             nextBtnParent.classList.add('blockBtn');
-//             countGender--
-//           }
-//           if (countGender > 0) {
-//             nextBtnParent.classList.remove('blockBtn');
-//           }
-//         }
-//         addGenderClass();
-
-//         element.addEventListener('click', function () {
-//           addGenderClass();
-//         })
-//       })
-//     }
-
-//     if (count === 3) {
-//       skill.forEach((element, i, arr) => {
-
-//         function addSkillClass() {
-//           if (element.checked) {
-//             countSkill++
-//             nextBtnParent.classList.remove('blockBtn');
-//           } else {
-//             nextBtnParent.classList.add('blockBtn');
-//             countSkill--
-//           }
-//           if (countSkill > 0) {
-//             nextBtnParent.classList.remove('blockBtn');
-//           }
-//         }
-
-//         addSkillClass();
-
-//         element.addEventListener('click', function () {
-//           addSkillClass();
-//         })
-//       })
-//     }
-
-//     if (count === quizAll.length - 1) {
-
-//       contact.forEach((element) => {
-//         if ((!element.value) || (element.value === ' ')) {
-//           formBtn.classList.add('blockBtn');
-//         } else {
-//           formBtn.classList.remove('blockBtn');
-//         }
-
-//         element.addEventListener('keyup', function () {
-//           if ((!element.value) || (element.value === ' ')) {
-//             formBtn.classList.add('blockBtn');
-//           } else {
-//             formBtn.classList.remove('blockBtn');
-//           }
-//         })
-
-//       })
-
-//     }
-
-//     // VALID FORM THE END
-
-//   }
-
-// }
