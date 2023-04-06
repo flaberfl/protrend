@@ -285,16 +285,23 @@ btnsNext.forEach((btn, btnIndex) => {
   });
 });
 
-btnsPrev.forEach((btn, btnIndex) => {
-  btn.addEventListener('click', (event) => {
+// btnsPrev.forEach((btn, btnIndex) => {
+//   btn.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     console.log(btnIndex);
+//     quizeItems[btnIndex + 1].style.display = 'none';
+//     quizeItems[btnIndex].style.display = 'block';
+//   });
+// });
+
+for (let i = 0; i < btnsPrev.length; i++) {
+  // const element = array[index];
+  btnsPrev[i].addEventListener('click', (event) => {
     event.preventDefault();
-    console.log(btnIndex);
-
-    quizeItems[btnIndex + 1].style.display = 'none';
-    quizeItems[btnIndex - 1].style.display = 'block';
-
-  });
-});
+    quizeItems[i + 1].style.display = 'none';
+    quizeItems[i].style.display = 'block';
+  })
+}
 
 quizeItems.forEach((quizeItem, quizeItemIndex) => {
   if (quizeItemIndex === 0) {
@@ -304,3 +311,206 @@ quizeItems.forEach((quizeItem, quizeItemIndex) => {
   }
 })
 // console.log(item);
+
+
+
+// let current = 0;
+// let setNewActive = function(duration) {
+//   let elements = document.getElementById('quiz-form').getElementsByTagName('fieldset');
+//   for (let i = 0; i < elements.length; i++) {
+//     if (elements[i].classList.contains('active')) {
+//       current = i;
+//     }
+//     elements[i].removeAttribute("class");
+//   }
+//   if (duration === 'up' && current > 0)
+//     current--;
+//   if (duration === 'down' && current < elements.length - 2)
+//     current++;
+//   elements[current].setAttribute('class', 'active');
+// }
+
+
+
+
+// let quiz_form = document.querySelector('.quiz-form');
+// if (quiz_form) {
+//   let PrevBtn = quiz_form.querySelector('.quiz-form__button_prev');
+//   let nextBtn = quiz_form.querySelector('.quiz-form__button_next"');
+//   let quizAll = quiz_form.querySelectorAll('.quiz-form__fieldset');
+//   // let currentQ = quiz_form.querySelector('.currentQ');
+//   // let progressQ = quiz_form.querySelector('.progress');
+//   // let progress = 0;
+//   let count = 0;
+//   // let progressPercent = 100 / (quizAll.length - 1);
+//   // initProgress();
+//   removeBtn();
+
+
+
+//   // quiz_form.querySelector('.allQ').textContent = `${quizAll.length}`;
+
+//   nextBtn.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     // currentQ.textContent++;
+//     count++
+//     // progress += Number(progressPercent.toFixed(3));
+//     initQuiz();
+//     // initProgress();
+//     // removeBtn();
+//     // blockBtn();
+//   })
+
+
+//   PrevBtn.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     count--
+//     // currentQ.textContent--;
+//     // progress -= Number(progressPercent.toFixed(3));
+//     initQuiz();
+//     // initProgress();
+//     // removeBtn();
+//     // blockBtn();
+//   })
+
+//   function initQuiz() {
+//     quizAll.forEach((element, i) => {
+//       element.classList.remove('active')
+//       if (i === count) {
+//         element.classList.add('active')
+//       }
+//     })
+//   }
+
+//   function initProgress() {
+//     progressQ.style.width = `${progress}%`;
+//   }
+
+//   function removeBtn() {
+//     if (count === 0) {
+//       PrevBtn.style.display = 'none'
+//     } else if (count !== 0) {
+//       PrevBtn.style.display = 'block'
+//     }
+//     if (count === quizAll.length - 1) {
+//       nextBtn.style.display = 'none'
+//     } else if (count !== quizAll.length) {
+//       nextBtn.style.display = 'block'
+//     }
+//   }
+
+
+//   function blockBtn() {
+//     let select = quiz_form.querySelector('.select');
+//     let phone = quiz_form.querySelector('#phone');
+//     let gender = quiz_form.querySelectorAll("[name = 'gender']");
+//     let nameInput = quiz_form.querySelector('[name = "name"]');
+//     let skill = quiz_form.querySelectorAll('[name = "skill"]');
+//     let contact = quiz_form.querySelectorAll('[name = "contact"]');
+//     let nextBtnParent = nextBtn.parentElement;
+//     let formBtn = quiz_form.querySelector('.form_btn');
+//     let countGender = gender.length;
+//     let countSkill = skill.length;
+
+//     if (count === 0) {
+//       if ((!nameInput.value) || (nameInput.value === ' ')) {
+//         nextBtnParent.classList.add('blockBtn');
+//       } else {
+//         nextBtnParent.classList.remove('blockBtn');
+//       }
+//       nameInput.addEventListener('keyup', function () {
+//         if ((!this.value) || (this.value === ' ')) {
+//           nextBtnParent.classList.add('blockBtn');
+//         } else {
+//           nextBtnParent.classList.remove('blockBtn');
+//         }
+//       })
+//     }
+
+//     if (count === 1) {
+//       function addSelectClass() {
+//         if (select.options.selectedIndex === 0) {
+//           nextBtnParent.classList.add('blockBtn');
+//         } else {
+//           nextBtnParent.classList.remove('blockBtn');
+//         }
+//       }
+//       addSelectClass();
+
+//       select.addEventListener('click', function () {
+//         addSelectClass();
+//       })
+//     }
+
+//     if (count === 2) {
+//       gender.forEach(element => {
+//         function addGenderClass() {
+//           if (element.checked) {
+//             nextBtnParent.classList.remove('blockBtn');
+//             countGender++
+//           } else {
+//             nextBtnParent.classList.add('blockBtn');
+//             countGender--
+//           }
+//           if (countGender > 0) {
+//             nextBtnParent.classList.remove('blockBtn');
+//           }
+//         }
+//         addGenderClass();
+
+//         element.addEventListener('click', function () {
+//           addGenderClass();
+//         })
+//       })
+//     }
+
+//     if (count === 3) {
+//       skill.forEach((element, i, arr) => {
+
+//         function addSkillClass() {
+//           if (element.checked) {
+//             countSkill++
+//             nextBtnParent.classList.remove('blockBtn');
+//           } else {
+//             nextBtnParent.classList.add('blockBtn');
+//             countSkill--
+//           }
+//           if (countSkill > 0) {
+//             nextBtnParent.classList.remove('blockBtn');
+//           }
+//         }
+
+//         addSkillClass();
+
+//         element.addEventListener('click', function () {
+//           addSkillClass();
+//         })
+//       })
+//     }
+
+//     if (count === quizAll.length - 1) {
+
+//       contact.forEach((element) => {
+//         if ((!element.value) || (element.value === ' ')) {
+//           formBtn.classList.add('blockBtn');
+//         } else {
+//           formBtn.classList.remove('blockBtn');
+//         }
+
+//         element.addEventListener('keyup', function () {
+//           if ((!element.value) || (element.value === ' ')) {
+//             formBtn.classList.add('blockBtn');
+//           } else {
+//             formBtn.classList.remove('blockBtn');
+//           }
+//         })
+
+//       })
+
+//     }
+
+//     // VALID FORM THE END
+
+//   }
+
+// }

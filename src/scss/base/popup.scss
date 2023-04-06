@@ -277,7 +277,13 @@ body::after {
 .quiz-form {
 
 	/* .quiz-form__fieldset */
-	&__fieldset {}
+	&__fieldset {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
 
 	/* .quiz-form__title */
 	&__title {
@@ -331,7 +337,7 @@ body::after {
 			align-items: end;
 			grid-template-columns: 69% 1fr;
 
-			@media (max-width:$tablet){
+			@media (max-width:$tablet) {
 				grid: none;
 			}
 		}
