@@ -298,7 +298,7 @@ for (let i = 0; i < btnsPrev.length; i++) {
   // const element = array[index];
   btnsPrev[i].addEventListener('click', (event) => {
     event.preventDefault();
-    quizeItems[i + 1].style.display = 'none';
+    quizeItems[i + 2].style.display = 'none';
     quizeItems[i].style.display = 'block';
   })
 }
