@@ -73,13 +73,14 @@
 </div>
 
 
+
 <div id="popup-quiz" aria-hidden="true" class="popup popup__quiz quiz-popup popup_show1">
 	<div class="popup__wrapper quiz-popup__wrapper">
-		<div class="popup__content quiz-popup__content">
+		<div class="popup__content quiz-popup__content popup__content_no-anim">
 			<button data-close type="button" class="popup__close quiz-popup__close"></button>
-			<form id="quiz-form" class="form quiz-form" action="#" method="POST" data-dev data-popup-message="#form-message">
+			<form id="quiz-form" class="form quiz-form" action="#">
 
-				<fieldset class="quiz-form__fieldset">
+				<!-- <fieldset class="quiz-form__fieldset active">
 					<h3 class="form__title quiz-form__title quiz-form__title_start">ЗАПОЛНИТЕ ЗАЯВКУ, ЧТОБЫ ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
 						ОТ PROTREND</h3>
 					<div class="quiz-form__body quiz-form__body_start">
@@ -94,7 +95,7 @@
 							<button class="button quiz-form__button quiz-form__button_next quiz-form__button_start">Начать</button>
 						</div>
 					</div>
-				</fieldset>
+				</fieldset> -->
 
 				<fieldset class="quiz-form__fieldset">
 					<h3 class=" form__title quiz-form__title">РОД ВАШЕЙ ДЕЯТЕЛЬНОСТИ?</h3>
@@ -169,9 +170,6 @@
 							</button>
 						</div>
 					</div>
-				</fieldset>
-				<fieldset>
-					<h3 class=" form__title quiz-form__title" style="display: none;">РОД ВАШЕЙ ДЕЯТЕЛЬНОСТИ?</h3>
 				</fieldset>
 				<fieldset class="quiz-form__fieldset">
 					<h3 class=" form__title quiz-form__title">Имеется ли у Вас рабочая версия Protrend?</h3>
@@ -397,6 +395,57 @@
 				</fieldset>
 			</form>
 
+		</div>
+	</div>
+</div>
+
+<!-- <div id="popup-qiuze-start1" aria-hidden="true" class="popup popup__quiz quiz-popup popup_show1">
+	<div class="popup__wrapper quiz-popup__wrapper">
+		<div class="popup__content quiz-popup__content">
+			<button data-close type="button" class="popup__close quiz-popup__close"></button>
+
+			<fieldset class="quiz-form__fieldset">
+				<h3 class="form__title quiz-form__title quiz-form__title_start">ЗАПОЛНИТЕ ЗАЯВКУ, ЧТОБЫ ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
+					ОТ PROTREND</h3>
+				<div class="quiz-form__body quiz-form__body_start">
+					<div class="quiz-form__content quiz-form__content">
+						<div class="quiz-form__image-ibg">
+							<img src="@img/quiz/quiz-image.jpg" alt="Изображение в квизе">
+						</div>
+					</div>
+					<div class="quiz-form__solution quiz-form__solution_start">
+						<p class="quiz-form__text-start">Ответьте на следующие <br> 4 вопроса</p>
+
+						<button class="button quiz-form__button quiz-form__button_next quiz-form__button_start">Начать</button>
+					</div>
+				</div>
+			</fieldset>
+
+
+		</div>
+	</div>
+</div> -->
+
+
+
+<div id="popup-qiuze-start" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content quiz-popup__content">
+			<button data-close type="button" class="popup__close quiz-popup__close"></button>
+			<h3 class="form__title quiz-form__title quiz-form__title_start">ЗАПОЛНИТЕ ЗАЯВКУ, ЧТОБЫ ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
+				ОТ PROTREND</h3>
+			<div class="quiz-form__body quiz-form__body_start">
+				<div class="quiz-form__content quiz-form__content">
+					<div class="quiz-form__image-ibg">
+						<img src="@img/quiz/quiz-image.jpg" alt="Изображение в квизе">
+					</div>
+				</div>
+				<div class="quiz-form__solution quiz-form__solution_start">
+					<p class="quiz-form__text-start">Ответьте на следующие <br> 4 вопроса</p>
+
+					<button class="button quiz-form__button quiz-form__button_start" data-popup="#popup-quiz">Начать</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

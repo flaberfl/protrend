@@ -102,6 +102,10 @@ body::after {
 	.lock & {
 		visibility: visible;
 	}
+
+	&_no-anim {
+		transition: transform .01s ease 0s;
+	}
 }
 
 
@@ -278,11 +282,8 @@ body::after {
 
 	/* .quiz-form__fieldset */
 	&__fieldset {
-		display: none;
+		transition: all 1s ease 0s;
 
-		&.active {
-			display: block;
-		}
 	}
 
 	/* .quiz-form__title */

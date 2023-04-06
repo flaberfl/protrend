@@ -275,13 +275,14 @@ const quizeItems = quize.querySelectorAll('fieldset');
 const btnsNext = quize.querySelectorAll('.quiz-form__button_next');
 const btnsPrev = quize.querySelectorAll('.quiz-form__button_prev');
 
+
 btnsNext.forEach((btn, btnIndex) => {
   btn.addEventListener('click', (event) => {
     event.preventDefault();
     console.log(btnIndex);
 
-    quizeItems[btnIndex].style.display = 'none';
     quizeItems[btnIndex + 1].style.display = 'block';
+    quizeItems[btnIndex].style.display = 'none';
   });
 });
 
@@ -298,7 +299,8 @@ for (let i = 0; i < btnsPrev.length; i++) {
   // const element = array[index];
   btnsPrev[i].addEventListener('click', (event) => {
     event.preventDefault();
-    quizeItems[i + 2].style.display = 'none';
+
+    quizeItems[i + 1].style.display = 'none';
     quizeItems[i].style.display = 'block';
   })
 }
@@ -308,6 +310,12 @@ quizeItems.forEach((quizeItem, quizeItemIndex) => {
     quizeItem.style.display = 'block';
   } else {
     quizeItem.style.display = 'none';
+  }
+
+  if (quizeItemIndex != quizeItems.length - 1) {
+
+    // quizeItem.style.display = 'none';
+
   }
 })
 // console.log(item);
@@ -331,8 +339,6 @@ quizeItems.forEach((quizeItem, quizeItemIndex) => {
 // }
 
 
-
-
 // let quiz_form = document.querySelector('.quiz-form');
 // if (quiz_form) {
 //   let PrevBtn = quiz_form.querySelector('.quiz-form__button_prev');
@@ -345,7 +351,6 @@ quizeItems.forEach((quizeItem, quizeItemIndex) => {
 //   // let progressPercent = 100 / (quizAll.length - 1);
 //   // initProgress();
 //   removeBtn();
-
 
 
 //   // quiz_form.querySelector('.allQ').textContent = `${quizAll.length}`;
