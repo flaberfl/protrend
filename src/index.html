@@ -986,28 +986,19 @@
 								<div class="reviews__position">Менеджер ОП</div>
 								<div class="reviews__job">Застройщик в г. Астана</div>
 								<div class="reviews__audio">
-
-
+									<audio id="player" src="files/audio/01.mp3"></audio>
 									<div class="player">
-										<audio id="av-tag" controls>
-											<source src="https://web-freelancer.ru/audio/01.mp3" type="audio/mp3">
-											Your browser does not support the audio element.
-										</audio>
-										<button class="play-btn">
-											<img src="@img/contols/play.svg" alt="Кнопка Play">
-										</button>
-										<div class="play-wrap">
-											<div class="play-time">1:00</div>
-											<div class="play-time">/ 1:00</div>
+										<div class="control">
+											<i class="fas fa-play" id="playbtn"></i>
 										</div>
-										<input id="cur-time" type="range" min="0" max="10" step="0">
-										<div id="speaker" class="speaker">
-											<img src="@img/contols/sound.svg" alt="">
+										<div class="info">
+											TheFatRat - Electrified
+											<div class="bar">
+												<div id="progress"></div>
+											</div>
 										</div>
-										<div class="play-more">
-											<span></span><span></span><span></span>
-										</div>
-										<!-- <input id="volume" type="range" min="0" max="10"> -->
+
+										<div id="current">0:00</div>
 									</div>
 
 								</div>
@@ -1055,9 +1046,9 @@
 
 			</section>
 
-			<audio src="files/01.mp3" id="audio-source"></audio>
+			<!-- <audio src="files/01.mp3" id="audio-source"></audio> -->
 
-			<section class="music-player-section">
+			<!-- <section class="music-player-section">
 				<div class="seek-bar-container">
 					<input type="range" value="0" class="music-seek-bar">
 					<p class="current-time">00 : 00</p>
@@ -1072,11 +1063,49 @@
 
 					</div>
 					<!-- <input type="range" class="volume-slider" max="1" value="1" step="0.1"> -->
-					<span class="volume-up"><img src="@img/contols/sound.svg" alt=""></span>
+			<!-- <span class="volume-up"><img src="@img/contols/sound.svg" alt=""></span> -->
 
+			<!-- </div> -->
+
+			<!-- </section> -->
+
+
+			<audio controls>
+				<source src="files/audio/01.mp3" type="audio/mp3">
+			</audio>
+			<div style="width: 50px; height: 50px;"></div>
+			<div class="audio-player">
+				<div class="timeline">
+					<div class="progress"></div>
 				</div>
+				<div class="controls">
+					<div class="play-container">
+						<div class="toggle-play play">
+						</div>
+					</div>
+					<div class="time">
+						<div class="current">0:00</div>
+						<div class="divider">/</div>
+						<div class="length"></div>
+					</div>
+					<div class="name">Music Song</div>
+					<!--     credit for icon to https://saeedalipoor.github.io/icono/ -->
+					<div class="volume-container">
+						<div class="volume-button">
+							<div class="volume icono-volumeMedium">
+								<img src="@img/contols/sound.svg" alt="">
+							</div>
+						</div>
 
-			</section>
+						<div class="volume-slider">
+							<div class="volume-percentage"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
 
 
 		</main>
