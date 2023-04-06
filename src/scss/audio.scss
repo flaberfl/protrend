@@ -172,28 +172,35 @@
 
 
 .audio-player {
-  height: 50px;
-  width: 350px;
-  background: #444;
-  box-shadow: 0 0 20px 0 #000a;
+  // display: flex;
+  // align-items: center;
+  height: rem(60);
+  width: rem(410);
 
-  font-family: arial;
-  color: white;
-  font-size: 0.75em;
-  overflow: hidden;
+  background: #2C3F51;
+  box-shadow: 0px 6px 23px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+
+  // overflow: hidden;
 
   display: grid;
-  grid-template-rows: 6px auto;
+  // justify-content: center;
+  // grid-template-rows: 6px auto;
+  grid-template-columns: repeat(3, 1fr);
 
   .timeline {
-    background: white;
+    background: #D9D9D9;
     width: 100%;
+    @include adaptiveValue("width", 182, 182);
     position: relative;
+    z-index: 100;
     cursor: pointer;
-    box-shadow: 0 2px 10px 0 #0008;
+    border-radius: rem(2);
+    height: rem(4);
+    align-self: center;
 
     .progress {
-      background: coral;
+      background: #FA982F;
       width: 0%;
       height: 100%;
       transition: 0.25s;
@@ -203,8 +210,9 @@
   .controls {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
-    padding: 0 20px;
+    align-items: center;
+    // align-items: stretch;
+    padding: 0 rem(22);
 
     >* {
       display: flex;
@@ -219,8 +227,8 @@
         left: 0;
         height: 0;
         width: 0;
-        border: 7px solid #0000;
-        border-left: 13px solid #D9D9D9;
+        border: rem(10) solid transparent;
+        border-left: rem(18) solid #D9D9D9;
 
         &:hover {
           transform: scale(1.1);
@@ -232,7 +240,6 @@
         width: rem(28);
         cursor: pointer;
         position: relative;
-
 
         &:before,
         &:after {
@@ -262,6 +269,11 @@
 
     .time {
       display: flex;
+      @include adaptiveValue("font-size", 12, 12);
+      line-height: math.div(15, 12);
+      font-weight: 400;
+      color: $mainTextColor;
+
 
       >* {
         padding: 2px;
@@ -272,13 +284,11 @@
       cursor: pointer;
 
       .volume-button {
-        height: 26px;
+
         display: flex;
         align-items: center;
 
-        .volume {
-          transform: scale(0.7);
-        }
+        .volume {}
       }
 
       position: relative;
@@ -287,27 +297,59 @@
       .volume-slider {
         position: absolute;
         left: -3px;
-        top: 15px;
+        top: rem(-16);
         z-index: -1;
-        width: 0;
-        height: 15px;
-        background: white;
-        box-shadow: 0 0 20px #000a;
+        width: rem(0);
+        height: rem(4);
+        background: #D9D9D9;
+        // box-shadow: 0 0 20px #000a;
         transition: .25s;
-
+        transform: rotate(-90deg);
+        border-radius: rem(2);
+        
         .volume-percentage {
-          background: coral;
+          background: #FA982F;
+          border-radius: rem(2);
           height: 100%;
           width: 75%;
         }
       }
 
+      .vol-null {
+        // display: none;
+      }
+
+
       &:hover {
+        .vol-full {
+          // display: none;
+        }
+
+        .vol-null {
+          // display: block;
+        }
+
+
         .volume-slider {
-          left: -123px;
-          width: 120px;
+          left: rem(-25);
+          width: rem(62);
         }
       }
     }
+  }
+}
+
+.play-more {
+  display: flex;
+  flex-direction: column;
+  gap: rem(2);
+  // grid-template-columns: 1fr;
+
+  span {
+    display: block;
+    background-color: #D9D9D9;
+    @include adaptiveValue("width", 4, 2);
+    @include adaptiveValue("height", 4, 2);
+    border-radius: 50%;
   }
 }

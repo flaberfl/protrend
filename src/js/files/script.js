@@ -348,7 +348,7 @@ const audioPlayer = document.querySelector(".audio-player");
 const audio = new Audio(
   "files/audio/01.mp3"
 );
-//credit for song: Adrian kreativaweb@gmail.com
+
 
 console.dir(audio);
 
