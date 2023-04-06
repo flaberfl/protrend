@@ -171,7 +171,8 @@
 
 
 
-.audio-player {
+.audio-player,
+.audio-player2 {
   // display: flex;
   // align-items: center;
   height: rem(60);
@@ -306,7 +307,7 @@
         transition: .25s;
         transform: rotate(-90deg);
         border-radius: rem(2);
-        
+
         .volume-percentage {
           background: #FA982F;
           border-radius: rem(2);
