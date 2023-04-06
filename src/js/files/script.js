@@ -266,3 +266,41 @@ function getValueTwo() {
     item4.classList.add('_active');
   };
 };
+
+
+/* Функционал КВИЗА  */
+
+const quize = document.getElementById('quiz-form');
+const quizeItems = quize.querySelectorAll('fieldset');
+const btnsNext = quize.querySelectorAll('.quiz-form__button_next');
+const btnsPrev = quize.querySelectorAll('.quiz-form__button_prev');
+
+btnsNext.forEach((btn, btnIndex) => {
+  btn.addEventListener('click', (event) => {
+    event.preventDefault();
+    console.log(btnIndex);
+
+    quizeItems[btnIndex].style.display = 'none';
+    quizeItems[btnIndex + 1].style.display = 'block';
+  });
+});
+
+btnsPrev.forEach((btn, btnIndex) => {
+  btn.addEventListener('click', (event) => {
+    event.preventDefault();
+    console.log(btnIndex);
+
+    quizeItems[btnIndex + 1].style.display = 'none';
+    quizeItems[btnIndex - 1].style.display = 'block';
+
+  });
+});
+
+quizeItems.forEach((quizeItem, quizeItemIndex) => {
+  if (quizeItemIndex === 0) {
+    quizeItem.style.display = 'block';
+  } else {
+    quizeItem.style.display = 'none';
+  }
+})
+// console.log(item);

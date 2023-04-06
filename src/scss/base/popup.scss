@@ -330,6 +330,10 @@ body::after {
 		&_start {
 			align-items: end;
 			grid-template-columns: 69% 1fr;
+
+			@media (max-width:$tablet){
+				grid: none;
+			}
 		}
 
 		&_finish {
