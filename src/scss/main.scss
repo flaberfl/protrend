@@ -50,42 +50,16 @@
   }
 
   /* .promo__decor-text-itemA */
-  &__decor-text-itemA {
-    overflow: hidden;
-    height: 100%;
-    width: rem(38);
-    // width: 100%;
-    opacity: 0.5;
-
-    animation: printed-text 6s infinite,
-  }
+  &__decor-text-itemA {}
 
   /* .promo__decor-text-itemB */
-  &__decor-text-itemB {
-    width: rem(38);
-
-    font-weight: 900;
-    color: #fff;
-    overflow: hidden;
-    animation: printed-text 4s infinite,
-  }
+  &__decor-text-itemB {}
 
   /* .promo__decor-text-itemC */
-  &__decor-text-itemC {
-    width: rem(38);
-
-    opacity: 0.5;
-    overflow: hidden;
-    animation: printed-text 2s infinite,
-  }
+  &__decor-text-itemC {}
 
   /* .promo__decor-text-itemD */
-  &__decor-text-itemD {
-    width: rem(38);
-
-    overflow: hidden;
-    animation: printed-text 4s infinite,
-  }
+  &__decor-text-itemD {}
 
   /* .promo__content */
   &__content {
