@@ -35,9 +35,8 @@
   /* .promo__decor-text */
   &__decor-text {
     position: absolute;
-    left: 0;
-    top: 0;
-
+    left: 36%;
+    top: 39%;
 
     @include adaptiveValue("font-size", 18, 14);
     line-height: math.div(42, 18);
@@ -54,39 +53,38 @@
   &__decor-text-itemA {
     overflow: hidden;
     height: 100%;
-    width: rem(50);
+    width: rem(38);
     // width: 100%;
     opacity: 0.5;
 
-    // animation: printed-text 6s infinite,
-      // animation: printed-text 3s easy infinite;
+    animation: printed-text 6s infinite,
   }
 
   /* .promo__decor-text-itemB */
   &__decor-text-itemB {
-    width: rem(50);
+    width: rem(38);
 
     font-weight: 900;
     color: #fff;
     overflow: hidden;
-    // animation: printed-text 4s infinite,
+    animation: printed-text 4s infinite,
   }
 
   /* .promo__decor-text-itemC */
   &__decor-text-itemC {
-    width: rem(50);
+    width: rem(38);
 
     opacity: 0.5;
     overflow: hidden;
-    // animation: printed-text 2s infinite,
+    animation: printed-text 2s infinite,
   }
 
   /* .promo__decor-text-itemD */
   &__decor-text-itemD {
-    width: rem(50);
+    width: rem(38);
 
     overflow: hidden;
-    // animation: printed-text 4s infinite,
+    animation: printed-text 4s infinite,
   }
 
   /* .promo__content */
