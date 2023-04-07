@@ -32,6 +32,56 @@
     }
   }
 
+  /* .promo__decor-text */
+  &__decor-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: math.div(42, 18);
+    font-weight: 800;
+    color: #EFD701;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    letter-spacing: 0.05em;
+    // transform: rotate(90deg);
+    // writing-mode:tb-rl;
+  }
+
+  /* .promo__decor-text-itemA */
+  &__decor-text-itemA {
+    overflow: hidden;
+    height: 100%;
+    width: rem(50);
+    // width: 100%;
+    opacity: 0.5;
+
+    animation: printed-text 3s infinite,
+    // animation: printed-text 3s easy infinite;
+  }
+
+  /* .promo__decor-text-itemB */
+  &__decor-text-itemB {
+    width: 10ch;
+
+    font-weight: 900;
+    color: #fff;
+  }
+
+  /* .promo__decor-text-itemC */
+  &__decor-text-itemC {
+    // width: 10ch;
+
+    opacity: 0.5;
+  }
+
+  /* .promo__decor-text-itemD */
+  &__decor-text-itemD {
+    width: 6ch;
+  }
+
   /* .promo__content */
   &__content {
     @include adaptiveValue("padding-top", 123, 45);
