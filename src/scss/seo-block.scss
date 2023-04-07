@@ -35,6 +35,15 @@
     }
   }
 
+
+  &__decor-text {
+    position: absolute;
+    left: 21%;
+    top: 37%;
+    z-index: 100;
+  }
+
+
   /* .seo-block__content */
   &__content {
 
