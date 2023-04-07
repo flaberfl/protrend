@@ -58,28 +58,35 @@
     // width: 100%;
     opacity: 0.5;
 
-    animation: printed-text 3s infinite,
-    // animation: printed-text 3s easy infinite;
+    // animation: printed-text 6s infinite,
+      // animation: printed-text 3s easy infinite;
   }
 
   /* .promo__decor-text-itemB */
   &__decor-text-itemB {
-    width: 10ch;
+    width: rem(50);
 
     font-weight: 900;
     color: #fff;
+    overflow: hidden;
+    // animation: printed-text 4s infinite,
   }
 
   /* .promo__decor-text-itemC */
   &__decor-text-itemC {
-    // width: 10ch;
+    width: rem(50);
 
     opacity: 0.5;
+    overflow: hidden;
+    // animation: printed-text 2s infinite,
   }
 
   /* .promo__decor-text-itemD */
   &__decor-text-itemD {
-    width: 6ch;
+    width: rem(50);
+
+    overflow: hidden;
+    // animation: printed-text 4s infinite,
   }
 
   /* .promo__content */
