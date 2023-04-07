@@ -43,6 +43,15 @@
 
     letter-spacing: 0.03em;
 
+    // transform: translate(0, rem(50));
+    // opacity: 0;
+    // transition: all 1.2s ease 0s;
+
+    // &._watcher-view {
+    //   transform: none;
+    //   opacity: 1;
+    // }
+
     span {
       color: #00C4EF;
     }
@@ -113,6 +122,17 @@
 
   /* .header-step-plans__title */
   &__title {
+
+    transform: translate(rem(-50), rem(0));
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+
+    &._watcher-view {
+      transform: none;
+      opacity: 1;
+    }
+
+
     @media (max-width:$tablet) {
       @include adaptiveValue("margin-bottom", 20, 12);
     }
@@ -537,6 +557,17 @@
       transition: .3s;
     }
 
+
+    transform: translate(rem(0), rem(-50));
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+
+    &._watcher-view {
+      transform: none;
+      opacity: 1;
+    }
+
+
     &:hover {
       &::before {
         opacity: 0;
@@ -552,6 +583,16 @@
     }
 
     &_up {
+
+      transform: translate(rem(0), rem(50));
+      opacity: 0;
+      transition: all .8s ease 0s;
+
+      &._watcher-view {
+        transform: none;
+        opacity: 1;
+      }
+
       &:hover {
 
         img {
@@ -784,6 +825,16 @@
     line-height: math.div(61, 50);
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    transform: scale(0);
+    opacity: 0;
+    transition: all .8s ease 0s;
+
+    &._watcher-view {
+      transform: scale(1);
+      // transform: none;
+      opacity: 1;
+    }
   }
 
   /* .question-plan__button */

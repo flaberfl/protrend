@@ -9,7 +9,14 @@
 
 // Спойлер
 .spollers__item {
-	// font-size: rem(20);
+	transform: translate(0, rem(40));
+	opacity: 0;
+	transition: all .8s ease 0s;
+
+	&._watcher-view {
+		transform: none;
+		opacity: 1;
+	}
 }
 
 // Заголовок спойлера
