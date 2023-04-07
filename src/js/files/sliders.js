@@ -107,11 +107,46 @@ function initSliders() {
 
 			on: {
 				init: function (swiper) {
-					var currentSlide = swiper.slideTo(3);
-					console.log(currentSlide);
+					num.oninput = getValue;
+					const itemsStep = document.querySelectorAll('.item-step');
+
+					function getValue() {
+						const item1 = document.getElementById('12');
+						const item2 = document.getElementById('35');
+						const item3 = document.getElementById('69');
+						const item4 = document.getElementById('10');
+
+						// Ограничение вводимых символов
+						this.value = this.value.substr(0, 2);
+						// result.innerText = numValue;
+						let numValue = this.value;
+
+						console.log(numValue);
+
+						itemsStep.forEach(box => {
+
+							box.classList.remove('_active');
+						});
+
+						if (numValue >= 1 && numValue <= 2) {
+							item1.classList.add('_active');
+							swiper.slideTo(0);
+						} else if (numValue >= 3 && numValue <= 5) {
+							item2.classList.add('_active');
+							swiper.slideTo(1);
+						} else if (numValue >= 6 && numValue <= 9) {
+							item3.classList.add('_active');
+							swiper.slideTo(2);
+						} else if (numValue >= 10 && numValue <= 50) {
+							item4.classList.add('_active');
+							swiper.slideTo(3);
+						};
+
+					};
+
 				}
 			}
-			
+
 		});
 	}
 
@@ -168,6 +203,39 @@ function initSliders() {
 			},
 
 			on: {
+				init: function (swiper) {
+
+					num2.oninput = getValueTwo;
+					const itemsStep = document.querySelectorAll('.item-step');
+
+					function getValueTwo() {
+						const item1 = document.getElementById('13');
+						const item2 = document.getElementById('47');
+						const item3 = document.getElementById('811');
+						const item4 = document.getElementById('120');
+						this.value = this.value.substr(0, 2);
+						let numValue = this.value;
+
+						itemsStep.forEach(box => {
+
+							box.classList.remove('_active');
+						});
+
+						if (numValue >= 1 && numValue <= 3) {
+							item1.classList.add('_active');
+							swiper.slideTo(0);
+						} else if (numValue >= 4 && numValue <= 7) {
+							item2.classList.add('_active');
+							swiper.slideTo(1);
+						} else if (numValue >= 8 && numValue <= 11) {
+							item3.classList.add('_active');
+							swiper.slideTo(2);
+						} else if (numValue >= 12 && numValue <= 50) {
+							item4.classList.add('_active');
+							swiper.slideTo(3);
+						};
+					};
+				}
 
 			}
 		});

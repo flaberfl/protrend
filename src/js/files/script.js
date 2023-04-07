@@ -208,64 +208,64 @@ window.addEventListener('scroll', function () {
 
 // Функции вывода карточек, в зависимости от введенного значениия в input
 
-num.oninput = getValue;
-const itemsStep = document.querySelectorAll('.item-step');
+// num.oninput = getValue;
+// const itemsStep = document.querySelectorAll('.item-step');
 
-function getValue() {
-  const item1 = document.getElementById('12');
-  const item2 = document.getElementById('35');
-  const item3 = document.getElementById('69');
-  const item4 = document.getElementById('10');
+// function getValue() {
+//   const item1 = document.getElementById('12');
+//   const item2 = document.getElementById('35');
+//   const item3 = document.getElementById('69');
+//   const item4 = document.getElementById('10');
 
-  // Ограничение вводимых символов
-  this.value = this.value.substr(0, 2);
-  // result.innerText = numValue;
-  let numValue = this.value;
+//   // Ограничение вводимых символов
+//   this.value = this.value.substr(0, 2);
+//   // result.innerText = numValue;
+//   let numValue = this.value;
 
-  console.log(numValue);
+//   console.log(numValue);
 
-  itemsStep.forEach(box => {
+//   itemsStep.forEach(box => {
 
-    box.classList.remove('_active');
-  });
+//     box.classList.remove('_active');
+//   });
 
-  if (numValue >= 1 && numValue <= 2) {
-    item1.classList.add('_active');
-  } else if (numValue >= 3 && numValue <= 5) {
-    item2.classList.add('_active');
-  } else if (numValue >= 6 && numValue <= 9) {
-    item3.classList.add('_active');
-  } else if (numValue >= 10 && numValue <= 50) {
-    item4.classList.add('_active');
-  };
+//   if (numValue >= 1 && numValue <= 2) {
+//     item1.classList.add('_active');
+//   } else if (numValue >= 3 && numValue <= 5) {
+//     item2.classList.add('_active');
+//   } else if (numValue >= 6 && numValue <= 9) {
+//     item3.classList.add('_active');
+//   } else if (numValue >= 10 && numValue <= 50) {
+//     item4.classList.add('_active');
+//   };
 
-};
+// };
 
-num2.oninput = getValueTwo;
+// num2.oninput = getValueTwo;
 
-function getValueTwo() {
-  const item1 = document.getElementById('13');
-  const item2 = document.getElementById('47');
-  const item3 = document.getElementById('811');
-  const item4 = document.getElementById('120');
-  this.value = this.value.substr(0, 2);
-  let numValue = this.value;
+// function getValueTwo() {
+//   const item1 = document.getElementById('13');
+//   const item2 = document.getElementById('47');
+//   const item3 = document.getElementById('811');
+//   const item4 = document.getElementById('120');
+//   this.value = this.value.substr(0, 2);
+//   let numValue = this.value;
 
-  itemsStep.forEach(box => {
+//   itemsStep.forEach(box => {
 
-    box.classList.remove('_active');
-  });
+//     box.classList.remove('_active');
+//   });
 
-  if (numValue >= 1 && numValue <= 3) {
-    item1.classList.add('_active');
-  } else if (numValue >= 4 && numValue <= 7) {
-    item2.classList.add('_active');
-  } else if (numValue >= 8 && numValue <= 11) {
-    item3.classList.add('_active');
-  } else if (numValue >= 12 && numValue <= 50) {
-    item4.classList.add('_active');
-  };
-};
+//   if (numValue >= 1 && numValue <= 3) {
+//     item1.classList.add('_active');
+//   } else if (numValue >= 4 && numValue <= 7) {
+//     item2.classList.add('_active');
+//   } else if (numValue >= 8 && numValue <= 11) {
+//     item3.classList.add('_active');
+//   } else if (numValue >= 12 && numValue <= 50) {
+//     item4.classList.add('_active');
+//   };
+// };
 
 
 /* Функционал КВИЗА  */
@@ -441,12 +441,12 @@ function getTimeCodeFromNum(num) {
 // );
 
 
-// console.dir(audio);
+// console.dir(audio2);
 
 // audio2.addEventListener(
 //   "loadeddata",
 //   () => {
-//     audioPlayer.querySelector(".time .length").textContent = getTimeCodeFromNum2(
+//     audioPlayer2.querySelector(".time .length").textContent = getTimeCodeFromNum2(
 //       audio2.duration
 //     );
 //     audio2.volume = .75;
@@ -454,72 +454,72 @@ function getTimeCodeFromNum(num) {
 //   false
 // );
 
-// //click on timeline to skip around
-// const timeline2 = audioPlayer.querySelector(".timeline");
-// timeline.addEventListener("click", e => {
-//   const timelineWidth = window.getComputedStyle(timeline).width;
-//   const timeToSeek = e.offsetX / parseInt(timelineWidth) * audio.duration;
-//   audio.currentTime = timeToSeek;
+//click on timeline to skip around
+// const timeline2 = audioPlayer2.querySelector(".timeline");
+// timeline2.addEventListener("click", e => {
+//   const timelineWidth2 = window.getComputedStyle(timeline2).width;
+//   const timeToSeek2 = e.offsetX / parseInt(timelineWidth2) * audio2.duration;
+//   audio2.currentTime2 = timeToSeek2;
 // }, false);
 
 // //click volume slider to change volume
-// const volumeSlider2 = audioPlayer.querySelector(".controls .volume-slider");
-// volumeSlider.addEventListener('click', e => {
-//   const sliderWidth = window.getComputedStyle(volumeSlider).width;
-//   const newVolume = e.offsetX / parseInt(sliderWidth);
-//   audio.volume = newVolume;
-//   audioPlayer.querySelector(".controls .volume-percentage").style.width = newVolume * 100 + '%';
+// const volumeSlider2 = audioPlayer2.querySelector(".controls .volume-slider");
+// volumeSlider2.addEventListener('click', e => {
+//   const sliderWidth2= window.getComputedStyle(volumeSlider2).width;
+//   const newVolume2 = e.offsetX / parseInt(sliderWidth2);
+//   audio2.volume2 = newVolume2;
+//   audioPlayer2.querySelector(".controls .volume-percentage").style.width = newVolume2 * 100 + '%';
 // }, false)
 
 // //check audio percentage and update time accordingly
 // setInterval(() => {
-//   const progressBar = audioPlayer.querySelector(".progress");
-//   progressBar.style.width = audio.currentTime / audio.duration * 100 + "%";
-//   audioPlayer.querySelector(".time .current").textContent = getTimeCodeFromNum2(
-//     audio.currentTime
+//   const progressBar2 = audioPlayer2.querySelector(".progress");
+//   progressBar2.style.width = audio2.currentTime2 / audio.duration * 100 + "%";
+//   audioPlayer2.querySelector(".time .current").textContent = getTimeCodeFromNum2(
+//     audio2.currentTime2
 //   );
 // }, 500);
 
 // //toggle between playing and pausing on button click
 // const playBtn2 = audioPlayer.querySelector(".controls .toggle-play");
-// playBtn.addEventListener(
+// playBtn2.addEventListener(
 //   "click",
 //   () => {
-//     if (audio.paused) {
-//       playBtn.classList.remove("play");
-//       playBtn.classList.add("pause");
-//       audio.play();
+//     if (audio2.paused) {
+//       playBtn2.classList.remove("play");
+//       playBtn2.classList.add("pause");
+//       audio2.play();
 //     } else {
-//       playBtn.classList.remove("pause");
-//       playBtn.classList.add("play");
-//       audio.pause();
+//       playBtn2.classList.remove("pause");
+//       playBtn2.classList.add("play");
+//       audio2.pause();
 //     }
 //   },
 //   false
 // );
 
-// audioPlayer.querySelector(".volume-button").addEventListener("click", () => {
-//   const volumeEl = audioPlayer.querySelector(".volume-container .volume");
-//   audio.muted = !audio.muted;
+// audioPlayer2.querySelector(".volume-button").addEventListener("click", () => {
+//   const volumeEl2 = audioPlayer2.querySelector(".volume-container .volume");
+//   audio2.muted = !audio2.muted;
 //   if (audio.muted) {
-//     volumeEl.classList.remove("icono-volumeMedium");
-//     volumeEl.classList.add("icono-volumeMute");
+//     volumeEl2.classList.remove("icono-volumeMedium");
+//     volumeEl2.classList.add("icono-volumeMute");
 //   } else {
-//     volumeEl.classList.add("icono-volumeMedium");
-//     volumeEl.classList.remove("icono-volumeMute");
+//     volumeEl2.classList.add("icono-volumeMedium");
+//     volumeEl2.classList.remove("icono-volumeMute");
 //   }
 // });
 
 // //turn 128 seconds into 2:08
 // function getTimeCodeFromNum2(num) {
-//   let seconds = parseInt(num);
-//   let minutes = parseInt(seconds / 60);
-//   seconds -= minutes * 60;
-//   const hours = parseInt(minutes / 60);
-//   minutes -= hours * 60;
+//   let seconds2 = parseInt(num);
+//   let minutes2 = parseInt(seconds2 / 60);
+//   seconds2 -= minutes2 * 60;
+//   const hours2 = parseInt(minutes2 / 60);
+//   minutes2 -= hours2 * 60;
 
-//   if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
-//   return `${String(hours).padStart(2, 0)}:${minutes}:${String(
-//     seconds % 60
+//   if (hours2 === 0) return `${minutes2}:${String(seconds2 % 60).padStart(2, 0)}`;
+//   return `${String(hours2).padStart(2, 0)}:${minutes2}:${String(
+//     seconds2 % 60
 //   ).padStart(2, 0)}`;
 // }
