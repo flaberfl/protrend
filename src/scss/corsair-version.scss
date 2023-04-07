@@ -75,6 +75,33 @@
     }
   }
 
+
+
+  /* .corsair-version__decor-text */
+  &__decor-text {
+    top: 37%;
+    left: 54%;
+
+    color: $hoverColor;
+  }
+
+  /* .corsair-version__decor-text-itemA */
+  &__decor-text-itemA {}
+
+  /* .corsair-version__decor-text-itemB */
+  &__decor-text-itemB {
+    opacity: .3;
+  }
+
+  /* .corsair-version__decor-text-itemC */
+  &__decor-text-itemC {}
+
+  /* .corsair-version__decor-text-itemD */
+  &__decor-text-itemD {
+    color: $hoverColor;
+  }
+
+
   &__decor-ellipse {
     right: -55%;
     top: -27%;
