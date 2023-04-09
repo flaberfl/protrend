@@ -34,8 +34,7 @@
   &__bottom {
     display: flex;
     align-items: center;
-    @include adaptiveValue("gap", 28, 28);
-
+    gap: rem(28);
     @include adaptiveValue("padding-top", 18, 22);
     padding-bottom: rem(25);
 
@@ -162,8 +161,7 @@
 
   /* .social-footer__name */
   &__name {
-
-    @include adaptiveValue("font-size", 10, 10);
+    font-size: rem(10);
     line-height: math.div(12, 10);
     font-weight: 600;
     color: $mainTextColor;
@@ -174,7 +172,7 @@
       position: relative;
       display: flex;
       align-items: center;
-      @include adaptiveValue("padding-left", 33, 33);
+      @include adaptiveValue("padding-left", 33, 26);
 
       font-weight: 500;
       text-transform: uppercase;
@@ -210,11 +208,10 @@
 
   &__right {
     @media (max-width:$mobile) {
-      @include adaptiveValue("padding-top", 40, 40);
+      padding-top: rem(40);
     }
   }
 }
-
 
 .footer {
 

@@ -43,15 +43,6 @@
 
     letter-spacing: 0.03em;
 
-    // transform: translate(0, rem(50));
-    // opacity: 0;
-    // transition: all 1.2s ease 0s;
-
-    // &._watcher-view {
-    //   transform: none;
-    //   opacity: 1;
-    // }
-
     span {
       color: #00C4EF;
     }
@@ -62,6 +53,15 @@
 
   /* .step-one-plans__form */
   &__form {
+    transform: translate(rem(50), rem(0));
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+
+    &._watcher-view {
+      transform: none;
+      opacity: 1;
+    }
+
     @media (max-width:$mobileSmall) {
       @include adaptiveValue("margin-left", -30, -60);
     }
@@ -561,7 +561,6 @@
       transition: .3s;
     }
 
-
     transform: translate(rem(0), rem(-50));
     opacity: 0;
     transition: all 1.2s ease 0s;
@@ -582,12 +581,11 @@
       }
 
       img {
-        transform: translate(0px, rem(15));
+        transform: translate(0px, rem(4));
       }
     }
 
     &_up {
-
       transform: translate(rem(0), rem(50));
       opacity: 0;
       transition: all .8s ease 0s;
@@ -600,8 +598,30 @@
       &:hover {
 
         img {
-          transform: translate(0px, rem(-15));
+          transform: translate(0, rem(-4));
         }
+      }
+    }
+
+    &_left {
+      transform: translate(rem(-40), rem(0));
+      opacity: 0;
+      transition: all .8s ease 0s;
+
+      &._watcher-view {
+        transform: none;
+        opacity: 1;
+      }
+    }
+
+    &_right {
+      transform: translate(rem(40), rem(0));
+      opacity: 0;
+      transition: all .8s ease 0s;
+
+      &._watcher-view {
+        transform: none;
+        opacity: 1;
       }
     }
   }
