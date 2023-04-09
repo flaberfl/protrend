@@ -45,21 +45,7 @@
     text-orientation: upright;
     writing-mode: vertical-lr;
     letter-spacing: 0.05em;
-    // transform: rotate(90deg);
-    // writing-mode:tb-rl;
   }
-
-  /* .promo__decor-text-itemA */
-  &__decor-text-itemA {}
-
-  /* .promo__decor-text-itemB */
-  &__decor-text-itemB {}
-
-  /* .promo__decor-text-itemC */
-  &__decor-text-itemC {}
-
-  /* .promo__decor-text-itemD */
-  &__decor-text-itemD {}
 
   /* .promo__content */
   &__content {
@@ -98,7 +84,6 @@
     @media (max-width:$mobile) {
       max-width: rem(500);
     }
-
   }
 
   &__symbol {
@@ -214,9 +199,3 @@
     }
   }
 }
-
-
-
-// .social__list {
-//   row-gap: rem(39);
-// }

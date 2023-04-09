@@ -37,10 +37,6 @@
     opacity: 0;
   }
 
-  &__logo {}
-
-  &__menu {}
-
   &__button {
     min-width: 0;
     @include adaptiveValue("width", 218, 172);

@@ -114,17 +114,53 @@
 
   /* .social-footer__link */
   &__link {
+
+    // transition: all 0.3s ease 0s;
+
     svg path {
       transition: all 0.3s ease 0s;
     }
 
-    @media (any-hover: hover) {
+    &_whatsapp {
       &:hover {
         svg path {
-          fill: #fff;
+          fill: #60D669;
         }
       }
     }
+
+    &_telegram {
+      &:hover {
+        svg path {
+          fill: #229ED9;
+        }
+      }
+    }
+
+    &_instagram {
+      &:hover {
+        svg path {
+          fill: #000;
+        }
+      }
+
+    }
+
+    &_other {
+      &:hover {
+        svg path {
+          fill: yellow;
+        }
+      }
+    }
+
+    // @media (any-hover: hover) {
+    //   &:hover {
+    //     svg path {
+    //       fill: #fff;
+    //     }
+    //   }
+    // }
 
     &_ytb {
       position: relative;
@@ -149,6 +185,12 @@
 
       @media (max-width:$mobile) {
         padding-left: rem(30);
+      }
+
+      &:hover {
+        svg path {
+          fill: red;
+        }
       }
     }
   }
