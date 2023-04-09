@@ -128,16 +128,7 @@
 	}
 
 	/* .types-crm__content */
-	&__content {
-		transform: translate(0, rem(50));
-		opacity: 0;
-		transition: all 1.2s ease 0s;
-
-		&._watcher-view {
-			transform: none;
-			opacity: 1;
-		}
-	}
+	&__content {}
 
 	/* .types-crm__item */
 	&__item {
@@ -148,7 +139,7 @@
 
 		letter-spacing: .05em;
 
-		transform: translate(rem(30), rem(10));
+		transform: translate(rem(0), rem(25));
 		opacity: 0;
 		transition: all .8s ease 0s;
 

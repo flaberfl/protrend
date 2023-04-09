@@ -195,6 +195,12 @@
       right: rem(22);
       top: 6%;
     }
+
+    @media (max-width:$mobile) {
+      right: rem(22);
+      top: rem(100);
+    }
+
   }
 
   &__decor-ellipse {
@@ -208,3 +214,9 @@
     }
   }
 }
+
+
+
+// .social__list {
+//   row-gap: rem(39);
+// }
