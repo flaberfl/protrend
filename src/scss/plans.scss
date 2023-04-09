@@ -58,7 +58,8 @@
 
   }
 
-  &__slider_one {
+  &__slider_one,
+  &__slider_two {
     transform: translate(rem(0), rem(40));
     opacity: 0;
     transition: all 1.2s ease 0s;
@@ -716,6 +717,16 @@
     @media (max-width:$mobileSmall) {
       grid: none;
     }
+
+    transform: translate(rem(0), rem(40));
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+
+    &._watcher-view {
+      transform: none;
+      opacity: 1;
+    }
+
   }
 
   /* .operation-plans__item */
@@ -873,13 +884,12 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
-    transform: scale(0);
+    transform: translate(rem(0), rem(40));
     opacity: 0;
-    transition: all .8s ease 0s;
+    transition: all .5s ease 0s;
 
     &._watcher-view {
-      transform: scale(1);
-      // transform: none;
+      transform: none;
       opacity: 1;
     }
   }
@@ -917,6 +927,15 @@
       @media (max-width:$mobile) {
         display: none;
       }
+    }
+
+    transform: translate(rem(0), rem(40));
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+
+    &._watcher-view {
+      transform: none;
+      opacity: 1;
     }
   }
 }

@@ -6,6 +6,17 @@
   line-height: math.div(84, 70);
   text-transform: uppercase;
   // letter-spacing: 0.05em;
+
+  &_anim {
+    transform: translate(rem(0), rem(40));
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+
+    &._watcher-view {
+      transform: none;
+      opacity: 1;
+    }
+  }
 }
 
 .decor-ellipse {
