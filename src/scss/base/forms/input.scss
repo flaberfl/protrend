@@ -16,6 +16,13 @@ textarea {
 	// padding: 0px 20px;
 	// border: 1px solid #eee;
 
+	&:active,
+	&:hover,
+	&:focus {
+		outline: 0;
+		outline-offset: 0;
+	}
+
 	&._focus {}
 }
 
