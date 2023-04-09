@@ -57,6 +57,17 @@
     }
 
   }
+
+  &__slider_one {
+    transform: translate(rem(0), rem(40));
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+
+    &._watcher-view {
+      transform: none;
+      opacity: 1;
+    }
+  }
 }
 
 .step-one-plans {
@@ -128,6 +139,10 @@
     top: rem(-13);
 
     color: $secTextColor;
+
+    &_2 {
+      top: 0;
+    }
   }
 
   /* .header-step-plans__title */
