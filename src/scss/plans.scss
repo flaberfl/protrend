@@ -314,7 +314,7 @@
     color: $secTextColor;
     text-align: center;
 
-    transition: color .3 ease 0s;
+    transition: all .6 ease 0s;
 
     &::after {
       content: '';
@@ -343,11 +343,7 @@
   &__border-img {
     position: absolute;
     width: calc(100% + rem(14));
-
   }
-
-  /* .item-step__list */
-  &__list {}
 
   /* .item-step__price */
   &__price {
@@ -357,8 +353,7 @@
     font-weight: 800;
     letter-spacing: 0.05em;
 
-    transition: color .3s ease 0s;
-
+    transition: color .6s ease 0s;
 
     ._active & {
       color: #fff;
@@ -381,7 +376,7 @@
     line-height: math.div(24, 14);
     color: $secTextColor;
 
-    transition: color .3s ease 0s;
+    transition: color .6s ease 0s;
 
     ._active & {
       color: #01C3ED;
@@ -390,17 +385,26 @@
 
   /* .item-step__check */
   &__check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
     @include adaptiveValue("margin-top", 30, 20);
     margin-bottom: rem(-4);
+    @include adaptiveValue("width", 80, 60);
+    @include adaptiveValue("height", 80, 60);
 
     transform: scale(0);
     opacity: 0;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #01C9F5 -18.3%, #006D85 134.86%);
+    box-shadow: 0px 10px 13px rgba(82, 203, 255, 0.33);
 
-    transition: all .3s ease 0s;
+    transition: all .6s ease 0s;
 
     ._active & {
-      display: inline-block;
-
       transform: scale(1);
       opacity: 1;
     }
@@ -411,7 +415,7 @@
   &__footer {
     position: relative;
     @include adaptiveValue("padding-top", 25, 18);
-    margin-bottom: rem(-122);
+    margin-bottom: rem(-80);
 
     text-align: center;
 

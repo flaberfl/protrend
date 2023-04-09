@@ -1,9 +1,6 @@
 .corsair-version {
   @include adaptiveValue("padding-top", 66, 46);
 
-  /* .corsair-version__page */
-  &__page {}
-
   /* .corsair-version__container */
   &__container {
     position: relative;
@@ -42,8 +39,6 @@
     @include adaptiveValue("margin-bottom", 60, 20);
     letter-spacing: 0.03em;
 
-
-
     transform: translate(rem(0), rem(50));
     opacity: 0;
     transition: all 1.2s ease 0s;
@@ -53,13 +48,11 @@
       opacity: 1;
     }
 
-
     span {
       display: block;
       color: $hoverColor;
       letter-spacing: 0.05em;
     }
-
   }
 
   /* .corsair-version__text */
@@ -93,10 +86,9 @@
     img {
       max-width: 100%;
 
-      transform: translate(rem(100), rem(100));
+      transform: translate(rem(0), rem(100));
       opacity: 0;
-      transition: all 1.2s ease 0s;
-
+      transition: all 2s ease 0s;
 
       &._watcher-view {
         transform: none;
@@ -104,7 +96,6 @@
       }
     }
   }
-
 
   /* .corsair-version__decor-text */
   &__decor-text {
@@ -129,7 +120,6 @@
   &__decor-text-itemD {
     color: $hoverColor;
   }
-
 
   &__decor-ellipse {
     right: -55%;
