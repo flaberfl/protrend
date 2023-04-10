@@ -30,6 +30,15 @@
         @include adaptiveValue("left", -14, -90, 992, 360);
       }
     }
+
+    transform: translate(rem(-50), rem(0));
+    opacity: 0;
+    transition: all 2s ease 0s;
+
+    &._watcher-view {
+      transform: none;
+      opacity: 1;
+    }
   }
 
   /* .promo__decor-text */
@@ -84,6 +93,16 @@
     @media (max-width:$mobile) {
       max-width: rem(500);
     }
+
+    transform: translate(0, rem(-50));
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+
+    &._watcher-view {
+      transform: none;
+      opacity: 1;
+    }
+
   }
 
   &__symbol {
@@ -114,6 +133,15 @@
       border-radius: rem(10);
       padding-left: rem(10);
     }
+
+    transform: translate(0, rem(50));
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+
+    &._watcher-view {
+      transform: none;
+      opacity: 1;
+    }
   }
 
   @media (max-width:$tablet) {}
@@ -125,6 +153,15 @@
     @media (max-width:$tablet) {
       position: absolute;
       bottom: rem(-163);
+    }
+
+    transform: translate(0, rem(50));
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+
+    &._watcher-view {
+      transform: none;
+      opacity: 1;
     }
   }
 
