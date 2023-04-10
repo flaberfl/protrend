@@ -8,9 +8,9 @@
   // letter-spacing: 0.05em;
 
   &_anim {
-    transform: translate(rem(0), rem(40));
+    transform: translate(rem(0), rem(20));
     opacity: 0;
-    transition: all 1.2s ease 0s;
+    transition: all $animSpeed ease 0s;
 
     &._watcher-view {
       transform: none;

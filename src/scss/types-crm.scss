@@ -38,9 +38,9 @@
 		overflow-x: auto;
 		position: relative;
 
-		transform: translate(0, rem(50));
+		transform: translate(0, rem(20));
 		opacity: 0;
-		transition: all 1.2s ease 0s;
+		transition: all $animSpeed ease 0s;
 
 		&._watcher-view {
 			transform: none;
@@ -139,9 +139,9 @@
 
 		letter-spacing: .05em;
 
-		transform: translate(rem(0), rem(25));
+		transform: translate(rem(0), rem(20));
 		opacity: 0;
-		transition: all .8s ease 0s;
+		transition: all $animSpeed ease 0s;
 
 		&_chess {
 			align-items: start;

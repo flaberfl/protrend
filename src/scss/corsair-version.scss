@@ -39,9 +39,9 @@
     @include adaptiveValue("margin-bottom", 60, 20);
     letter-spacing: 0.03em;
 
-    transform: translate(rem(0), rem(50));
+    transform: translate(rem(0), rem(20));
     opacity: 0;
-    transition: all 1.2s ease 0s;
+    transition: all $animSpeed ease 0s;
 
     &._watcher-view {
       transform: none;
@@ -68,9 +68,9 @@
 
     z-index: 40;
 
-    transform: translate(rem(0), rem(50));
+    transform: translate(rem(0), rem(20));
     opacity: 0;
-    transition: all 1.2s ease 0s;
+    transition: all $animSpeed ease 0s;
 
     &._watcher-view {
       transform: none;
@@ -86,9 +86,9 @@
     img {
       max-width: 100%;
 
-      transform: translate(rem(0), rem(100));
+      transform: translate(rem(0), rem(20));
       opacity: 0;
-      transition: all 2s ease 0s;
+      transition: all $animSpeed ease 0s;
 
       &._watcher-view {
         transform: none;
