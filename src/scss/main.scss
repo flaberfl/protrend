@@ -26,8 +26,12 @@
       @include adaptiveValue("width", 1264, 694);
       @include adaptiveValue("left", -212, -92, 1920, 992);
 
+      @media (max-width: em(1100)){
+          left: -150px;
+      }
+
       @media (max-width:$tablet) {
-        @include adaptiveValue("left", -14, -90, 992, 360);
+        @include adaptiveValue("left", 100, -90, 992, 360);
       }
     }
 
@@ -124,7 +128,6 @@
     letter-spacing: 0.05em;
 
     &:not(:last-child) {
-      // margin-bottom: rem(96);
       @include adaptiveValue("margin-bottom", 96, 20);
     }
 
@@ -145,6 +148,10 @@
     &._watcher-view {
       transform: none;
       opacity: 1;
+    }
+
+    @media (max-width: em(1230)) {
+      max-width: rem(500);
     }
   }
 

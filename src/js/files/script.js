@@ -44,6 +44,11 @@ window.addEventListener('scroll', function () {
 
 })
 
+
+const itemsTab = document.querySelectorAll('.tabs__title');
+let countTab = 0;
+itemsTab[countTab].classList.add('_tab-active');
+
 /* Функционал КВИЗА  */
 
 const quize = document.getElementById('quiz-form');
