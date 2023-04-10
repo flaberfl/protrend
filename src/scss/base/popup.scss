@@ -215,7 +215,7 @@ body::after {
 	&__title {
 		margin-bottom: rem(30);
 
-		@include adaptiveValue("font-size", 70, 24);
+		@include adaptiveValue("font-size", 30, 18);
 		font-weight: 700;
 		line-height: math.div(85, 70);
 		letter-spacing: 0.05em;
@@ -228,10 +228,14 @@ body::after {
 	}
 
 	&__content {
-		@include adaptiveValue("padding-top", 104, 27);
+		@include adaptiveValue("padding-left", 30, 27);
+		@include adaptiveValue("padding-right", 30, 28);
+		// @include adaptiveValue("padding-top", 104, 27);
 
-		@include adaptiveValue("padding-bottom", 0, 50);
-		@include adaptiveValue("width", 964, 323);
+		@include adaptiveValue("padding-bottom", 0, 1);
+		padding-bottom: rem(0);
+		// @include adaptiveValue("width", 964, 323);
+		@include adaptiveValue("width", 600, 300);
 	}
 
 	/* .thanks-popup__body */
