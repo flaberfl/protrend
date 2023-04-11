@@ -64,7 +64,7 @@ function initSliders() {
 			*/
 			observer: true,
 			observeParents: true,
-			slidesPerView: 'auto',
+			// slidesPerView: 'auto',
 			spaceBetween: 44,
 			// freeMode: true,
 			// autoHeight: true,
@@ -73,12 +73,12 @@ function initSliders() {
 			// hashNavigation: {
 
 			// },
-			
+
 			//touchRatio: 0,
 			//simulateTouch: false,
 			// loop: true,
 			//preloadImages: false,
-			//lazy: true,
+			lazy: true,
 			// Dotts
 			pagination: {
 				el: '.swiper-pagination-plans_one',
@@ -92,17 +92,27 @@ function initSliders() {
 
 			breakpoints: {
 				320: {
-					spaceBetween: 23,
+					spaceBetween: 20,
+					slidesPerView: 1.2,
+
+				},
+				480: {
+					spaceBetween: 20,
+					slidesPerView: 1.7,
+
 				},
 				768: {
+					slidesPerView: 2.5,
 					spaceBetween: 30
 				},
-				// 992: {
-				// 	spaceBetween: 34,
-				// },
-				// 1268: {
-				// 	spaceBetween: 40,
-				// },
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 34,
+				},
+				1268: {
+					slidesPerView: 4,
+					spaceBetween: 44,
+				},
 			},
 
 			on: {
@@ -165,7 +175,7 @@ function initSliders() {
 			*/
 			observer: true,
 			observeParents: true,
-			slidesPerView: 'auto',
+			// slidesPerView: 'auto',
 			spaceBetween: 44,
 			// freeMode: true,
 			// autoHeight: true,
@@ -189,17 +199,27 @@ function initSliders() {
 
 			breakpoints: {
 				320: {
-					spaceBetween: 23,
+					spaceBetween: 20,
+					slidesPerView: 1.2,
+
+				},
+				480: {
+					spaceBetween: 20,
+					slidesPerView: 1.7,
+
 				},
 				768: {
+					slidesPerView: 2.5,
 					spaceBetween: 30
 				},
-				// 992: {
-				// 	spaceBetween: 34,
-				// },
-				// 1268: {
-				// 	spaceBetween: 40,
-				// },
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 34,
+				},
+				1268: {
+					slidesPerView: 4,
+					spaceBetween: 44,
+				},
 			},
 
 			on: {
