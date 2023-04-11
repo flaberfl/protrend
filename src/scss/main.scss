@@ -26,12 +26,16 @@
       @include adaptiveValue("width", 1264, 694);
       @include adaptiveValue("left", -212, -92, 1920, 992);
 
-      @media (max-width: em(1100)){
-          left: -150px;
+      @media (max-width: em(1100)) {
+        left: -150px;
       }
 
       @media (max-width:$tablet) {
-        @include adaptiveValue("left", 100, -90, 992, 360);
+        left: rem(-17);
+      }
+
+      @media (max-width:$mobile) {
+        @include adaptiveValue("left", 40, -90, 992, 360);
       }
     }
 
@@ -164,14 +168,21 @@
     @media (max-width:$tablet) {
       position: absolute;
       bottom: rem(-163);
+      // left: 36%;
+      left: 50%;
+      transform: translate(-50%, 0px);
     }
+
+    // @media (max-width: em(600)) {
+    //   left: 30%;
+    // }
 
     transform: translate(0, rem(20));
     opacity: 0;
     transition: all $animSpeed ease 0s;
 
     &._watcher-view {
-      transform: none;
+      transform: 0;
       opacity: 1;
     }
   }
@@ -221,12 +232,12 @@
 
     @media (max-width: em(1450)) {
       right: 3%;
-      top: 17%;
+      top: 25%;
     }
 
     @media (max-width:$tablet) {
       right: rem(22);
-      top: 6%;
+      top: 20%;
     }
 
     @media (max-width:$mobile) {
