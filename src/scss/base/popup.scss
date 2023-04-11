@@ -83,8 +83,8 @@ body::after {
 
 .popup__content {
 	@include adaptiveValue("padding-top", 94, 27);
-	@include adaptiveValue("padding-left", 124, 27);
-	@include adaptiveValue("padding-right", 124, 28);
+	@include adaptiveValue("padding-left", 70, 27);
+	@include adaptiveValue("padding-right", 70, 28);
 	@include adaptiveValue("padding-bottom", 100, 32);
 
 	width: 100%;
@@ -214,6 +214,7 @@ body::after {
 	/* .thanks-popup__title */
 	&__title {
 		margin-bottom: rem(30);
+		text-align: center;
 
 		@include adaptiveValue("font-size", 30, 18);
 		font-weight: 700;
@@ -274,9 +275,9 @@ body::after {
 		@include adaptiveValue("padding-top", 88, 24);
 
 		@include adaptiveValue("padding-bottom", 70, 20);
-		@include adaptiveValue("width", 1463, 320);
+		@include adaptiveValue("width", 1463, 360);
 
-		@include adaptiveValue("height", 800, 720);
+		@include adaptiveValue("height", 780, 720);
 
 		// height: rem(800);
 	}
@@ -313,9 +314,9 @@ body::after {
 
 	/* .quiz-form__title */
 	&__title {
-		@include adaptiveValue("margin-bottom", 53, 28);
+		@include adaptiveValue("margin-bottom", 40, 28);
 
-		@include adaptiveValue("font-size", 40, 24);
+		@include adaptiveValue("font-size", 30, 24);
 		font-size: 700px;
 		line-height: math.div(49, 40);
 		letter-spacing: 0.03em;
@@ -356,10 +357,6 @@ body::after {
 
 		}
 
-		&:not(:last-child) {
-			// @include adaptiveValue("margin-bottom", 60, 18);
-		}
-
 		@media (max-width: em(1200)) {
 			grid-template-columns: 1fr 1fr;
 		}
@@ -394,6 +391,7 @@ body::after {
 	&__content {
 		display: grid;
 		row-gap: rem(19);
+		align-self: start;
 
 		&_finish {
 			grid: none;
@@ -418,8 +416,8 @@ body::after {
 
 	/* .quiz-form__solution */
 	&__solution {
+		// margin-left: 113px;
 
-		// align-self: end;
 		@media (max-width:$mobile) {
 			justify-self: center;
 		}
@@ -428,6 +426,8 @@ body::after {
 			@include adaptiveValue("padding-left", 38, 20, 1920, 992);
 			@include adaptiveValue("padding-bottom", 88, 33, 1920, 992);
 		}
+
+
 	}
 
 	/* .quiz-form__text-start */
@@ -618,6 +618,10 @@ body::after {
 
 		img {
 			@include adaptiveValue("width", 52, 33);
+		}
+
+		&_ml {
+			// margin-left: rem(110);
 		}
 	}
 
