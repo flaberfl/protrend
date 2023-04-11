@@ -35,8 +35,10 @@
 		@include adaptiveValue("margin-bottom", 74, 20);
 
 		@include adaptiveValue("column-gap", 26, 7);
-		overflow-x: auto;
+		// overflow-x: auto;
+		overflow-y: scroll;
 		position: relative;
+		scrollbar-width: none;
 
 		transform: translate(0, rem(20));
 		opacity: 0;
@@ -46,6 +48,12 @@
 			transform: none;
 			opacity: 1;
 		}
+
+		@media (max-width:$tablet) {
+			margin-left: rem(-20);
+			margin-right: rem(-20);
+		}
+
 	}
 
 	/* .types-crm__button */
@@ -77,6 +85,7 @@
 			transition: all 0.3s ease 0s;
 			z-index: -1000;
 		}
+
 
 		@media (any-hover: hover) {
 			&:hover {

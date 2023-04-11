@@ -126,3 +126,10 @@
   // z-index: -1;
   // opacity: .1;
 }
+
+::-webkit-scrollbar {
+  /* chrome based */
+  width: 0px;
+
+  background: transparent;
+}
