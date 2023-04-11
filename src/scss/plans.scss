@@ -938,3 +938,10 @@
     }
   }
 }
+
+.set-month {
+
+  .change & {
+    display: none;
+  }
+}

@@ -28,6 +28,16 @@
 		-webkit-transition-delay: 0.5s;
 		transition: all 0.5s easy;
 		transition-delay: 0.5s;
-		
+
+
+		&:last-child>* {
+			display: none;
+		}
+
+		&::nth-child(2) {
+			align-items: center;
+		}
+
+
 	}
 }

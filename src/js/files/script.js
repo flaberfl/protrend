@@ -49,6 +49,62 @@ const itemsTab = document.querySelectorAll('.tabs__title');
 let countTab = 0;
 itemsTab[countTab].classList.add('_tab-active');
 
+const typesItems = document.querySelectorAll('.types-crm__item');
+// const contItemsTab = 0;
+typesItems.forEach((element, i) => {
+  if (i === 0)
+    element.classList.add('types-crm__item_chess')
+  if (i === 1)
+    element.childNodes[1].classList.add('types-crm__image_crm')
+  if (i === 2)
+    element.childNodes[1].classList.add('types-crm__image_crm')
+  if (i === 3) {
+    element.childNodes[1].classList.add('types-crm__image_an')
+  }
+  // console.log(element.childNodes[1]); // Дочерний элемент
+})
+
+const itemsSlideOne = document.querySelectorAll('.step-one-plans__item');
+const itemsSlideTwo = document.querySelectorAll('.step-two-plans__item');
+
+itemsSlideOne.forEach((element, i) => {
+  if (i === 0)
+    element.setAttribute('id', '12');
+  if (i === 1)
+    element.setAttribute('id', '35');
+  if (i === 2)
+    element.setAttribute('id', '69');
+  if (i === 3)
+    element.setAttribute('id', '10');
+  // console.log(element.childNodes[1]); // Дочерний элемент
+})
+
+itemsSlideTwo.forEach((element, i) => {
+  if (i === 0)
+    element.setAttribute('id', '13');
+  if (i === 1)
+    element.setAttribute('id', '47');
+  if (i === 2)
+    element.setAttribute('id', '811');
+  if (i === 3) {
+    element.setAttribute('id', '120');
+    element.classList.add('change');
+  }
+  // console.log(element.childNodes[1]); // Дочерний элемент
+})
+
+const itemsStepValue = document.querySelectorAll('.list-item-step__value');
+
+itemsStepValue.forEach((element, i) => {
+  if (i === 49)
+    element.classList.add('list-item-step__value_sm')
+  if (i === 50)
+    element.classList.add('list-item-step__value_sm')
+})
+
+
+// console.log(countTab);
+
 /* Функционал КВИЗА  */
 
 const quize = document.getElementById('quiz-form');
