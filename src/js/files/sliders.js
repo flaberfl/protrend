@@ -68,12 +68,12 @@ function initSliders() {
 			spaceBetween: 44,
 			// freeMode: true,
 			// autoHeight: true,
-			speed: 800,
-			hashnav: true,
-			hashNavigation: {
+			speed: 1100,
+			// hashnav: true,
+			// hashNavigation: {
 
-			},
-
+			// },
+			
 			//touchRatio: 0,
 			//simulateTouch: false,
 			// loop: true,
@@ -169,7 +169,7 @@ function initSliders() {
 			spaceBetween: 44,
 			// freeMode: true,
 			// autoHeight: true,
-			speed: 800,
+			speed: 1100,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
