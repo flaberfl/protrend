@@ -279,10 +279,13 @@ function initSliders() {
 
 			breakpoints: {
 				320: {
-					spaceBetween: -20,
+					spaceBetween: -10,
+				},
+				480: {
+					spaceBetween: 20,
 				},
 				768: {
-					spaceBetween: 20,
+					spaceBetween: 40,
 				},
 				992: {
 					spaceBetween: 45,

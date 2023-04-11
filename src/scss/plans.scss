@@ -1,5 +1,6 @@
 .plans {
-  @include adaptiveValue("margin-top", -30, 117);
+  // @include adaptiveValue("margin-top", 0, 117);
+  @include adaptiveValue("padding-top", 0, 130);
   @include adaptiveValue("padding-bottom", 120, 79);
 
   /* .plans__container */
@@ -39,7 +40,7 @@
   &__title {
     position: relative;
     z-index: 100;
-    @include adaptiveValue("margin-bottom", 75, 50);
+    @include adaptiveValue("margin-bottom", 75, 30);
 
     letter-spacing: 0.03em;
 
@@ -671,6 +672,20 @@
   /* .step-plans__operation */
   &__operation {
     @include adaptiveValue("margin-bottom", 103, 100);
+    @include adaptiveValue("margin-left", 120, 60, 1920, 798, 2);
+
+    @media (max-width: em(798)) {
+      transform: translate(10%, 0px);
+    }
+
+    @media (max-width: em(600)) {
+      transform: translate(-4%, 0);
+    }
+
+    @media (max-width: em(506)) {
+      transform: none;
+      // transform: translate(-4%, 0);
+    }
   }
 }
 

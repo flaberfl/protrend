@@ -61,7 +61,13 @@ typesItems.forEach((element, i) => {
   if (i === 3) {
     element.childNodes[1].classList.add('types-crm__image_an')
   }
-  // console.log(element.childNodes[1]); // Дочерний элемент
+  if (i === 4) {
+    element.childNodes[3].classList.add('w50wh');
+  }
+  // if (i === 4) {
+  //   element.childNodes[3].classList.add('types-crm__image_an1')
+  // }
+  // console.log(element.childNodes); // Дочерний элемент
 })
 
 const itemsSlideOne = document.querySelectorAll('.step-one-plans__item');

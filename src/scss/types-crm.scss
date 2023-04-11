@@ -214,7 +214,7 @@
 		&_an {
 			@media (max-width:$tablet) {
 				max-width: 85%;
-
+				@include adaptiveValue("margin-left", 60, 20);
 			}
 		}
 
@@ -227,6 +227,28 @@
 	/* .types-crm__text */
 	&__text {
 		position: relative;
+
+
+		@media (max-width:$tablet) {
+			width: 80vw;
+			justify-self: center;
+		}
+
+		@media (max-width:$mobileSmall) {
+			width: 100%;
+		}
+
+		&.w50wh {
+
+			@media (max-width:$tablet) {
+				width: 60%;
+
+			}
+
+			@media (max-width:$mobileSmall) {
+				width: 100%;
+			}
+		}
 	}
 }
 

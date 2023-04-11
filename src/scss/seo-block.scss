@@ -29,8 +29,21 @@
 
       z-index: -1;
 
-      @media (min-width:$mobileSmall) and (max-width:$tablet) {
-        transform: translate(14%, 0px);
+      @media (max-width:$tablet) {
+
+        @include adaptiveValue("left", 50, -50);
+      }
+
+      @media (max-width: em(560)) {
+        left: -15%;
+      }
+
+      @media (max-width:$mobileSmall) {
+        left: -20%;
+      }
+
+      @media (max-width: em(400)) {
+        left: -30%;
       }
     }
   }
