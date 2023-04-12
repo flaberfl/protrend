@@ -118,6 +118,7 @@ function initSliders() {
 			on: {
 				init: function (swiper) {
 					num.oninput = getValue;
+
 					const itemsStep = document.querySelectorAll('.item-step');
 
 					function getValue() {
@@ -128,10 +129,17 @@ function initSliders() {
 
 						// Ограничение вводимых символов
 						this.value = this.value.substr(0, 2);
+
+						// Введенное число > 50 - блокируется ввод
+						if (this.value > 50) {
+							this.value = this.value.substr(0, 1);
+						}
+
+						// if (numValue > 50) {
+						// 	numValue == 0;
+						// }
 						// result.innerText = numValue;
 						let numValue = this.value;
-
-						console.log(numValue);
 
 						itemsStep.forEach(box => {
 
@@ -153,10 +161,8 @@ function initSliders() {
 						};
 
 					};
-
 				}
 			}
-
 		});
 	}
 
@@ -182,7 +188,7 @@ function initSliders() {
 			speed: 1100,
 
 			//touchRatio: 0,
-		//simulateTouch: false,
+			//simulateTouch: false,
 			// loop: true,
 			//preloadImages: false,
 			//lazy: true,
@@ -235,7 +241,9 @@ function initSliders() {
 						const item4 = document.getElementById('120');
 						this.value = this.value.substr(0, 2);
 						let numValue = this.value;
-
+						if (this.value > 50) {
+							this.value = this.value.substr(0, 1);
+						}
 						itemsStep.forEach(box => {
 
 							box.classList.remove('_active');
