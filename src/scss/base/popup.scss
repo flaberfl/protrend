@@ -355,6 +355,10 @@ body::after {
 			opacity: 1;
 			transform: scale(1);
 
+
+			&_start {
+				flex: 0 1 auto;
+			}
 		}
 
 		@media (max-width: em(1200)) {
@@ -407,6 +411,7 @@ body::after {
 
 		@media (max-width:$tablet) {
 			margin-bottom: rem(10);
+			// padding-bottom: 42.5%;
 		}
 	}
 
@@ -425,6 +430,11 @@ body::after {
 		&_start {
 			@include adaptiveValue("padding-left", 38, 20, 1920, 992);
 			@include adaptiveValue("padding-bottom", 88, 33, 1920, 992);
+
+			@media (max-width:$tablet) {
+				// margin-left: auto;
+				margin: 0 auto;
+			}
 		}
 
 

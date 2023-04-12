@@ -21,7 +21,7 @@
 		// overflow-y: scroll;
 		position: relative;
 		scrollbar-width: none;
-		z-index: 100;
+		z-index: 400;
 
 		@media (max-width:$tablet) {
 			margin-left: rem(-20);
