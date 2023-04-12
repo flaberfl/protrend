@@ -1,5 +1,4 @@
 .plans {
-  // @include adaptiveValue("margin-top", 0, 117);
   @include adaptiveValue("padding-top", 0, 130);
   @include adaptiveValue("padding-bottom", 120, 79);
 
@@ -47,28 +46,6 @@
     span {
       color: #00C4EF;
     }
-
-    transform: translate(rem(0), rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
-
-  }
-
-  &__slider_one,
-  &__slider_two {
-    transform: translate(rem(0), rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
   }
 }
 
@@ -76,15 +53,6 @@
 
   /* .step-one-plans__form */
   &__form {
-    transform: translate(rem(0), rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
-
     @media (max-width:$mobileSmall) {
       @include adaptiveValue("margin-left", -30, -60);
     }
@@ -149,15 +117,6 @@
 
   /* .header-step-plans__title */
   &__title {
-    transform: translate(rem(0), rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
-
     @media (max-width:$tablet) {
       @include adaptiveValue("margin-bottom", 20, 12);
     }
@@ -576,7 +535,6 @@
     &::after {
       opacity: 0;
       box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.25);
-
     }
 
     img {
@@ -585,16 +543,6 @@
       @include adaptiveValue("height", 43, 19);
       transition: .3s;
     }
-
-    transform: translate(rem(0), rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
-
 
     &:hover {
       &::before {
@@ -611,42 +559,11 @@
     }
 
     &_up {
-      transform: translate(rem(0), rem(20));
-      opacity: 0;
-      transition: all $animSpeed ease 0s;
-
-      &._watcher-view {
-        transform: none;
-        opacity: 1;
-      }
-
       &:hover {
 
         img {
-          transform: translate(0, rem(-4));
+          transform: translate(0, rem(4));
         }
-      }
-    }
-
-    &_left {
-      transform: translate(rem(0), rem(20));
-      opacity: 0;
-      transition: all $animSpeed ease 0s;
-
-      &._watcher-view {
-        transform: none;
-        opacity: 1;
-      }
-    }
-
-    &_right {
-      transform: translate(rem(0), rem(20));
-      opacity: 0;
-      transition: all $animSpeed ease 0s;
-
-      &._watcher-view {
-        transform: none;
-        opacity: 1;
       }
     }
   }
@@ -684,7 +601,6 @@
 
     @media (max-width: em(506)) {
       transform: none;
-      // transform: translate(-4%, 0);
     }
   }
 }
@@ -732,19 +648,7 @@
     @media (max-width:$mobileSmall) {
       grid: none;
     }
-
-    transform: translate(rem(0), rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
   }
-
-  /* .operation-plans__item */
-  &__item {}
 }
 
 .item-operation {
@@ -897,15 +801,6 @@
     line-height: math.div(61, 50);
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
-    transform: translate(rem(0), rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
   }
 
   /* .question-plan__button */
@@ -941,15 +836,6 @@
       @media (max-width:$mobile) {
         display: none;
       }
-    }
-
-    transform: translate(rem(0), rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
     }
   }
 }

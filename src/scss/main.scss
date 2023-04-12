@@ -38,15 +38,6 @@
         @include adaptiveValue("left", 40, -90, 992, 360);
       }
     }
-
-    transform: translate(rem(0), rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
   }
 
   /* .promo__decor-text */
@@ -105,15 +96,6 @@
     @media (max-width:$mobile) {
       max-width: rem(500);
     }
-
-    transform: translate(0, rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
   }
 
   &__symbol {
@@ -144,15 +126,6 @@
       padding-left: rem(10);
     }
 
-    transform: translate(0, rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
-
     @media (max-width: em(1230)) {
       max-width: rem(500);
     }
@@ -169,15 +142,6 @@
       bottom: rem(-163);
       left: 50%;
       transform: translate(-50%, 0px);
-    }
-
-    transform: translate(0, rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: 0;
-      opacity: 1;
     }
   }
 

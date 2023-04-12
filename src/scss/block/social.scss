@@ -11,15 +11,6 @@
   /* .social__item */
   &__item {
     display: flex;
-
-    transform: translate(0, rem(50));
-    opacity: 0;
-    transition: all 1.2s ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
   }
 
   /* .social__link */

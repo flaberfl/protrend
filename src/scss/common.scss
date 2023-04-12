@@ -6,17 +6,6 @@
   line-height: math.div(84, 70);
   text-transform: uppercase;
   // letter-spacing: 0.05em;
-
-  &_anim {
-    transform: translate(rem(0), rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
-  }
 }
 
 .decor-ellipse {
@@ -121,15 +110,20 @@
   animation: printed-text 4s infinite,
 }
 
-.audio-mp3 {
-  // position: absolute;
-  // z-index: -1;
-  // opacity: .1;
-}
-
 ::-webkit-scrollbar {
   /* chrome based */
   width: 0px;
 
   background: transparent;
+}
+
+[anim-up-down] {
+  transform: translate(rem(0), rem(20));
+  opacity: 0;
+  transition: all $animSpeed ease 0s;
+
+  &._watcher-view {
+    transform: none;
+    opacity: 1;
+  }
 }

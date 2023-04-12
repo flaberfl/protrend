@@ -39,15 +39,6 @@
     @include adaptiveValue("margin-bottom", 60, 20);
     letter-spacing: 0.03em;
 
-    transform: translate(rem(0), rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
-
     span {
       display: block;
       color: $hoverColor;
@@ -67,15 +58,6 @@
     @include adaptiveValue("font-size", 16, 14);
 
     z-index: 40;
-
-    transform: translate(rem(0), rem(20));
-    opacity: 0;
-    transition: all $animSpeed ease 0s;
-
-    &._watcher-view {
-      transform: none;
-      opacity: 1;
-    }
   }
 
   /* .corsair-version__image */
@@ -85,15 +67,6 @@
 
     img {
       max-width: 100%;
-
-      transform: translate(rem(0), rem(20));
-      opacity: 0;
-      transition: all $animSpeed ease 0s;
-
-      &._watcher-view {
-        transform: none;
-        opacity: 1;
-      }
     }
   }
 
