@@ -31,6 +31,7 @@
 	@include adaptiveValue("height", 80, 60);
 	@include adaptiveValue("padding-left", 39, 28);
 	padding-right: rem(70);
+	z-index: 100;
 
 
 	background-color: #445D74;

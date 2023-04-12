@@ -126,6 +126,7 @@
 	align-items: center;
 	gap: rem(14);
 
+
 	.plans__button-block_up & {
 		@media (max-width:$mobile) {
 			margin-bottom: rem(20);

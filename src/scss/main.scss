@@ -24,7 +24,7 @@
       top: rem(-76);
       @include adaptiveValue("top", -117, -76);
       @include adaptiveValue("width", 1264, 694);
-      @include adaptiveValue("left", -212, -92, 1920, 992);
+      @include adaptiveValue("left", -224, -92, 1920, 992);
 
       @media (max-width: em(1100)) {
         left: -150px;
@@ -189,20 +189,20 @@
     }
 
     @media (max-width: em(1450)) {
-      right: 3%;
+      right: 4%;
       top: 25%;
     }
 
     @media (max-width:$tablet) {
-      right: rem(22);
-      top: 20%;
+      right: rem(80);
+      top: 50vh;
+      transform: translate(0, -84%);
     }
 
     @media (max-width:$mobile) {
-      right: rem(22);
-      top: rem(100);
+      // right: rem(60);
+      @include adaptiveValue("right", 60, 25);
     }
-
   }
 
   &__decor-ellipse {

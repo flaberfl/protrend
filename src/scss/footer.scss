@@ -12,9 +12,12 @@
     align-items: center;
     justify-content: space-between;
     @include adaptiveValue("padding-bottom", 32, 21);
-    gap: rem(20);
-
+    
     border-bottom: 1px solid #34393D;
+    
+    @media (min-width:$mobile){
+      gap: rem(20);
+    }
 
     @media (max-width:$tablet) {
       flex-wrap: wrap;
@@ -27,7 +30,11 @@
   }
 
   /* .footer__social */
-  &__social {}
+  &__social {
+    @media (max-width:$mobile){
+       margin-right: rem(33); 
+    }
+  }
 
   /* .footer__bottom */
   &__bottom {
@@ -196,7 +203,7 @@
   /* .social-footer__media */
   &__media {
     display: flex;
-    @include adaptiveValue("gap", 66, 0);
+    // @include adaptiveValue("gap", 66, 0);
 
     @media (max-width:$mobile) {
       flex-direction: column-reverse;

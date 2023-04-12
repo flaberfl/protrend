@@ -47,13 +47,6 @@
       &::before {
         transform: scale(1);
       }
-
-    }
-
-    .promo__social & {
-      @media (max-width:$mobile) {
-        width: rem(14);
-      }
     }
 
     &_telegram {
