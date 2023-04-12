@@ -182,7 +182,7 @@ function initSliders() {
 			speed: 1100,
 
 			//touchRatio: 0,
-			//simulateTouch: false,
+		//simulateTouch: false,
 			// loop: true,
 			//preloadImages: false,
 			//lazy: true,
