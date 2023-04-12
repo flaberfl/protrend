@@ -39,7 +39,7 @@
       }
     }
 
-    transform: translate(rem(-20), rem(0));
+    transform: translate(rem(0), rem(20));
     opacity: 0;
     transition: all $animSpeed ease 0s;
 
@@ -106,7 +106,7 @@
       max-width: rem(500);
     }
 
-    transform: translate(0, rem(-20));
+    transform: translate(0, rem(20));
     opacity: 0;
     transition: all $animSpeed ease 0s;
 
@@ -114,7 +114,6 @@
       transform: none;
       opacity: 1;
     }
-
   }
 
   &__symbol {
@@ -168,14 +167,9 @@
     @media (max-width:$tablet) {
       position: absolute;
       bottom: rem(-163);
-      // left: 36%;
       left: 50%;
       transform: translate(-50%, 0px);
     }
-
-    // @media (max-width: em(600)) {
-    //   left: 30%;
-    // }
 
     transform: translate(0, rem(20));
     opacity: 0;

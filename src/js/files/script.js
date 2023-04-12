@@ -148,7 +148,7 @@ function initQuiz() {
 }
 
 // Функционал аудио-плеера для прослушивания отзывов
-
+/* 
 const audioPlayer = document.querySelector(".audio-player");
 const audio = new Audio(
   "files/audio/01.mp3"
@@ -237,3 +237,6 @@ function getTimeCodeFromNum(num) {
     seconds % 60
   ).padStart(2, 0)}`;
 }
+
+*/
+

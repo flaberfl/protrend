@@ -76,7 +76,7 @@
 
   /* .step-one-plans__form */
   &__form {
-    transform: translate(rem(20), rem(0));
+    transform: translate(rem(0), rem(20));
     opacity: 0;
     transition: all $animSpeed ease 0s;
 
@@ -149,7 +149,7 @@
 
   /* .header-step-plans__title */
   &__title {
-    transform: translate(rem(-20), rem(0));
+    transform: translate(rem(0), rem(20));
     opacity: 0;
     transition: all $animSpeed ease 0s;
 
@@ -586,7 +586,7 @@
       transition: .3s;
     }
 
-    transform: translate(rem(0), rem(-20));
+    transform: translate(rem(0), rem(20));
     opacity: 0;
     transition: all $animSpeed ease 0s;
 
@@ -629,7 +629,7 @@
     }
 
     &_left {
-      transform: translate(rem(-20), rem(0));
+      transform: translate(rem(0), rem(20));
       opacity: 0;
       transition: all $animSpeed ease 0s;
 
@@ -640,7 +640,7 @@
     }
 
     &_right {
-      transform: translate(rem(20), rem(0));
+      transform: translate(rem(0), rem(20));
       opacity: 0;
       transition: all $animSpeed ease 0s;
 
