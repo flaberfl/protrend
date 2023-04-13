@@ -821,7 +821,10 @@
     align-items: center;
     justify-content: center;
     gap: rem(15);
-    @include adaptiveValue("padding-left", 165, 0, 1920, 768, 1);
+
+    @media (min-width:$mobile) {
+      margin-left: rem(168);
+    }
 
     span {
       position: relative;
