@@ -64,6 +64,17 @@
   &__image {
     position: relative;
     z-index: 40;
+    top: rem(52);
+
+
+    @media (min-width:$mobile) {
+      left: rem(28);
+    }
+
+    @media (max-width:$mobile) {
+      margin: 0 auto;
+      max-width: rem(440);
+    }
 
     img {
       max-width: 100%;
@@ -96,7 +107,8 @@
 
   &__decor-ellipse {
     right: -55%;
-    top: -27%;
+    // top: -27%;
+    top: -40%;
 
     @media (max-width:$mobile) {
       right: -128%;
