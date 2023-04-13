@@ -31,7 +31,7 @@
 
   /* .footer__social */
   &__social {
-    @media (max-width:$mobile){
+    @media (max-width:$tablet){
        margin-right: rem(33); 
     }
   }
@@ -76,6 +76,12 @@
   &__copyright {
     flex: 1 1 auto;
     color: #fff;
+  }
+
+  &__made-in {
+    display: flex;
+    align-items: center;
+    gap: rem(15);
   }
 
   /* .footer__label */

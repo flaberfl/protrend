@@ -1,5 +1,11 @@
 .seo-block {
   @include adaptiveValue("padding-top", 194, 68);
+  @include adaptiveValue("padding-bottom", 100, 100);
+  padding-bottom: rem(100);
+  
+  @media (max-width: em(570)){
+    padding-bottom: rem(40);
+  }
 
   /* .seo-block__container */
   &__container {
@@ -30,24 +36,11 @@
       z-index: -1;
 
       @media (max-width:$tablet) {
-
-        @include adaptiveValue("left", 50, -50);
-      }
-
-      @media (max-width: em(560)) {
-        left: -15%;
-      }
-
-      @media (max-width:$mobileSmall) {
-        left: -20%;
-      }
-
-      @media (max-width: em(400)) {
-        left: -30%;
+        left: 59%;
+        transform: translate(-50%, 0);
       }
     }
   }
-
 
   &__decor-text {
     position: absolute;
