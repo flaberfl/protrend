@@ -28,7 +28,7 @@
   &__logo {
     margin-right: rem(20);
 
-    @media (max-width:$mobile){
+    @media (max-width:$tablet){
        margin-bottom: rem(20); 
     }
   }
