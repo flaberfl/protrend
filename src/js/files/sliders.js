@@ -43,14 +43,19 @@ function initSliders() {
 				disableOnInteraction: false,
 			},
 			*/
-			effect: 'fade',
+			scrollbar: {
+				container: '.swiper-wrapper',
+				hide: false,
+				draggable: true,
+				snapOnRelease: true
+			},
 			observer: true,
 			observeParents: true,
 			// slidesPerView: 'auto',
 			spaceBetween: 44,
 			// freeMode: true,
 			// autoHeight: true,
-			speed: 1100,
+			speed: 1500,
 			// hashnav: true,
 			// hashNavigation: {
 
@@ -161,13 +166,19 @@ function initSliders() {
 				disableOnInteraction: false,
 			},
 			*/
+			scrollbar: {
+				container: '.swiper-wrapper',
+				hide: false,
+				draggable: true,
+				snapOnRelease: true
+			},
 			observer: true,
 			observeParents: true,
 			// slidesPerView: 'auto',
 			spaceBetween: 44,
 			// freeMode: true,
 			// autoHeight: true,
-			speed: 1100,
+			speed: 1500,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -321,13 +332,19 @@ function initSliders() {
 			// 	disableOnInteraction: false,
 			// },
 
+			scrollbar: {
+				container: '.swiper-wrapper',
+				hide: false,
+				draggable: true,
+				snapOnRelease: true
+			},
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 30,
 			// freeMode: true,
 			// autoHeight: true,
-			speed: 800,
+			speed: 1500,
 
 			//touchRatio: 0,
 			//simulateTouch: false,

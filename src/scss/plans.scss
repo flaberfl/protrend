@@ -775,7 +775,7 @@
     padding-left: rem(40);
 
     @include adaptiveValue("font-size", 16, 14);
-    line-height: math.div(19, 16);
+    line-height: math.div(21, 16);
     letter-spacing: 0.05em;
 
     background: url('@img/icons/check-w.svg') 0 0 no-repeat;
