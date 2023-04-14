@@ -324,13 +324,6 @@ function initSliders() {
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Pagination],
-			/*
-			effect: 'fade',
-		*/
-			// autoplay: {
-			// 	delay: 800,
-			// 	disableOnInteraction: false,
-			// },
 
 			scrollbar: {
 				container: '.swiper-wrapper',
