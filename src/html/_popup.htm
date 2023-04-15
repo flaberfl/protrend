@@ -25,8 +25,8 @@
 
 				<div class="form__item form__item_checkbox">
 					<div class="checkbox">
-						<input id="c_1" checked data-error="Не выбрано поле" data-required required class="checkbox__input" type="checkbox"
-							value="1" name="checkbox">
+						<input id="c_1" checked data-error="Не выбрано поле" class="checkbox__input"
+							type="checkbox" value="1" name="checkbox">
 						<label for="c_1" class="checkbox__label checkbox__label_subm">
 							<span class="checkbox__text checkbox__text_subm">Даем согласие на
 								обработку
@@ -75,11 +75,12 @@
 							<div class="quiz-form__image-ibg">
 								<img src="@img/quiz/quiz-image.jpg" alt="Изображение в квизе">
 							</div>
-						</div>
+						</div> 
 						<div class="quiz-form__solution quiz-form__solution_start">
 							<p class="quiz-form__text-start">Ответьте на следующие <br> 4 вопроса</p>
 
-							<button class="button quiz-form__button quiz-form__button_next quiz-form__button_start">Начать</button>
+							<button enabled
+								class="button quiz-form__button quiz-form__button_next quiz-form__button_start">Начать</button>
 						</div>
 					</div>
 				</fieldset>
@@ -164,7 +165,7 @@
 						<div class="options">
 
 							<div class="options__item">
-								<input id="officialVersion" class="options__input" checked type="radio" value="official_version"
+								<input id="officialVersion" class="options__input" type="radio" value="official_version"
 									name="version">
 								<label for="officialVersion" class="options__label"><span class="options__text">Да, официальный
 										Protrend</span></label>
@@ -227,7 +228,7 @@
 						<div class="options">
 
 							<div class="options__item">
-								<input id="create_0" class="options__input" checked type="radio" value="create_0" name="create_complex">
+								<input id="create_0" class="options__input" type="radio" value="create_0" name="create_complex">
 								<label for="create_0" class="options__label"><span class="options__text">0</span></label>
 							</div>
 
@@ -290,7 +291,7 @@
 						<div class="options">
 
 							<div class="options__item">
-								<input id="use_0" class="options__input" checked type="radio" value="use_0" name="use_complex">
+								<input id="use_0" class="options__input" type="radio" value="use_0" name="use_complex">
 								<label for="use_0" class="options__label"><span class="options__text">0</span></label>
 							</div>
 
@@ -365,17 +366,17 @@
 
 								<div class="form__item form__item_name">
 									<label class="form__label" for="name">*</label>
-									<input type="text" name="name" placeholder="Ваше имя" class="form__input input">
+									<input type="text" name="name" placeholder="Ваше имя" required class="form__input input">
 								</div>
 
 								<div class="form__item form__item_phone">
 									<label class="form__label" for="name">*</label>
-									<input type="tel" name="phone" placeholder="Номер телефона" class="form__input input">
+									<input type="tel" name="phone" placeholder="Номер телефона" required class="form__input input">
 								</div>
 
 								<div class="form__item form__item_checkbox">
 									<div class="checkbox">
-										<input id="send-quiz" checked data-error="Не выбрано поле" class="checkbox__input" type="checkbox"
+										<input id="send-quiz" checked data-error="Не выбрано поле" required class="checkbox__input" type="checkbox"
 											value="send-quiz" name="checkbox">
 										<label for="send-quiz" class="checkbox__label checkbox__label_subm"><span
 												class="checkbox__text checkbox__text_finish">Даем согласие на

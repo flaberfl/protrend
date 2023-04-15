@@ -116,6 +116,35 @@ const quizeItems = quize.querySelectorAll('.quiz-form__fieldset');
 const btnsNext = quize.querySelectorAll('.quiz-form__button_next');
 const btnsPrev = quize.querySelectorAll('.quiz-form__button_prev');
 
+// quizeItems.forEach((quizeItem, quizeItemIndex) => {
+//   if (quizeItemIndex === 0) {
+//     quizeItem.classList.add('_active');
+//   } else {
+//     quizeItem.classList.remove('_active');
+//   }
+// });
+
+// btnsNext.forEach((btn, btnIndex) => {
+//   btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     quizeItems[btnIndex].classList.remove('_active');
+//     quizeItems[btnIndex + 1].classList.add('_active');
+//   });
+
+// });
+
+// btnsPrev.forEach((btn, btnIndex) => {
+//   btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     quizeItems[btnIndex].classList.remove('_active');
+//     quizeItems[btnIndex].classList.add('_active');
+//   });
+
+// });
+
+
+
+
 let count = 0;
 quizeItems[count].classList.add('_active');
 
@@ -125,6 +154,12 @@ btnsNext.forEach((btn) => {
     count++;
     initQuiz();
   });
+
+  btn.disabled = true;
+
+  if (btn.classList.contains('quiz-form__button_start')) {
+    btn.disabled = false;
+  }
 });
 
 
@@ -144,3 +179,42 @@ function initQuiz() {
     }
   })
 }
+
+
+quizeItems.forEach((quizeItem, quizeItemIndex) => {
+
+
+  quizeItem.addEventListener('change', (e) => {
+    const target = e.target;
+    const inputsChecked = quizeItem.querySelectorAll('input:checked');
+    if (inputsChecked.length > 0) {
+      // разблокировать кнопку именно эту
+      btnsNext[quizeItemIndex].disabled = false;
+    } else {
+      // заблоировать эту кнопку
+      btnsNext[quizeItemIndex].disabled = true;
+    }
+    // console.log(inputsChecked);
+    // // console.log(target);
+    // if (target.classList.contains('options__input')) {
+
+    //   const radios = quizeItem.querySelectorAll('.options__input');
+
+    //   radios.forEach(input => {
+    //     if (input = target) {
+    //       // input.classList
+    //       // add active class
+    //     } else {
+    //       // add remove class
+    //     }
+    //   })
+
+    //   // console.log(target, 'radio');
+    // } else if (target.classList.contains('checkbox__input')) {
+    //   console.log(target, 'check');
+    // } else {
+    //   return;
+    // }
+  })
+
+});
