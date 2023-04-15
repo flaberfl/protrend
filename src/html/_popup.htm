@@ -8,13 +8,13 @@
 
 				<div class="form__item form__item_name">
 					<label class="form__label" for="name">*</label>
-					<input autocomplete="off" type="text" name="name" data-required data-error="Не заполненное поле!"
+					<input autocomplete="off" type="text" name="name" data-required required data-error="Не заполненное поле!"
 						placeholder="Ваше имя" class="form__input input">
 				</div>
 
 				<div class="form__item form__item_phone">
 					<label class="form__label" for="name">*</label>
-					<input autocomplete="off" type="tel" name="phone" data-required data-error="Не заполненное поле!"
+					<input autocomplete="off" type="tel" name="phone" data-required required data-error="Не заполненное поле!"
 						placeholder="Номер телефона" class="form__input input">
 				</div>
 
@@ -25,7 +25,7 @@
 
 				<div class="form__item form__item_checkbox">
 					<div class="checkbox">
-						<input id="c_1" checked data-error="Не выбрано поле" data-required class="checkbox__input" type="checkbox"
+						<input id="c_1" checked data-error="Не выбрано поле" data-required required class="checkbox__input" type="checkbox"
 							value="1" name="checkbox">
 						<label for="c_1" class="checkbox__label checkbox__label_subm">
 							<span class="checkbox__text checkbox__text_subm">Даем согласие на
@@ -35,8 +35,9 @@
 					</div>
 				</div>
 
-				<div class="form__item">
-					<button type="submit" class="form__button button">Отправить</button>
+				<div class="form__item form__item_submit">
+					<button type="submit" class="form__button button button-form-submit_inp"></button>
+					<span class="button-form-text">Отправить</span>
 				</div>
 
 			</form>

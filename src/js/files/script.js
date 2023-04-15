@@ -41,9 +41,7 @@ window.addEventListener('scroll', function () {
   } else {
     remove_class_on_scroll()
   }
-
 })
-
 
 const itemsTab = document.querySelectorAll('.tabs__title');
 let countTab = 0;

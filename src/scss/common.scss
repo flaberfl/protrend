@@ -5,7 +5,6 @@
   font-weight: 700;
   line-height: math.div(84, 70);
   text-transform: uppercase;
-  // letter-spacing: 0.05em;
 }
 
 .decor-ellipse {
@@ -77,11 +76,9 @@
 /* .promo__decor-text-itemA */
 .decor-text-itemA {
   overflow: hidden;
-
   width: rem(38);
 
   opacity: 0.5;
-
   animation: printed-text 6s infinite,
 }
 
@@ -127,5 +124,30 @@
   &._watcher-view {
     transform: none;
     opacity: 1;
+  }
+}
+
+.form__item_submit {
+  position: relative;
+
+  .button-form-text {
+    position: absolute;
+    z-index: 200;
+    top: 50%;
+    transform: translate(78%, -66%);
+    left: 0;
+    cursor: pointer;
+
+    @include adaptiveValue("font-size", 12, 10);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.18);
+    font-weight: 800;
+    line-height: math.div(12, 10);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &_inp {
+    position: absolute;
+    z-index: 10;
   }
 }

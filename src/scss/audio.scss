@@ -202,9 +202,7 @@ audio {
   @include adaptiveValue("width", 410, 257);
 
   box-shadow: 0px 6px 23px rgba(0, 0, 0, 0.25) !important;
-  position: relative;
-
-
+  // position: relative;
 
   @media (max-width:$mobile) {
     height: rem(50);
@@ -260,7 +258,7 @@ audio::-webkit-media-controls-play-button {
 
   cursor: pointer;
 
-  background: url('@img/contols/play.svg') no-repeat;
+  // background: url('@img/contols/play.svg') no-repeat;
   background-position: center center;
 
   .state-stpped & {
@@ -288,7 +286,7 @@ audio::-webkit-media-controls-mute-button {
   color: inherit;
   cursor: pointer;
   // -webkit-tap-highlight-color: transparent;
-  background: url('@img/contols/sound.svg') no-repeat;
+  // background: url('@img/contols/sound.svg') no-repeat;
   background-position: center center;
 }
 
@@ -304,7 +302,7 @@ audio::-internal-media-controls-overflow-button {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 
-  background: url('@img/contols/stop.svg') 0 0 no-repeat;
+  // background: url('@img/contols/stop.svg') 0 0 no-repeat;
   position: relative;
   background-repeat: no-repeat;
   background-position: center center;

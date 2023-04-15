@@ -28,8 +28,8 @@
   &__logo {
     margin-right: rem(20);
 
-    @media (max-width:$tablet){
-       margin-bottom: rem(20); 
+    @media (max-width:$tablet) {
+      margin-bottom: rem(20);
     }
   }
 
@@ -162,7 +162,7 @@
     &_instagram {
       &:hover {
         svg path {
-          fill: #000;
+          fill: #8A3AC8;
         }
       }
 

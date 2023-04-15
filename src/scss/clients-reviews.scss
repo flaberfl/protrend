@@ -158,7 +158,6 @@
     @include adaptiveValue("margin-bottom", 20, 20);
     margin-bottom: rem(20);
 
-
     @include adaptiveValue("font-size", 16, 12);
     font-weight: 400;
     line-height: math.div(20, 16);
@@ -167,5 +166,44 @@
   }
 
   /* .reviews__audio */
-  &__audio {}
+  &__audio {
+    position: relative;
+
+
+    .pl-start {
+      position: absolute;
+      cursor: pointer;
+      left: rem(27);
+      top: rem(18);
+      z-index: 10;
+      pointer-events: none;
+
+      img {}
+
+    }
+
+    .pl-pause {
+      position: absolute;
+      cursor: pointer;
+      left: rem(27);
+      top: rem(18);
+      pointer-events: none;
+      z-index: 110;
+
+      img {}
+    }
+  }
 }
+
+.null {
+  position: relative;
+  // width: rem(30);
+  width: rem(30);
+  height: rem(30);
+  z-index: 100;
+  left: rem(27);
+  top: rem(18);
+}
+
+// .pl-start {
+// }
