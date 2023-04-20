@@ -109,12 +109,12 @@
   animation: printed-text 4s infinite,
 }
 
-::-webkit-scrollbar {
-  /* chrome based */
-  width: 0px;
+// ::-webkit-scrollbar {
+//   /* chrome based */
+//   // width: 0px;
 
-  background: transparent;
-}
+//   background: transparent;
+// }
 
 [anim-up-down] {
   transform: translate(rem(0), rem(20));

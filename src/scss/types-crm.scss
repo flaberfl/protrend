@@ -17,8 +17,13 @@
 		@include adaptiveValue("margin-bottom", 74, 20);
 
 		@include adaptiveValue("column-gap", 26, 7);
+	
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
 		overflow-x: auto;
-		// overflow-y: scroll;
+
 		position: relative;
 		scrollbar-width: none;
 		z-index: 400;
