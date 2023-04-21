@@ -1090,7 +1090,6 @@ body::after {
   gap: clamp(0.7rem, 0.4157894737rem + 0.7894736842vw, 1.6rem);
 }
 
-
 .progress-quiz-form__bar {
   position: relative;
   background: #517291;
@@ -4232,505 +4231,506 @@ input[type=range]::-moz-range-thumb {
   .step-plans__operation {
     margin-left: clamp(9rem, 6.1578947368rem + 7.8947368421vw, 18rem);
   }
+}
 
-  @media (max-width: 35.5em) {
-    .form-step__descr {
-      max-width: 14rem;
-    }
+@media (max-width: 35.5em) {
+  .form-step__descr {
+    max-width: 14rem;
+  }
+}
+
+@media (max-width: 35.625em) {
+  .seo-block {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 31.625em) {
+  .step-plans__operation {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+@media (max-width: 29.99875em) {
+  .types-crm__icon img {
+    width: 1.4rem;
   }
 
-  @media (max-width: 35.625em) {
-    .seo-block {
-      padding-bottom: 4rem;
-    }
+  .types-crm__text {
+    width: 100%;
   }
 
-  @media (max-width: 31.625em) {
-    .step-plans__operation {
-      -webkit-transform: none;
-      -ms-transform: none;
-      transform: none;
-    }
+  .types-crm__text.w50wh {
+    width: 100%;
   }
 
-  @media (max-width: 29.99875em) {
-    .types-crm__icon img {
-      width: 1.4rem;
-    }
-
-    .types-crm__text {
-      width: 100%;
-    }
-
-    .types-crm__text.w50wh {
-      width: 100%;
-    }
-
-    .step-one-plans__form {
-      margin-left: clamp(-6rem, -6.9473684211rem + 2.6315789474vw, -3rem);
-    }
-
-    .clients-reviews__logo img {
-      width: 55%;
-    }
-
-    .seo-block__text {
-      line-height: 135%;
-    }
-
-    .footer__button {
-      margin-top: -5rem;
-    }
-
-    .social-footer__item_ytb {
-      gap: 0;
-    }
-
-    .footer__action {
-      right: 2%;
-      top: 40%;
-      z-index: 100;
-    }
+  .step-one-plans__form {
+    margin-left: clamp(-6rem, -6.9473684211rem + 2.6315789474vw, -3rem);
   }
 
-  @media (max-width: 47.99875em) and (min-width: 62em) {
-    .promo__image img {
-      left: inherit;
-    }
+  .clients-reviews__logo img {
+    width: 55%;
   }
 
-  @media (min-width: 61.99875em) and (max-width: 75em) {
-    .promo__text {
-      background-color: rgba(0, 0, 0, 0.2);
-      border-radius: 1rem;
-      padding-left: 1rem;
-    }
-
-    .form-step__descr {
-      max-width: 14rem;
-    }
+  .seo-block__text {
+    line-height: 135%;
   }
 
-  @media (min-width: 46em) and (max-width: 61.99875em) {
-    .item-operation:nth-child(2)::after {
-      display: none;
-    }
+  .footer__button {
+    margin-top: -5rem;
   }
 
-  @media (any-hover: hover) {
-    .button:hover::before {
-      -webkit-box-shadow: none;
-      box-shadow: none;
-    }
-
-    .button:hover::after {
-      opacity: 1;
-    }
-
-    .button_tr-b:hover,
-    .button_tr:hover {
-      border: 1px solid transparent;
-    }
-
-    .button_tr-b:hover::before,
-    .button_tr:hover::before {
-      width: 100%;
-      opacity: 1;
-    }
-
-    .button_tr-b:hover::after,
-    .button_tr:hover::after {
-      display: none;
-    }
-
-    .header .menu__link:hover {
-      color: #EF002B;
-    }
-
-    .types-crm__button:hover::before {
-      opacity: 1;
-    }
-
-    .types-crm__button:hover .types-crm__name {
-      color: #85E25A;
-    }
-
-    .footer__scroll-up:hover::before {
-      content: "";
-      width: 70%;
-      height: 70%;
-    }
+  .social-footer__item_ytb {
+    gap: 0;
   }
 
-  .webp .plans__button-block_up::before {
-    background: url(assets/img/smoke.webp) no-repeat;
+  .footer__action {
+    right: 2%;
+    top: 40%;
+    z-index: 100;
+  }
+}
+
+@media (max-width: 47.99875em) and (min-width: 62em) {
+  .promo__image img {
+    left: inherit;
+  }
+}
+
+@media (min-width: 61.99875em) and (max-width: 75em) {
+  .promo__text {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    padding-left: 1rem;
   }
 
-  .webp .question-plan::before {
-    background: url(assets/img/smoke.webp) no-repeat;
+  .form-step__descr {
+    max-width: 14rem;
+  }
+}
+
+@media (min-width: 46em) and (max-width: 61.99875em) {
+  .item-operation:nth-child(2)::after {
+    display: none;
+  }
+}
+
+@media (any-hover: hover) {
+  .button:hover::before {
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 
-
-  .wpcf7-form-control.form__button {
-    display: inline-flex;
+  .button:hover::after {
+    opacity: 1;
   }
+
+  .button_tr-b:hover,
+  .button_tr:hover {
+    border: 1px solid transparent;
+  }
+
+  .button_tr-b:hover::before,
+  .button_tr:hover::before {
+    width: 100%;
+    opacity: 1;
+  }
+
+  .button_tr-b:hover::after,
+  .button_tr:hover::after {
+    display: none;
+  }
+
+  .header .menu__link:hover {
+    color: #EF002B;
+  }
+
+  .types-crm__button:hover::before {
+    opacity: 1;
+  }
+
+  .types-crm__button:hover .types-crm__name {
+    color: #85E25A;
+  }
+
+  .footer__scroll-up:hover::before {
+    content: "";
+    width: 70%;
+    height: 70%;
+  }
+}
+
+.webp .plans__button-block_up::before {
+  background: url(assets/img/smoke.webp) no-repeat;
+}
+
+.webp .question-plan::before {
+  background: url(assets/img/smoke.webp) no-repeat;
+}
+
+
+.wpcf7-form-control.form__button {
+  display: inline-flex;
+}
+
+.wpcf7-form-control {
+  wpcfdisplay: -ms-grid;
+  display: grid;
+  row-gap: 2.9rem;
+  -ms-grid-row-align: start;
+  align-self: start;
+}
+
+.wpcf7-form {
+  display: initial;
+}
+
+.quiz-form__text-end .wpcf7-list-item.last label .wpcf7-list-item-label {
+  font-weight: 400;
+}
+
+span.wpcf7-list-item {
+  display: inline-block;
+  margin: 0;
+  position: relative;
+}
+
+/* LINE */
+span.wpcf7-list-item:before {
+  content: "";
+  position: absolute;
+  background-color: #BBC8D3;
+  width: 2.5rem;
+  height: 0.1rem;
+  left: 42px;
+  top: 50%;
+}
+
+.wpcf7-radio label {
+  position: relative;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.wpcf7-radio input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.wpcf7-radio input[type="radio"]+span:before {
+  display: block;
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+}
+
+
+.wpcf7-radio input[type="radio"]+span:after {
+  display: block;
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+  height: 14px;
+  width: 14px;
+  top: 8px;
+  left: 8px;
+  visibility: hidden;
+
+  transition: all .2s ease-in 0s;
+}
+
+
+.wpcf7 {
+  height: 100%;
+}
+
+.wpcf7-radio input[type="radio"]:checked+span:before {
+  background: #fff;
+}
+
+.wpcf7-radio input[type="radio"]:checked+span:after {
+  visibility: visible;
+}
+
+.wpcf7-list-item-label {
+  display: inline-block;
+}
+
+.wpcf7-form .wpcf7-radio input[type=radio] {
+  position: relative;
+  visibility: hidden;
+}
+
+.wpcf7-form .wpcf7-radio input[type=radio]:checked+span:after {
+  background: #FA982F;
+  visibility: visible;
+}
+
+.wpcf7-checkbox label {
+  position: relative;
+  cursor: pointer;
+}
+
+.wpcf7-checkbox input[type="checkbox"] {
+  /*position: relative;*/
+  position: absolute;
+  visibility: hidden;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+
+  border-radius: clamp(0.5rem, 0.4368421053rem + 0.1754385965vw, 0.7rem);
+
+}
+
+/* CHECKBOX */
+.wpcf7-checkbox input[type="checkbox"]+span:before {
+  display: block;
+  position: absolute;
+  content: "";
+  border-radius: 0;
+  height: 30px;
+  width: 30px;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+  border-radius: clamp(0.5rem, 0.4368421053rem + 0.1754385965vw, 0.7rem);
+}
+
+@media (max-width: 768px) {
+  .quiz-form__input_other {
+    margin: 20px auto 0 auto;
+  }
+
+  .wpcf7-checkbox input[type="checkbox"]+span:before {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.wpcf7-checkbox input[type="checkbox"]+span:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+.wpcf7-checkbox input[type="checkbox"]:checked+span:before {
+  /*   background: #fff; */
+  background: #fff url(assets/img/icons/chksvg.svg) center center no-repeat;
+}
+
+.wpcf7-checkbox input[type="checkbox"]:checked+span:after {
+  visibility: visible;
+}
+
+
+input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+}
+
+div#wpcf7-f80-o2 {
+  height: 100% !important;
+}
+
+.contact-forms7-wrapper {
+  height: 100%;
+}
+
+
+input[type=checkbox] {
+  padding-left: 5px;
+  padding-right: 5px;
+
+  -webkit-appearance: button;
+
+  border: double 2px rgb(151, 55, 199);
+
+  background-color: transparent;
+  color: #FFF;
+  white-space: nowrap;
+  overflow: hidden;
+
+  width: 15px;
+  height: 15px;
+}
+
+.wpcf7-checkbox input[type="checkbox"]:checked+span:before input[type=checkbox]:hover {
+  box-shadow: 0px 0px 10px #1300ff;
+}
+
+.checkbox__input:checked+.checkbox__label:before {
+  background: url(assets/img/icons/chksvg.svg) center center no-repeat;
+  background-color: #fff;
+}
+
+.wpcf7-list-item-label {
+  font-size: clamp(1.4rem, 1.0736842105rem + 0.350877193vw, 1.8rem);
+  font-weight: 700;
+  margin-left: 74px;
+  letter-spacing: 0.05em;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.quiz-form__solution_start {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.4rem, 3.3684210526rem + 0.0877192982vw, 3.5rem);
+}
+
+@media (min-width: 781px) {
+  .wpcf7-checkbox input[type="checkbox"]+span:before {
+    top: -6px;
+  }
+}
+
+@media (max-width: 780px) {
 
   .wpcf7-form-control {
-    wpcfdisplay: -ms-grid;
-    display: grid;
-    row-gap: 2.9rem;
-    -ms-grid-row-align: start;
-    align-self: start;
+    row-gap: 1.9rem;
   }
 
-  .wpcf7-form {
-    display: initial;
+  .wpcf7-list-item-label {
+    margin-left: 48px;
+  }
+}
+
+@media (max-width: 560px) {
+  .quiz-form__solution_start {
+    margin-top: 4.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .quiz-form__title_start {
+    margin-bottom: 6rem;
+  }
+}
+
+@media (max-width: 1240px) {
+  .quiz-popup__content {
+    height: 70rem !important;
+  }
+}
+
+@media (max-width: 779.99px) {
+
+  .form__button_order {
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 
-  .quiz-form__text-end .wpcf7-list-item.last label .wpcf7-list-item-label {
-    font-weight: 400;
+  .wpcf7-checkbox input[type="checkbox"]+span:before {
+    height: 2rem;
+    width: 2rem;
   }
 
-  span.wpcf7-list-item {
-    display: inline-block;
-    margin: 0;
-    position: relative;
+  .wpcf7-radio input[type="radio"]+span:after {
+    height: 9px;
+    width: 9px;
+    top: 11px;
+    left: 6px;
   }
 
-  /* LINE */
   span.wpcf7-list-item:before {
-    content: "";
-    position: absolute;
-    background-color: #BBC8D3;
-    width: 2.5rem;
+    width: 1.5rem;
     height: 0.1rem;
-    left: 42px;
-    top: 50%;
-  }
-
-  .wpcf7-radio label {
-    position: relative;
-    cursor: pointer;
-    padding-top: 5px;
-  }
-
-  .wpcf7-radio input[type="checkbox"] {
-    position: absolute;
-    visibility: hidden;
-    width: 30px;
-    height: 30px;
-    top: 0;
-    left: 0;
-    background-color: #fff;
+    left: 28px;
   }
 
   .wpcf7-radio input[type="radio"]+span:before {
-    display: block;
-    position: absolute;
-    content: '';
-    border-radius: 100%;
-    height: 30px;
-    width: 30px;
-    top: 0px;
-    left: 0px;
-    background: #fff;
+    height: 20px;
+    width: 20px;
+    top: 6px;
+  }
+}
+
+
+@media (max-width: 1018px) {
+  .form__item_checkbox_finish {
+    margin-bottom: 1.5rem;
   }
 
-
-  .wpcf7-radio input[type="radio"]+span:after {
-    display: block;
-    position: absolute;
-    content: '';
-    border-radius: 100%;
-    height: 14px;
-    width: 14px;
-    top: 8px;
-    left: 8px;
-    visibility: hidden;
-
-    transition: all .2s ease-in 0s;
+  .form__item_submit-finish .quiz-form__button_prev {
+    margin-bottom: 2rem;
   }
 
-
-  .wpcf7 {
-    height: 100%;
+  .form__item_submit-finish {
+    text-align: center;
   }
 
-  .wpcf7-radio input[type="radio"]:checked+span:before {
-    background: #fff;
+  .form__button_sub {
+    left: 30px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .quiz-form__decor-wrap_finish {
+    padding-top: 3.6rem;
   }
 
-  .wpcf7-radio input[type="radio"]:checked+span:after {
-    visibility: visible;
+  .quiz-form__subtitle {
+    margin-bottom: 2rem !important;
   }
+}
 
-  .wpcf7-list-item-label {
-    display: inline-block;
-  }
-
-  .wpcf7-form .wpcf7-radio input[type=radio] {
-    position: relative;
-    visibility: hidden;
-  }
-
-  .wpcf7-form .wpcf7-radio input[type=radio]:checked+span:after {
-    background: #FA982F;
-    visibility: visible;
-  }
-
-  .wpcf7-checkbox label {
-    position: relative;
-    cursor: pointer;
-  }
-
-  .wpcf7-checkbox input[type="checkbox"] {
-    /*position: relative;*/
-    position: absolute;
-    visibility: hidden;
-    width: 30px;
-    height: 30px;
-    top: 0;
+@media (max-width: 941px) {
+  .form__button_sub {
     left: 0;
-
-    border-radius: clamp(0.5rem, 0.4368421053rem + 0.1754385965vw, 0.7rem);
-
   }
+}
 
-  /* CHECKBOX */
-  .wpcf7-checkbox input[type="checkbox"]+span:before {
-    display: block;
-    position: absolute;
-    content: "";
-    border-radius: 0;
-    height: 30px;
-    width: 30px;
-    top: 0px;
-    left: 0px;
-    background: #fff;
-    border-radius: clamp(0.5rem, 0.4368421053rem + 0.1754385965vw, 0.7rem);
+@media (max-width: 848px) {
+  .quiz-form__decor-wrap_finish {
+    padding-bottom: 0;
   }
+}
 
-  @media (max-width: 768px) {
-    .quiz-form__input_other {
-      margin: 20px auto 0 auto;
-    }
 
-    .wpcf7-checkbox input[type="checkbox"]+span:before {
-      height: 20px;
-      width: 20px;
-    }
+@media (max-width: 1200px) {
+  .quiz-form__body_start {
+    grid-template-columns: 1fr auto;
   }
+}
 
-  .wpcf7-checkbox input[type="checkbox"]+span:after {
-    display: block;
-    position: absolute;
-    content: "";
-  }
-
-  .wpcf7-checkbox input[type="checkbox"]:checked+span:before {
-    /*   background: #fff; */
-    background: #fff url(assets/img/icons/chksvg.svg) center center no-repeat;
-  }
-
-  .wpcf7-checkbox input[type="checkbox"]:checked+span:after {
-    visibility: visible;
-  }
-
-
-  input[type="checkbox"] {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-
-  }
-
-  div#wpcf7-f80-o2 {
-    height: 100% !important;
-  }
-
-  .contact-forms7-wrapper {
-    height: 100%;
-  }
-
-
-  input[type=checkbox] {
-    padding-left: 5px;
-    padding-right: 5px;
-
-    -webkit-appearance: button;
-
-    border: double 2px rgb(151, 55, 199);
-
-    background-color: transparent;
-    color: #FFF;
-    white-space: nowrap;
-    overflow: hidden;
-
-    width: 15px;
-    height: 15px;
-  }
-
-  .wpcf7-checkbox input[type="checkbox"]:checked+span:before input[type=checkbox]:hover {
-    box-shadow: 0px 0px 10px #1300ff;
-  }
-
-  .checkbox__input:checked+.checkbox__label:before {
-    background: url(assets/img/icons/chksvg.svg) center center no-repeat;
-    background-color: #fff;
-  }
-
-  .wpcf7-list-item-label {
-    font-size: clamp(1.4rem, 1.0736842105rem + 0.350877193vw, 1.8rem);
-    font-weight: 700;
-    margin-left: 74px;
-    letter-spacing: 0.05em;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
+@media (max-width: 992px) {
   .quiz-form__solution_start {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(3.4rem, 3.3684210526rem + 0.0877192982vw, 3.5rem);
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  @media (min-width: 781px) {
-    .wpcf7-checkbox input[type="checkbox"]+span:before {
-      top: -6px;
-    }
-  }
-
-  @media (max-width: 780px) {
-
-    .wpcf7-form-control {
-      row-gap: 1.9rem;
-    }
-
-    .wpcf7-list-item-label {
-      margin-left: 48px;
-    }
-  }
-
-  @media (max-width: 560px) {
-    .quiz-form__solution_start {
-      margin-top: 4.5rem;
-    }
-  }
-
-  @media (max-width: 700px) {
-
-    .quiz-form__title_start {
-      margin-bottom: 6rem;
-    }
-  }
-
-  @media (max-width: 1240px) {
-    .quiz-popup__content {
-      height: 70rem !important;
-    }
-  }
-
-  @media (max-width: 779.99px) {
-
-    .form__button_order {
-      left: 50%;
-      transform: translate(-50%, 0);
-    }
-
-    .wpcf7-checkbox input[type="checkbox"]+span:before {
-      height: 2rem;
-      width: 2rem;
-    }
-
-    .wpcf7-radio input[type="radio"]+span:after {
-      height: 9px;
-      width: 9px;
-      top: 11px;
-      left: 6px;
-    }
-
-    span.wpcf7-list-item:before {
-      width: 1.5rem;
-      height: 0.1rem;
-      left: 28px;
-    }
-
-    .wpcf7-radio input[type="radio"]+span:before {
-      height: 20px;
-      width: 20px;
-      top: 6px;
-    }
+  .quiz-form__body_start {
+    grid-template-columns: auto;
   }
 
 
-  @media (max-width: 1018px) {
-    .form__item_checkbox_finish {
-      margin-bottom: 1.5rem;
-    }
-
-    .form__item_submit-finish .quiz-form__button_prev {
-      margin-bottom: 2rem;
-    }
-
-    .form__item_submit-finish {
-      text-align: center;
-    }
-
-    .form__button_sub {
-      left: 30px;
-    }
+  .quiz-form__image-ibg {
+    padding-bottom: 40.5%;
   }
+}
 
-  @media (max-width: 1140px) {
-    .quiz-form__decor-wrap_finish {
-      padding-top: 3.6rem;
-    }
-
-    .quiz-form__subtitle {
-      margin-bottom: 2rem !important;
-    }
+@media (max-width: 830px) {
+  .quiz-form__image-ibg {
+    padding-bottom: 51.5%;
   }
-
-  @media (max-width: 941px) {
-    .form__button_sub {
-      left: 0;
-    }
-  }
-
-  @media (max-width: 848px) {
-    .quiz-form__decor-wrap_finish {
-      padding-bottom: 0;
-    }
-  }
-
-
-  @media (max-width: 1200px) {
-    .quiz-form__body_start {
-      grid-template-columns: 1fr auto;
-    }
-  }
-
-  @media (max-width: 992px) {
-    .quiz-form__solution_start {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .quiz-form__body_start {
-      grid-template-columns: auto;
-    }
-
-
-    .quiz-form__image-ibg {
-      padding-bottom: 40.5%;
-    }
-  }
-
-  @media (max-width: 830px) {
-    .quiz-form__image-ibg {
-      padding-bottom: 51.5%;
-    }
-  }
+}
