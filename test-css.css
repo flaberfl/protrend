@@ -1077,18 +1077,7 @@ body::after {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-@supports (gap: clamp(0.7rem, 0.4789473684rem + 0.6140350877vw, 1.4rem)) {
-  .quiz-form__buttons {
-    gap: clamp(0.7rem, 0.4789473684rem + 0.6140350877vw, 1.4rem);
-  }
-}
-
-@supports not (gap: clamp(0.7rem, 0.4789473684rem + 0.6140350877vw, 1.4rem)) {
-  .quiz-form__buttons {
-    gap: calc(0.7rem + 0.4375 * (100vw - 36rem) / 71.25);
-  }
+  gap: clamp(0.7rem, 0.4789473684rem + 0.6140350877vw, 1.4rem);
 }
 
 .progress-quiz-form {
@@ -1098,52 +1087,20 @@ body::after {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  /* .progress-quiz-form__bar */
-  /* .progress-quiz-form__progress */
-  /* .progress-quiz-form__rate */
+  gap: clamp(0.7rem, 0.4157894737rem + 0.7894736842vw, 1.6rem);
 }
 
-@supports (gap: clamp(0.7rem, 0.4157894737rem + 0.7894736842vw, 1.6rem)) {
-  .progress-quiz-form {
-    gap: clamp(0.7rem, 0.4157894737rem + 0.7894736842vw, 1.6rem);
-  }
-}
-
-@supports not (gap: clamp(0.7rem, 0.4157894737rem + 0.7894736842vw, 1.6rem)) {
-  .progress-quiz-form {
-    gap: calc(0.7rem + 0.5625 * (100vw - 36rem) / 71.25);
-  }
-}
 
 .progress-quiz-form__bar {
   position: relative;
   background: #517291;
   border-radius: 1.5rem;
   height: 1.5rem;
+  width: clamp(12.5rem, -11.7842105263rem + 67.4561403509vw, 89.4rem);
 }
 
-@supports (width: clamp(12.5rem, -11.7842105263rem + 67.4561403509vw, 89.4rem)) {
-  .progress-quiz-form__bar {
-    width: clamp(12.5rem, -11.7842105263rem + 67.4561403509vw, 89.4rem);
-  }
-}
-
-@supports not (width: clamp(12.5rem, -11.7842105263rem + 67.4561403509vw, 89.4rem)) {
-  .progress-quiz-form__bar {
-    width: calc(12.5rem + 48.0625 * (100vw - 36rem) / 71.25);
-  }
-}
-
-@supports (width: clamp(24.1rem, 11.8157894737rem + 34.1228070175vw, 63rem)) {
-  .progress-quiz-form__bar_finish {
-    width: clamp(24.1rem, 11.8157894737rem + 34.1228070175vw, 63rem);
-  }
-}
-
-@supports not (width: clamp(24.1rem, 11.8157894737rem + 34.1228070175vw, 63rem)) {
-  .progress-quiz-form__bar_finish {
-    width: calc(24.1rem + 24.3125 * (100vw - 36rem) / 71.25);
-  }
+.progress-quiz-form__bar_finish {
+  width: clamp(24.1rem, 11.8157894737rem + 34.1228070175vw, 63rem);
 }
 
 .progress-quiz-form__progress {
@@ -1187,18 +1144,7 @@ body::after {
   line-height: 1.2;
   letter-spacing: 0.05em;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.18);
-}
-
-@supports (font-size: clamp(1rem, 1rem + 0vw, 1rem)) {
-  .progress-quiz-form__rate {
-    font-size: clamp(1rem, 1rem + 0vw, 1rem);
-  }
-}
-
-@supports not (font-size: clamp(1rem, 1rem + 0vw, 1rem)) {
-  .progress-quiz-form__rate {
-    font-size: calc(1rem + 0 * (100vw - 36rem) / 71.25);
-  }
+  font-size: clamp(1rem, 1rem + 0vw, 1rem);
 }
 
 .spollers {
@@ -1245,42 +1191,9 @@ body::after {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-
-@supports (height: clamp(6rem, 5.3684210526rem + 1.7543859649vw, 8rem)) {
-  .spollers__title {
-    height: clamp(6rem, 5.3684210526rem + 1.7543859649vw, 8rem);
-  }
-}
-
-@supports not (height: clamp(6rem, 5.3684210526rem + 1.7543859649vw, 8rem)) {
-  .spollers__title {
-    height: calc(6rem + 1.25 * (100vw - 36rem) / 71.25);
-  }
-}
-
-@supports (padding-left: clamp(2.8rem, 2.4526315789rem + 0.9649122807vw, 3.9rem)) {
-  .spollers__title {
-    padding-left: clamp(2.8rem, 2.4526315789rem + 0.9649122807vw, 3.9rem);
-  }
-}
-
-@supports not (padding-left: clamp(2.8rem, 2.4526315789rem + 0.9649122807vw, 3.9rem)) {
-  .spollers__title {
-    padding-left: calc(2.8rem + 0.6875 * (100vw - 36rem) / 71.25);
-  }
-}
-
-@supports (font-size: clamp(1.4rem, 1.2105263158rem + 0.5263157895vw, 2rem)) {
-  .spollers__title {
-    font-size: clamp(1.4rem, 1.2105263158rem + 0.5263157895vw, 2rem);
-  }
-}
-
-@supports not (font-size: clamp(1.4rem, 1.2105263158rem + 0.5263157895vw, 2rem)) {
-  .spollers__title {
-    font-size: calc(1.4rem + 0.375 * (100vw - 36rem) / 71.25);
-  }
+  height: clamp(6rem, 5.3684210526rem + 1.7543859649vw, 8rem);
+  padding-left: clamp(2.8rem, 2.4526315789rem + 0.9649122807vw, 3.9rem);
+  font-size: clamp(1.4rem, 1.2105263158rem + 0.5263157895vw, 2rem);
 }
 
 ._spoller-init .spollers__title {
@@ -1295,38 +1208,8 @@ body::after {
   background-color: #fff;
   height: 0.2rem;
   z-index: 20;
-}
-
-@supports (right: clamp(2.6rem, 2.2842105263rem + 0.8771929825vw, 3.6rem)) {
-
-  ._spoller-init .spollers__title::before,
-  ._spoller-init .spollers__title::after {
-    right: clamp(2.6rem, 2.2842105263rem + 0.8771929825vw, 3.6rem);
-  }
-}
-
-@supports not (right: clamp(2.6rem, 2.2842105263rem + 0.8771929825vw, 3.6rem)) {
-
-  ._spoller-init .spollers__title::before,
-  ._spoller-init .spollers__title::after {
-    right: calc(2.6rem + 0.625 * (100vw - 36rem) / 71.25);
-  }
-}
-
-@supports (width: clamp(0.45rem, 0.3552631579rem + 0.2631578947vw, 0.75rem)) {
-
-  ._spoller-init .spollers__title::before,
-  ._spoller-init .spollers__title::after {
-    width: clamp(0.45rem, 0.3552631579rem + 0.2631578947vw, 0.75rem);
-  }
-}
-
-@supports not (width: clamp(0.45rem, 0.3552631579rem + 0.2631578947vw, 0.75rem)) {
-
-  ._spoller-init .spollers__title::before,
-  ._spoller-init .spollers__title::after {
-    width: calc(0.45rem + 0.1875 * (100vw - 36rem) / 71.25);
-  }
+  right: clamp(2.6rem, 2.2842105263rem + 0.8771929825vw, 3.6rem);
+  width: clamp(0.45rem, 0.3552631579rem + 0.2631578947vw, 0.75rem);
 }
 
 ._spoller-init .spollers__title::before {
