@@ -974,6 +974,9 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.quiz-form__input_other {
   width: clamp(27rem, 22.0736842105rem + 13.6842105263vw, 42.6rem);
 }
 
