@@ -218,3 +218,11 @@ quizeItems.forEach((quizeItem, quizeItemIndex) => {
   })
 
 });
+
+// Останов проигрыывателя при запуске другого аудио проигрывателя
+
+document.addEventListener('play', (event) => {
+  const audios = [...document.getElementsByTagName('audio')];
+  
+  audios.forEach((audio) => audio !== event.target && audio.pause());
+}, true);
