@@ -4,10 +4,6 @@ import Swiper, {
 } from 'swiper';
 
 import "../../scss/base/swiper.scss";
-// Полный набор стилей из scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
-// Полный набор стилей из node_modules
-// import 'swiper/css';
 
 function bildSliders() {
 	//BildSlider
@@ -176,25 +172,13 @@ function initSliders() {
 			observeParents: true,
 			// slidesPerView: 'auto',
 			spaceBetween: 44,
-			// freeMode: true,
-			// autoHeight: true,
+
 			speed: 1500,
 
-			//touchRatio: 0,
-			//simulateTouch: false,
-			// loop: true,
-			//preloadImages: false,
-			//lazy: true,
-			// Dotts
 			pagination: {
 				el: '.swiper-pagination-plans_two',
 				clickable: true,
 			},
-			// Arrows
-			// navigation: {
-			// 	nextEl: '.about__more .more__item_next',
-			// 	prevEl: '.about__more .more__item_prev',
-			// },
 
 			breakpoints: {
 				320: {
@@ -239,20 +223,20 @@ function initSliders() {
 						}
 						itemsStep.forEach(box => {
 
-							box.classList.remove('_active');
+							box.classList.remove('_active-2');
 						});
 
 						if (numValue >= 1 && numValue <= 3) {
-							item1.classList.add('_active');
+							item1.classList.add('_active-2');
 							swiper.slideTo(0);
 						} else if (numValue >= 4 && numValue <= 7) {
-							item2.classList.add('_active');
+							item2.classList.add('_active-2');
 							swiper.slideTo(1);
 						} else if (numValue >= 8 && numValue <= 11) {
-							item3.classList.add('_active');
+							item3.classList.add('_active-2');
 							swiper.slideTo(2);
 						} else if (numValue >= 12 && numValue <= 50) {
-							item4.classList.add('_active');
+							item4.classList.add('_active-2');
 							swiper.slideTo(3);
 						};
 					};
