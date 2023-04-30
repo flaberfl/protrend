@@ -221,15 +221,19 @@ quizeItems.forEach((quizeItem, quizeItemIndex) => {
 
 // Отключение ввода цифр в инпуте Ваше Имя
 
-const inputName = document.querySelector('.form__input_name');
+const inputName = document.querySelectorAll('.form__input_name');
 const regex = /[0-9]/g;
-inputName.oninput = function () {
-  this.value = this.value.replace(regex, '');
-}
+
+inputName.forEach(i => {
+  i.oninput = function () {
+    this.value = this.value.replace(regex, '');
+  };
+});
+
 // Останов проигрыывателя при запуске другого аудио проигрывателя
 
 document.addEventListener('play', (event) => {
   const audios = [...document.getElementsByTagName('audio')];
-  
+
   audios.forEach((audio) => audio !== event.target && audio.pause());
 }, true);
