@@ -180,13 +180,38 @@ function initQuiz() {
   })
 }
 
+const other = document.getElementById('other');
+const answer = document.getElementById('answer');
+
+// document.getElementById('other').onchange = function() {
+//   document.getElementById('answer').disabled = !this.checked;
+// };
+
+answer.disabled = true;
+other.addEventListener('change', e => {
+answer.disabled = true;
+
+  if (e.target.checked === true) {
+    console.log('Включено поле ввода');
+    answer.disabled = false;
+    console.log("Checkbox is checked - boolean value: ", e.target.checked)
+  }
+  if (e.target.checked === false) {
+    console.log("Checkbox is not checked - boolean value: ", e.target.checked)
+  }
+
+});
+
 
 quizeItems.forEach((quizeItem, quizeItemIndex) => {
-
 
   quizeItem.addEventListener('change', (e) => {
     const target = e.target;
     const inputsChecked = quizeItem.querySelectorAll('input:checked');
+
+
+
+
     if (inputsChecked.length > 0) {
       // разблокировать кнопку именно эту
       btnsNext[quizeItemIndex].disabled = false;
