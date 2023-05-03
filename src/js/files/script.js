@@ -182,6 +182,7 @@ function initQuiz() {
 
 const other = document.getElementById('other');
 const answer = document.getElementById('answer');
+const startNext = document.getElementById('start-next');
 
 // document.getElementById('other').onchange = function() {
 //   document.getElementById('answer').disabled = !this.checked;
@@ -189,15 +190,21 @@ const answer = document.getElementById('answer');
 
 answer.disabled = true;
 other.addEventListener('change', e => {
-answer.disabled = true;
+  answer.disabled = true;
 
   if (e.target.checked === true) {
     console.log('Включено поле ввода');
     answer.disabled = false;
     console.log("Checkbox is checked - boolean value: ", e.target.checked)
+    console.log(startNext.value);
+
   }
   if (e.target.checked === false) {
     console.log("Checkbox is not checked - boolean value: ", e.target.checked)
+  }
+
+  if (e.target.checked === true && startNext.value !== '') {
+    console.log('startNext.value');
   }
 
 });
