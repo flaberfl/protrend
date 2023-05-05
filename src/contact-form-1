@@ -1,0 +1,305 @@
+<div id="quiz-form" class="form quiz-form">
+
+  <fieldset class="quiz-form__fieldset">
+    <h3 class="form__title quiz-form__title quiz-form__title_start">ЗАПОЛНИТЕ ЗАЯВКУ, ЧТОБЫ ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
+      ОТ PROTREND</h3>
+    <div class="quiz-form__body quiz-form__body_start">
+      <div class="quiz-form__content quiz-form__content">
+        <div class="quiz-form__image-ibg">
+
+          [img quiz-image.jpg]
+
+        </div>
+      </div>
+      <div class="quiz-form__solution quiz-form__solution_start">
+        <p class="quiz-form__text-start">Ответьте на следующие <br> 4 вопроса</p>
+
+        <button class="button quiz-form__button quiz-form__button_next quiz-form__button_start">Начать</button>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="quiz-form__fieldset">
+    <h3 class=" form__title quiz-form__title">РОД ВАШЕЙ ДЕЯТЕЛЬНОСТИ?</h3>
+    <div class="quiz-form__body">
+      <div class="quiz-form__content">
+
+        [checkbox carrer class:quiz-form__text-end use_label_element "РОП/Маркетолог компании" "Риэлторское агентство"
+        "Digital агентство" "IT интегратор" "Web студия"]
+
+
+        [checkbox other id:other class:input class:input__answer use_label_element "Впишите свой ответ:"]
+
+        [text carrer-other class:input class:form__input class:quiz-form__input class:quiz-form__input_other id:answer]
+
+      </div>
+      <div class="quiz-form__solution">
+        <div class="quiz-form__decor-wrap">
+          <div class="quiz-form__description">
+            [img d-check.svg]
+            <p>Данная информация нам необходима, чтобы рассмотреть <span>для Вас партнерскую скидку</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-form__footer">
+      <div class="quiz-form__progress progress-quiz-form">
+        <div class="progress-quiz-form__bar">
+          <div class="progress-quiz-form__progress progress-quiz-form__progress_20"></div>
+        </div>
+        <span class="progress-quiz-form__rate">20%</span>
+      </div>
+
+      <div class="quiz-form__buttons">
+        <button class="button quiz-form__button quiz-form__button_next"><span>Далее</span>
+          [img arrow-next.svg]
+
+        </button>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="quiz-form__fieldset">
+    <h3 class=" form__title quiz-form__title">Имеется ли у Вас рабочая версия Protrend?</h3>
+    <div class="quiz-form__body">
+      <div class="options">
+
+        [radio version use_label_element "Да, официальный Protrend" "Да, неофициальный Protrend" "Нет" "Затрудняюсь
+        ответить"]
+
+      </div>
+
+      <div class="quiz-form__solution">
+        <div class="quiz-form__decor-wrap">
+          <div class="quiz-form__description">
+            [img d-check.svg]
+
+            <p>Среди наших клиентов <span>есть
+                компании, перешедшие с пиратской версии Protrend,</span> отказавшиеся от решений
+              сторонних поставщиков-конкурентов, а также впервые организовавшие работу отдела продаж</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-form__footer">
+      <div class="quiz-form__progress progress-quiz-form">
+        <div class="progress-quiz-form__bar">
+          <div class="progress-quiz-form__progress progress-quiz-form__progress_40"></div>
+        </div>
+        <span class="progress-quiz-form__rate">40%</span>
+      </div>
+
+      <div class="quiz-form__buttons">
+        <button class="quiz-form__button quiz-form__button_prev">
+          [img arrow-prev.svg]
+
+        </button>
+        <button class="button quiz-form__button quiz-form__button_next"><span>Далее</span>
+          [img arrow-next.svg]
+        </button>
+      </div>
+    </div>
+  </fieldset>
+
+
+
+  <fieldset class="quiz-form__fieldset">
+
+    <h3 class="form__title quiz-form__title">Сколько новых жилых комплексов хотите внедрить в Protrend?</h3>
+    <div class="quiz-form__body">
+      <div class="options">
+
+        [radio new-complex use_label_element "0" "1-2" "3-5" "6-9" "от 10 и больше" ]
+
+      </div>
+
+      <div class="quiz-form__solution">
+        <div class="quiz-form__decor-wrap">
+          <div class="quiz-form__description">
+            [img d-check.svg]
+
+            <p>Чем больше количество внедряемых ЖК, <span>тем выше скидка на стоимость лицензии.</span> Одна
+              лицензия равна
+              одному ЖК</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-form__footer">
+      <div class="quiz-form__progress progress-quiz-form">
+        <div class="progress-quiz-form__bar">
+          <div class="progress-quiz-form__progress progress-quiz-form__progress_60"></div>
+        </div>
+        <span class="progress-quiz-form__rate">60%</span>
+      </div>
+
+      <div class="quiz-form__buttons">
+        <button class="quiz-form__button quiz-form__button_prev">
+          [img arrow-prev.svg]
+
+        </button>
+        <button class="button quiz-form__button quiz-form__button_next"><span>Далее</span>
+          [img arrow-next.svg]
+
+        </button>
+      </div>
+    </div>
+  </fieldset>
+
+
+  <fieldset class="quiz-form__fieldset">
+    <h3 class=" form__title quiz-form__title">Сколько жилых комплексов уже обслуживается в PROTREND?</h3>
+    <div class="quiz-form__body">
+      <div class="options">
+
+        [radio use-complex use_label_element "0" "1-3" "4-7" "8-11" "от 12 и больше"]
+
+      </div>
+
+      <div class="quiz-form__solution">
+        <div class="quiz-form__decor-wrap">
+          <div class="quiz-form__description">
+            [img d-check.svg]
+
+            <p>Общее количество обслуживаемых ЖК необходимо для расчета мощностей сервера, <span>чтобы
+                пользовательский
+                опыт в Protrend был максимально комфортным</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-form__footer">
+      <div class="quiz-form__progress progress-quiz-form">
+        <div class="progress-quiz-form__bar">
+          <div class="progress-quiz-form__progress progress-quiz-form__progress_80"></div>
+        </div>
+        <span class="progress-quiz-form__rate">80%</span>
+      </div>
+
+      <div class="quiz-form__buttons">
+        <button class="quiz-form__button quiz-form__button_prev">
+          [img arrow-prev.svg]
+
+        </button>
+        <button class="button quiz-form__button quiz-form__button_next"><span>Далее</span>
+          [img arrow-next.svg]
+
+        </button>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="quiz-form__fieldset">
+    <div class="quiz-form__body quiz-form__body_finish">
+      <div class="quiz-form__content_finish">
+        <h3 class="form__title quiz-form__title quiz-form__title_finish">МЫ ГОТОВИМ ДЛЯ ВАС ЛУЧШЕЕ ПРЕДЛОЖЕНИЕ
+        </h3>
+        <h4 class="quiz-form__subtitle">О нем мы расскажем по телефону!</h4>
+
+        <div class="quiz-form__progress progress-quiz-form">
+          <div class="progress-quiz-form__bar progress-quiz-form__bar_finish">
+            <div class="progress-quiz-form__progress progress-quiz-form__progress_99"></div>
+          </div>
+          <span class="progress-quiz-form__rate">99%</span>
+        </div>
+      </div>
+
+      <div class="quiz-form__submit-form">
+
+        <div class="quiz-form__decor-wrap quiz-form__decor-wrap_finish">
+
+          <div class="form__item form__item_name">
+            <label class="form__label" for="name">*</label>
+            [text* your-name minlength:3 maxlength:20 class:form__input class:form__input_name class:input placeholder
+            "Ваше имя (только текст)"]
+
+          </div>
+
+          <div class="form__item form__item_phone">
+            <label class="form__label" for="name">*</label>
+            [mask* your-phone class:form__input class:input "+7 (___) ___-__-__" "Номер телефона"]
+
+          </div>
+
+
+
+          <div class="form__item form__item_checkbox">
+
+            <label class="checkbox checkbox_cf7">
+              [acceptance accept class:checkbox__input class:checkbox-real__input id:accept]
+
+              <span class="checkbox__text checkbox__text_finish">Даем согласие на обработку персональных данных <a
+                  href="#">Политика конфиденциальности</a></span>
+            </label>
+
+          </div>
+
+
+          <div class="form__item form__item_submit-finish">
+            <button class="quiz-form__button quiz-form__button_prev">
+              [img arrow-prev.svg]
+
+            </button>
+
+            [submit class:form__button class:button class:form__button_sub "Отправить заявку"]
+            <span class="button-form-text">Отправить заявку</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+//========================================================================================================================================================
+
+
+<div class="form">
+
+  <h2 class="form__title">Связаться с нами</h2>
+
+  <div class="form__item form__item_name">
+
+    <label class="form__label" for="yourname">*</label>
+    [text* yourname minlength:3 maxlength:20 class:form__input class:form__input_name class:input placeholder "Ваше имя
+    (только текст)"]
+
+  </div>
+
+  <div class="form__item form__item_phone">
+
+    <label class="form__label" for="yourphone">*</label>
+
+    [mask* yourphone class:form__input class:input "+7 (___) ___-__-__" "Номер телефона"]
+  </div>
+
+  <div class="form__item form__item_textarea">
+
+    [textarea textarea class:form__input class:input placeholder "Введите текст сообщения"]
+
+  </div>
+
+
+  <div class="form__item form__item_checkbox">
+
+    <label class="checkbox checkbox_cf7">
+      [acceptance accept class:checkbox__input class:checkbox-real__input id:accept]
+
+      <span class="checkbox__text checkbox__text_subm">Даем согласие на обработку персональных данных <a
+          href="#">Политика конфиденциальности</a></span>
+    </label>
+
+  </div>
+
+
+  <div class="form__item form__item_submit">
+
+    [submit class:form__button class:button class:form__button_order "Отправить"]
+    <span class="button-form-text">Отправить</span>
+
+  </div>
+</div>

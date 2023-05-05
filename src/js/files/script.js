@@ -240,7 +240,6 @@ quizeItems.forEach((quizeItem, quizeItemIndex) => {
       btnsNext[quizeItemIndex].disabled = false;
     }
   })
-
 });
 
 // Отключение ввода цифр в инпуте Ваше Имя

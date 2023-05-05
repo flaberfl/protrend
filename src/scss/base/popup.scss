@@ -527,7 +527,11 @@ body::after {
 		}
 
 		/* .quiz-form__button_next */
-		&_next {}
+		&_next {
+			&:disabled {
+				opacity: .3;
+			}
+		}
 
 		@media (max-width:$tablet) {
 			span {
