@@ -181,34 +181,43 @@ function initQuiz() {
 }
 
 const other = document.getElementById('other');
-const answer = document.getElementById('answer');
+// const answer = document.getElementById('answer');
 const startNext = document.getElementById('start-next');
 
 // document.getElementById('other').onchange = function() {
 //   document.getElementById('answer').disabled = !this.checked;
 // };
 
+
 answer.disabled = true;
+
 other.addEventListener('change', e => {
   answer.disabled = true;
+  startNext.disabled = false;
 
   if (e.target.checked === true) {
-    console.log('Включено поле ввода');
     answer.disabled = false;
-    console.log("Checkbox is checked - boolean value: ", e.target.checked)
-    console.log(startNext.value);
-
+    startNext.disabled = true;
+    console.log(startNext.disabled);
   }
+
   if (e.target.checked === false) {
-    console.log("Checkbox is not checked - boolean value: ", e.target.checked)
+    startNext.disabled = false;
+    answer.value = '';
   }
-
-  if (e.target.checked === true && startNext.value !== '') {
-    console.log('startNext.value');
-  }
-
 });
 
+answer.oninput = ValueInp;
+
+function ValueInp() {
+  console.log(this.value);
+
+  if (this.value !== '') {
+    startNext.disabled = false;
+  } else {
+    startNext.disabled = true;
+  }
+}
 
 quizeItems.forEach((quizeItem, quizeItemIndex) => {
 
@@ -216,37 +225,20 @@ quizeItems.forEach((quizeItem, quizeItemIndex) => {
     const target = e.target;
     const inputsChecked = quizeItem.querySelectorAll('input:checked');
 
-
-
-
     if (inputsChecked.length > 0) {
       // разблокировать кнопку именно эту
       btnsNext[quizeItemIndex].disabled = false;
     } else {
-      // заблоировать эту кнопку
+      // заблокировать эту кнопку
       btnsNext[quizeItemIndex].disabled = true;
     }
-    // console.log(inputsChecked);
-    // // console.log(target);
-    // if (target.classList.contains('options__input')) {
 
-    //   const radios = quizeItem.querySelectorAll('.options__input');
-
-    //   radios.forEach(input => {
-    //     if (input = target) {
-    //       // input.classList
-    //       // add active class
-    //     } else {
-    //       // add remove class
-    //     }
-    //   })
-
-    //   // console.log(target, 'radio');
-    // } else if (target.classList.contains('checkbox__input')) {
-    //   console.log(target, 'check');
-    // } else {
-    //   return;
-    // }
+    if (other.checked === true) {
+      btnsNext[quizeItemIndex].disabled = true;
+    }
+    if (answer.value !== '') {
+      btnsNext[quizeItemIndex].disabled = false;
+    }
   })
 
 });
