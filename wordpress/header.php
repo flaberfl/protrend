@@ -30,11 +30,11 @@
               <li class="menu__item"><a href="#" data-goto-header data-goto=".types-crm__navigation" class="menu__link"><?= CFS()->get('menu__item-link1'); ?></a></li>
               <li class="menu__item"><a href="#" data-goto-header data-goto=".plans" class="menu__link"><?= CFS()->get('menu__item-link2'); ?></a></li>
               <li class="menu__item"><a href="#" data-goto-header data-goto=".clients-reviews" class="menu__link"><?= CFS()->get('menu__item-link3'); ?></a></li>
-              <li class="menu__item"><a href="#" data-goto-header data-goto=".seo-block" class="menu__link"><?= CFS()->get('menu__item-link4'); ?></a></li>
+              <li class="menu__item"><a href="#" data-goto-header data-goto=".corsair-version" class="menu__link"><?= CFS()->get('menu__item-link4'); ?></a></li>
             </ul>
 
 
-            <button data-popup="#popup-submit" type="button" class="header__button button header__button button_tr"><?= CFS()->get('header__btn'); ?></button>
+            <button data-popup="#popup-submit" type="button" class="header__button button header__button button_tr">Связаться</button>
 
 
             <div class="header__mobile-social">
@@ -42,7 +42,7 @@
 
 
                 <li class="mobile-social__item">
-                  <a href="<?= CFS()->get('telegram__link'); ?>" class="social__link" target="_blank"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <a target="_blank" href="<?= CFS()->get('telegram__link'); ?>"  class="social__link"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5931 0.0884743C16.4494 0.137031 12.7155 1.46705 8.29559 3.04409C3.34542 4.81031 0.223071 5.94314 0.164945 5.99402C0.0408952 6.10256 -0.0261141 6.31899 0.00954116 6.49599C0.0706415 6.79932 0.0924686 6.80879 2.41239 7.53834L4.53181 8.20485L4.66345 8.13237C4.73585 8.09254 6.96424 6.82474 9.61543 5.31505C14.5678 2.49503 14.5631 2.49746 14.5631 2.71464C14.5631 2.75837 13.9858 3.2795 13.0125 4.11448C12.1597 4.84606 10.4768 6.28926 9.27283 7.32154L7.08371 9.19846L6.95275 10.9156C6.80828 12.8097 6.80667 12.849 6.86773 12.9553C6.92083 13.0477 7.0903 13.1105 7.1994 13.0783C7.2447 13.0649 7.80714 12.5759 8.44934 11.9916C9.0915 11.4074 9.63163 10.9293 9.64964 10.9293C9.66765 10.9293 10.6178 11.5899 11.761 12.3973C12.9042 13.2047 13.9029 13.8966 13.9802 13.9347C14.2843 14.0847 14.7293 13.9665 14.9404 13.6796C15.0091 13.5863 15.3631 12.1465 16.5145 7.27811C17.3315 3.82348 18 0.946741 18 0.885305C18 0.660453 17.9051 0.468059 17.6999 0.276937C17.3835 -0.0177372 17.067 -0.0716107 16.5931 0.0884743Z" fill="#6F879D" />
                     </svg>
                   </a>

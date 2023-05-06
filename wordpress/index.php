@@ -101,7 +101,7 @@ get_header();
 					<span class="promo__name"><?= CFS()->get('promo__title'); ?></span><span class="promo__symbol"> -</span> <br> <?= CFS()->get('promo__subtitle'); ?>
 				</h1>
 				<h2 data-watch anim-up-down class="promo__text"><?= CFS()->get('promo__text'); ?></h2>
-				<button data-popup="#popup-quiz" class="button promo__button"><?= CFS()->get('promo__btn'); ?></button>
+				<button data-popup="#popup-quiz" class="button promo__button">Оставить заявку</button>
 			</div>
 
 			<div class="promo__decor">

@@ -53,7 +53,7 @@
         </div>
 
         <button data-popup="#popup-submit" type="submit" class="footer__button button button_tr-b">Связаться с нами</button>
-		<button data-popup="#popup-thanks" type="submit" style:"display: none; position: absolut; z-index: -1000;"></button>
+		<button data-popup="#popup-thanks" type="submit" style="display: none; position: absolute; z-index: -1000;"></button>
 
       </div>
 
@@ -98,9 +98,9 @@
         за обращение!</h5>
       <div class="thanks-popup__body">
         <div class="thanks-popup__image">
-          <picture>
-            <source srcset="<?php bloginfo('template_url'); ?>/assets/img/popup/thanks-img.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/popup/thanks-img.png" alt="Модальное изображение">
-          </picture>
+
+<img src="<?php bloginfo('template_url'); ?>/assets/img/popup/thanks-img.webp" alt="Модальное изображение">
+
         </div>
         <img src="<?php bloginfo('template_url'); ?>/assets/img/popup/popup-logo.svg" alt="Модльное лого на фоне" class="thanks-popup__logo">
       </div>
@@ -123,7 +123,7 @@
 <script>
 document.addEventListener( 'wpcf7mailsent', function( event ) {
 	
-  setTimeout(() => { location = 'https://test.protrend.kz'; }, 5000);
+  setTimeout(() => { location = 'https://test.protrend.kz'; }, 4000);
   
   location = 'https://test.protrend.kz/#popup-thanks';
 	
@@ -131,7 +131,7 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 }, false );
 </script>
 
-<script src="js/app.min.js?_v=20230407193902"></script>
+<!-- <script src="js/app.min.js?_v=20230407193902"></script> -->
 
 
 <?php wp_footer(); ?>

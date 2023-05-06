@@ -3,7 +3,7 @@ add_action( 'wp_enqueue_scripts', 'add_scripts_and_styles' );
 add_action( 'after_setup_theme', 'add_features');
 add_action( 'after_setup_theme', 'add_menu');
 function add_scripts_and_styles () {
-wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/app.min.js', 'null', 'null', true);
+wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/app.js', 'null', 'null', true);
   
 wp_enqueue_style( 'style', get_stylesheet_uri() );
 
@@ -68,5 +68,29 @@ function custom_add_form_tag_img() {
 
 add_action( 'wpcf7_init', 'custom_add_form_tag_img' );
 
+
+add_filter('wpcf7_validate_text', 'your_validation_filter_func', 999, 2);
+ add_filter('wpcf7_validate_text*', 'your_validation_filter_func', 999, 2);
+ function your_validation_filter_func($result, $tag) {
+    $type = $tag['type'];
+    $name = $tag['name'];
+    if ('coupon_code' == $name) {
+    $the_value = $_POST[$name];
+    if($the_value != "abc"){
+     $result->invalidate($tag, wpcf7_get_message('Invalid_coupon_code'));
+     }
+   }
+  return $result;
+}
+
+add_filter('wpcf7_messages', 'customwpcf7_text_messages');
+
+function customwpcf7_text_messages($messages) {
+    return array_merge($messages, array(
+'invalid_coupon_code' => array(
+     'description' => __("Coupon is invalid", 'contact-form-7'),
+     'default' => __('Coupon seems invalid.', 'contact-form-7')
+  )));
+  }
 
 ?>
