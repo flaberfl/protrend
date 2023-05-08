@@ -245,7 +245,7 @@ quizeItems.forEach((quizeItem, quizeItemIndex) => {
 // Отключение ввода цифр в инпуте Ваше Имя
 
 const inputName = document.querySelectorAll('.form__input_name');
-const regex = /[0-9]/g;
+const regex = /[^a-zA-Zа-яА-Я\u0020]/g;
 
 inputName.forEach(i => {
   i.oninput = function () {
