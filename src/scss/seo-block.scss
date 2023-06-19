@@ -24,7 +24,10 @@
   /* .seo-block__image */
   &__image {
     position: relative;
+      // position: sticky;
+
     align-self: start;
+
 
     img {
       position: absolute;
@@ -76,6 +79,7 @@
 
   /* .seo-block__text */
   &__text {
+
     @include adaptiveValue("font-size", 16, 14);
     font-weight: 400;
     color: $mainTextColor;
@@ -102,4 +106,13 @@
       left: -294%;
     }
   }
+}
+
+.sticky {
+  position: fixed;
+  z-index: 101;
+}
+.stop {
+  position: relative;
+  z-index: 101;
 }
