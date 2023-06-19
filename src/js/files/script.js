@@ -289,7 +289,7 @@ document.addEventListener('play', (event) => {
       a.style.border = '0';
     }
     var Ra = a.getBoundingClientRect(),
-        R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.seo-block__content').getBoundingClientRect().bottom);  // селектор блока, при достижении нижнего края которого нужно открепить прилипающий элемент
+        R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.seo-block__decor-ellipse').getBoundingClientRect().bottom);  // селектор блока, при достижении нижнего края которого нужно открепить прилипающий элемент
     if ((Ra.top - P) <= 0) {
       if ((Ra.top - P) <= R) {
         b.className = 'stop';
