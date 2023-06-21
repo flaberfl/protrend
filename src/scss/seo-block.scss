@@ -2,31 +2,48 @@
   @include adaptiveValue("padding-top", 194, 68);
   @include adaptiveValue("padding-bottom", 100, 100);
   padding-bottom: rem(100);
-  
-  @media (max-width: em(570)){
+
+  @media (max-width: em(570)) {
     padding-bottom: rem(40);
   }
 
   /* .seo-block__container */
   &__container {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 49.5%;
+    // display: grid;
+    // grid-template-columns: 1fr 49.5%;
 
-    align-items: center;
+    // align-items: center;
 
     @media (max-width:$tablet) {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+      // grid-template-columns: 1fr;
+      // grid-template-rows: 1fr 1fr;
+      // flex-direction: column;
+    }
+
+    @media (min-width:$tablet) {
+      display: flex;
+      align-items: center;
     }
   }
 
   /* .seo-block__image */
   &__image {
     position: relative;
-      // position: sticky;
+    // position: sticky;
+    // position: absolute;
 
     align-self: start;
+
+    height: 100%;
+    // width: 100%;
+
+    
+    @media (min-width:$tablet){
+      width: 51.5%;
+        
+    }
+
 
 
     img {
@@ -36,7 +53,7 @@
       @include adaptiveValue("left", -193, -142);
       @include adaptiveValue("top", -213, -139);
 
-      z-index: -1;
+      z-index: 10;
 
       @media (max-width:$tablet) {
         left: 59%;
@@ -49,7 +66,7 @@
     position: absolute;
     left: 21%;
     top: 37%;
-    z-index: 100;
+    z-index: 20;
 
     @media (max-width:$tablet) {
       left: 37%;
@@ -59,6 +76,12 @@
 
   /* .seo-block__content */
   &__content {
+
+    
+    @media (min-width:$tablet){
+      width: 49.5%;
+        
+    }
 
     @media (max-width:$tablet) {
       grid-row-start: 1;
@@ -98,7 +121,8 @@
   }
 
   &__decor-ellipse {
-    top: -51%;
+    // top: -51%;
+    top: -10%;
     left: -59%;
 
     @media (max-width:$mobile) {
@@ -108,11 +132,15 @@
   }
 }
 
-.sticky {
-  position: fixed;
-  z-index: 101;
-}
-.stop {
-  position: relative;
-  z-index: 101;
+@media (min-width:$tablet) {
+
+  .sticky {
+    position: fixed;
+    z-index: 101;
+  }
+
+  .stop {
+    position: relative;
+    z-index: 101;
+  }
 }
