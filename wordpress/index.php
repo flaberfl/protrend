@@ -455,6 +455,7 @@ get_header();
 					</div>
 					<div data-watch anim-up-down class="header-step-plans__title">
 						<h3 class="header-step-plans__name"><?= CFS()->get('step-plans__title2'); ?></h3>
+						<h4 class="header-step-plans__subname"><?= CFS()->get('step-plans__slogan2'); ?></h4>
 					</div>
 					<form data-watch anim-up-down action="" class="step-one-plans__form form-step-two form-step">
 						<label for="form-input" class="form-step__lable">Введите количество:</label>
@@ -748,12 +749,16 @@ get_header();
 	</section>
 
 	<section class="page__seo-block seo-block">
+		<div class="__container">
+						<h2 data-watch anim-up-down class="seo-block__title title"><span><?= CFS()->get('seo-block__title'); ?></span> <?= CFS()->get('seo-block__title2'); ?>
+			</h2>
 		<div data-watch anim-up-down class="seo-block__container">
+			
+	
 			<div class="seo-block__image">
 
 				<img src="<?= CFS()->get('seo-block__image'); ?>" alt="Изображение блока статей">
-			</div>
-			<div class="seo-block__decor-text decor-text">
+							<div class="seo-block__decor-text decor-text">
 				<div class="seo-block__decor-text-itemA decor-text-itemA">1
 					0
 					0
@@ -795,9 +800,10 @@ get_header();
 					0
 				</div>
 			</div>
+			</div>
+
 
 			<div class="seo-block__content">
-				<h2 data-watch anim-up-down class="seo-block__title title"><span><?= CFS()->get('seo-block__title'); ?></span> <?= CFS()->get('seo-block__title2'); ?></h2>
 				<div data-watch anim-up-down class="seo-block__text">
 
 					<?php
@@ -822,7 +828,7 @@ get_header();
 			</div>
 
 		</div>
-
+</div>
 	</section>
 </main>
 

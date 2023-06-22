@@ -12,19 +12,18 @@
     position: relative;
     // display: grid;
     // grid-template-columns: 1fr 49.5%;
+    display: flex;
+    align-items: center;
 
     // align-items: center;
 
     @media (max-width:$tablet) {
       // grid-template-columns: 1fr;
       // grid-template-rows: 1fr 1fr;
-      // flex-direction: column;
+      flex-direction: column-reverse;
     }
 
-    @media (min-width:$tablet) {
-      display: flex;
-      align-items: center;
-    }
+    @media (min-width:$tablet) {}
   }
 
   /* .seo-block__image */
@@ -34,58 +33,75 @@
     // position: absolute;
 
     align-self: start;
-
+    margin-bottom: rem(100);
     height: 100%;
     // width: 100%;
 
-    
-    @media (min-width:$tablet){
+
+    @media (min-width:$tablet) {
       width: 51.5%;
-        
+
     }
 
 
 
     img {
       position: absolute;
-      left: 0;
+      // left: 0;
       @include adaptiveValue("width", 1120, 690);
-      @include adaptiveValue("left", -193, -142);
-      @include adaptiveValue("top", -213, -139);
-
+      top: -40%;
       z-index: 10;
 
-      @media (max-width:$tablet) {
-        left: 59%;
-        transform: translate(-50%, 0);
+      @media (min-width:$tablet) {
+        @include adaptiveValue("left", -193, -142);
+        @include adaptiveValue("top", -213, -139);
       }
+
+      @media (max-width:$mobileSmall) {
+        left: -24%;
+      }
+
+
+      // @media (max-width:$tablet) {
+      //   // left: 59%;
+      //   left: 100%;
+      //   transform: translate(-50%, 0);
+      // }
+
+
+      @media (max-width: em(660)) {
+        left: 0;
+      }
+
+      @media (max-width:$mobile) {
+        left: -15%;
+      }
+
     }
   }
 
   &__decor-text {
-    position: absolute;
-    left: 21%;
-    top: 37%;
+
+    position: relative;
+    // left: 21%;
+    // top: 37%;
+    left: 42.5%;
+    transform: translate(0, 50%);
+    // top: 37%;
     z-index: 20;
 
     @media (max-width:$tablet) {
       left: 37%;
       top: 56%;
+      display: none;
     }
   }
 
   /* .seo-block__content */
   &__content {
 
-    
-    @media (min-width:$tablet){
+    @media (min-width:$tablet) {
       width: 49.5%;
-        
-    }
-
-    @media (max-width:$tablet) {
-      grid-row-start: 1;
-      grid-row-end: 2;
     }
   }
 
@@ -121,9 +137,11 @@
   }
 
   &__decor-ellipse {
-    // top: -51%;
-    top: -10%;
     left: -59%;
+
+    @media (min-width:$mobile) and (max-width: em(1200)) {
+      top: 35%;
+    }
 
     @media (max-width:$mobile) {
       top: 14%;
