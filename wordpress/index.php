@@ -26,6 +26,30 @@ Template Name: Protrend
 						?>
 
 
+	<li class="text-types-crm__item">
+
+												<?php
+												if (!empty($row2['text-types-crm__item-name'])) {
+												?>
+													<h5 class="text-types-crm__name"><?= $row2['text-types-crm__item-name']; ?></h5>
+												<?php
+												}
+												?>
+												<p><?= $row2['text-types-crm__item-text']; ?></p>
+</li>
+
+<?= $row['types-crm__icon']; ?>
+
+
+
+									<?php
+									if (!empty($row['text-types-crm__descr'])) {
+									?>
+										<p class="text-types-crm__descr"><?= $row['text-types-crm__descr']; ?></p>
+									<?php
+									}
+									?>
+
 
 
 						<?php
@@ -750,85 +774,85 @@ get_header();
 
 	<section class="page__seo-block seo-block">
 		<div class="__container">
-						<h2 data-watch anim-up-down class="seo-block__title title"><span><?= CFS()->get('seo-block__title'); ?></span> <?= CFS()->get('seo-block__title2'); ?>
+			<h2 data-watch anim-up-down class="seo-block__title title"><span><?= CFS()->get('seo-block__title'); ?></span> <?= CFS()->get('seo-block__title2'); ?>
 			</h2>
-		<div data-watch anim-up-down class="seo-block__container">
-			
-	
-			<div class="seo-block__image">
+			<div data-watch anim-up-down class="seo-block__container">
 
-				<img src="<?= CFS()->get('seo-block__image'); ?>" alt="Изображение блока статей">
-							<div class="seo-block__decor-text decor-text">
-				<div class="seo-block__decor-text-itemA decor-text-itemA">1
-					0
-					0
-					0
-					1
-					0
-					0
-					0
-					0
-					1
+
+				<div class="seo-block__image">
+
+					<img src="<?= CFS()->get('seo-block__image'); ?>" alt="Изображение блока статей">
+					<div class="seo-block__decor-text decor-text">
+						<div class="seo-block__decor-text-itemA decor-text-itemA">1
+							0
+							0
+							0
+							1
+							0
+							0
+							0
+							0
+							1
+						</div>
+						<div class="seo-block__decor-text-itemB decor-text-itemB">&nbsp 0
+							0
+							0
+							0
+							1
+							1
+							0
+							0
+							0
+							0
+						</div>
+						<div class="seo-block__decor-text-itemC decor-text-itemC">0
+							0
+							0
+							0
+							1
+							1
+							0
+							0
+							0
+							0
+						</div>
+						<div class="seo-block__decor-text-itemD decor-text-itemD">0
+							0
+							1
+							0
+							0
+							0
+						</div>
+					</div>
 				</div>
-				<div class="seo-block__decor-text-itemB decor-text-itemB">&nbsp 0
-					0
-					0
-					0
-					1
-					1
-					0
-					0
-					0
-					0
+
+
+				<div class="seo-block__content">
+					<div data-watch anim-up-down class="seo-block__text">
+
+						<?php
+
+						$loop = CFS()->get('seo-block__texts');
+
+						foreach ($loop as $row) {
+
+						?>
+
+							<p><?= $row['seo-block__text']; ?></p>
+
+						<?php
+						}
+						?>
+
+					</div>
 				</div>
-				<div class="seo-block__decor-text-itemC decor-text-itemC">0
-					0
-					0
-					0
-					1
-					1
-					0
-					0
-					0
-					0
+
+				<div class="seo-block__decor-ellipse decor-ellipse">
+					<img data-src="<?php bloginfo('template_url'); ?>/assets/img/decor/elipse.svg" alt="Декоративный круг">
 				</div>
-				<div class="seo-block__decor-text-itemD decor-text-itemD">0
-					0
-					1
-					0
-					0
-					0
-				</div>
+
 			</div>
-			</div>
-
-
-			<div class="seo-block__content">
-				<div data-watch anim-up-down class="seo-block__text">
-
-					<?php
-
-					$loop = CFS()->get('seo-block__texts');
-
-					foreach ($loop as $row) {
-
-					?>
-
-						<p><?= $row['seo-block__text']; ?></p>
-
-					<?php
-					}
-					?>
-
-				</div>
-			</div>
-
-			<div class="seo-block__decor-ellipse decor-ellipse">
-				<img data-src="<?php bloginfo('template_url'); ?>/assets/img/decor/elipse.svg" alt="Декоративный круг">
-			</div>
-
 		</div>
-</div>
 	</section>
 </main>
 
